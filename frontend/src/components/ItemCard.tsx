@@ -6,9 +6,8 @@ function ItemCard({ item, glossary, status, onStatusChange }: any) {
     <div className="item-card" id={`item-${item.id}`}>
       <div className="card-header">
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          <h3 className="item-name">{item.name}</h3>
-          <div className="status-buttons" style={{ display: 'flex', gap: '0.25rem', marginTop: '0.5rem' }}>
-            <button 
+          <div className="status-buttons" style={{ display: 'flex', gap: '0.25rem' }}>
+            <button
               onClick={() => onStatusChange(status === 'verified' ? null : 'verified')}
               style={{
                 background: 'transparent',
@@ -25,7 +24,7 @@ function ItemCard({ item, glossary, status, onStatusChange }: any) {
             >
               ✅
             </button>
-            <button 
+            <button
               onClick={() => onStatusChange(status === 'flagged' ? null : 'flagged')}
               style={{
                 background: 'transparent',
@@ -43,16 +42,17 @@ function ItemCard({ item, glossary, status, onStatusChange }: any) {
               🚩
             </button>
           </div>
+          <h3 className="item-name">{item.name}</h3>
         </div>
         <span className="item-id">#{item.id}</span>
       </div>
-      
+
       <div className="card-middle">
         <div className="card-image-wrapper">
           {item.image && (
-            <img 
-              src={`https://raw.githubusercontent.com/cmlenius/gloomhaven-card-browser/images/images/${item.image}`} 
-              alt={item.name} 
+            <img
+              src={`https://raw.githubusercontent.com/cmlenius/gloomhaven-card-browser/images/images/${item.image}`}
+              alt={item.name}
               className="item-image"
               loading="lazy"
             />
@@ -82,7 +82,7 @@ function ItemCard({ item, glossary, status, onStatusChange }: any) {
           })}
         </div>
       </div>
-      
+
       <div className="card-body">
         {renderTextWithTooltips(item.text, glossary)}
       </div>

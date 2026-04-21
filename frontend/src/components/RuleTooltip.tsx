@@ -4,14 +4,14 @@ import React from 'react';
 function highlightModifiers(text: string) {
   if (!text) return text;
   
-  // regex to find modifiers like +X Move, -X Attack, or just +1, x2 etc.
+  // regex to find modifiers like +X Move, -X Attack, or just +1, 2x etc.
   // We constrain the following word to specific game terminology so we don't accidentally badge '+1 instead'.
-  const regex = /([\+\-]\d+\s+(?:Move|Attack|Range|Shield|Retaliate|Heal|Target|Pierce)|[\+\-]\d+|x\d+)/gi;
+  const regex = /([\+\-]\d+\s+(?:Move|Attack|Range|Shield|Retaliate|Heal|Target|Pierce)|[\+\-]\d+|\b\d+x\b)/gi;
   const parts = text.split(regex);
   const elements: any[] = [];
   
   parts.forEach((part, i) => {
-    if (part.match(/x\d+/)) {
+    if (part.match(/\d+x/)) {
       elements.push(<span key={`mod-${i}`} className="mod-mult">{part}</span>);
     } else if (part.match(/\+0\b/)) {
       elements.push(<span key={`mod-${i}`} className="mod-neut">{part}</span>);

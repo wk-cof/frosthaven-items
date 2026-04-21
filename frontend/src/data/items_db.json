@@ -48,7 +48,7 @@
     "cost": 0,
     "slot": "body",
     "spent": true,
-    "text": "On the next two attacks targeting you, the attacker gains disadvantage. [Uses: 2] [Modifier: -1 x1]",
+    "text": "[Uses: 2] On the next two attacks targeting you, the attacker gains disadvantage. [Modifier: -1 x1]",
     "resources": {
       "Hide": 2
     }

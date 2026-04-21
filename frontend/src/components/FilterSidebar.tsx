@@ -1,8 +1,9 @@
+import React from 'react';
 import { Filters, ItemStatusMap } from '../App';
 
 type Props = {
   filters: Filters;
-  setFilters: (f: Filters) => void;
+  setFilters: React.Dispatch<React.SetStateAction<Filters>>;
   itemStatuses: ItemStatusMap;
 };
 
@@ -19,7 +20,18 @@ const SLOTS = [
 
 function FilterSidebar({ filters, setFilters, itemStatuses }: Props) {
   const updateFilter = (key: keyof Filters, value: any) => {
-    setFilters({ ...filters, [key]: value });
+    setFilters(prev => ({ ...prev, [key]: value }));
+  };
+
+  const updateReviewFilters = (key: 'showFlaggedOnly' | 'showUnreviewedOnly', checked: boolean) => {
+    setFilters(prev => {
+      const newFilters = { ...prev, [key]: checked };
+      if (checked) {
+        if (key === 'showFlaggedOnly') newFilters.showUnreviewedOnly = false;
+        if (key === 'showUnreviewedOnly') newFilters.showFlaggedOnly = false;
+      }
+      return newFilters;
+    });
   };
 
   return (
@@ -88,22 +100,16 @@ function FilterSidebar({ filters, setFilters, itemStatuses }: Props) {
           <input 
             type="checkbox" 
             checked={filters.showFlaggedOnly}
-            onChange={(e) => {
-              updateFilter('showFlaggedOnly', e.target.checked);
-              if (e.target.checked) updateFilter('showUnreviewedOnly', false);
-            }}
+            onChange={(e) => updateReviewFilters('showFlaggedOnly', e.target.checked)}
           />
-          🚩 Flagged Only
+          🚩 Flagged Only ({Object.values(itemStatuses).filter(s => s === 'flagged').length})
         </label>
         
         <label className="toggle-label">
           <input 
             type="checkbox" 
             checked={filters.showUnreviewedOnly}
-            onChange={(e) => {
-              updateFilter('showUnreviewedOnly', e.target.checked);
-              if (e.target.checked) updateFilter('showFlaggedOnly', false);
-            }}
+            onChange={(e) => updateReviewFilters('showUnreviewedOnly', e.target.checked)}
           />
           ❓ Unreviewed Only
         </label>
