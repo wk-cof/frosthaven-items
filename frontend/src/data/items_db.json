@@ -48,7 +48,7 @@
     "cost": 0,
     "slot": "body",
     "spent": true,
-    "text": "On the next two attacks targeting you, the attacker gains disadvantage. [Uses: 2]",
+    "text": "On the next two attacks targeting you, the attacker gains disadvantage. [Uses: 2] [Modifier: -1 x1]",
     "resources": {
       "Hide": 2
     }
@@ -134,7 +134,7 @@
     "cost": 0,
     "slot": "1h",
     "consumed": true,
-    "text": "When an enemy would apply a negative condition to you, prevent the condition.",
+    "text": "When an enemy would apply a negative condition to you, prevent the condition. [Modifier: -1 x1]",
     "resources": {
       "Metal": 1
     }
@@ -161,7 +161,7 @@
     "cost": 0,
     "slot": "body",
     "spent": true,
-    "text": "When you suffer Damage from an attack, gain Shield 2 for the attack.",
+    "text": "When you suffer [Damage] from an attack, gain Shield 2 for the attack. [Modifier: -1 x1]",
     "resources": {
       "Metal": 1
     }
@@ -205,7 +205,7 @@
     "cost": 0,
     "slot": "1h",
     "spent": true,
-    "text": "When an enemy would apply a negative condition to you, prevent the condition.",
+    "text": "When an enemy would apply a negative condition to you, prevent the condition. [Modifier: -1 x2]",
     "resources": {
       "Wood": 1,
       "Item 010": 1
