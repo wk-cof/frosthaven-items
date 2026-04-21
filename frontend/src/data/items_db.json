@@ -1,0 +1,3382 @@
+[
+  {
+    "id": 1,
+    "name": "spyglass",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-001-spyglass.jpeg",
+    "cost": 0,
+    "slot": "head",
+    "spent": true,
+    "text": "During your attack ability, gain advantage on one attack.",
+    "resources": {
+      "Metal": 1
+    }
+  },
+  {
+    "id": 2,
+    "name": "crude helmet",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-002-crude-helmet.jpeg",
+    "cost": 0,
+    "slot": "head",
+    "text": "When you are attacked, treat any 2x attack modifier card the enemy draws as a +1 instead.",
+    "resources": {
+      "Metal": 1
+    }
+  },
+  {
+    "id": 3,
+    "name": "traveling cloak",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-003-traveling-cloak.jpeg",
+    "cost": 0,
+    "slot": "body",
+    "text": "At the start of the scenario, increase your maximum hit point value by 1.",
+    "resources": {
+      "Hide": 1
+    }
+  },
+  {
+    "id": 4,
+    "name": "crude hide armor",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-004-crude-hide-armor.jpeg",
+    "cost": 0,
+    "slot": "body",
+    "spent": true,
+    "text": "On the next two attacks targeting you, the attacker gains disadvantage. [Uses: 2]",
+    "resources": {
+      "Hide": 2
+    }
+  },
+  {
+    "id": 5,
+    "name": "crude boots",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-005-crude-boots.jpeg",
+    "cost": 0,
+    "slot": "legs",
+    "spent": true,
+    "text": "During your move ability, add +1 Move.",
+    "resources": {
+      "Hide": 2
+    }
+  },
+  {
+    "id": 6,
+    "name": "flexible slippers",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-006-flexible-slippers.jpeg",
+    "cost": 0,
+    "slot": "legs",
+    "spent": true,
+    "text": "During your end-of-turn looting, loot an adjacent hex instead of the hex you occupy.",
+    "resources": {
+      "Hide": 1
+    }
+  },
+  {
+    "id": 7,
+    "name": "crude bow",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-007-crude-bow.jpeg",
+    "cost": 0,
+    "slot": "2h",
+    "spent": true,
+    "text": "During your turn, add +1 Range to one of your ranged attacks.",
+    "resources": {
+      "Wood": 1
+    }
+  },
+  {
+    "id": 8,
+    "name": "crude spear",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-008-crude-spear.jpeg",
+    "cost": 0,
+    "slot": "2h",
+    "spent": true,
+    "text": "During your turn, one of your single-target melee attack abilities may target an enemy two hexes away.",
+    "resources": {
+      "Wood": 1,
+      "Metal": 1
+    }
+  },
+  {
+    "id": 9,
+    "name": "protective scepter",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-009-protective-scepter.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "spent": true,
+    "text": "During your turn, grant one ally within Range 2: Shield 1",
+    "resources": {
+      "Wood": 1,
+      "Hide": 1
+    }
+  },
+  {
+    "id": 10,
+    "name": "crude shield",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-010-crude-shield.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "consumed": true,
+    "text": "When an enemy would apply a negative condition to you, prevent the condition.",
+    "resources": {
+      "Metal": 1
+    }
+  },
+  {
+    "id": 11,
+    "name": "simple charm",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-011-simple-charm.jpeg",
+    "cost": 0,
+    "slot": "head",
+    "text": "At the start of the scenario, remove one -1 attack modifier card from your attack modifier deck.",
+    "resources": {
+      "Metal": 2
+    }
+  },
+  {
+    "id": 12,
+    "name": "crude chain armor",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-012-crude-chain-armor.jpeg",
+    "cost": 0,
+    "slot": "body",
+    "spent": true,
+    "text": "When you suffer Damage from an attack, gain Shield 2 for the attack.",
+    "resources": {
+      "Metal": 1
+    }
+  },
+  {
+    "id": 13,
+    "name": "dancing slippers",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-013-dancing-slippers.jpeg",
+    "cost": 0,
+    "slot": "legs",
+    "spent": true,
+    "text": "After you suffer Damage from an attack, perform: Move 2",
+    "resources": {
+      "Hide": 1,
+      "Arrowvine": 1
+    }
+  },
+  {
+    "id": 14,
+    "name": "heavy sword",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-014-heavy-sword.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "spent": true,
+    "text": "During your melee attack ability, add +1 Attack to one attack.",
+    "resources": {
+      "Metal": 1,
+      "Hide": 1
+    }
+  },
+  {
+    "id": 15,
+    "name": "reinforced shield",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-015-reinforced-shield.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "spent": true,
+    "text": "When an enemy would apply a negative condition to you, prevent the condition.",
+    "resources": {
+      "Wood": 1,
+      "Item 010": 1
+    }
+  },
+  {
+    "id": 16,
+    "name": "inspiring helmet",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-016-inspiring-helmet.jpeg",
+    "cost": 0,
+    "slot": "head",
+    "consumed": true,
+    "text": "During your turn, grant all adjacent allies: Move 2",
+    "resources": {
+      "Metal": 1,
+      "Hide": 1
+    }
+  },
+  {
+    "id": 17,
+    "name": "cured leather armor",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-017-cured-leather-armor.jpeg",
+    "cost": 0,
+    "slot": "body",
+    "spent": true,
+    "text": "[Uses: 2] On the next two attacks targeting you, the attacker gains disadvantage.",
+    "resources": {
+      "Item 004": 1,
+      "Item 098": 1
+    }
+  },
+  {
+    "id": 18,
+    "name": "rough boots",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-018-rough-boots.jpeg",
+    "cost": 0,
+    "slot": "legs",
+    "spent": true,
+    "text": "During your turn, add +1 Move to all your move abilities.",
+    "resources": {
+      "Item 005": 1,
+      "Hide": 1
+    }
+  },
+  {
+    "id": 19,
+    "name": "ringing hammer",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-019-ringing-hammer.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "spent": true,
+    "text": "During your attack ability, add [Condition: Muddle] to all attacks.",
+    "resources": {
+      "Wood": 1,
+      "Metal": 1,
+      "Corpsecap": 1
+    }
+  },
+  {
+    "id": 20,
+    "name": "well-strung bow",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-020-well-strung-bow.jpeg",
+    "cost": 0,
+    "slot": "2h",
+    "spent": true,
+    "text": "During your turn, add +1 Range to all your ranged attacks.",
+    "resources": {
+      "Item 007": 1,
+      "Arrowvine": 1
+    }
+  },
+  {
+    "id": 21,
+    "name": "chain hood",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-021-chain-hood.jpeg",
+    "cost": 0,
+    "slot": "head",
+    "text": "While you are adjacent to three or more enemies, gain Shield 1.",
+    "resources": {
+      "Metal": 3,
+      "Hide": 1
+    }
+  },
+  {
+    "id": 22,
+    "name": "heavy chain armor",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-022-heavy-chain-armor.jpeg",
+    "cost": 0,
+    "slot": "body",
+    "spent": true,
+    "text": "When you suffer Damage from an attack, gain Shield 3 for the attack.",
+    "resources": {
+      "Item 012": 1,
+      "Metal": 1
+    }
+  },
+  {
+    "id": 23,
+    "name": "sturdy greaves",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-023-sturdy-greaves.jpeg",
+    "cost": 0,
+    "slot": "legs",
+    "spent": true,
+    "text": "At the start of your turn, add -2 Move to all your move abilities to gain Shield 1 this round.",
+    "resources": {
+      "Metal": 2,
+      "Hide": 2
+    }
+  },
+  {
+    "id": 24,
+    "name": "corrupted blade",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-024-corrupted-blade.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "consumed": true,
+    "text": "During your melee attack ability, add [Condition: Wound], [Condition: Poison], and [Condition: Muddle] to one attack.",
+    "resources": {
+      "Item 014": 1,
+      "Item 098": 1
+    }
+  },
+  {
+    "id": 25,
+    "name": "soothing scepter",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-025-soothing-scepter.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "spent": true,
+    "text": "During your turn, perform: [Condition: Regenerate], Target 1 ally, Range 2",
+    "resources": {
+      "Wood": 1,
+      "Hide": 1,
+      "Arrowvine": 1
+    }
+  },
+  {
+    "id": 26,
+    "name": "truesight lenses",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-026-truesight-lenses.jpeg",
+    "cost": 0,
+    "slot": "head",
+    "spent": true,
+    "text": "During your attack ability, treat all negative and [Null] modifier cards as +0 instead.",
+    "resources": {
+      "Metal": 1,
+      "Hide": 1
+    }
+  },
+  {
+    "id": 27,
+    "name": "cloak of warding",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-027-cloak-of-warding.jpeg",
+    "cost": 0,
+    "slot": "body",
+    "consumed": true,
+    "text": "Immediately after an enemy ends its move ability adjacent to you, perform: [Push] 1 [Target] the enemy",
+    "resources": {
+      "Item 003": 1,
+      "Item 091": 1,
+      "Hide": 1
+    }
+  },
+  {
+    "id": 28,
+    "name": "sturdy boots",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-028-sturdy-boots.jpeg",
+    "cost": 0,
+    "slot": "legs",
+    "spent": true,
+    "text": "During your turn, add +1 Move to all your move abilities and ignore difficult terrain.",
+    "resources": {
+      "Item 018": 1,
+      "Hide": 1
+    }
+  },
+  {
+    "id": 29,
+    "name": "cleaving axe",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-029-cleaving-axe.jpeg",
+    "cost": 0,
+    "slot": "2h",
+    "spent": true,
+    "text": "After your melee attack, one enemy adjacent to the target suffers [Damage] 2.",
+    "resources": {
+      "Wood": 1,
+      "Metal": 2
+    }
+  },
+  {
+    "id": 30,
+    "name": "parrying gauntlet",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-030-parrying-gauntlet.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "consumed": true,
+    "text": "Immediately after an enemy ends its move ability adjacent to you, perform: Attack 3 [Target] the enemy",
+    "resources": {
+      "Metal": 1,
+      "Hide": 1
+    }
+  },
+  {
+    "id": 31,
+    "name": "deathproof charm",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-031-deathproof-charm.jpeg",
+    "cost": 0,
+    "slot": "head",
+    "consumed": true,
+    "text": "When you would suffer [Damage] from any source, negate the [Damage].",
+    "resources": {
+      "Item 011": 1,
+      "Item 106": 1
+    }
+  },
+  {
+    "id": 32,
+    "name": "shell armor",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-032-shell-armor.jpeg",
+    "cost": 0,
+    "slot": "body",
+    "spent": true,
+    "text": "During your turn, perform: [Condition: Ward] self",
+    "resources": {
+      "Wood": 1,
+      "Metal": 2,
+      "Hide": 2
+    }
+  },
+  {
+    "id": 33,
+    "name": "volatile boots",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-033-volatile-boots.jpeg",
+    "imageBack": "items/frosthaven/fh-033-volatile-boots-back.jpeg",
+    "cost": 0,
+    "slot": "legs",
+    "text": "Up to once each turn, during your move ability, add +1 Move, then flip this card over at the end of your turn.",
+    "resources": {
+      "Item 018": 1,
+      "Item 096": 1,
+      "Metal": 1
+    }
+  },
+  {
+    "id": 34,
+    "name": "shrapnel bomb",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-034-shrapnel-bomb.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "consumed": true,
+    "text": "After your ranged attack, all enemies adjacent to the target suffer [Damage] 2.",
+    "resources": {
+      "Item 097": 1,
+      "Metal": 2
+    }
+  },
+  {
+    "id": 35,
+    "name": "kite shield",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-035-kite-shield.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "spent": true,
+    "text": "When you suffer [Damage] from an attack, gain Shield 1 for the attack and prevent any negative conditions from the attack.",
+    "resources": {
+      "Wood": 2,
+      "Metal": 1
+    }
+  },
+  {
+    "id": 36,
+    "name": "plumed helmet",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-036-plumed-helmet.jpeg",
+    "cost": 0,
+    "slot": "head",
+    "text": "When you are attacked by an attack with disadvantage, treat all +0 and +1 attack modifier cards as -1.",
+    "resources": {
+      "Item 016": 1,
+      "Hide": 1,
+      "Arrowvine": 1
+    }
+  },
+  {
+    "id": 37,
+    "name": "ghost cloak",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-037-ghost-cloak.jpeg",
+    "cost": 0,
+    "slot": "body",
+    "consumed": true,
+    "text": "During your turn, suffer [Damage] 3 to perform: [Condition: Invisible] self",
+    "resources": {
+      "Item 003": 1,
+      "Item 114": 1,
+      "Corpsecap": 1
+    }
+  },
+  {
+    "id": 38,
+    "name": "duelists shoes",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-038-duelists-shoes.jpeg",
+    "cost": 0,
+    "slot": "legs",
+    "spent": true,
+    "text": "During your turn, perform: Move 2. This movement must end adjacent to an enemy.",
+    "resources": {
+      "Item 013": 1,
+      "Item 113": 1
+    }
+  },
+  {
+    "id": 39,
+    "name": "abyss axe",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-039-abyss-axe.jpeg",
+    "cost": 0,
+    "slot": "2h",
+    "spent": true,
+    "text": "During your attack ability, add +3 Attack and [Pierce] 1 to one attack targeting a Frozen Corpse, Ice Wraith, or Living Doom.",
+    "resources": {
+      "Item 029": 1,
+      "Item 101": 1,
+      "Item 112": 1
+    }
+  },
+  {
+    "id": 40,
+    "name": "heartstrike bow",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-040-heartstrike-bow.jpeg",
+    "cost": 0,
+    "slot": "2h",
+    "spent": true,
+    "text": "During your turn, add +1 Attack and +2 Range to one of your ranged attacks.",
+    "resources": {
+      "Item 020": 1,
+      "Item 085": 1,
+      "Wood": 1
+    }
+  },
+  {
+    "id": 41,
+    "name": "intricate charm",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-041-intricate-charm.jpeg",
+    "cost": 0,
+    "slot": "head",
+    "text": "At the start of the scenario, remove one +0 and one -1 attack modifier card from your attack modifier deck.",
+    "resources": {
+      "Item 011": 1,
+      "Item 110": 1,
+      "Metal": 1
+    }
+  },
+  {
+    "id": 42,
+    "name": "ornate armor",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-042-ornate-armor.jpeg",
+    "cost": 0,
+    "slot": "body",
+    "spent": true,
+    "text": "[Uses: 2] On the next two sources of [Damage] from attacks targeting you, gain Shield 2 for the attacks.",
+    "resources": {
+      "Item 112": 1,
+      "Metal": 3
+    }
+  },
+  {
+    "id": 43,
+    "name": "kicking boots",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-043-kicking-boots.jpeg",
+    "cost": 0,
+    "slot": "legs",
+    "spent": true,
+    "text": "During your melee attack ability, add [Push] 2 to one attack.",
+    "resources": {
+      "Item 028": 1,
+      "Item 090": 1,
+      "Metal": 1
+    }
+  },
+  {
+    "id": 44,
+    "name": "sword of absolution",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-044-sword-of-absolution.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "spent": true,
+    "text": "When you would gain [Condition: Curse] or [Condition: Brittle], gain [Condition: Bless] instead.",
+    "resources": {
+      "Item 024": 1,
+      "Item 108": 1
+    }
+  },
+  {
+    "id": 45,
+    "name": "master scepter",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-045-master-scepter.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "spent": true,
+    "text": "During your turn, perform: Heal 1, Target 1 ally, Range 2, [Condition: Ward]",
+    "resources": {
+      "Item 009": 1,
+      "Item 025": 1
+    }
+  },
+  {
+    "id": 46,
+    "name": "double-lens goggles",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-046-double-lens-goggles.jpeg",
+    "cost": 0,
+    "slot": "head",
+    "spent": true,
+    "text": "During your attack ability, gain advantage on all attacks and treat all +0 and -1 attack modifier cards as +1 instead.",
+    "resources": {
+      "Item 026": 1,
+      "Item 129": 1,
+      "Hide": 1
+    }
+  },
+  {
+    "id": 47,
+    "name": "robes of doom",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-047-robes-of-doom.jpeg",
+    "cost": 0,
+    "slot": "body",
+    "spent": true,
+    "text": "On the next two sources of [Damage] from attacks targeting you, suffer [Damage] 3 to give the attacker [Condition: Brittle].",
+    "resources": {
+      "Item 027": 1,
+      "Item 119": 1,
+      "Item 162": 1
+    }
+  },
+  {
+    "id": 48,
+    "name": "living shoes",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-048-living-shoes.jpeg",
+    "cost": 0,
+    "slot": "legs",
+    "text": "After any ally's heal ability targeting you, perform: Move 2",
+    "resources": {
+      "Item 013": 1,
+      "Hide": 2,
+      "Flamefruit": 1
+    }
+  },
+  {
+    "id": 49,
+    "name": "cruel dagger",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-049-cruel-dagger.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "text": "During your melee attack ability, add +1 Attack and [Condition: Wound] to one attack.",
+    "resources": {
+      "Item 111": 1,
+      "Item 145": 1,
+      "Metal": 1
+    }
+  },
+  {
+    "id": 50,
+    "name": "shield of reciprocity",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-050-shield-of-reciprocity.jpeg",
+    "imageBack": "items/frosthaven/fh-050-shield-of-reciprocity-back.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "text": "When you suffer [Damage] from an attack, gain Shield 1 for the attack and flip this card over.",
+    "resources": {
+      "Item 035": 1,
+      "Item 105": 1,
+      "Item 161": 1,
+      "Metal": 1
+    }
+  },
+  {
+    "id": 51,
+    "name": "spiked collar",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-051-spiked-collar.jpeg",
+    "cost": 0,
+    "slot": "head",
+    "spent": true,
+    "text": "During your turn, perform: [Condition: Wound] self",
+    "resources": {
+      "Item 011": 1,
+      "Flamefruit": 1
+    }
+  },
+  {
+    "id": 52,
+    "name": "laser lens",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-052-laser-lens.jpeg",
+    "cost": 0,
+    "slot": "head",
+    "spent": true,
+    "text": "During your turn, [Consume Element: Fire] to cause up to two enemies within Range 4 to suffer [Damage] 1.",
+    "resources": {
+      "Item 097": 1,
+      "Item 129": 1
+    }
+  },
+  {
+    "id": 53,
+    "name": "hobnail boots",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-053-hobnail-boots.jpeg",
+    "cost": 0,
+    "slot": "legs",
+    "text": "After you move 4 or more hexes during your turn, gain [Retaliate] 1 for the round.",
+    "resources": {
+      "Item 018": 1,
+      "Item 088": 1,
+      "Metal": 1
+    }
+  },
+  {
+    "id": 54,
+    "name": "restful slippers",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-054-restful-slippers.jpeg",
+    "cost": 0,
+    "slot": "legs",
+    "spent": true,
+    "text": "During your short rest, instead of randomly losing one card from your discard pile, randomly draw three cards from your discard pile and choose one to lose.",
+    "resources": {
+      "Item 006": 1,
+      "Item 092": 1,
+      "Snowthistle": 1
+    }
+  },
+  {
+    "id": 55,
+    "name": "biting gauntlet",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-055-biting-gauntlet.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "spent": true,
+    "text": "When you are attacked by an adjacent enemy, gain [Retaliate] 2 for the attack.",
+    "resources": {
+      "Item 094": 1,
+      "Metal": 1,
+      "Hide": 1
+    }
+  },
+  {
+    "id": 56,
+    "name": "scavengers magnet",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-056-scavengers-magnet.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "spent": true,
+    "text": "During your turn, [Consume Element: Earth] to loot one adjacent loot token.",
+    "resources": {
+      "Wood": 1,
+      "Metal": 1
+    }
+  },
+  {
+    "id": 57,
+    "name": "shovel",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-057-shovel.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "consumed": true,
+    "text": "During your turn, destroy one adjacent obstacle, hazardous terrain, difficult terrain, icy terrain, or trap tile.",
+    "resources": {
+      "Wood": 1,
+      "Metal": 1
+    }
+  },
+  {
+    "id": 58,
+    "name": "slippery sword",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-058-slippery-sword.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "spent": true,
+    "text": "During your melee attack ability, add +2 Attack to one attack. After the ability, gain [Condition: Invisible].",
+    "resources": {
+      "Item 014": 1,
+      "Item 085": 1,
+      "Item 090": 1
+    }
+  },
+  {
+    "id": 59,
+    "name": "charm of expertise",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-059-charm-of-expertise.jpeg",
+    "cost": 0,
+    "slot": "head",
+    "text": "At the start of the scenario, for the scenario, gain one 1-mark perk from your character sheet which you have not yet gained.",
+    "resources": {
+      "Item 011": 1,
+      "Item 113": 1
+    }
+  },
+  {
+    "id": 60,
+    "name": "cloak of many pockets",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-060-cloak-of-many-pockets.jpeg",
+    "cost": 0,
+    "slot": "body",
+    "text": "At the start of the scenario, bring up to two additional [Small Item] items.",
+    "resources": {
+      "Item 132": 1,
+      "Hide": 3
+    }
+  },
+  {
+    "id": 61,
+    "name": "spiked shell",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-061-spiked-shell.jpeg",
+    "cost": 0,
+    "slot": "body",
+    "spent": true,
+    "text": "Immediately after you are attacked by an adjacent enemy, that enemy suffers [Damage] X, where X is your Shield value for the attack.",
+    "resources": {
+      "Item 032": 1,
+      "Item 105": 1,
+      "Metal": 1
+    }
+  },
+  {
+    "id": 62,
+    "name": "everlasting boots",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-062-everlasting-boots.jpeg",
+    "cost": 0,
+    "slot": "legs",
+    "spent": true,
+    "text": "During your move ability, add +1 Move and gain [Condition: Regenerate].",
+    "resources": {
+      "Item 028": 1,
+      "Item 099": 1
+    }
+  },
+  {
+    "id": 63,
+    "name": "shadow stompers",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-063-shadow-stompers.jpeg",
+    "cost": 0,
+    "slot": "legs",
+    "spent": true,
+    "text": "During your move ability, [Consume Element: Dark] to add +2 Move.",
+    "resources": {
+      "Item 013": 1,
+      "Item 158": 1
+    }
+  },
+  {
+    "id": 64,
+    "name": "detonator",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-064-detonator.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "consumed": true,
+    "text": "When one of your summons is killed, all enemies adjacent to it suffer [Damage] 2 and gain [Condition: Wound].",
+    "resources": {
+      "Item 096": 1,
+      "Item 112": 1,
+      "Metal": 1
+    }
+  },
+  {
+    "id": 65,
+    "name": "rust powder",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-065-rust-powder.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, place a character token on one normal or elite enemy within Range 3. That enemy gains -1 Shield for the scenario.",
+    "resources": {
+      "Item 157": 1,
+      "Corpsecap": 1
+    }
+  },
+  {
+    "id": 66,
+    "name": "amulet of eternal life",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-066-amulet-of-eternal-life.jpeg",
+    "cost": 0,
+    "slot": "head",
+    "text": "At the start of your rests, perform: Heal 1 self",
+    "resources": {
+      "Item 109": 1,
+      "Item 120": 1
+    }
+  },
+  {
+    "id": 67,
+    "name": "converging lenses",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-067-converging-lenses.jpeg",
+    "imageBack": "items/frosthaven/fh-067-converging-lenses-back.jpeg",
+    "cost": 0,
+    "slot": "head",
+    "text": "When you are attacked, add +1 Attack to the attack instead of drawing an attack modifier card and flip this card over.",
+    "resources": {
+      "Item 001": 1,
+      "Item 093": 1,
+      "Metal": 1
+    }
+  },
+  {
+    "id": 68,
+    "name": "scaled armor",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-068-scaled-armor.jpeg",
+    "cost": 0,
+    "slot": "body",
+    "consumed": true,
+    "text": "[Uses: 3] On the next three sources of 2 or fewer [Damage] you would suffer, negate the [Damage].",
+    "resources": {
+      "Item 089": 1,
+      "Item 123": 1
+    }
+  },
+  {
+    "id": 69,
+    "name": "feathered cloak",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-069-feathered-cloak.jpeg",
+    "cost": 0,
+    "slot": "body",
+    "spent": true,
+    "text": "When you suffer [Damage] from an attack, [Consume Element: Air] to gain Shield 3 for the attack.",
+    "resources": {
+      "Item 003": 1,
+      "Item 233": 1
+    }
+  },
+  {
+    "id": 70,
+    "name": "aesther robe",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-070-aesther-robe.jpeg",
+    "cost": 0,
+    "slot": "body",
+    "text": "Whenever you suffer [Damage] from [Retaliate], reduce the [Damage] to 1. If the [Damage] is already 1, reduce it to 0 instead.",
+    "resources": {
+      "Item 027": 1,
+      "Item 113": 1
+    }
+  },
+  {
+    "id": 71,
+    "name": "bone boots",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-071-bone-boots.jpeg",
+    "cost": 0,
+    "slot": "legs",
+    "consumed": true,
+    "text": "After your ability where you kill an enemy, perform: Move 4",
+    "resources": {
+      "Item 018": 1,
+      "Corpsecap": 1
+    }
+  },
+  {
+    "id": 72,
+    "name": "oak staff",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-072-oak-staff.jpeg",
+    "cost": 0,
+    "slot": "2h",
+    "spent": true,
+    "text": "During your turn, [Consume Element: Light] to perform: [Condition: Bless] Range 3",
+    "resources": {
+      "Item 091": 1,
+      "Wood": 1
+    }
+  },
+  {
+    "id": 73,
+    "name": "energizing baton",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-073-energizing-baton.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "spent": true,
+    "text": "When you apply a positive condition to an ally, a different ally within Range 3 gains the same condition.",
+    "resources": {
+      "Item 101": 1,
+      "Metal": 2
+    }
+  },
+  {
+    "id": 74,
+    "name": "shock grenades",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-074-shock-grenades.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "spent": true,
+    "text": "During your turn, perform: [Condition: Stun] Range 2 [Area]",
+    "resources": {
+      "Item 019": 1,
+      "Item 097": 1
+    }
+  },
+  {
+    "id": 75,
+    "name": "rose gauntlet",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-075-rose-gauntlet.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "consumed": true,
+    "text": "After any ally within Range 2 suffers [Damage] from an attack, remove all negative conditions from the ally and then perform: Heal 3 [Target] the ally, [Pull] 1",
+    "resources": {
+      "Item 030": 1,
+      "Flamefruit": 1,
+      "Arrowvine": 1
+    }
+  },
+  {
+    "id": 76,
+    "name": "horn of command",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-076-horn-of-command.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "spent": true,
+    "text": "During one of your summons' turns, decide how it performs its abilities.",
+    "resources": {
+      "Metal": 1,
+      "Hide": 1,
+      "Snowthistle": 1
+    }
+  },
+  {
+    "id": 77,
+    "name": "chaos cannon",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-077-chaos-cannon.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "consumed": true,
+    "text": "During your turn, replace one 1-hex obstacle, hazardous terrain, difficult terrain, or icy terrain tile in an unoccupied hex within Range 2 with a different type of tile listed above.",
+    "resources": {
+      "Item 086": 1,
+      "Metal": 2
+    }
+  },
+  {
+    "id": 78,
+    "name": "balanced scales",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-078-balanced-scales.jpeg",
+    "imageBack": "items/frosthaven/fh-078-balanced-scales-back.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "text": "Once each turn, during your attack ability, gain advantage on one attack, then flip this card over at the end of your turn.",
+    "resources": {
+      "Item 110": 1,
+      "Metal": 1,
+      "Hide": 1
+    }
+  },
+  {
+    "id": 79,
+    "name": "roasted fowl",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-079-roasted-fowl.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, add +1 Attack to all your attacks and perform: Heal 2 self",
+    "resources": {
+      "Hide": 2,
+      "Flamefruit": 1,
+      "Arrowvine": 1
+    }
+  },
+  {
+    "id": 80,
+    "name": "living stone",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-080-living-stone.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "When you would suffer 4 or fewer [Damage] from an attack, negate the [Damage] and perform: Heal X self where X is the amount of damage you would have suffered.",
+    "resources": {
+      "Item 099": 1,
+      "Item 156": 1,
+      "Snowthistle": 1
+    }
+  },
+  {
+    "id": 81,
+    "name": "pain simulacrum",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-081-pain-simulacrum.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "When you suffer 5 or fewer [Damage] from an attack, one enemy within Range 2 also suffers the same amount of [Damage].",
+    "resources": {
+      "Item 097": 1,
+      "Hide": 2
+    }
+  },
+  {
+    "id": 82,
+    "name": "mechanical cube",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-082-mechanical-cube.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your move ability, after you enter any one hex, give [Condition: Immobilize] to all adjacent enemies.",
+    "resources": {
+      "Item 112": 1,
+      "Metal": 2
+    }
+  },
+  {
+    "id": 83,
+    "name": "healing potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-083-healing-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, perform: Heal 3 self",
+    "resources": {
+      "Arrowvine": 1,
+      "Corpsecap": 1
+    }
+  },
+  {
+    "id": 84,
+    "name": "stamina potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-084-stamina-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, [Recover] one level 1 card from your discard pile.",
+    "resources": {
+      "Arrowvine": 1,
+      "Flamefruit": 1
+    }
+  },
+  {
+    "id": 85,
+    "name": "power potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-085-power-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, add +1 Attack to all your attacks.",
+    "resources": {
+      "Arrowvine": 1,
+      "Axenut": 1
+    }
+  },
+  {
+    "id": 86,
+    "name": "element potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-086-element-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, [Element: Any].",
+    "resources": {
+      "Arrowvine": 1,
+      "Flamefruit": 1
+    }
+  },
+  {
+    "id": 87,
+    "name": "cure potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-087-cure-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, remove one negative condition you have. This item can be used while you have [Condition: Disarm] or [Condition: Stun].",
+    "resources": {
+      "Arrowvine": 1,
+      "Corpsecap": 1
+    }
+  },
+  {
+    "id": 88,
+    "name": "fireshield potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-088-fireshield-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, perform: [Retaliate] 1, Range 3",
+    "resources": {
+      "Flamefruit": 2
+    }
+  },
+  {
+    "id": 89,
+    "name": "stoneskin potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-089-stoneskin-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, perform: [Condition: Ward] self",
+    "resources": {
+      "Rockroot": 2
+    }
+  },
+  {
+    "id": 90,
+    "name": "muscle potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-090-muscle-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, perform: [Condition: Strengthen] self",
+    "resources": {
+      "Axenut": 1,
+      "Flamefruit": 1
+    }
+  },
+  {
+    "id": 91,
+    "name": "holy water",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-091-holy-water.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, perform: [Condition: Bless] self",
+    "resources": {
+      "Rockroot": 1,
+      "Flamefruit": 1
+    }
+  },
+  {
+    "id": 92,
+    "name": "renewing potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-092-renewing-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, [Recover] up to two of your spent items.",
+    "resources": {
+      "Flamefruit": 1,
+      "Arrowvine": 1
+    }
+  },
+  {
+    "id": 93,
+    "name": "glancing potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-093-glancing-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "When you reveal a [Null] attack modifier card from your attack modifier deck, treat it as a +0 instead.",
+    "resources": {
+      "Flamefruit": 1,
+      "Axenut": 1
+    }
+  },
+  {
+    "id": 94,
+    "name": "frenzy potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-094-frenzy-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, perform: Attack 2",
+    "resources": {
+      "Rockroot": 1,
+      "Axenut": 1
+    }
+  },
+  {
+    "id": 95,
+    "name": "poison vial",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-095-poison-vial.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, perform: [Condition: Poison] Range 1",
+    "resources": {
+      "Arrowvine": 1,
+      "Rockroot": 1
+    }
+  },
+  {
+    "id": 96,
+    "name": "flame vial",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-096-flame-vial.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, perform: [Condition: Wound] Range 1",
+    "resources": {
+      "Arrowvine": 1,
+      "Flamefruit": 1
+    }
+  },
+  {
+    "id": 97,
+    "name": "explosive vial",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-097-explosive-vial.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, one enemy within Range 2 suffers [Damage] 2.",
+    "resources": {
+      "Arrowvine": 1,
+      "Axenut": 1
+    }
+  },
+  {
+    "id": 98,
+    "name": "unhealthy mixture",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-098-unhealthy-mixture.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, perform: [Condition: Wound], [Condition: Poison] self",
+    "resources": {
+      "Flamefruit": 1,
+      "Rockroot": 1
+    }
+  },
+  {
+    "id": 99,
+    "name": "major healing potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-099-major-healing-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, perform: Heal 6 self",
+    "resources": {
+      "Arrowvine": 1,
+      "Corpsecap": 1,
+      "Flamefruit": 1
+    }
+  },
+  {
+    "id": 100,
+    "name": "major stamina potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-100-major-stamina-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, [Recover] one card from your discard pile.",
+    "resources": {
+      "Arrowvine": 1,
+      "Flamefruit": 1,
+      "Axenut": 1
+    }
+  },
+  {
+    "id": 101,
+    "name": "major power potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-101-major-power-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, add +2 Attack to all your attacks.",
+    "resources": {
+      "Arrowvine": 1,
+      "Axenut": 1,
+      "Corpsecap": 1
+    }
+  },
+  {
+    "id": 102,
+    "name": "major element potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-102-major-element-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, [Element: Any] [Element: Any].",
+    "resources": {
+      "Arrowvine": 1,
+      "Axenut": 1,
+      "Flamefruit": 1
+    }
+  },
+  {
+    "id": 103,
+    "name": "major cure potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-103-major-cure-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, remove all negative conditions you have. This item can be used while you have [Condition: Disarm] or [Condition: Stun].",
+    "resources": {
+      "Arrowvine": 1,
+      "Corpsecap": 1,
+      "Flamefruit": 1
+    }
+  },
+  {
+    "id": 104,
+    "name": "swiftness potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-104-swiftness-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, add +3 Move and [Jump].",
+    "resources": {
+      "Arrowvine": 1,
+      "Axenut": 1,
+      "Flamefruit": 1
+    }
+  },
+  {
+    "id": 105,
+    "name": "major fireshield potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-105-major-fireshield-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, perform: [Retaliate] 2, Range 3",
+    "resources": {
+      "Arrowvine": 1,
+      "Corpsecap": 1,
+      "Flamefruit": 1
+    }
+  },
+  {
+    "id": 106,
+    "name": "stonewall potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-106-stonewall-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, perform: [Condition: Ward] Target 2 adjacent allies and self",
+    "resources": {
+      "Arrowvine": 1,
+      "Corpsecap": 1,
+      "Axenut": 1
+    }
+  },
+  {
+    "id": 107,
+    "name": "vigor potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-107-vigor-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, perform: [Condition: Strengthen] Target 2 adjacent allies and self",
+    "resources": {
+      "Arrowvine": 1,
+      "Corpsecap": 1,
+      "Flamefruit": 1
+    }
+  },
+  {
+    "id": 108,
+    "name": "holy rain",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-108-holy-rain.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, perform: [Condition: Bless] Target 2 adjacent allies and self",
+    "resources": {
+      "Arrowvine": 1,
+      "Snowthistle": 1,
+      "Corpsecap": 1
+    }
+  },
+  {
+    "id": 109,
+    "name": "major renewing potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-109-major-renewing-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, [Recover] up to one of your lost 2-herb potions.",
+    "resources": {
+      "Arrowvine": 1,
+      "Snowthistle": 1,
+      "Flamefruit": 1
+    }
+  },
+  {
+    "id": 110,
+    "name": "precision potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-110-precision-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "When you reveal a [Null] attack modifier card from your attack modifier deck, treat it as a +2 instead.",
+    "resources": {
+      "Arrowvine": 1,
+      "Snowthistle": 1,
+      "Corpsecap": 1
+    }
+  },
+  {
+    "id": 111,
+    "name": "major frenzy potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-111-major-frenzy-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, perform: Attack 4",
+    "resources": {
+      "Arrowvine": 1,
+      "Axenut": 1,
+      "Corpsecap": 1
+    }
+  },
+  {
+    "id": 112,
+    "name": "hammer potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-112-hammer-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, suffer [Damage] 10.",
+    "resources": {
+      "Arrowvine": 1,
+      "Snowthistle": 1,
+      "Axenut": 1
+    }
+  },
+  {
+    "id": 113,
+    "name": "expertise potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-113-expertise-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "At the start of your turn, discard one of your played cards to perform both the top and bottom actions of your other played card. At most one action can trigger a [Lost] icon.",
+    "resources": {
+      "Arrowvine": 1,
+      "Corpsecap": 1,
+      "Flamefruit": 1
+    }
+  },
+  {
+    "id": 114,
+    "name": "foresight potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-114-foresight-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, reveal the top card of one monster ability deck. You may place the card on the bottom of the deck.",
+    "resources": {
+      "Snowthistle": 1,
+      "Corpsecap": 1,
+      "Flamefruit": 1
+    }
+  },
+  {
+    "id": 115,
+    "name": "infusion potion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-115-infusion-potion.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, ignore one elemental consumption symbol on an action you played and gain its effect.",
+    "resources": {
+      "Axenut": 1,
+      "Corpsecap": 1,
+      "Flamefruit": 1
+    }
+  },
+  {
+    "id": 116,
+    "name": "plague flask",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-116-plague-flask.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, perform: [Condition: Poison] Range 1, [Area]",
+    "resources": {
+      "Snowthistle": 1,
+      "Corpsecap": 1,
+      "Flamefruit": 1
+    }
+  },
+  {
+    "id": 117,
+    "name": "inferno flask",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-117-inferno-flask.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, perform: [Condition: Wound] Range 1, [Area]",
+    "resources": {
+      "Snowthistle": 1,
+      "Corpsecap": 1,
+      "Flamefruit": 1
+    }
+  },
+  {
+    "id": 118,
+    "name": "fulminant flask",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-118-fulminant-flask.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, one enemy within Range 2 suffers [Damage] 4.",
+    "resources": {
+      "Arrowvine": 1,
+      "Snowthistle": 1,
+      "Flamefruit": 1
+    }
+  },
+  {
+    "id": 119,
+    "name": "deadly mixture",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-119-deadly-mixture.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, perform: [Condition: Wound], [Condition: Poison], [Condition: Immobilize], [Condition: Disarm], self",
+    "resources": {
+      "Any herb": 3
+    }
+  },
+  {
+    "id": 120,
+    "name": "amulet of life",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-120-amulet-of-life.jpeg",
+    "cost": 15,
+    "slot": "head",
+    "spent": true,
+    "text": "During your turn, perform: Heal 1, self"
+  },
+  {
+    "id": 121,
+    "name": "circlet of elements",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-121-circlet-of-elements.jpeg",
+    "cost": 25,
+    "slot": "head",
+    "spent": true,
+    "text": "During your turn, perform: [Consume Element: Any] : [Element: Any]"
+  },
+  {
+    "id": 122,
+    "name": "wardens robes",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-122-wardens-robes.jpeg",
+    "cost": 30,
+    "slot": "body",
+    "spent": true,
+    "text": "When one of your summons suffers [Damage] from an attack, that summon gains Shield 2 for the attack."
+  },
+  {
+    "id": 123,
+    "name": "leather armor",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-123-leather-armor.jpeg",
+    "cost": 15,
+    "slot": "body",
+    "spent": true,
+    "text": "When you are attacked, before drawing an attack modifier card, the attacker gains disadvantage on the attack."
+  },
+  {
+    "id": 124,
+    "name": "winged shoes",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-124-winged-shoes.jpeg",
+    "cost": 15,
+    "slot": "legs",
+    "spent": true,
+    "text": "During your turn, add [Jump] to all your move abilities."
+  },
+  {
+    "id": 125,
+    "name": "boots of speed",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-125-boots-of-speed.jpeg",
+    "cost": 30,
+    "slot": "legs",
+    "spent": true,
+    "text": "During ordering of initiative, after all ability cards have been revealed, increase or decrease your initiative by 10."
+  },
+  {
+    "id": 126,
+    "name": "weighted net",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-126-weighted-net.jpeg",
+    "cost": 20,
+    "slot": "2h",
+    "spent": true,
+    "text": "During your ranged attack ability, add [Condition: Immobilize] to one attack."
+  },
+  {
+    "id": 127,
+    "name": "poison dagger",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-127-poison-dagger.jpeg",
+    "cost": 15,
+    "slot": "1h",
+    "spent": true,
+    "text": "During your melee attack ability, add [Condition: Poison] to one attack."
+  },
+  {
+    "id": 128,
+    "name": "heater shield",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-128-heater-shield.jpeg",
+    "cost": 15,
+    "slot": "1h",
+    "spent": true,
+    "text": "When you suffer [Damage] from an attack, gain Shield 1 for the attack."
+  },
+  {
+    "id": 129,
+    "name": "eagle-eye goggles",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-129-eagle-eye-goggles.jpeg",
+    "cost": 30,
+    "slot": "head",
+    "spent": true,
+    "text": "During your attack ability, gain advantage on all attacks."
+  },
+  {
+    "id": 130,
+    "name": "iron helmet",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-130-iron-helmet.jpeg",
+    "cost": 20,
+    "slot": "head",
+    "text": "When you are attacked, treat any 2x attack modifier card the enemy draws as a +0 instead."
+  },
+  {
+    "id": 131,
+    "name": "chainmail",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-131-chainmail.jpeg",
+    "cost": 25,
+    "slot": "body",
+    "spent": true,
+    "text": "On the next three sources of [Damage] from attacks targeting you, gain Shield 1 for the attacks."
+  },
+  {
+    "id": 132,
+    "name": "cloak of pockets",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-132-cloak-of-pockets.jpeg",
+    "cost": 30,
+    "slot": "body",
+    "text": "At the start of the scenario, bring one additional [Small Item] item."
+  },
+  {
+    "id": 133,
+    "name": "nimble legguards",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-133-nimble-legguards.jpeg",
+    "cost": 20,
+    "slot": "legs",
+    "spent": true,
+    "text": "When an adjacent ally would be targeted by an attack, you are targeted instead, regardless of range and line-of-sight."
+  },
+  {
+    "id": 134,
+    "name": "comfortable shoes",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-134-comfortable-shoes.jpeg",
+    "cost": 30,
+    "slot": "legs",
+    "text": "When you use the basic bottom action of an ability card, perform Move 3 instead of Move 2."
+  },
+  {
+    "id": 135,
+    "name": "armorbane bow",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-135-armorbane-bow.jpeg",
+    "cost": 30,
+    "slot": "2h",
+    "consumed": true,
+    "text": "During your turn, add [Pierce] 3 to all your ranged attacks."
+  },
+  {
+    "id": 136,
+    "name": "battle axe",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-136-battle-axe.jpeg",
+    "cost": 20,
+    "slot": "2h",
+    "consumed": true,
+    "text": "During your single-target melee attack ability, change the targeting of the ability to: [Area]"
+  },
+  {
+    "id": 137,
+    "name": "tower shield",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-137-tower-shield.jpeg",
+    "cost": 35,
+    "slot": "1h",
+    "spent": true,
+    "text": "When you suffer [Damage] from an attack, gain Shield 2 for the attack."
+  },
+  {
+    "id": 138,
+    "name": "heavy basinet",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-138-heavy-basinet.jpeg",
+    "cost": 30,
+    "slot": "head",
+    "text": "Whenever an enemy would give you [Condition: Disarm], [Condition: Stun], or [Condition: Muddle], prevent the condition."
+  },
+  {
+    "id": 139,
+    "name": "horned helm",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-139-horned-helm.jpeg",
+    "cost": 35,
+    "slot": "head",
+    "text": "After you move 4 or more hexes on your turn, add +1 Attack to your next melee attack this turn."
+  },
+  {
+    "id": 140,
+    "name": "mantle of summoning",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-140-mantle-of-summoning.jpeg",
+    "cost": 40,
+    "slot": "body",
+    "text": "During your turn, grant one of your summons: Shield 2."
+  },
+  {
+    "id": 141,
+    "name": "studded leather",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-141-studded-leather.jpeg",
+    "cost": 20,
+    "slot": "body",
+    "spent": true,
+    "text": "When you are attacked, before drawing an attack modifier card, the attacker gains disadvantage on the attack and you gain Shield 1 for the attack."
+  },
+  {
+    "id": 142,
+    "name": "boots of quickness",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-142-boots-of-quickness.jpeg",
+    "cost": 50,
+    "slot": "legs",
+    "spent": true,
+    "text": "During ordering of initiative, after all ability cards have been revealed, increase or decrease your initiative by 20."
+  },
+  {
+    "id": 143,
+    "name": "endurance footwraps",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-143-endurance-footwraps.jpeg",
+    "cost": 40,
+    "slot": "legs",
+    "text": "After you move 4 or more hexes on your turn, after the move ability, perform: Heal 1, self"
+  },
+  {
+    "id": 144,
+    "name": "staff of eminence",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-144-staff-of-eminence.jpeg",
+    "cost": 50,
+    "slot": "2h",
+    "spent": true,
+    "text": "During your turn, [Consume Element: Any] to add +1 Attack to all your attacks."
+  },
+  {
+    "id": 145,
+    "name": "versatile dagger",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-145-versatile-dagger.jpeg",
+    "cost": 25,
+    "slot": "1h",
+    "text": "When you use the basic top action of an ability card, perform Attack 3 instead of Attack 2."
+  },
+  {
+    "id": 146,
+    "name": "hooked chain",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-146-hooked-chain.jpeg",
+    "cost": 35,
+    "slot": "2h",
+    "spent": true,
+    "text": "During your turn, add [Pull] 2 to all your ranged attacks."
+  },
+  {
+    "id": 147,
+    "name": "mask of terror",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-147-mask-of-terror.jpeg",
+    "cost": 60,
+    "slot": "head",
+    "text": "During your melee attack, add [Push] 1."
+  },
+  {
+    "id": 148,
+    "name": "circlet of sanctity",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-148-circlet-of-sanctity.jpeg",
+    "imageBack": "items/frosthaven/fh-148-circlet-of-sanctity-back.jpeg",
+    "cost": 45,
+    "slot": "head",
+    "text": "After the next three attacks targeting an ally within Range 2, flip this card over.\n\n[Back] During your turn, perform: [Condition: Ward] Range 3, then flip this card over."
+  },
+  {
+    "id": 149,
+    "name": "platemail",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-149-platemail.jpeg",
+    "cost": 50,
+    "slot": "body",
+    "spent": true,
+    "text": "On the next five sources of [Damage] from attacks targeting you, gain Shield 1 for the attacks."
+  },
+  {
+    "id": 150,
+    "name": "robes of the oak",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-150-robes-of-the-oak.jpeg",
+    "cost": 30,
+    "slot": "body",
+    "spent": true,
+    "text": "During your turn, perform: Heal 3, Target 1 ally, Range 1"
+  },
+  {
+    "id": 151,
+    "name": "serene sandals",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-151-serene-sandals.jpeg",
+    "cost": 75,
+    "slot": "legs",
+    "text": "When you use the basic bottom action of an ability card, perform Move 4 instead of Move 2."
+  },
+  {
+    "id": 152,
+    "name": "steel sabatons",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-152-steel-sabatons.jpeg",
+    "cost": 55,
+    "slot": "legs",
+    "text": "At the end of your turn, if you have moved 1 or fewer hexes during your turn, gain Shield 1 for the round."
+  },
+  {
+    "id": 153,
+    "name": "long spear",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-153-long-spear.jpeg",
+    "cost": 40,
+    "slot": "2h",
+    "spent": true,
+    "text": "During your single-target melee attack ability, change the targeting of the ability to: [Area]"
+  },
+  {
+    "id": 154,
+    "name": "volatile bomb",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-154-volatile-bomb.jpeg",
+    "cost": 50,
+    "slot": "2h",
+    "consumed": true,
+    "text": "During your single-target ranged attack ability, change the targeting of the ability to: [Area]"
+  },
+  {
+    "id": 155,
+    "name": "wall shield",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-155-wall-shield.jpeg",
+    "cost": 50,
+    "slot": "2h",
+    "spent": true,
+    "text": "When you suffer [Damage] from an attack, gain Shield 4 for the attack."
+  },
+  {
+    "id": 156,
+    "name": "moon earring",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-156-moon-earring.jpeg",
+    "cost": 20,
+    "slot": "small",
+    "consumed": true,
+    "text": "When you short rest, [Refresh] up to three of your spent items."
+  },
+  {
+    "id": 157,
+    "name": "steel ring",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-157-steel-ring.jpeg",
+    "cost": 20,
+    "slot": "small",
+    "consumed": true,
+    "text": "When you suffer [Damage] from an attack, gain Shield 4 for the attack."
+  },
+  {
+    "id": 158,
+    "name": "deep earth brooch",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-158-deep-earth-brooch.jpeg",
+    "cost": 30,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, perform: [Consume Element: Earth/Dark] : Heal 3 self, [Condition: Ward]"
+  },
+  {
+    "id": 159,
+    "name": "glorious bracelet",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-159-glorious-bracelet.jpeg",
+    "cost": 30,
+    "slot": "small",
+    "consumed": true,
+    "text": "After your attack ability during which one enemy suffered at least [Damage] 6, perform: [Condition: Bless], [Condition: Bless] self"
+  },
+  {
+    "id": 160,
+    "name": "sun earring",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-160-sun-earring.jpeg",
+    "cost": 35,
+    "slot": "small",
+    "consumed": true,
+    "text": "When you short rest, [Refresh] up to three of your spent items and perform: Heal 2 self"
+  },
+  {
+    "id": 161,
+    "name": "strategists ring",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-161-strategists-ring.jpeg",
+    "cost": 30,
+    "slot": "small",
+    "consumed": true,
+    "text": "At the end of your turn, play one card from your hand and perform all persistent and mandatory abilities on either the top or bottom action of the card."
+  },
+  {
+    "id": 162,
+    "name": "howling ice brooch",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-162-howling-ice-brooch.jpeg",
+    "cost": 40,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, perform: [Consume Element: Ice/Air] : Attack 3 Range 3, [Condition: Immobilize]"
+  },
+  {
+    "id": 163,
+    "name": "stunning bracelet",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-163-stunning-bracelet.jpeg",
+    "cost": 35,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, give [Condition: Stun] to half (rounded up) the enemies adjacent to you."
+  },
+  {
+    "id": 164,
+    "name": "star earring",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-164-star-earring.jpeg",
+    "cost": 50,
+    "slot": "small",
+    "consumed": true,
+    "text": "When you short rest, [Refresh] up to three of your spent items, choose which card to lose during the rest, and perform: Heal 2 self"
+  },
+  {
+    "id": 165,
+    "name": "ring of haste",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-165-ring-of-haste.jpeg",
+    "cost": 40,
+    "slot": "small",
+    "consumed": true,
+    "text": "At the end of your turn, play one card from your hand and perform the bottom action of the card."
+  },
+  {
+    "id": 166,
+    "name": "blazing sun brooch",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-166-blazing-sun-brooch.jpeg",
+    "cost": 50,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, perform: [Consume Element: Fire/Light] : Attack 3 [Condition: Disarm]"
+  },
+  {
+    "id": 167,
+    "name": "attractive bracelet",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-167-attractive-bracelet.jpeg",
+    "cost": 40,
+    "slot": "small",
+    "consumed": true,
+    "text": "At the start of an enemy's turn, before it determines its focus, perform: [Pull] 4 Target the enemy, Range 5, [Condition: Muddle]"
+  },
+  {
+    "id": 168,
+    "name": "circlet of eyes",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-168-circlet-of-eyes.jpeg",
+    "cost": 50,
+    "slot": "head",
+    "consumed": true,
+    "text": "During your ranged attack ability, add +1 Target."
+  },
+  {
+    "id": 169,
+    "name": "fateful charm",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-169-fateful-charm.jpeg",
+    "cost": 30,
+    "slot": "head",
+    "consumed": true,
+    "text": "During your turn, reveal the top card of your attack modifier deck. You may place the card on the bottom of the deck."
+  },
+  {
+    "id": 170,
+    "name": "eye of truth",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-170-eye-of-truth.jpeg",
+    "cost": 25,
+    "slot": "head",
+    "consumed": true,
+    "text": "During your turn, reveal the top card of each monster ability deck."
+  },
+  {
+    "id": 171,
+    "name": "rejuvenating charm",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-171-rejuvenating-charm.jpeg",
+    "cost": 20,
+    "slot": "head",
+    "text": "Whenever you lose a card to negate [Damage], [Recover] up to one card from your discard pile and gain [Condition: Regenerate]."
+  },
+  {
+    "id": 172,
+    "name": "cap of premonition",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-172-cap-of-premonition.jpeg",
+    "cost": 25,
+    "slot": "head",
+    "consumed": true,
+    "text": "During your turn, look at the top four cards of your attack modifier deck and put them back in any order."
+  },
+  {
+    "id": 173,
+    "name": "multi-colored cloak",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-173-multi-colored-cloak.jpeg",
+    "cost": 20,
+    "slot": "body",
+    "text": "When attacked, [Element: Any]."
+  },
+  {
+    "id": 174,
+    "name": "magnetic cape",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-174-magnetic-cape.jpeg",
+    "cost": 40,
+    "slot": "body",
+    "consumed": true,
+    "text": "During your turn, perform: [Teleport] 20. This teleport must end in a hex adjacent to one of your allies."
+  },
+  {
+    "id": 175,
+    "name": "mirrored armor",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-175-mirrored-armor.jpeg",
+    "cost": 35,
+    "slot": "body",
+    "consumed": true,
+    "text": "When you suffer [Damage] from an attack, the attacker suffers an equal amount of [Damage]."
+  },
+  {
+    "id": 176,
+    "name": "blinking cape",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-176-blinking-cape.jpeg",
+    "cost": 50,
+    "slot": "body",
+    "consumed": true,
+    "text": "During your turn, perform: [Teleport] 4. This teleport must end in a hex adjacent to an enemy."
+  },
+  {
+    "id": 177,
+    "name": "boots of transference",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-177-boots-of-transference.jpeg",
+    "cost": 40,
+    "slot": "legs",
+    "consumed": true,
+    "text": "When you spring a trap by entering its hex, you may apply its effects to a figure within Range 3 instead of yourself."
+  },
+  {
+    "id": 178,
+    "name": "tranquil shoes",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-178-tranquil-shoes.jpeg",
+    "cost": 40,
+    "slot": "legs",
+    "text": "At the start of your turn in which your initiative is 60 or higher and you are not performing a long rest, perform: Heal 1 self"
+  },
+  {
+    "id": 179,
+    "name": "burst boots",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-179-burst-boots.jpeg",
+    "cost": 25,
+    "slot": "legs",
+    "consumed": true,
+    "text": "During your move ability, add +4 Move. After the move ability, gain [Condition: Immobilize]."
+  },
+  {
+    "id": 180,
+    "name": "boots of greed",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-180-boots-of-greed.jpeg",
+    "cost": 35,
+    "slot": "legs",
+    "text": "Whenever you loot two or more loot tokens at once, perform: [Condition: Bless] self"
+  },
+  {
+    "id": 181,
+    "name": "translocation rod",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-181-translocation-rod.jpeg",
+    "cost": 30,
+    "slot": "2h",
+    "consumed": true,
+    "text": "During your turn, designate any two allies or any two normal or elite monsters. Each designated figure simultaneously [Teleport] to the hex occupied by the other designated figure."
+  },
+  {
+    "id": 182,
+    "name": "wing clippers",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-182-wing-clippers.jpeg",
+    "cost": 40,
+    "slot": "2h",
+    "text": "After your melee attack, place a character token on the target. The target loses [Flying]."
+  },
+  {
+    "id": 183,
+    "name": "decanter of mists",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-183-decanter-of-mists.jpeg",
+    "cost": 35,
+    "slot": "1h",
+    "consumed": true,
+    "text": "During your turn, all figures gain disadvantage on and add -1 Range to all ranged attacks this round."
+  },
+  {
+    "id": 184,
+    "name": "flashing axe",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-184-flashing-axe.jpeg",
+    "cost": 20,
+    "slot": "1h",
+    "consumed": true,
+    "text": "During your multi-target melee attack ability, add +1 Target."
+  },
+  {
+    "id": 185,
+    "name": "mirrored knife",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-185-mirrored-knife.jpeg",
+    "cost": 20,
+    "slot": "1h",
+    "text": "During your melee attack ability, add all negative conditions you have except [Condition: Brittle], [Condition: Bane], and [Condition: Stun] to one attack."
+  },
+  {
+    "id": 186,
+    "name": "wild growth seeds",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-186-wild-growth-seeds.jpeg",
+    "cost": 20,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, create one 1-hex obstacle in an adjacent empty hex."
+  },
+  {
+    "id": 187,
+    "name": "dangerous gear",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-187-dangerous-gear.jpeg",
+    "cost": 25,
+    "slot": "small",
+    "consumed": true,
+    "text": "During you turn, create one [Damage] 3 trap in an adjacent empty hex."
+  },
+  {
+    "id": 188,
+    "name": "freezing crystal",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-188-freezing-crystal.jpeg",
+    "cost": 35,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, create one 1-hex hazardous terrain, icy terrain, or water tile in an adjacent featureless hex."
+  },
+  {
+    "id": 189,
+    "name": "ring of the night",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-189-ring-of-the-night.jpeg",
+    "cost": 50,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, perform: [Consume Element: Dark] or [Consume Element: Any] : [Condition: Invisible] self"
+  },
+  {
+    "id": 190,
+    "name": "white card",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-190-white-card.jpeg",
+    "cost": 20,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, place a character token on one normal or elite enemy within Range 3. This enemy adds -1 Attack to all its attacks."
+  },
+  {
+    "id": 191,
+    "name": "corrupted scroll",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-191-corrupted-scroll.jpeg",
+    "cost": 25,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, perform: Heal 5 Range 5, [Condition: Poison] target of the heal ability"
+  },
+  {
+    "id": 192,
+    "name": "enticing bell",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-192-enticing-bell.jpeg",
+    "cost": 25,
+    "slot": "small",
+    "consumed": true,
+    "text": "At the end of your turn, designate one enemy within Range 3. You are its primary focus and it does not avoid negative hexes when determining movement this round."
+  },
+  {
+    "id": 193,
+    "name": "mind-thieving helmet",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-193-mind-thieving-helmet.jpeg",
+    "cost": 30,
+    "slot": "head",
+    "consumed": true,
+    "text": "During your turn, control one enemy within Range 3: Attack 3."
+  },
+  {
+    "id": 194,
+    "name": "temporal amulet",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-194-temporal-amulet.jpeg",
+    "cost": 30,
+    "slot": "head",
+    "consumed": true,
+    "text": "During ordering of initiative, after all ability cards have been revealed, increase or decrease a monster set's initiative by 30."
+  },
+  {
+    "id": 195,
+    "name": "tri-corner hat",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-195-tri-corner-hat.jpeg",
+    "cost": 30,
+    "slot": "head",
+    "spent": true,
+    "text": "During your turn, add +1 Range and [Pierce] 1 to one of your ranged attacks."
+  },
+  {
+    "id": 196,
+    "name": "choker of sacrifice",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-196-choker-of-sacrifice.jpeg",
+    "cost": 30,
+    "slot": "head",
+    "consumed": true,
+    "text": "During your turn, discard one loot card except Random Item to perform: Heal 5 Range 2, [Condition: Ward]"
+  },
+  {
+    "id": 197,
+    "name": "aesther diadem",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-197-aesther-diadem.jpeg",
+    "cost": 30,
+    "slot": "head",
+    "consumed": true,
+    "text": "After ordering of initiative, exchange a card in your hand for one which you played. Your initiative is unaffected."
+  },
+  {
+    "id": 198,
+    "name": "hunters necklace",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-198-hunters-necklace.jpeg",
+    "cost": 35,
+    "slot": "head",
+    "consumed": true,
+    "text": "During your turn, perform: [Pull] 3 Range 4"
+  },
+  {
+    "id": 199,
+    "name": "opulent shoes",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-199-opulent-shoes.jpeg",
+    "cost": 30,
+    "slot": "legs",
+    "text": "At the start of the scenario, consider yourself to be before your summons in initiative order when determining monster focusing for the remainder of the scenario."
+  },
+  {
+    "id": 200,
+    "name": "eventide scepter",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-200-eventide-scepter.jpeg",
+    "imageBack": "items/frosthaven/fh-200-eventide-scepter-back.jpeg",
+    "cost": 50,
+    "slot": "1h",
+    "text": "During your heal ability targeting an ally, [Consume Element: Light] to add [Condition: Ward] to one heal and flip this card over. / During your attack ability, [Consume Element: Dark] to add [Condition: Curse] to one attack and flip this card over."
+  },
+  {
+    "id": 201,
+    "name": "wave blade",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-201-wave-blade.jpeg",
+    "cost": 50,
+    "slot": "2h",
+    "spent": true,
+    "text": "During your melee attack ability performed while occupying or adjacent to a hex with a water tile, add [Pierce] 1 and [Condition: Wound] to one attack."
+  },
+  {
+    "id": 202,
+    "name": "giant piranha pig spine",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-202-giant-piranha-pig-spine.jpeg",
+    "cost": 40,
+    "slot": "2h",
+    "spent": true,
+    "text": "During your melee attack ability, add [Pierce] 2 and [Condition: Wound] to one attack."
+  },
+  {
+    "id": 203,
+    "name": "scepter of control",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-203-scepter-of-control.jpeg",
+    "cost": 50,
+    "slot": "1h",
+    "consumed": true,
+    "text": "After your attack ability, control one target: Move 2"
+  },
+  {
+    "id": 204,
+    "name": "severed claw",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-204-severed-claw.jpeg",
+    "cost": 35,
+    "slot": "1h",
+    "consumed": true,
+    "text": "During your turn, one adjacent normal or elite enemy suffers [Damage] equal to their [Shield] value."
+  },
+  {
+    "id": 205,
+    "name": "harpoon",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-205-harpoon.jpeg",
+    "cost": 30,
+    "slot": "2h",
+    "consumed": true,
+    "text": "During your turn, perform: Attack 2 Range 3, [Pull] 2"
+  },
+  {
+    "id": 206,
+    "name": "giant sword",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-206-giant-sword.jpeg",
+    "cost": 40,
+    "slot": "2h",
+    "spent": true,
+    "text": "During your melee attack ability, if you have not moved this round, add +2 Attack to one attack, and you may perform no move abilities this turn."
+  },
+  {
+    "id": 207,
+    "name": "fishhook",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-207-fishhook.jpeg",
+    "cost": 25,
+    "slot": "2h",
+    "spent": true,
+    "text": "After your attack, if the target's current hit point value is 3 or less, give the target [Condition: Bane]."
+  },
+  {
+    "id": 208,
+    "name": "titan nail",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-208-titan-nail.jpeg",
+    "cost": 35,
+    "slot": "2h",
+    "spent": true,
+    "text": "During your attack ability, add [Pierce] 3 to one attack targeting an enemy whose current hit point value is 4 or less."
+  },
+  {
+    "id": 209,
+    "name": "sword of mastery",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-209-sword-of-mastery.jpeg",
+    "cost": 60,
+    "slot": "2h",
+    "spent": true,
+    "text": "During your melee attack ability, gain advantage on one attack. For each mastery you have completed, also add one of the following to the attack: +1 Attack, [Condition: Wound], or [Condition: Poison]."
+  },
+  {
+    "id": 210,
+    "name": "tanjo",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-210-tanjo.jpeg",
+    "cost": 30,
+    "slot": "2h",
+    "spent": true,
+    "text": "During your turn, add -3 Attack to all attacks performed by Lurkers targeting you this round."
+  },
+  {
+    "id": 211,
+    "name": "boom barrel",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-211-boom-barrel.jpeg",
+    "cost": 30,
+    "slot": "2h",
+    "consumed": true,
+    "text": "During your turn, designate one adjacent hex. At the end of your turn, all figures within Range 2 of the designated hex suffer [Damage] 1."
+  },
+  {
+    "id": 212,
+    "name": "elemental stone",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-212-elemental-stone.jpeg",
+    "cost": 30,
+    "slot": "1h",
+    "spent": true,
+    "text": "After ordering of initiative, choose one element. This element cannot be infused or consumed by any monster this round."
+  },
+  {
+    "id": 213,
+    "name": "key of seasons",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-213-key-of-seasons.jpeg",
+    "imageBack": "items/frosthaven/fh-213-key-of-seasons-back.jpeg",
+    "cost": 70,
+    "slot": "1h",
+    "text": "During your attack ability, [Consume Element: Ice] to add [Condition: Immobilize] to one attack, then flip this card over at the end of your turn. / During your attack ability, [Consume Element: Fire] to add [Condition: Wound] to one attack, then flip this card over at the end of your turn."
+  },
+  {
+    "id": 214,
+    "name": "cup of ventillion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-214-cup-of-ventillion.jpeg",
+    "cost": 30,
+    "slot": "1h",
+    "spent": true,
+    "text": "During your heal ability, add one positive condition you have to one heal."
+  },
+  {
+    "id": 215,
+    "name": "befuddling mug",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-215-befuddling-mug.jpeg",
+    "cost": 30,
+    "slot": "1h",
+    "consumed": true,
+    "text": "During your turn, add +1 Attack and [Condition: Muddle] to all your attacks. At the end of your turn, perform: [Condition: Muddle] self"
+  },
+  {
+    "id": 216,
+    "name": "tome of elements",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-216-tome-of-elements.jpeg",
+    "cost": 50,
+    "slot": "1h",
+    "consumed": true,
+    "text": "During your turn, [Element: Fire] [Element: Ice] [Element: Air] [Element: Earth] [Element: Light] [Element: Dark] Elements do not move from strong to waning at the end of this round."
+  },
+  {
+    "id": 217,
+    "name": "tome of time",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-217-tome-of-time.jpeg",
+    "cost": 50,
+    "slot": "1h",
+    "consumed": true,
+    "text": "During ordering of initiative, after all ability cards have been revealed, shuffle all monster ability decks and draw a new card for each active monster set."
+  },
+  {
+    "id": 218,
+    "name": "tome of life",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-218-tome-of-life.jpeg",
+    "cost": 50,
+    "slot": "1h",
+    "consumed": true,
+    "text": "During your turn, remove all conditions from all figures, then grant all figures: Heal 2 self"
+  },
+  {
+    "id": 219,
+    "name": "tome of conflict",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-219-tome-of-conflict.jpeg",
+    "cost": 50,
+    "slot": "1h",
+    "consumed": true,
+    "text": "During your turn, all figures gain [Condition: Strengthen]. Until any monster is killed, the first attack modifier card drawn for every attack is treated as rolling."
+  },
+  {
+    "id": 220,
+    "name": "belaras quill",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-220-belaras-quill.jpeg",
+    "cost": 50,
+    "slot": "1h",
+    "consumed": true,
+    "text": "During your turn, [Refresh] up to one Tome item."
+  },
+  {
+    "id": 221,
+    "name": "ice shiv",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-221-ice-shiv.jpeg",
+    "cost": 30,
+    "slot": "1h",
+    "spent": true,
+    "text": "During your melee attack ability, [Consume Element: Ice] to add [Pierce] 3 to one attack."
+  },
+  {
+    "id": 222,
+    "name": "black box",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-222-black-box.jpeg",
+    "cost": 30,
+    "slot": "1h",
+    "spent": true,
+    "text": "During your turn, discard two cards from your hand to perform: Heal 6 self"
+  },
+  {
+    "id": 223,
+    "name": "lightning rod",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-223-lightning-rod.jpeg",
+    "cost": 20,
+    "slot": "1h",
+    "spent": true,
+    "text": "After ordering of initiative, all monsters consider you to be first in initiative order when determining their focus this round."
+  },
+  {
+    "id": 224,
+    "name": "armor of empathy",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-224-armor-of-empathy.jpeg",
+    "imageBack": "items/frosthaven/fh-224-armor-of-empathy-back.jpeg",
+    "cost": 40,
+    "slot": "body",
+    "text": "After the next three attacks targeting you, flip this card over. / During your turn, perform: Heal 3 Target 1 ally, Range 3, [Condition: Ward] then flip this card over."
+  },
+  {
+    "id": 225,
+    "name": "algox carving",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-225-algox-carving.jpeg",
+    "imageBack": "items/frosthaven/fh-225-algox-carving-back.jpeg",
+    "cost": 60,
+    "slot": "body",
+    "text": "During your melee attack ability, [Consume Element: Earth] to add +1 Attack to one attack and flip this card over. / During your ranged attack ability, [Consume Element: Air] to add [Pierce] 2 to one attack and flip this card over."
+  },
+  {
+    "id": 226,
+    "name": "unfettered arm",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-226-unfettered-arm.jpeg",
+    "cost": 20,
+    "slot": "1h",
+    "spent": true,
+    "text": "During your attack ability, double the numerical value of the next attack modifier card you draw. 2x and Null modifier cards are unaffected."
+  },
+  {
+    "id": 227,
+    "name": "data drive",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-227-data-drive.jpeg",
+    "cost": 40,
+    "slot": "1h",
+    "spent": true,
+    "text": "When you short rest, place half (rounded down) of your discard pile on this item, lose one of the remaining cards randomly as normal, then draw the cards on this item."
+  },
+  {
+    "id": 228,
+    "name": "extendable pole",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-228-extendable-pole.jpeg",
+    "cost": 20,
+    "slot": "1h",
+    "spent": true,
+    "text": "During your turn, open one unlocked door within Range 2."
+  },
+  {
+    "id": 229,
+    "name": "exquisite map",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-229-exquisite-map.jpeg",
+    "cost": 30,
+    "slot": "1h",
+    "consumed": true,
+    "text": "During your turn, grant one ally within Range 3: Move 3"
+  },
+  {
+    "id": 230,
+    "name": "examination glass",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-230-examination-glass.jpeg",
+    "cost": 20,
+    "slot": "1h",
+    "text": "After you draw one loot card, draw one additional card, keep one, and place the other on either the top or bottom of the loot deck."
+  },
+  {
+    "id": 231,
+    "name": "skinning knife",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-231-skinning-knife.jpeg",
+    "cost": 15,
+    "slot": "1h",
+    "consumed": true,
+    "text": "When you gain a loot token, gain 3 [Hide] instead of drawing a loot card."
+  },
+  {
+    "id": 232,
+    "name": "orchid wand",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-232-orchid-wand.jpeg",
+    "cost": 20,
+    "slot": "1h",
+    "consumed": true,
+    "text": "During your turn, lose 1 morale to perform: [Condition: Ward] Target all allies and self"
+  },
+  {
+    "id": 233,
+    "name": "dead raven",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-233-dead-raven.jpeg",
+    "cost": 30,
+    "slot": "small",
+    "consumed": true,
+    "text": "During an ally's ranged attack ability, add [Condition: Muddle] and [Condition: Curse] to one attack."
+  },
+  {
+    "id": 234,
+    "name": "ooze vial",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-234-ooze-vial.jpeg",
+    "cost": 30,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, create one [Condition: Poison], [Condition: Immobilize] trap in an empty hex within Range 2."
+  },
+  {
+    "id": 235,
+    "name": "small rat",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-235-small-rat.jpeg",
+    "cost": 10,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, loot one loot token within Range 2."
+  },
+  {
+    "id": 236,
+    "name": "cracked mirror",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-236-cracked-mirror.jpeg",
+    "cost": 30,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, lose one card from your hand to [Recover] one card from your lost pile of equal or lower level."
+  },
+  {
+    "id": 237,
+    "name": "mesmerizing seashell",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-237-mesmerizing-seashell.jpeg",
+    "cost": 45,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, choose one of six directions. You and all figures within Range 2 are forced to simultaneously move 2 hexes in the chosen direction."
+  },
+  {
+    "id": 238,
+    "name": "cracked idol",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-238-cracked-idol.jpeg",
+    "cost": 30,
+    "slot": "small",
+    "consumed": true,
+    "text": "When you would become exhausted from suffering [Damage], set your hit point value to 1 instead."
+  },
+  {
+    "id": 239,
+    "name": "eye of the storm",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-239-eye-of-the-storm.jpeg",
+    "cost": 40,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, all allies and enemies within Range 2 suffer [Damage] 1."
+  },
+  {
+    "id": 240,
+    "name": "demons gem",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-240-demons-gem.jpeg",
+    "cost": 15,
+    "slot": "small",
+    "text": "When you fail a scenario, still earn all [Check] from your battle goal if it was completed."
+  },
+  {
+    "id": 241,
+    "name": "shimmering powder",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-241-shimmering-powder.jpeg",
+    "cost": 40,
+    "slot": "small",
+    "consumed": true,
+    "text": "After you draw one loot card, draw one additional loot card."
+  },
+  {
+    "id": 242,
+    "name": "lucky dice",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-242-lucky-dice.jpeg",
+    "cost": 30,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your attack ability, treat the next three attack modifier cards you draw as rolling."
+  },
+  {
+    "id": 243,
+    "name": "cursed rock",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-243-cursed-rock.jpeg",
+    "cost": 10,
+    "slot": "small",
+    "consumed": true,
+    "text": "This item cannot be sold and must be brought into and used every scenario.\n\nAt the start of the scenario, perform: [Condition: Curse], [Condition: Ward] self"
+  },
+  {
+    "id": 244,
+    "name": "ember energy source",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-244-ember-energy-source.jpeg",
+    "cost": 50,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, increase the printed Attack, Move, Target, or Range numeral value of one of your abilities by 1."
+  },
+  {
+    "id": 245,
+    "name": "ancient coin",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-245-ancient-coin.jpeg",
+    "cost": 0,
+    "slot": "",
+    "text": ""
+  },
+  {
+    "id": 246,
+    "name": "key card",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-246-key-card.jpeg",
+    "cost": 0,
+    "slot": "",
+    "text": ""
+  },
+  {
+    "id": 247,
+    "name": "trainers net",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-247-trainers-net.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "consumed": true,
+    "text": "During your turn, capture an adjacent enemy whose hit point value is 1 or 2."
+  },
+  {
+    "id": 248,
+    "name": "wanderers club",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-248-wanderers-club.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "consumed": true,
+    "text": "During your attack ability, move the character token on one of your persistent abilities backward one slot and add +X Attack to one attack, where X is the number of your active persistent abilities."
+  },
+  {
+    "id": 249,
+    "name": "recalibration trigger",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-249-recalibration-trigger.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, perform one of the two following abilities:\nLose one card from your hand to gain 3 [Time].\n-2 [Time]: [Recover] up to two of your discarded cards."
+  },
+  {
+    "id": 250,
+    "name": "spear of justice",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-250-spear-of-justice.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "consumed": true,
+    "text": "During your turn, perform: Attack 2 Range 3\nAll your banners are treated as additionally occupying the hex of the attacked target for their bonuses and that hex is treated as occupied by an ally this round."
+  },
+  {
+    "id": 251,
+    "name": "soul urn",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-251-soul-urn.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "consumed": true,
+    "text": "Place one [Water] in an adjacent hex.\n[Element: Dark]"
+  },
+  {
+    "id": 252,
+    "name": "black earth codex",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-252-black-earth-codex.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "consumed": true,
+    "text": "On the next three deaths of any of your summons, [Consume Element: Earth] or [Consume Element: Dark] and perform: Heal 2 self"
+  },
+  {
+    "id": 253,
+    "name": "mask of duality",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-253-mask-of-duality.jpeg",
+    "imageBack": "items/frosthaven/fh-253-mask-of-duality-back.jpeg",
+    "cost": 0,
+    "slot": "head",
+    "text": "During your ranged attack ability while in [Ranged Form], gain advantage for one attack, then flip this card over. / When an enemy performs an attack targeting you while you are in [Melee Form], the attacker gains disadvantage, then flip this card over."
+  },
+  {
+    "id": 254,
+    "name": "ancestral blade",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-254-ancestral-blade.jpeg",
+    "cost": 0,
+    "slot": "2h",
+    "consumed": true,
+    "text": "During your turn, activate all your [Song] as if you have just performed a [Song] action."
+  },
+  {
+    "id": 255,
+    "name": "mountains heart",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-255-mountains-heart.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "During your turn, you may create either one 1-hex obstacle or hazardous terrain tile in an empty hex within Range 2.\n[Consume Element: Fire] or [Consume Element: Earth]"
+  },
+  {
+    "id": 256,
+    "name": "sonorous shard",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-256-sonorous-shard.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "Gain 3 [Wave].\n[Consume Element: Air] or [Consume Element: Earth]"
+  },
+  {
+    "id": 257,
+    "name": "sly camouflage",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-257-sly-camouflage.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "spent": true,
+    "text": "When you create a trap, place a character token on it. Monsters do not treat the hex with that trap as negative. Remove the token when you [Check] this item."
+  },
+  {
+    "id": 258,
+    "name": "skull of agony",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-258-skull-of-agony.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "When you suffer damage, if your hit point value is reduced to below half of your maximum, perform: Heal 7 self, [Condition: Curse]\nThis heal is not affected by and cannot remove negative conditions."
+  },
+  {
+    "id": 259,
+    "name": "storm carving",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-259-storm-carving.jpeg",
+    "imageBack": "items/frosthaven/fh-259-storm-carving-back.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "text": "During an attack ability you grant an ally, add [Push] 2 to one of their attacks, then flip this card over. / During your attack ability, add [Pull] 2 to one attack, then flip this card over."
+  },
+  {
+    "id": 260,
+    "name": "freezing orb",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-260-freezing-orb.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "consumed": true,
+    "text": "During your attack ability, add [Condition: Brittle] to one attack and create one 1-hex icy terrain tile in the featureless hex occupied by the target."
+  },
+  {
+    "id": 261,
+    "name": "energized module",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-261-energized-module.jpeg",
+    "cost": 0,
+    "slot": "small",
+    "consumed": true,
+    "text": "Remove all damage and negative conditions from one of your summons, then [Energy] [Energy] to that summon."
+  },
+  {
+    "id": 262,
+    "name": "exhaust boots",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-262-exhaust-boots.jpeg",
+    "imageBack": "items/frosthaven/fh-262-exhaust-boots-back.jpeg",
+    "cost": 0,
+    "slot": "legs",
+    "text": "During your move ability when you have [Fast] or [Slow], add +1 Move, then flip this card over at the end of your turn. / During your turn when you have [Fast], perform: Move 1\nThen flip this card over at the end of your turn."
+  },
+  {
+    "id": 263,
+    "name": "warlords skull",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-263-warlords-skull.jpeg",
+    "cost": 0,
+    "slot": "1h",
+    "text": "Whenever you gain [Condition: Invisible] or perform a teleport ability while you have [Condition: Invisible], after the ability perform: Move 1"
+  },
+  {
+    "id": 264,
+    "name": "spiraled medallion",
+    "game": "fh",
+    "source": "fh",
+    "image": "items/frosthaven/fh-264-spiraled-medallion.jpeg",
+    "cost": 0,
+    "slot": "head",
+    "consumed": true,
+    "text": "When you rest, you may keep up to three [Tides] cards in your active area.\n[Consume Element: Light] or [Consume Element: Dark]"
+  }
+]
