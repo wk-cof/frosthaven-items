@@ -174,12 +174,12 @@
     "image": "items/frosthaven/fh-013-dancing-slippers.jpeg",
     "cost": 0,
     "slot": "legs",
-    "spent": true,
-    "text": "After you suffer Damage from an attack, perform: Move 2",
+    "text": "After you suffer [Damage] from an attack, perform: Move 2",
     "resources": {
       "Hide": 1,
       "Arrowvine": 1
-    }
+    },
+    "consumed": true
   },
   {
     "id": 14,
@@ -265,7 +265,7 @@
     "cost": 0,
     "slot": "1h",
     "spent": true,
-    "text": "During your attack ability, add [Condition: Muddle] to all attacks.",
+    "text": "During your attack ability, add [Condition: Stun] to all attacks. [Modifier: -1 x1]",
     "resources": {
       "Wood": 1,
       "Metal": 1,
@@ -295,7 +295,7 @@
     "image": "items/frosthaven/fh-021-chain-hood.jpeg",
     "cost": 0,
     "slot": "head",
-    "text": "While you are adjacent to three or more enemies, gain Shield 1.",
+    "text": "While you are adjacent to three or more enemies, gain Shield 1. [Modifier: -1 x1]",
     "resources": {
       "Metal": 3,
       "Hide": 1
@@ -310,7 +310,7 @@
     "cost": 0,
     "slot": "body",
     "spent": true,
-    "text": "When you suffer Damage from an attack, gain Shield 3 for the attack.",
+    "text": "When you suffer [Damage] from an attack, gain Shield 3 for the attack. [Modifier: -1 x2]",
     "resources": {
       "Item 012": 1,
       "Metal": 1
@@ -509,7 +509,7 @@
     "cost": 0,
     "slot": "1h",
     "spent": true,
-    "text": "When you suffer [Damage] from an attack, gain Shield 1 for the attack and prevent any negative conditions from the attack.",
+    "text": "When you suffer [Damage] from an attack, gain Shield 1 for the attack and prevent any negative conditions from the attack. [Modifier: -1 x2]",
     "resources": {
       "Wood": 2,
       "Metal": 1
@@ -617,7 +617,7 @@
     "cost": 0,
     "slot": "body",
     "spent": true,
-    "text": "[Uses: 2] On the next two sources of [Damage] from attacks targeting you, gain Shield 2 for the attacks.",
+    "text": "[Uses: 2] On the next two sources of [Damage] from attacks targeting you, gain Shield 2 for the attacks. [Modifier: -1 x4]",
     "resources": {
       "Item 112": 1,
       "Metal": 3
@@ -740,7 +740,7 @@
     "imageBack": "items/frosthaven/fh-050-shield-of-reciprocity-back.jpeg",
     "cost": 0,
     "slot": "1h",
-    "text": "When you suffer [Damage] from an attack, gain Shield 1 for the attack and flip this card over.",
+    "text": "When you suffer [Damage] from an attack, gain Shield 1 for the attack and flip this card over. [Modifier: -1 x3]",
     "resources": {
       "Item 035": 1,
       "Item 105": 1,
@@ -1925,7 +1925,7 @@
     "image": "items/frosthaven/fh-130-iron-helmet.jpeg",
     "cost": 20,
     "slot": "head",
-    "text": "When you are attacked, treat any 2x attack modifier card the enemy draws as a +0 instead."
+    "text": "When you are attacked, treat any 2x attack modifier card the enemy draws as a +0 instead. [Modifier: -1 x1]"
   },
   {
     "id": 131,
@@ -1936,7 +1936,7 @@
     "cost": 25,
     "slot": "body",
     "spent": true,
-    "text": "On the next three sources of [Damage] from attacks targeting you, gain Shield 1 for the attacks."
+    "text": "[Uses: 3] On the next three sources of [Damage] from attacks targeting you, gain Shield 1 for the attacks. [Modifier: -1 x3]"
   },
   {
     "id": 132,
@@ -2000,7 +2000,7 @@
     "cost": 35,
     "slot": "1h",
     "spent": true,
-    "text": "When you suffer [Damage] from an attack, gain Shield 2 for the attack."
+    "text": "When you suffer [Damage] from an attack, gain Shield 2 for the attack. [Modifier: -1 x1]"
   },
   {
     "id": 138,
@@ -2010,7 +2010,7 @@
     "image": "items/frosthaven/fh-138-heavy-basinet.jpeg",
     "cost": 30,
     "slot": "head",
-    "text": "Whenever an enemy would give you [Condition: Disarm], [Condition: Stun], or [Condition: Muddle], prevent the condition."
+    "text": "Whenever an enemy would give you [Condition: Disarm], [Condition: Stun], or [Condition: Muddle], prevent the condition. [Modifier: -1 x2]"
   },
   {
     "id": 139,
@@ -2126,7 +2126,7 @@
     "cost": 50,
     "slot": "body",
     "spent": true,
-    "text": "On the next five sources of [Damage] from attacks targeting you, gain Shield 1 for the attacks."
+    "text": "[Uses: 5] On the next five sources of [Damage] from attacks targeting you, gain Shield 1 for the attacks. [Modifier: -1 x5]"
   },
   {
     "id": 150,
@@ -2157,7 +2157,7 @@
     "image": "items/frosthaven/fh-152-steel-sabatons.jpeg",
     "cost": 55,
     "slot": "legs",
-    "text": "At the end of your turn, if you have moved 1 or fewer hexes during your turn, gain Shield 1 for the round."
+    "text": "At the end of your turn, if you have moved 1 or fewer hexes during your turn, gain Shield 1 for the round. [Modifier: -1 x2]"
   },
   {
     "id": 153,
@@ -2190,7 +2190,7 @@
     "cost": 50,
     "slot": "2h",
     "spent": true,
-    "text": "When you suffer [Damage] from an attack, gain Shield 4 for the attack."
+    "text": "When you suffer [Damage] from an attack, gain Shield 4 for the attack. [Modifier: -1 x2]"
   },
   {
     "id": 156,
@@ -2408,7 +2408,7 @@
     "cost": 35,
     "slot": "body",
     "consumed": true,
-    "text": "When you suffer [Damage] from an attack, the attacker suffers an equal amount of [Damage]."
+    "text": "When you suffer [Damage] from an attack, the attacker suffers an equal amount of [Damage]. [Modifier: -1 x2]"
   },
   {
     "id": 176,
@@ -2722,7 +2722,7 @@
     "cost": 35,
     "slot": "1h",
     "consumed": true,
-    "text": "During your turn, one adjacent normal or elite enemy suffers [Damage] equal to their [Shield] value."
+    "text": "During your turn, one adjacent normal or elite enemy suffers [Damage] equal to their Shield value. [Modifier: -1 x3]"
   },
   {
     "id": 205,
@@ -2744,7 +2744,7 @@
     "cost": 40,
     "slot": "2h",
     "spent": true,
-    "text": "During your melee attack ability, if you have not moved this round, add +2 Attack to one attack, and you may perform no move abilities this turn."
+    "text": "During your melee attack ability, if you have not moved this round, add +2 Attack to one attack, and you may perform no move abilities this turn. [Modifier: -1 x3]"
   },
   {
     "id": 207,

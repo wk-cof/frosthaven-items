@@ -10,6 +10,8 @@ export type Filters = {
   maxCost: string;
   hideSpent: boolean;
   hideConsumed: boolean;
+  showFlaggedOnly: boolean;
+  showUnreviewedOnly: boolean;
 };
 
 export type ItemStatusMap = Record<string, 'verified' | 'flagged' | null>;
@@ -21,6 +23,8 @@ function App() {
     maxCost: '',
     hideSpent: false,
     hideConsumed: false,
+    showFlaggedOnly: false,
+    showUnreviewedOnly: false,
   });
 
   const [itemStatuses, setItemStatuses] = useState<ItemStatusMap>({});
@@ -55,7 +59,7 @@ function App() {
         <p>A beautiful database of artifacts and gear.</p>
       </header>
       <main className="app-main">
-        <FilterSidebar filters={filters} setFilters={setFilters} />
+        <FilterSidebar filters={filters} setFilters={setFilters} itemStatuses={itemStatuses} />
         <ItemGrid 
           items={itemsData} 
           filters={filters} 

@@ -1,8 +1,9 @@
-import { Filters } from '../App';
+import { Filters, ItemStatusMap } from '../App';
 
 type Props = {
   filters: Filters;
   setFilters: (f: Filters) => void;
+  itemStatuses: ItemStatusMap;
 };
 
 // Available slots
@@ -16,7 +17,7 @@ const SLOTS = [
   { id: 'small', label: 'Small Item' },
 ];
 
-function FilterSidebar({ filters, setFilters }: Props) {
+function FilterSidebar({ filters, setFilters, itemStatuses }: Props) {
   const updateFilter = (key: keyof Filters, value: any) => {
     setFilters({ ...filters, [key]: value });
   };
@@ -78,6 +79,33 @@ function FilterSidebar({ filters, setFilters }: Props) {
             onChange={(e) => updateFilter('hideConsumed', e.target.checked)}
           />
           Hide Consumed Items
+        </label>
+      </div>
+
+      <div className="filter-group toggle-group">
+        <label style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Review Status</label>
+        <label className="toggle-label">
+          <input 
+            type="checkbox" 
+            checked={filters.showFlaggedOnly}
+            onChange={(e) => {
+              updateFilter('showFlaggedOnly', e.target.checked);
+              if (e.target.checked) updateFilter('showUnreviewedOnly', false);
+            }}
+          />
+          🚩 Flagged Only
+        </label>
+        
+        <label className="toggle-label">
+          <input 
+            type="checkbox" 
+            checked={filters.showUnreviewedOnly}
+            onChange={(e) => {
+              updateFilter('showUnreviewedOnly', e.target.checked);
+              if (e.target.checked) updateFilter('showFlaggedOnly', false);
+            }}
+          />
+          ❓ Unreviewed Only
         </label>
       </div>
     </aside>

@@ -47,6 +47,16 @@ function ItemGrid({ items, filters, glossary, itemStatuses, updateItemStatus }: 
       return false;
     }
 
+    // 6. Show Flagged Only
+    if (filters.showFlaggedOnly) {
+      if (itemStatuses[String(item.id)] !== 'flagged') return false;
+    }
+
+    // 7. Show Unreviewed Only
+    if (filters.showUnreviewedOnly) {
+      if (itemStatuses[String(item.id)]) return false;
+    }
+
     return true;
   });
 
