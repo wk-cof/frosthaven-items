@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import itemsData from './data/items_db.json';
 import glossaryData from './data/glossary.json';
 import ItemGrid from './components/ItemGrid';
@@ -12,6 +12,8 @@ export type Filters = {
   hideConsumed: boolean;
 };
 
+export type ItemStatusMap = Record<string, 'verified' | 'flagged' | null>;
+
 function App() {
   const [filters, setFilters] = useState<Filters>({
     searchTerm: '',
@@ -20,6 +22,31 @@ function App() {
     hideSpent: false,
     hideConsumed: false,
   });
+
+  const [itemStatuses, setItemStatuses] = useState<ItemStatusMap>({});
+
+  useEffect(() => {
+    fetch('/api/status')
+      .then(res => res.json())
+      .then(data => setItemStatuses(data || {}))
+      .catch(e => console.error("Could not fetch status:", e));
+  }, []);
+
+  const updateItemStatus = (id: string, status: 'verified' | 'flagged' | null) => {
+    const newStatuses = { ...itemStatuses };
+    if (status === null) {
+      delete newStatuses[id];
+    } else {
+      newStatuses[id] = status;
+    }
+    
+    setItemStatuses(newStatuses);
+    
+    fetch('/api/save-status', {
+      method: 'POST',
+      body: JSON.stringify(newStatuses)
+    }).catch(e => console.error("Could not save status:", e));
+  };
   
   return (
     <div className="app-container">
@@ -29,7 +56,13 @@ function App() {
       </header>
       <main className="app-main">
         <FilterSidebar filters={filters} setFilters={setFilters} />
-        <ItemGrid items={itemsData} filters={filters} glossary={glossaryData} />
+        <ItemGrid 
+          items={itemsData} 
+          filters={filters} 
+          glossary={glossaryData} 
+          itemStatuses={itemStatuses} 
+          updateItemStatus={updateItemStatus} 
+        />
       </main>
     </div>
   );

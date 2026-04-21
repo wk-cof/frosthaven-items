@@ -4,8 +4,9 @@ import React from 'react';
 function highlightModifiers(text: string) {
   if (!text) return text;
   
-  // simple regex to find modifiers like +1, -1, x2, -2 etc.
-  const regex = /([\+\-]\d+|x\d+)/g;
+  // regex to find modifiers like +X Move, -X Attack, or just +1, x2 etc.
+  // We constrain the following word to specific game terminology so we don't accidentally badge '+1 instead'.
+  const regex = /([\+\-]\d+\s+(?:Move|Attack|Range|Shield|Retaliate|Heal|Target|Pierce)|[\+\-]\d+|x\d+)/g;
   const parts = text.split(regex);
   const elements: any[] = [];
   

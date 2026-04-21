@@ -1,13 +1,15 @@
 import ItemCard from './ItemCard';
-import { Filters } from '../App';
+import { Filters, ItemStatusMap } from '../App';
 
 type Props = {
   items: any[];
   filters: Filters;
   glossary: any;
+  itemStatuses: ItemStatusMap;
+  updateItemStatus: (id: string, status: 'verified' | 'flagged' | null) => void;
 };
 
-function ItemGrid({ items, filters, glossary }: Props) {
+function ItemGrid({ items, filters, glossary, itemStatuses, updateItemStatus }: Props) {
   const filtered = items.filter((item: any) => {
     // 1. Search term match (name or text)
     const searchMatch = !filters.searchTerm || 
@@ -51,7 +53,13 @@ function ItemGrid({ items, filters, glossary }: Props) {
   return (
     <div className="item-grid">
       {filtered.map((item: any) => (
-        <ItemCard key={item.id} item={item} glossary={glossary} />
+        <ItemCard 
+          key={item.id} 
+          item={item} 
+          glossary={glossary} 
+          status={itemStatuses[String(item.id)]}
+          onStatusChange={(status: any) => updateItemStatus(String(item.id), status)}
+        />
       ))}
     </div>
   );

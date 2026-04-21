@@ -1,11 +1,49 @@
 
 import { renderTextWithTooltips } from './RuleTooltip';
 
-function ItemCard({ item, glossary }: any) {
+function ItemCard({ item, glossary, status, onStatusChange }: any) {
   return (
     <div className="item-card" id={`item-${item.id}`}>
       <div className="card-header">
-        <h3 className="item-name">{item.name}</h3>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <h3 className="item-name">{item.name}</h3>
+          <div className="status-buttons" style={{ display: 'flex', gap: '0.25rem', marginTop: '0.5rem' }}>
+            <button 
+              onClick={() => onStatusChange(status === 'verified' ? null : 'verified')}
+              style={{
+                background: 'transparent',
+                border: '1px solid',
+                borderColor: status === 'verified' ? '#16a34a' : 'rgba(255,255,255,0.1)',
+                opacity: status === 'verified' ? 1 : 0.4,
+                borderRadius: '4px',
+                cursor: 'pointer',
+                padding: '2px 4px',
+                transition: 'all 0.2s',
+                filter: status === 'verified' ? 'drop-shadow(0 0 4px #16a34a)' : 'none'
+              }}
+              title="Verified"
+            >
+              ✅
+            </button>
+            <button 
+              onClick={() => onStatusChange(status === 'flagged' ? null : 'flagged')}
+              style={{
+                background: 'transparent',
+                border: '1px solid',
+                borderColor: status === 'flagged' ? '#dc2626' : 'rgba(255,255,255,0.1)',
+                opacity: status === 'flagged' ? 1 : 0.4,
+                borderRadius: '4px',
+                cursor: 'pointer',
+                padding: '2px 4px',
+                transition: 'all 0.2s',
+                filter: status === 'flagged' ? 'drop-shadow(0 0 4px #dc2626)' : 'none'
+              }}
+              title="Needs Work"
+            >
+              🚩
+            </button>
+          </div>
+        </div>
         <span className="item-id">#{item.id}</span>
       </div>
       
