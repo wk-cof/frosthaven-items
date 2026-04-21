@@ -53,7 +53,7 @@ function ItemCard({ item, glossary, status, onStatusChange }: any) {
         <div className="card-image-wrapper">
           {item.image && (
             <img
-              src={`/assets/items/${item.image.split('/').pop()}`}
+              src={`${import.meta.env.BASE_URL}assets/items/${item.image.split('/').pop()}`}
               alt={item.name}
               className="item-image"
               loading="lazy"

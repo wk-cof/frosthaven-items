@@ -30,6 +30,7 @@ function App() {
   const [itemStatuses, setItemStatuses] = useState<ItemStatusMap>({});
 
   useEffect(() => {
+    if (!import.meta.env.DEV) return;
     fetch('/api/status')
       .then(res => res.json())
       .then(data => setItemStatuses(data || {}))
@@ -46,10 +47,12 @@ function App() {
     
     setItemStatuses(newStatuses);
     
-    fetch('/api/save-status', {
-      method: 'POST',
-      body: JSON.stringify(newStatuses)
-    }).catch(e => console.error("Could not save status:", e));
+    if (import.meta.env.DEV) {
+      fetch('/api/save-status', {
+        method: 'POST',
+        body: JSON.stringify(newStatuses)
+      }).catch(e => console.error("Could not save status:", e));
+    }
   };
   
   return (
