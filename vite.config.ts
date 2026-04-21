@@ -48,5 +48,5 @@ const itemStatusPlugin = () => ({
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), itemStatusPlugin()],
-  base: './', // for github pages
+  base: '/frosthaven-items/',
 })

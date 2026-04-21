@@ -94,26 +94,28 @@ function FilterSidebar({ filters, setFilters, itemStatuses }: Props) {
         </label>
       </div>
 
-      <div className="filter-group toggle-group">
-        <label style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Review Status</label>
-        <label className="toggle-label">
-          <input 
-            type="checkbox" 
-            checked={filters.showFlaggedOnly}
-            onChange={(e) => updateReviewFilters('showFlaggedOnly', e.target.checked)}
-          />
-          🚩 Flagged Only ({Object.values(itemStatuses).filter(s => s === 'flagged').length})
-        </label>
-        
-        <label className="toggle-label">
-          <input 
-            type="checkbox" 
-            checked={filters.showUnreviewedOnly}
-            onChange={(e) => updateReviewFilters('showUnreviewedOnly', e.target.checked)}
-          />
-          ❓ Unreviewed Only
-        </label>
-      </div>
+      {import.meta.env.DEV && (
+        <div className="filter-group toggle-group">
+          <label style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Review Status</label>
+          <label className="toggle-label">
+            <input 
+              type="checkbox" 
+              checked={filters.showFlaggedOnly}
+              onChange={(e) => updateReviewFilters('showFlaggedOnly', e.target.checked)}
+            />
+            🚩 Flagged Only ({Object.values(itemStatuses).filter(s => s === 'flagged').length})
+          </label>
+          
+          <label className="toggle-label">
+            <input 
+              type="checkbox" 
+              checked={filters.showUnreviewedOnly}
+              onChange={(e) => updateReviewFilters('showUnreviewedOnly', e.target.checked)}
+            />
+            ❓ Unreviewed Only
+          </label>
+        </div>
+      )}
     </aside>
   );
 }
