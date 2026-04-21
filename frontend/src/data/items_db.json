@@ -265,7 +265,7 @@
     "cost": 0,
     "slot": "1h",
     "spent": true,
-    "text": "During your attack ability, add [Condition: Stun] to all attacks. [Modifier: -1 x1]",
+    "text": "During your attack ability, add [Condition: Muddle] to all attacks. [Modifier: -1 x1]",
     "resources": {
       "Wood": 1,
       "Metal": 1,
