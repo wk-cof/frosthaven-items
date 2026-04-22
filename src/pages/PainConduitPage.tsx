@@ -9,93 +9,108 @@ const LEVEL_LABELS: Record<string, string> = {
 
 const BUILDS = [
   {
-    id: 'condition-striker',
-    icon: '🩸',
-    name: 'Condition Striker',
-    summary: 'Stack conditions on yourself, then transfer them to enemies for massive burst damage.',
-    keyCards: ['delayed malady', 'shared affliction', 'transferred injury', 'the agony of others'],
-    strategy: `The heart of the Pain Conduit. Your loop is: use cards that inflict negative conditions on yourself (Wound, Poison, Immobilize), then play cards that transfer ALL your conditions to an enemy — often dealing bonus damage per condition transferred. Delayed Malady is the crown jewel: it lets you set up a devastating delayed explosion of conditions. Pair with Shared Affliction for AoE condition spreading.`,
+    id: 'melee-retaliate',
+    icon: '⚔️',
+    name: 'Melee Retaliate',
+    summary: 'Focuses on reflecting and retaliating damage. Plays at the front line, turning enemy aggression into true damage.',
+    keyCards: ['reprisal', 'reversal of fate', 'penance', 'redemption'],
+    strategy: 'The primary "thorns" build. Your goal is to be targeted by enemies and reflect that damage back. Use Reprisal and Redemption to stack retaliate effects. Remember that damage reflected through the bottom of Redemption or Reversal of Fate is true damage, bypassing shields.',
     levelPicks: {
-      '2': 'Infection Purge — mass condition clear + damage',
-      '3': 'Burned at Both Ends — self-wound for massive output',
-      '4': 'Mirrored Misery — condition multiplication',
-      '5': 'Chained by Spite — more self-harm options',
-      '6': 'Hopelessness — late-round finisher',
-      '7': 'Reject the Gift — conditional tanking',
-      '8': 'Wave of Anguish — AoE pain',
-      '9': 'The End of Everything — ultimate nuke',
-    },
+      '2': 'Reversal of Fate',
+      '3': 'Reprisal',
+      '4': 'Down to the Dirt',
+      '5': 'Chained by Spite',
+      '6': 'Hopelessness',
+      '7': 'Penance',
+      '8': 'Wracked with Pain',
+      '9': 'Redemption'
+    }
   },
   {
-    id: 'defender-tank',
-    icon: '🛡️',
-    name: 'Defender / Tank',
-    summary: 'Use your massive HP pool and damage redirection to protect allies and absorb punishment.',
-    keyCards: ['scarred effigy', 'blood ritual', 'cleansing fire', 'swift vengeance'],
-    strategy: `With the +5 HP perk and natural high health, you can stand at the front and take hits that would destroy squishier allies. Cards like Scarred Effigy and Blood Ritual let you heal through self-harm, and Cleansing Fire gives you condition removal. Your goal is to be a wall that the enemies waste attacks on while your team deals damage behind you. Use Swift Vengeance to retaliate.`,
-    levelPicks: {
-      '2': 'Reversal of Fate — damage redirection',
-      '3': 'Reprisal — retaliate synergy',
-      '4': 'Down to the Dirt — emergency heal + tank',
-      '5': 'Chained by Despair — immobilize for control',
-      '6': 'Phantom Limb — sustain and recovery',
-      '7': 'Penance — shield and counter',
-      '8': 'Wracked with Pain — massive self-heal burst',
-      '9': 'Redemption — resurrection-like recovery',
-    },
-  },
-  {
-    id: 'controller',
+    id: 'ranged-condition',
     icon: '🎯',
-    name: 'Controller',
-    summary: 'Spread debilitating conditions across multiple enemies to dictate the flow of battle.',
-    keyCards: ['line of transference', 'explosive wounds', 'unending torment', 'the agony of others'],
-    strategy: `Instead of maximizing single-target burst, focus on spreading conditions to as many enemies as possible. Line of Transference lets you hit a line of enemies, Explosive Wounds creates AoE condition application, and Unending Torment provides persistent pressure. This build excels in scenarios with many weaker enemies.`,
+    name: 'Ranged Condition',
+    summary: 'Stacks negative conditions to supercharge attacks or transfer them to enemies from a safe distance.',
+    keyCards: ['delayed malady', 'shared affliction', 'wave of anguish', 'the end of everything'],
+    strategy: 'Standard ranged dealer. Focus on generating Fire and Air to power up your attacks. Use Chained by Despair to load up on conditions, then dump them on high-priority targets. Wave of Anguish is your late-game AoE transfer powerhouse.',
     levelPicks: {
-      '2': 'Infection Purge — AoE condition clear/spread',
-      '3': 'Burned at Both Ends — AoE self-wound combo',
-      '4': 'Mirrored Misery — reflect conditions outward',
-      '5': 'Chained by Despair — immobilize groups',
-      '6': 'Hopelessness — condition-based AoE',
-      '7': 'Reject the Gift — conditional denial',
-      '8': 'Wave of Anguish — huge AoE',
-      '9': 'The End of Everything — all or nothing nuke',
-    },
+      '2': 'Infection Purge',
+      '3': 'Burned at Both Ends',
+      '4': 'Down to the Dirt',
+      '5': 'Chained by Despair',
+      '6': 'Hopelessness',
+      '7': 'Reject the Gift',
+      '8': 'Wave of Anguish',
+      '9': 'The End of Everything'
+    }
   },
+  {
+    id: 'tank-control',
+    icon: '🛡️',
+    name: 'Tank / Control',
+    summary: 'Utilizes high self-healing and crowd control (Disarm/Stun) to manipulate the battlefield and protect allies.',
+    keyCards: ['infection purge', 'chained by despair', 'wracked with pain', 'redemption'],
+    strategy: 'A defensive variant that prioritizes Disarm and Stun. Use Chained by Despair to give yourself Disarm, then move it to an enemy to neutralize them. Your high self-healing from Wracked with Pain and Redemption keeps you in the fight.',
+    levelPicks: {
+      '2': 'Infection Purge',
+      '3': 'Burned at Both Ends',
+      '4': 'Mirrored Misery',
+      '5': 'Chained by Despair',
+      '6': 'Hopelessness',
+      '7': 'Reject the Gift',
+      '8': 'Wracked with Pain',
+      '9': 'Redemption'
+    }
+  },
+  {
+    id: 'support',
+    icon: '🤝',
+    name: 'Support',
+    summary: 'Specializes in siphoning negative conditions and damage from allies to weaken and debuff foes.',
+    keyCards: ['blood ritual', 'mirrored misery', 'phantom limb', 'the end of everything'],
+    strategy: 'The ultimate utility build. Stay close to allies to pull their Poisons and Wounds with Blood Ritual. Classes with self-inflicted debuffs (like Geminate) love having you around. You can essentially make your team immune to conditions.',
+    levelPicks: {
+      '2': 'Infection Purge',
+      '3': 'Burned at Both Ends',
+      '4': 'Mirrored Misery',
+      '5': 'Chained by Despair',
+      '6': 'Phantom Limb',
+      '7': 'Reject the Gift',
+      '8': 'Wracked with Pain',
+      '9': 'The End of Everything'
+    }
+  }
 ];
 
 const PERK_PRIORITY = [
-  { perk: 'Gain +5 maximum HP', priority: '★★★', note: 'Mandatory. Enables your entire playstyle.' },
-  { perk: 'Remove two -1 cards', priority: '★★★', note: 'Always good. Cleanses your modifier deck.' },
-  { perk: 'Replace one -1 with one +1', priority: '★★☆', note: 'Solid upgrade to deck consistency.' },
-  { perk: 'Add one +2 (Wound)', priority: '★★☆', note: 'Free Wound on a strong hit.' },
-  { perk: 'Add one +1 (Poison)', priority: '★★☆', note: 'Extra Poison application.' },
-  { perk: 'Add one +1 (Immobilize)', priority: '★★☆', note: 'Crowd control on hit.' },
-  { perk: 'Add two rolling +1', priority: '★☆☆', note: 'More consistent damage.' },
-  { perk: 'Add one rolling (Heal 1, self)', priority: '★☆☆', note: 'Sustain, but small.' },
+  { perk: 'Increase your maximum health by 1', note: 'Essential for Self-Damage and Retaliate builds to survive reflections.' },
+  { perk: 'When long resting, you may keep any negative conditions', note: 'Critical for stacking Bane, Brittle, or Poison for future turns.' },
+  { perk: 'Add "Heal 2, Self" modifiers', note: 'Standard survivability for all front-line variants.' },
+  { perk: 'Add "+1 if you have a negative condition" modifiers', note: 'The core damage boost for Ranged/Condition builds.' },
+  { perk: 'Add "Curse" modifiers', note: 'High value for Support and Summoning (Flesh Fiend) builds.' }
 ];
 
 const TIPS = [
   {
-    icon: '❤️',
-    title: 'HP Is Your Primary Resource',
-    text: 'Don\'t be afraid to spend health. With 10-card hand size and high HP, your longevity comes from careful card management, not staying at full health. Calculate how much damage you can afford each round.',
-  },
-  {
-    icon: '🔄',
-    title: 'Master the Condition Loop',
-    text: 'The core pattern: (1) inflict conditions on yourself, (2) transfer them to enemies. Always plan two rounds ahead — setting up conditions in round N to transfer them in round N+1.',
-  },
-  {
-    icon: '⚡',
-    title: 'Initiative Management',
-    text: 'Your cards range from 12 to 99 initiative. Go early when you need to set up conditions before allies act, go late when you want enemies to attack you first (for retaliate/tank builds).',
+    icon: '🛡️',
+    title: 'Negating Damage',
+    text: 'If you lose a card to negate damage, you "suffer no damage." This means reflection effects will NOT trigger. Plan your health pool carefully.'
   },
   {
     icon: '🧪',
-    title: 'Item Synergies',
-    text: 'Prioritize healing items (Healing Potion, Major Healing Potion), damage mitigation (Hide Armor, Shield items), and condition-enhancing gear. Stamina Potions are critical for recovering key burn cards.',
+    title: 'Condition Timing',
+    text: 'Healing removes Wound, Poison, Brittle, and Bane. Always transfer these to an enemy before you use a healing ability or a long rest.'
   },
+  {
+    icon: '🔄',
+    title: 'Refreshing Conditions',
+    text: 'Reapplying a condition to yourself refreshes its duration. Use this to stack Disarm or Immobilize across multiple turns.'
+  },
+  {
+    icon: '💀',
+    title: 'Curse is a Condition',
+    text: 'Curse is technically a negative condition when applied. Once it becomes a modifier card, it is no longer a condition.'
+  }
 ];
 
 function PainConduitPage() {
@@ -114,37 +129,47 @@ function PainConduitPage() {
       {/* Hero Section */}
       <section className="char-hero">
         <div className="char-hero-inner">
-          <div className="char-hero-info">
-            <div className="char-hero-badges">
-              <span className="char-badge complexity-high">{characterData.complexity}</span>
-              <span className="char-badge">{characterData.role}</span>
-            </div>
-            <h1 className="char-hero-name">{characterData.name}</h1>
-            <p className="char-hero-aka">Class: {characterData.spoilerName} • {characterData.race}</p>
-            <p className="char-hero-summary">{characterData.summary}</p>
-            <div className="char-hero-stats">
-              <div className="char-stat-box">
-                <span className="char-stat-value">{characterData.handSize}</span>
-                <span className="char-stat-label">Hand Size</span>
-              </div>
-              <div className="char-stat-box">
-                <span className="char-stat-value">{characterData.hp['1']}</span>
-                <span className="char-stat-label">Base HP</span>
-              </div>
-              <div className="char-stat-box">
-                <span className="char-stat-value">{characterData.hp['9']}</span>
-                <span className="char-stat-label">Lvl 9 HP</span>
-              </div>
-              <div className="char-stat-box">
-                <span className="char-stat-value">{characterData.cards.length}</span>
-                <span className="char-stat-label">Cards</span>
-              </div>
-            </div>
+          <div className="char-hero-portrait">
+            <img src={`${basePath}/${characterData.portrait}`} alt={characterData.name} />
           </div>
-          <div className="char-hero-traits">
-            {characterData.traits.map(t => (
-              <span key={t} className="char-trait-tag">{t}</span>
-            ))}
+          <div className="char-hero-content">
+            <div className="char-hero-info">
+              <div className="char-hero-badges">
+                <span className="char-badge complexity-high">{characterData.complexity}</span>
+                <span className="char-badge">{characterData.role}</span>
+              </div>
+              <div className="char-hero-title-row">
+                <h1 className="char-hero-name">{characterData.name}</h1>
+                <div className="char-class-icon">
+                  <img src={`${basePath}/${characterData.icon}`} alt="Class Icon" />
+                </div>
+              </div>
+              <p className="char-hero-aka">Class: {characterData.spoilerName} • {characterData.race}</p>
+              <p className="char-hero-summary">{characterData.summary}</p>
+              <div className="char-hero-stats">
+                <div className="char-stat-box">
+                  <span className="char-stat-value">{characterData.handSize}</span>
+                  <span className="char-stat-label">Hand Size</span>
+                </div>
+                <div className="char-stat-box">
+                  <span className="char-stat-value">{characterData.hp['1']}</span>
+                  <span className="char-stat-label">Base HP</span>
+                </div>
+                <div className="char-stat-box">
+                  <span className="char-stat-value">{characterData.hp['9']}</span>
+                  <span className="char-stat-label">Lvl 9 HP</span>
+                </div>
+                <div className="char-stat-box">
+                  <span className="char-stat-value">{characterData.cards.length}</span>
+                  <span className="char-stat-label">Cards</span>
+                </div>
+              </div>
+            </div>
+            <div className="char-hero-traits">
+              {characterData.traits.map(t => (
+                <span key={t} className="char-trait-tag">{t}</span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -261,7 +286,6 @@ function PainConduitPage() {
                 <span className="perk-name">{p.perk}</span>
                 <span className="perk-note">{p.note}</span>
               </div>
-              <span className="perk-stars">{p.priority}</span>
             </div>
           ))}
         </div>

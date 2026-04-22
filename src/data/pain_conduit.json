@@ -208,5 +208,7 @@
   ],
   "matFront": "character-mat-front.png",
   "matBack": "character-mat-back.png",
+  "portrait": "portrait.png",
+  "icon": "icon.png",
   "perks": "perks.png"
 }
