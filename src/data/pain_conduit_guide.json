@@ -1,0 +1,197 @@
+{
+  "intro": "Pain Conduit (Shackles) is perhaps the highest risk/reward class in the game. It functions by intentionally taking damage and negative conditions to either reflect them back at enemies or supercharge its own attacks. It is one of the only classes that can non-loss apply Bane to bosses and deal massive true damage that ignores shields.",
+  "pros": [
+    "High true damage that ignores Shields and Retaliate.",
+    "Can apply Bane (instakill) without losing cards.",
+    "Extremely flexible: can Tank, Support, or deal Ranged Damage.",
+    "Massive Health pool (potentially +5 from perks).",
+    "Great synergy with classes that self-inflict conditions."
+  ],
+  "cons": [
+    "Very high risk: you are often played at low health.",
+    "Vulnerable to burst damage if miscalculated.",
+    "Struggles with healing if conditions are not managed correctly.",
+    "Requires careful initiative planning to time transfers."
+  ],
+  "cardAnalysis": {
+    "1": [
+      {
+        "name": "Delayed Malady",
+        "image": "fh-delayed-malady.png",
+        "text": "The heart of the condition build. This card allows you to keep conditions for several rounds, which is vital for building up a massive transfer. The 99 initiative is great for playing after enemies, and the bottom is one of your best movement options."
+      },
+      {
+        "name": "Shared Affliction",
+        "image": "fh-shared-affliction.png",
+        "text": "The other half of your core loop. The top allows you to transfer ALL conditions to an enemy. The bottom is a great way to move and apply a condition to yourself to prepare for the top."
+      },
+      {
+        "name": "The Agony of Others",
+        "image": "fh-the-agony-of-others.png",
+        "text": "A staple for reflection. The bottom persistent effect makes enemies take damage when they damage you. Combined with high health, this turns you into a walking bomb."
+      },
+      {
+        "name": "Swift Vengeance",
+        "image": "fh-swift-vengeance.png",
+        "text": "A solid level 1 attack that gains power if you are damaged. The bottom move is fast and reliable for early positioning."
+      },
+      {
+        "name": "Scarred Effigy",
+        "image": "fh-scarred-effigy.png",
+        "text": "A very useful summon for tank builds. It has high health and retaliate, acting as a secondary target to soak up damage."
+      }
+    ],
+    "2": [
+      {
+        "name": "Infection Purge",
+        "image": "fh-infection-purge.png",
+        "text": "Potentially your most important card. The top clears all negative conditions and heals you for each. The bottom is a powerful attack that consumes conditions to deal massive damage. Essential for survivability."
+      },
+      {
+        "name": "Reversal of Fate",
+        "image": "fh-reversal-of-fate.png",
+        "text": "The king of reflection. The bottom allows you to take damage and immediately deal an equal amount to an adjacent enemy. Bypasses all shields."
+      }
+    ],
+    "3": [
+      {
+        "name": "Burned at Both Ends",
+        "image": "fh-burned-at-both-ends.png",
+        "text": "The top deals massive damage but wounds you. For Shackles, this is a benefit. The bottom is a great move that also causes self-harm to set up transfers."
+      },
+      {
+        "name": "Reprisal",
+        "image": "fh-reprisal.png",
+        "text": "Vital for the retaliate build. The top persistent effect adds 1 to all your retaliate values. The bottom is a fast move with a self-disarm which you can later transfer."
+      }
+    ],
+    "4": [
+      {
+        "name": "Down to the Dirt",
+        "image": "fh-down-to-the-dirt.png",
+        "text": "A great healing card. The top heals you for a large amount if you are under half health. The bottom is a strong attack that can stun if conditions are met."
+      },
+      {
+        "name": "Mirrored Misery",
+        "image": "fh-mirrored-misery.png",
+        "text": "Perfect for condition spreading. The top allows you to transfer a condition to multiple nearby enemies. Essential for controller/support roles."
+      }
+    ],
+    "5": [
+      {
+        "name": "Chained by Spite",
+        "image": "fh-chained-by-spite.png",
+        "text": "Increases your damage based on how many negative conditions you have. For a class that wants to be poisoned/wounded, this makes your attacks hit like a truck."
+      },
+      {
+        "name": "Chained by Despair",
+        "image": "fh-chained-by-despair.png",
+        "text": "The crowd control option. High initiative but the curse and immobilize application is vital for mitigating incoming pressure."
+      }
+    ],
+    "6": [
+      {
+        "name": "Hopelessness",
+        "image": "fh-hopelessness.png",
+        "text": "The Bane bringer. The top is a ranged attack that applies Bane if you have conditions. This is how you kill bosses. The bottom is a massive AoE move."
+      },
+      {
+        "name": "Phantom Limb",
+        "image": "fh-phantom-limb.png",
+        "text": "A sustain card. The top allows you to heal whenever you deal damage with a certain type of attack. Good for the ranged damage build."
+      }
+    ],
+    "7": [
+      {
+        "name": "Penance",
+        "image": "fh-penance.png",
+        "text": "Insane initiative (12). The top is a turret-like attack that deals high damage at the cost of self-harm. The bottom is a massive Retaliate 3 at Range 3, which melts ranged enemies."
+      },
+      {
+        "name": "Reject the Gift",
+        "image": "fh-reject-the-gift.png",
+        "text": "A more situational card. It can divert damage from conditions onto enemies. Powerful when combined with Hopelessness to send 10 damage from Bane onto a foe."
+      }
+    ],
+    "8": [
+      {
+        "name": "Wave of Anguish",
+        "image": "fh-wave-of-anguish.png",
+        "text": "The upgraded Shared Affliction. Allows transferring multiple conditions to multiple targets at range. The ultimate condition-delivering system."
+      },
+      {
+        "name": "Wracked with Pain",
+        "image": "fh-wracked-with-pain.png",
+        "text": "Includes one of the few ranged non-loss stuns in the game. If you are low on health, it adds brittle for double damage. The bottom is your best self-heal (5 to 7)."
+      }
+    ],
+    "9": [
+      {
+        "name": "Redemption",
+        "image": "fh-redemption.png",
+        "text": "A capstone for the Melee/Tank build. The top is a persistent effect that reflects damage points to any enemy. The bottom can shuffle up to 10 curses into the enemy deck."
+      },
+      {
+        "name": "The End of Everything",
+        "image": "fh-the-end-of-everything.png",
+        "text": "The nuke. The top deals massive damage to all nearby enemies but exhausts you. Perfect for ending a scenario with a bang. The bottom is a move 4 that bypasses all negative effects."
+      }
+    ]
+  },
+  "builds": [
+    {
+      "id": "tank",
+      "name": "Tank & Curse Control",
+      "description": "Focuses on self-healing, cursing, and applying Disarm/Muddle to survive. Bypasses self-inflicted debuffs by dealing damage without 'Attacking'.",
+      "strategy": "Run defensive items (Hide Armor, Shields) despite lacking the 'Ignore negative item effects' perk—the added -1s don't matter because this build rarely makes traditional attacks. Stack curses using Chained by Despair and then shuffle them into the enemy deck with Redemption.",
+      "levelPicks": { "2": "Infection Purge", "3": "Burned at Both Ends", "4": "Mirrored Misery", "5": "Chained by Despair", "6": "Hopelessness", "7": "Reject the Gift", "8": "Wracked with Pain", "9": "Redemption" },
+      "exampleHand": ["fh-infection-purge.png", "fh-burned-at-both-ends.png", "fh-mirrored-misery.png", "fh-chained-by-despair.png", "fh-hopelessness.png", "fh-reject-the-gift.png", "fh-wracked-with-pain.png", "fh-redemption.png", "fh-reprisal.png", "fh-the-agony-of-others.png"]
+    },
+    {
+      "id": "retaliate",
+      "name": "Melee Retaliate",
+      "description": "Draws in attacks to reflect massive true damage back. Completely bypasses Muddle, Curse, and Disarm.",
+      "strategy": "Aggressively position yourself in the center of enemy groups. Use Reprisal and The Agony of Others to maximize the 'thorns' damage. Reversal of Fate is your emergency nuke—use its bottom to reflect a heavy hit back as an 8+ damage true-strike.",
+      "levelPicks": { "2": "Reversal of Fate", "3": "Reprisal", "4": "Down to the Dirt", "5": "Chained by Spite", "6": "Hopelessness", "7": "Penance", "8": "Wracked with Pain", "9": "Redemption" },
+      "exampleHand": ["fh-reversal-of-fate.png", "fh-reprisal.png", "fh-down-to-the-dirt.png", "fh-chained-by-spite.png", "fh-hopelessness.png", "fh-penance.png", "fh-wracked-with-pain.png", "fh-redemption.png", "fh-shared-affliction.png", "fh-the-agony-of-others.png"]
+    },
+    {
+      "id": "ranged",
+      "name": "Ranged Condition Damage",
+      "description": "Stacks negative conditions to unleash high-damage ranged attacks. Highly synergistic with the class perk list.",
+      "strategy": "Keep a distance and use Delayed Malady to carry over multiple conditions. Use high-initiative turns to load up, followed by 12-initiative turns (Penance) to transfer. This build is the best user of '+1 per condition' modifier perks.",
+      "levelPicks": { "2": "Infection Purge", "3": "Burned at Both Ends", "4": "Down to the Dirt", "5": "Chained by Spite", "6": "Hopelessness", "7": "Reject the Gift", "8": "Wave of Anguish", "9": "The End of Everything" },
+      "exampleHand": ["fh-infection-purge.png", "fh-burned-at-both-ends.png", "fh-down-to-the-dirt.png", "fh-chained-by-spite.png", "fh-hopelessness.png", "fh-reject-the-gift.png", "fh-wave-of-anguish.png", "fh-the-end-of-everything.png", "fh-delayed-malady.png", "fh-shared-affliction.png"]
+    },
+    {
+      "id": "support",
+      "name": "Condition Support",
+      "description": "The ultimate partner for classes that self-inflict debuffs (like Geminate). Siphons pain to protect the team.",
+      "strategy": "Stay near allies and use Blood Ritual bottom every turn possible to pull their Poisons and Wounds. You are effectively making your team immune to conditions. Use siphoned conditions to fuel Wave of Anguish transfers.",
+      "levelPicks": { "2": "Infection Purge", "3": "Burned at Both Ends", "4": "Mirrored Misery", "5": "Chained by Despair", "6": "Phantom Limb", "7": "Reject the Gift", "8": "Wracked with Pain", "9": "The End of Everything" },
+      "exampleHand": ["fh-blood-ritual.png", "fh-mirrored-misery.png", "fh-phantom-limb.png", "fh-chained-by-despair.png", "fh-wracked-with-pain.png", "fh-the-end-of-everything.png", "fh-infection-purge.png", "fh-transferred-injury.png", "fh-swift-vengeance.png", "fh-cleansing-fire.png"]
+    }
+  ],
+  "items": [
+    { "id": "047", "name": "Item 047", "text": "Broken with Pain Conduit. Reflect the extra damage to apply Brittle and double your future output." },
+    { "id": "119", "name": "Item 119", "text": "Must-have for condition builds. Four powerful conditions all at once for instant transfer setup." },
+    { "id": "112", "name": "Item 112", "text": "An instant 10 damage potion you can redirect—essentially a faster Bane with no risks." },
+    { "id": "125/142", "name": "Boots of Speed", "text": "Crucial for Shackles to fix high-initiative cards and get in range before enemies move." },
+    { "id": "183", "name": "Item 183", "text": "Forces ranged enemies into your retaliate range by reducing their attack range." }
+  ],
+  "synergies": {
+    "S": [
+      { "name": "Geminate", "text": "Loves a Pain Conduit ally. You can remove all their self-inflicted conditions via Blood Ritual, turning their drawbacks into your boons." },
+      { "name": "Kelp", "text": "The best synergy. If Kelp goes stealth, enemies refocus on you (which Retaliate builds want), and your conditions fuel Kelp's highest damage abilities." }
+    ],
+    "A": [
+      { "name": "Astral", "text": "Can provide an infinite source of Disarm for you to transfer. Their healing allows you to play with fire safely." },
+      { "name": "Drill", "text": "Uses self-inflicted Stun and heat. You can clear their stuns and use their Fire element output." },
+      { "name": "Prism", "text": "You keep their summons alive via damage redirection and soaking up AoE curses." }
+    ],
+    "B": [
+      { "name": "Boneshaper", "text": "Poison spreading helps their summons, and you can siphon the self-damage they take from summoning." },
+      { "name": "Trap", "text": "You can deliberately step on their 1-damage traps to trigger your reflection or clear their board for them." }
+    ]
+  }
+}

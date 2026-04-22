@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import characterData from '../data/pain_conduit.json';
 
-const LEVELS = ['x', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 const LEVEL_LABELS: Record<string, string> = {
   'x': 'X', '1': '1', '2': '2', '3': '3', '4': '4',
   '5': '5', '6': '6', '7': '7', '8': '8', '9': '9',
@@ -114,15 +113,22 @@ const TIPS = [
 ];
 
 function PainConduitPage() {
-  const [selectedLevel, setSelectedLevel] = useState<string>('all');
+  const [charLevel, setCharLevel] = useState<number>(1);
   const [lightboxCard, setLightboxCard] = useState<string | null>(null);
   const [matSide, setMatSide] = useState<'front' | 'back'>('front');
   const [expandedBuild, setExpandedBuild] = useState<string | null>('condition-striker');
   const basePath = `${import.meta.env.BASE_URL}assets/characters/pain-conduit`;
 
-  const filteredCards = selectedLevel === 'all'
-    ? characterData.cards
-    : characterData.cards.filter(c => c.level === selectedLevel);
+  const filteredCards = characterData.cards.filter(c => {
+    if (c.level === 'x' || c.level === '1') return true;
+    return parseInt(c.level) <= charLevel;
+  }).sort((a, b) => {
+    if (a.level === 'x' && b.level !== 'x') return -1;
+    if (a.level !== 'x' && b.level === 'x') return 1;
+    return parseInt(a.level) - parseInt(b.level);
+  });
+
+  const currentHP = (characterData.hp as any)[charLevel.toString()];
 
   return (
     <div className="character-page">
@@ -135,7 +141,7 @@ function PainConduitPage() {
           <div className="char-hero-content">
             <div className="char-hero-info">
               <div className="char-hero-badges">
-                <span className="char-badge complexity-high">{characterData.complexity}</span>
+                <span className="char-badge complexity-high">Difficulty: {characterData.complexity}</span>
                 <span className="char-badge">{characterData.role}</span>
               </div>
               <div className="char-hero-title-row">
@@ -152,16 +158,12 @@ function PainConduitPage() {
                   <span className="char-stat-label">Hand Size</span>
                 </div>
                 <div className="char-stat-box">
-                  <span className="char-stat-value">{characterData.hp['1']}</span>
-                  <span className="char-stat-label">Base HP</span>
+                  <span className="char-stat-value">{currentHP}</span>
+                  <span className="char-stat-label">Current HP</span>
                 </div>
                 <div className="char-stat-box">
-                  <span className="char-stat-value">{characterData.hp['9']}</span>
-                  <span className="char-stat-label">Lvl 9 HP</span>
-                </div>
-                <div className="char-stat-box">
-                  <span className="char-stat-value">{characterData.cards.length}</span>
-                  <span className="char-stat-label">Cards</span>
+                  <span className="char-stat-value">{filteredCards.length}</span>
+                  <span className="char-stat-label">Available Cards</span>
                 </div>
               </div>
             </div>
@@ -174,43 +176,37 @@ function PainConduitPage() {
         </div>
       </section>
 
-      {/* HP Progression Table */}
-      <section className="char-section">
-        <h2 className="char-section-title">HP Progression</h2>
-        <div className="hp-table">
-          {Object.entries(characterData.hp).map(([lvl, hp]) => (
-            <div key={lvl} className="hp-cell">
-              <span className="hp-level">Lvl {lvl}</span>
-              <span className="hp-value">{hp}</span>
+      {/* Character Progression Slider */}
+      <section className="char-section level-slider-section">
+        <div className="level-slider-container">
+          <div className="level-slider-header">
+            <h2 className="char-section-title">Character Level</h2>
+            <div className="level-indicator">
+              <span>Level</span>
+              <span className="level-number">{charLevel}</span>
             </div>
-          ))}
+          </div>
+          <input 
+            type="range" 
+            min="1" 
+            max="9" 
+            value={charLevel} 
+            onChange={(e) => setCharLevel(parseInt(e.target.value))}
+            className="level-range-input"
+          />
+          <div className="level-slider-ticks">
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(lvl => (
+              <span key={lvl} className={lvl <= charLevel ? 'active' : ''}>{lvl}</span>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Ability Cards Gallery */}
       <section className="char-section">
         <h2 className="char-section-title">Ability Cards</h2>
-        <div className="level-filter-bar">
-          <button
-            className={`level-btn ${selectedLevel === 'all' ? 'active' : ''}`}
-            onClick={() => setSelectedLevel('all')}
-          >
-            All
-          </button>
-          {LEVELS.map(lvl => {
-            const count = characterData.cards.filter(c => c.level === lvl).length;
-            if (count === 0) return null;
-            return (
-              <button
-                key={lvl}
-                className={`level-btn ${selectedLevel === lvl ? 'active' : ''}`}
-                onClick={() => setSelectedLevel(lvl)}
-              >
-                {LEVEL_LABELS[lvl]}
-                <span className="level-count">{count}</span>
-              </button>
-            );
-          })}
+        <div className="ability-card-grid-header">
+          <p className="card-count-note">Showing {filteredCards.length} cards available at Level {charLevel}</p>
         </div>
         <div className="ability-card-grid">
           {filteredCards.map(card => (
