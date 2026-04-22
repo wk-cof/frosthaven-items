@@ -1,5 +1,5 @@
 import ItemCard from './ItemCard';
-import { Filters, ItemStatusMap } from '../App';
+import { Filters, ItemStatusMap } from '../pages/ItemsPage';
 
 type Props = {
   items: any[];

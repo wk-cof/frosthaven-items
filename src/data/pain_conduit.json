@@ -1,0 +1,212 @@
+{
+  "id": "pain-conduit",
+  "name": "Pain Conduit",
+  "spoilerName": "Shackles",
+  "race": "Aesther",
+  "handSize": 10,
+  "complexity": "High",
+  "role": "Condition Striker / Controller",
+  "summary": "A masochistic melee hybrid who turns self-inflicted pain and conditions into devastating crowd control and damage.",
+  "hp": {
+    "1": 8,
+    "2": 9,
+    "3": 11,
+    "4": 12,
+    "5": 14,
+    "6": 15,
+    "7": 17,
+    "8": 18,
+    "9": 20
+  },
+  "traits": [
+    "Condition Transfer",
+    "Self-Harm",
+    "Crowd Control",
+    "Tanking"
+  ],
+  "cards": [
+    {
+      "name": "unstable effigy",
+      "level": "x",
+      "initiative": 18,
+      "image": "fh-unstable-effigy.png"
+    },
+    {
+      "name": "flesh bomb",
+      "level": "x",
+      "initiative": 18,
+      "image": "fh-unstable-effigy.png"
+    },
+    {
+      "name": "pleasure in pain",
+      "level": "x",
+      "initiative": 47,
+      "image": "fh-pleasure-in-pain.png"
+    },
+    {
+      "name": "delayed malady",
+      "level": "x",
+      "initiative": 90,
+      "image": "fh-delayed-malady.png"
+    },
+    {
+      "name": "scarred effigy",
+      "level": "1",
+      "initiative": 19,
+      "image": "fh-scarred-effigy.png"
+    },
+    {
+      "name": "swift vengeance",
+      "level": "1",
+      "initiative": 21,
+      "image": "fh-swift-vengeance.png"
+    },
+    {
+      "name": "line of transference",
+      "level": "1",
+      "initiative": 25,
+      "image": "fh-line-of-transference.png"
+    },
+    {
+      "name": "unending torment",
+      "level": "1",
+      "initiative": 29,
+      "image": "fh-unending-torment.png"
+    },
+    {
+      "name": "explosive wounds",
+      "level": "1",
+      "initiative": 43,
+      "image": "fh-explosive-wounds.png"
+    },
+    {
+      "name": "blood ritual",
+      "level": "1",
+      "initiative": 56,
+      "image": "fh-blood-ritual.png"
+    },
+    {
+      "name": "shared affliction",
+      "level": "1",
+      "initiative": 61,
+      "image": "fh-shared-affliction.png"
+    },
+    {
+      "name": "cleansing fire",
+      "level": "1",
+      "initiative": 64,
+      "image": "fh-cleansing-fire.png"
+    },
+    {
+      "name": "transferred injury",
+      "level": "1",
+      "initiative": 74,
+      "image": "fh-transferred-injury.png"
+    },
+    {
+      "name": "the agony of others",
+      "level": "1",
+      "initiative": 78,
+      "image": "fh-the-agony-of-others.png"
+    },
+    {
+      "name": "reversal of fate",
+      "level": "2",
+      "initiative": 23,
+      "image": "fh-reversal-of-fate.png"
+    },
+    {
+      "name": "infection purge",
+      "level": "2",
+      "initiative": 45,
+      "image": "fh-infection-purge.png"
+    },
+    {
+      "name": "burned at both ends",
+      "level": "3",
+      "initiative": 30,
+      "image": "fh-burned-at-both-ends.png"
+    },
+    {
+      "name": "reprisal",
+      "level": "3",
+      "initiative": 70,
+      "image": "fh-reprisal.png"
+    },
+    {
+      "name": "down to the dirt",
+      "level": "4",
+      "initiative": 39,
+      "image": "fh-down-to-the-dirt.png"
+    },
+    {
+      "name": "mirrored misery",
+      "level": "4",
+      "initiative": 72,
+      "image": "fh-mirrored-misery.png"
+    },
+    {
+      "name": "chained by despair",
+      "level": "5",
+      "initiative": 15,
+      "image": "fh-chained-by-despair.png"
+    },
+    {
+      "name": "chained by spite",
+      "level": "5",
+      "initiative": 15,
+      "image": "fh-chained-by-spite.png"
+    },
+    {
+      "name": "phantom limb",
+      "level": "6",
+      "initiative": 75,
+      "image": "fh-phantom-limb.png"
+    },
+    {
+      "name": "hopelessness",
+      "level": "6",
+      "initiative": 83,
+      "image": "fh-hopelessness.png"
+    },
+    {
+      "name": "penance",
+      "level": "7",
+      "initiative": 12,
+      "image": "fh-penance.png"
+    },
+    {
+      "name": "reject the gift",
+      "level": "7",
+      "initiative": 20,
+      "image": "fh-reject-the-gift.png"
+    },
+    {
+      "name": "wracked with pain",
+      "level": "8",
+      "initiative": 22,
+      "image": "fh-wracked-with-pain.png"
+    },
+    {
+      "name": "wave of anguish",
+      "level": "8",
+      "initiative": 68,
+      "image": "fh-wave-of-anguish.png"
+    },
+    {
+      "name": "redemption",
+      "level": "9",
+      "initiative": 33,
+      "image": "fh-redemption.png"
+    },
+    {
+      "name": "the end of everything",
+      "level": "9",
+      "initiative": 99,
+      "image": "fh-the-end-of-everything.png"
+    }
+  ],
+  "matFront": "character-mat-front.png",
+  "matBack": "character-mat-back.png",
+  "perks": "perks.png"
+}

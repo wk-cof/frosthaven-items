@@ -1,5 +1,5 @@
 import React from 'react';
-import { Filters, ItemStatusMap } from '../App';
+import { Filters, ItemStatusMap } from '../pages/ItemsPage';
 
 type Props = {
   filters: Filters;
