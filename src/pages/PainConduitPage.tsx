@@ -130,6 +130,25 @@ function PainConduitPage() {
 
   const currentHP = (characterData.hp as any)[charLevel.toString()];
 
+  const renderComplexityDots = (val: number) => (
+    <div className="char-complexity-dots">
+      {[1, 2, 3, 4, 5].map(i => (
+        <div key={i} className={`complexity-dot ${i <= val ? 'filled' : ''}`} />
+      ))}
+    </div>
+  );
+
+  const renderBarChart = (label: string, val: number) => (
+    <div className="role-chart-item">
+      <span className="role-chart-label">{label}</span>
+      <div className="role-bar-container">
+        {[1, 2, 3, 4, 5].map(i => (
+          <div key={i} className={`role-bar-segment ${i <= val ? 'filled' : ''}`} />
+        ))}
+      </div>
+    </div>
+  );
+
   return (
     <div className="character-page">
       {/* Hero Section */}
@@ -141,8 +160,14 @@ function PainConduitPage() {
           <div className="char-hero-content">
             <div className="char-hero-info">
               <div className="char-hero-badges">
-                <span className="char-badge complexity-high">Difficulty: {characterData.complexity}</span>
-                <span className="char-badge">{characterData.role}</span>
+                <div className="char-badge">
+                  Difficulty: {renderComplexityDots(characterData.complexity as number)}
+                </div>
+                <div className="char-elements">
+                  {characterData.elements?.map(el => (
+                    <span key={el} className="element-tag">{el}</span>
+                  ))}
+                </div>
               </div>
               <div className="char-hero-title-row">
                 <h1 className="char-hero-name">{characterData.name}</h1>
@@ -151,7 +176,7 @@ function PainConduitPage() {
                 </div>
               </div>
               <p className="char-hero-aka">Class: {characterData.spoilerName} • {characterData.race}</p>
-              <p className="char-hero-summary">{characterData.summary}</p>
+              
               <div className="char-hero-stats">
                 <div className="char-stat-box">
                   <span className="char-stat-value">{characterData.handSize}</span>
@@ -159,18 +184,21 @@ function PainConduitPage() {
                 </div>
                 <div className="char-stat-box">
                   <span className="char-stat-value">{currentHP}</span>
-                  <span className="char-stat-label">Current HP</span>
+                  <span className="char-stat-label">HP (level {charLevel})</span>
                 </div>
                 <div className="char-stat-box">
                   <span className="char-stat-value">{filteredCards.length}</span>
                   <span className="char-stat-label">Available Cards</span>
                 </div>
               </div>
-            </div>
-            <div className="char-hero-traits">
-              {characterData.traits.map(t => (
-                <span key={t} className="char-trait-tag">{t}</span>
-              ))}
+
+              <div className="char-role-charts">
+                {Object.entries((characterData as any).roleStats).map(([label, val]) => (
+                  renderBarChart(label, val as number)
+                ))}
+              </div>
+
+              <p className="char-lore-text">{characterData.lore}</p>
             </div>
           </div>
         </div>
@@ -254,10 +282,10 @@ function PainConduitPage() {
               </button>
             </div>
             <img
-              src={`${basePath}/${matSide === 'front' ? characterData.matFront : characterData.matBack}`}
+              src={`${basePath}/${matSide === 'front' ? (characterData as any).matFront : (characterData as any).matBack}`}
               alt={`Character mat ${matSide}`}
               className="mat-image"
-              onClick={() => setLightboxCard(matSide === 'front' ? characterData.matFront : characterData.matBack)}
+              onClick={() => setLightboxCard(matSide === 'front' ? (characterData as any).matFront : (characterData as any).matBack)}
             />
           </div>
           <div className="perks-panel">

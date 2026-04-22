@@ -4,8 +4,17 @@
   "spoilerName": "Shackles",
   "race": "Aesther",
   "handSize": 10,
-  "complexity": "High",
-  "role": "Condition Striker / Controller",
+  "complexity": 3,
+  "elements": ["Fire", "Air"],
+  "lore": "Aesthers were once human, but a tragedy long ago caused them to lose their physical form, scattering it across the infinite planes. Those who willed their psyche back together found a world they no longer recognized, and so they left, traveling the planes in search of knowledge and hidden insights. Occasionally they return, driven by varied purposes and employing bewildering methods.\n\nThe calamity that caused the Aesthers' condition was a persistent presence on this plane for much of recorded history. It captured and tortured any who fought against it, and its prisoners—those who survived—were only released after it was destroyed. The Pain Conduits suffered worst, so infused with torment that they developed a unique ability to control pain itself. They can visit great horrors upon their foes, but they do not do so lightly. Only those who inflict harm and evil intent on others will find that same harm visited back upon themselves.",
+  "roleStats": {
+    "melee": 1,
+    "ranged": 4,
+    "mobility": 2,
+    "support": 3,
+    "defense": 3,
+    "control": 5
+  },
   "summary": "A masochistic melee hybrid who turns self-inflicted pain and conditions into devastating crowd control and damage.",
   "hp": {
     "1": 8,
