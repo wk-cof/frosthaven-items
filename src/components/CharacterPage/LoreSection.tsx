@@ -27,14 +27,14 @@ const glassStyle = {
 
 export const LoreSection: React.FC<LoreSectionProps> = ({ lore, race, matBack, basePath }) => {
   return (
-    <Box component="section" sx={{ width: '100%', py: 4 }}>
+    <Box component="section" sx={{ width: '100%' }}>
       <Typography 
         variant="h2" 
         sx={{ 
-          fontSize: '2rem', 
+          fontSize: '1.5rem', 
           fontWeight: 800, 
           color: '#f8fafc', 
-          mb: 4,
+          mb: 3,
           display: 'flex',
           alignItems: 'center',
           gap: 2,
