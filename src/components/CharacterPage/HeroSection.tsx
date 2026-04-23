@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import {
   Box,
   Typography,
@@ -7,7 +8,8 @@ import {
   Avatar,
   Paper,
   Grid,
-  Slider
+  Slider,
+  Fade
 } from '@mui/material';
 import { ElementIcon } from '../ElementIcon';
 import { Character } from '../../types/character';
@@ -52,8 +54,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   availableCards,
   onLevelChange 
 }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
   const currentHP = character.hp[level.toString()] || character.hp["1"];
   const basePath = `${import.meta.env.BASE_URL}assets/characters/${character.id}`;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 400);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const getStatDesc = (val: number) => {
     if (val >= 5) return 'Extreme';
@@ -64,14 +75,86 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   };
 
   return (
-    <Box
-      sx={{
-        background: 'linear-gradient(135deg, rgba(220, 38, 38, 0.15), rgba(15, 23, 42, 0.9)), radial-gradient(circle at 20% 80%, rgba(220, 38, 38, 0.1), transparent 50%)',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-        py: 6,
-      }}
-    >
-      <Container maxWidth="lg">
+    <>
+      <Fade in={isScrolled}>
+        <Box
+          sx={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            zIndex: 1100,
+            bgcolor: 'rgba(15, 23, 42, 0.9)',
+            backdropFilter: 'blur(12px)',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+            py: 1,
+            boxShadow: '0 4px 20px rgba(0, 0, 0, 0.4)',
+            display: { xs: 'none', md: 'block' }
+          }}
+        >
+          <Container maxWidth="lg">
+            <Stack direction="row" spacing={3} sx={{ alignItems: 'center' }}>
+              <Stack direction="row" spacing={2} sx={{ alignItems: 'center' }}>
+                <Avatar 
+                  src={`${basePath}/${character.portrait}`}
+                  sx={{ 
+                    width: 44, 
+                    height: 44, 
+                    border: '2px solid rgba(255, 255, 255, 0.1)',
+                    boxShadow: '0 0 10px rgba(220, 38, 38, 0.3)'
+                  }}
+                />
+                <Stack>
+                  <Typography variant="h6" sx={{ fontWeight: 800, fontSize: '1.1rem', background: 'linear-gradient(to right, #f87171, #fb923c)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', lineHeight: 1.2 }}>
+                    {character.name}
+                  </Typography>
+                  <Typography variant="caption" sx={{ color: '#94a3b8', fontWeight: 600, textTransform: 'uppercase', fontSize: '0.6rem' }}>
+                    {character.race} • Level {level}
+                  </Typography>
+                </Stack>
+              </Stack>
+
+              <Box sx={{ flex: 1, px: 4 }}>
+                <Slider
+                  min={1}
+                  max={9}
+                  step={1}
+                  value={level}
+                  onChange={(_, val) => onLevelChange(val as number)}
+                  sx={{
+                    height: 4,
+                    color: '#38bdf8',
+                    '& .MuiSlider-track': { border: 'none' },
+                    '& .MuiSlider-rail': { opacity: 0.1, bgcolor: '#ffffff' },
+                    '& .MuiSlider-thumb': {
+                      width: 14,
+                      height: 14,
+                      bgcolor: '#38bdf8',
+                      '&:hover, &.Mui-focusVisible, &.Mui-active': {
+                        boxShadow: '0 0 10px rgba(56, 189, 248, 0.4)',
+                      },
+                      '&::before': { display: 'none' },
+                    },
+                  }}
+                />
+              </Box>
+
+              <Stack direction="row" spacing={1}>
+                {character.elements.map(el => <ElementIcon key={el} element={el} size={24} />)}
+              </Stack>
+            </Stack>
+          </Container>
+        </Box>
+      </Fade>
+
+      <Box
+        sx={{
+          background: 'linear-gradient(135deg, rgba(220, 38, 38, 0.15), rgba(15, 23, 42, 0.9)), radial-gradient(circle at 20% 80%, rgba(220, 38, 38, 0.1), transparent 50%)',
+          borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+          py: 6,
+        }}
+      >
+        <Container maxWidth="lg">
         <Grid container spacing={4}>
           {/* Main Info Column */}
           <Grid {...({ size: { xs: 12, lg: 8 } } as any)}>
@@ -324,6 +407,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </Grid>
         </Grid>
       </Container>
-    </Box>
+      </Box>
+    </>
   );
 };
