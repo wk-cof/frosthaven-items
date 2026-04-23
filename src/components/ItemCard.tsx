@@ -85,7 +85,7 @@ function ItemCard({ item, glossary, status, onStatusChange, onImageClick }: any)
         <Box sx={{ display: 'flex', p: 2, gap: 2 }}>
           <Box 
             sx={{ 
-              width: 100, 
+              width: 200, 
               flexShrink: 0, 
               cursor: 'zoom-in',
               transition: 'transform 0.2s ease',
@@ -113,13 +113,13 @@ function ItemCard({ item, glossary, status, onStatusChange, onImageClick }: any)
             <Stack direction="row" spacing={1.5} sx={{ my: 0.5, flexWrap: 'wrap', gap: 1 }}>
               {item.spent && (
                 <Stack direction="row" spacing={0.5} sx={{ alignItems: 'center', bgcolor: 'rgba(245, 158, 11, 0.1)', px: 1, py: 0.25, borderRadius: 1, border: '1px solid rgba(245, 158, 11, 0.2)' }}>
-                  <Box component="img" src={`${import.meta.env.BASE_URL}assets/general/fh-spent-bw-icon.png`} sx={{ width: 14, height: 14, objectFit: 'contain', filter: 'invert(1) sepia(1) saturate(5) hue-rotate(0deg) brightness(1)' }} />
+                  <Box component="img" src={`${import.meta.env.BASE_URL}assets/general/fh-tap-card-color-icon.png`} sx={{ width: 14, height: 14, objectFit: 'contain', filter: 'invert(1)' }} />
                   <Typography sx={{ fontSize: '0.65rem', fontWeight: 800, color: '#fbbf24', textTransform: 'uppercase' }}>Spent</Typography>
                 </Stack>
               )}
               {item.consumed && (
                 <Stack direction="row" spacing={0.5} sx={{ alignItems: 'center', bgcolor: 'rgba(239, 68, 68, 0.1)', px: 1, py: 0.25, borderRadius: 1, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
-                  <Box component="img" src={`${import.meta.env.BASE_URL}assets/general/fh-lost-color-icon.png`} sx={{ width: 14, height: 14, objectFit: 'contain' }} />
+                  <Box component="img" src={`${import.meta.env.BASE_URL}assets/general/fh-lost-black-card-color-icon.png`} sx={{ width: 14, height: 14, objectFit: 'contain', filter: 'invert(1)' }} />
                   <Typography sx={{ fontSize: '0.65rem', fontWeight: 800, color: '#f87171', textTransform: 'uppercase' }}>Consumed</Typography>
                 </Stack>
               )}
