@@ -101,19 +101,20 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ character, level, avai
                 {/* Header Tags */}
                 <Stack direction="row" spacing={1} sx={{ justifyContent: { xs: 'center', md: 'flex-start' } }}>
                   <Chip
-                    label="THEORYCRAFTING"
+                    label={`${character.spoilerName}`}
                     size="small"
                     sx={{
-                      bgcolor: 'rgba(0,0,0,0.3)',
-                      border: '1px solid rgba(255,255,255,0.05)',
-                      color: '#94a3b8',
+                      bgcolor: 'rgba(56, 189, 248, 0.1)',
+                      border: '1px solid rgba(56, 189, 248, 0.2)',
+                      color: '#38bdf8',
                       fontWeight: 700,
                       fontSize: '0.7rem',
                       letterSpacing: '0.05em'
                     }}
                   />
+
                   <Chip
-                    label={`${character.race.toUpperCase()} CLASS`}
+                    label={`${character.race}`}
                     size="small"
                     sx={{
                       bgcolor: 'rgba(56, 189, 248, 0.1)',
@@ -185,10 +186,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ character, level, avai
                     sx={{ bgcolor: 'rgba(255, 255, 255, 0.08)', border: '1px solid rgba(255, 255, 255, 0.15)', px: 1, height: 'auto', py: 0.5 }}
                   />
                 </Stack>
-
-                <Typography variant="body2" sx={{ color: '#94a3b8', opacity: 0.8 }}>
-                  Class: {character.spoilerName} • {character.race}
-                </Typography>
 
                 {/* Traits */}
                 <Stack direction="row" spacing={1} sx={{ flexWrap: 'wrap', justifyContent: { xs: 'center', md: 'flex-start' } }}>

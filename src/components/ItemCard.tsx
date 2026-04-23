@@ -14,6 +14,7 @@ import FlagOutlinedIcon from '@mui/icons-material/FlagOutlined';
 import { renderTextWithTooltips } from './RuleTooltip';
 import { toTitleCase } from '../utils/stringUtils';
 import { SlotIcon } from './SlotIcon';
+import { ResourceIcon } from './ResourceIcon';
 
 function ItemCard({ item, glossary, status, onStatusChange }: any) {
   const isVerified = status === 'verified';
@@ -107,11 +108,17 @@ function ItemCard({ item, glossary, status, onStatusChange }: any) {
           {item.spent && <Chip label="Spent" size="small" sx={{ height: 20, bgcolor: 'rgba(245, 158, 11, 0.1)', color: '#fbbf24', border: '1px solid rgba(245, 158, 11, 0.2)', fontSize: '0.65rem', fontWeight: 800 }} />}
           {item.consumed && <Chip label="Consumed" size="small" sx={{ height: 20, bgcolor: 'rgba(239, 68, 68, 0.1)', color: '#f87171', border: '1px solid rgba(239, 68, 68, 0.2)', fontSize: '0.65rem', fontWeight: 800 }} />}
           {item.resources && Object.entries(item.resources).map(([res, count]) => (
-            <Typography key={res} sx={{ fontSize: '0.75rem', color: '#64748b' }}>
-              📦 {String(count)} {res.startsWith('Item ') ? (
-                <Link href={`#item-${res.replace('Item ', '')}`} sx={{ color: '#38bdf8', textDecoration: 'none' }}>{toTitleCase(res)}</Link>
-              ) : toTitleCase(res)}
-            </Typography>
+            <Stack key={res} direction="row" spacing={1} sx={{ alignItems: 'center' }}>
+              <Typography sx={{ fontSize: '0.75rem', color: '#64748b', minWidth: 12 }}>{String(count)}</Typography>
+              {res.startsWith('Item ') ? (
+                <Link href={`#item-${res.replace('Item ', '')}`} sx={{ color: '#38bdf8', textDecoration: 'none', fontSize: '0.75rem' }}>{toTitleCase(res)}</Link>
+              ) : (
+                <Stack direction="row" spacing={0.5} sx={{ alignItems: 'center' }}>
+                  <ResourceIcon resource={res} size={16} />
+                  <Typography sx={{ fontSize: '0.75rem', color: '#94a3b8' }}>{toTitleCase(res)}</Typography>
+                </Stack>
+              )}
+            </Stack>
           ))}
         </Stack>
       </Box>
