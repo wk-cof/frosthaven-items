@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled from '@emotion/styled';
+import { Box } from '@mui/material';
 import { Character } from '../types/character';
 
 // Sub-components
@@ -12,15 +12,6 @@ import { BuildsSection } from '../components/CharacterPage/BuildsSection';
 import { TipsSection } from '../components/CharacterPage/TipsSection';
 import { PerkPriorityList } from '../components/CharacterPage/PerkPriorityList';
 import { Lightbox } from '../components/CharacterPage/Lightbox';
-
-const PageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  min-height: 100vh;
-  background-color: #0f172a;
-  color: #f8fafc;
-`;
 
 interface CharacterPageProps {
   character: Character;
@@ -43,7 +34,16 @@ export const CharacterPage: React.FC<CharacterPageProps> = ({ character }) => {
   });
 
   return (
-    <PageContainer>
+    <Box 
+      sx={{ 
+        display: 'flex', 
+        flexDirection: 'column', 
+        gap: 0, 
+        minHeight: '100vh', 
+        bgcolor: '#0f172a', 
+        color: '#f8fafc' 
+      }}
+    >
       <HeroSection 
         character={character} 
         level={charLevel} 
@@ -90,6 +90,6 @@ export const CharacterPage: React.FC<CharacterPageProps> = ({ character }) => {
           basePath={basePath} 
         />
       )}
-    </PageContainer>
+    </Box>
   );
 };

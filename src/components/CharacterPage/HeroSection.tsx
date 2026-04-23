@@ -1,12 +1,11 @@
-import React from 'react';
-import { 
-  Box, 
-  Typography, 
-  Container, 
-  Stack, 
-  Chip, 
-  Avatar, 
-  Paper, 
+import {
+  Box,
+  Typography,
+  Container,
+  Stack,
+  Chip,
+  Avatar,
+  Paper,
   Grid
 } from '@mui/material';
 import { ElementIcon } from '../ElementIcon';
@@ -60,7 +59,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ character, level, avai
   };
 
   return (
-    <Box 
+    <Box
       sx={{
         background: 'linear-gradient(135deg, rgba(220, 38, 38, 0.15), rgba(15, 23, 42, 0.9)), radial-gradient(circle at 20% 80%, rgba(220, 38, 38, 0.1), transparent 50%)',
         borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
@@ -68,10 +67,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ character, level, avai
       }}
     >
       <Container maxWidth="lg">
-        <Stack 
-          direction={{ xs: 'column', md: 'row' }} 
-          spacing={6} 
-          sx={{ 
+        <Stack
+          direction={{ xs: 'column', md: 'row' }}
+          spacing={6}
+          sx={{
             alignItems: { xs: 'center', md: 'flex-start' },
             textAlign: { xs: 'center', md: 'left' }
           }}
@@ -100,29 +99,29 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ character, level, avai
           <Stack spacing={3} sx={{ flex: 1, width: '100%' }}>
             {/* Header Tags */}
             <Stack direction="row" spacing={1} sx={{ justifyContent: { xs: 'center', md: 'flex-start' } }}>
-              <Chip 
-                label="THEORYCRAFTING" 
+              <Chip
+                label="THEORYCRAFTING"
                 size="small"
-                sx={{ 
-                  bgcolor: 'rgba(0,0,0,0.3)', 
-                  border: '1px solid rgba(255,255,255,0.05)', 
+                sx={{
+                  bgcolor: 'rgba(0,0,0,0.3)',
+                  border: '1px solid rgba(255,255,255,0.05)',
                   color: '#94a3b8',
                   fontWeight: 700,
                   fontSize: '0.7rem',
                   letterSpacing: '0.05em'
-                }} 
+                }}
               />
-              <Chip 
-                label={`${character.race.toUpperCase()} CLASS`} 
+              <Chip
+                label={`${character.race.toUpperCase()} CLASS`}
                 size="small"
-                sx={{ 
-                  bgcolor: 'rgba(56, 189, 248, 0.1)', 
-                  border: '1px solid rgba(56, 189, 248, 0.2)', 
+                sx={{
+                  bgcolor: 'rgba(56, 189, 248, 0.1)',
+                  border: '1px solid rgba(56, 189, 248, 0.2)',
                   color: '#38bdf8',
                   fontWeight: 700,
                   fontSize: '0.7rem',
                   letterSpacing: '0.05em'
-                }} 
+                }}
               />
             </Stack>
 
@@ -143,10 +142,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ character, level, avai
               >
                 <img src={`${basePath}/${character.icon}`} alt="Class" style={{ width: '100%', filter: 'drop-shadow(0 0 5px #38bdf8)' }} />
               </Box>
-              <Typography 
-                variant="h1" 
-                sx={{ 
-                  fontSize: '3rem', 
+              <Typography
+                variant="h1"
+                sx={{
+                  fontSize: '3rem',
                   fontWeight: 800,
                   background: 'linear-gradient(to right, #f87171, #fb923c)',
                   WebkitBackgroundClip: 'text',
@@ -160,7 +159,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ character, level, avai
 
             {/* Sub-Header info */}
             <Stack direction="row" spacing={1} sx={{ flexWrap: 'wrap', justifyContent: { xs: 'center', md: 'flex-start' } }}>
-               <Chip 
+              <Chip
                 label={
                   <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
                     <Typography variant="caption" sx={{ fontWeight: 600, color: '#94a3b8' }}>COMPLEXITY:</Typography>
@@ -173,7 +172,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ character, level, avai
                 }
                 sx={{ bgcolor: 'rgba(255, 255, 255, 0.08)', border: '1px solid rgba(255, 255, 255, 0.15)', px: 1, height: 'auto', py: 0.5 }}
               />
-              <Chip 
+              <Chip
                 label={
                   <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
                     <Typography variant="caption" sx={{ fontWeight: 600, color: '#94a3b8' }}>AFFINITIES:</Typography>
@@ -193,15 +192,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ character, level, avai
             {/* Traits */}
             <Stack direction="row" spacing={1} sx={{ flexWrap: 'wrap', justifyContent: { xs: 'center', md: 'flex-start' } }}>
               {character.traits.map(t => (
-                <Chip 
-                  key={t} 
-                  label={t} 
-                  sx={{ 
-                    bgcolor: 'rgba(56, 189, 248, 0.1)', 
-                    border: '1px solid rgba(56, 189, 248, 0.2)', 
+                <Chip
+                  key={t}
+                  label={t}
+                  sx={{
+                    bgcolor: 'rgba(56, 189, 248, 0.1)',
+                    border: '1px solid rgba(56, 189, 248, 0.2)',
                     color: '#38bdf8',
                     borderRadius: 2
-                  }} 
+                  }}
                 />
               ))}
             </Stack>
@@ -213,13 +212,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ character, level, avai
                 { label: `HP (Lvl ${level})`, value: currentHP },
                 { label: 'Cards', value: availableCards }
               ].map(stat => (
-                <Box 
-                  key={stat.label} 
-                  sx={{ 
-                    bgcolor: 'rgba(0, 0, 0, 0.3)', 
-                    border: '1px solid rgba(255, 255, 255, 0.1)', 
-                    borderRadius: 3, 
-                    p: '12px 20px', 
+                <Box
+                  key={stat.label}
+                  sx={{
+                    bgcolor: 'rgba(0, 0, 0, 0.3)',
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    borderRadius: 3,
+                    p: '12px 20px',
                     minWidth: 100,
                     textAlign: 'center'
                   }}
@@ -233,16 +232,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ character, level, avai
             {/* Sub-Grids */}
             <Grid container spacing={3} sx={{ mt: 2 }}>
               {/* Combat Profile */}
-              <Grid size={{ xs: 12, md: 6 }}>
+              <Grid {...({ size: { xs: 12, md: 6 } } as any)}>
                 <Paper elevation={0} sx={{ ...glassStyle, height: '100%', display: 'flex', flexDirection: 'column', gap: 2.5 }}>
-                  <Typography 
-                    variant="h6" 
-                    sx={{ 
-                      fontSize: '1.2rem', 
-                      fontWeight: 700, 
-                      color: '#f8fafc', 
-                      borderBottom: '1px solid rgba(255,255,255,0.1)', 
-                      pb: 1 
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontSize: '1.2rem',
+                      fontWeight: 700,
+                      color: '#f8fafc',
+                      borderBottom: '1px solid rgba(255,255,255,0.1)',
+                      pb: 1
                     }}
                   >
                     Combat Profile
@@ -266,10 +265,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ character, level, avai
               </Grid>
 
               {/* Lore */}
-              <Grid size={{ xs: 12, md: 6 }}>
-                <Paper 
-                  elevation={0} 
-                  sx={{ 
+              <Grid {...({ size: { xs: 12, md: 6 } } as any)}>
+                <Paper
+                  elevation={0}
+                  sx={{
                     ...glassStyle,
                     height: '100%',
                     position: 'relative',
@@ -288,13 +287,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ character, level, avai
                   }}
                 >
                   <Typography variant="h5" sx={{ fontWeight: 700, color: '#f8fafc', mb: 0.5, position: 'relative', zIndex: 1 }}>Lore</Typography>
-                  <Typography 
-                    sx={{ 
-                      fontFamily: 'Space Grotesk', 
-                      fontSize: '0.75rem', 
-                      fontWeight: 700, 
-                      color: '#94a3b8', 
-                      textTransform: 'uppercase', 
+                  <Typography
+                    sx={{
+                      fontFamily: 'Space Grotesk',
+                      fontSize: '0.75rem',
+                      fontWeight: 700,
+                      color: '#94a3b8',
+                      textTransform: 'uppercase',
                       letterSpacing: '0.15em',
                       mb: 2,
                       position: 'relative',

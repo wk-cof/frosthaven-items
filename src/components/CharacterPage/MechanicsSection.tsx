@@ -61,7 +61,7 @@ export const MechanicsSection: React.FC<MechanicsSectionProps> = ({ notes }) => 
             const { title, body } = parseNote(note);
             const color = getColor(i);
             return (
-              <Grid key={i} size={{ xs: 12, md: 6 }}>
+              <Grid key={i} {...({ size: { xs: 12, md: 6 } } as any)}>
                 <Box 
                   className="mechanics-card"
                   sx={{

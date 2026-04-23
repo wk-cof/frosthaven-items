@@ -1,4 +1,17 @@
 import React from 'react';
+import { 
+  Typography, 
+  TextField, 
+  Select, 
+  MenuItem, 
+  FormControl, 
+  InputLabel, 
+  Checkbox, 
+  FormControlLabel, 
+  Stack,
+  Paper,
+  Divider
+} from '@mui/material';
 import { Filters, ItemStatusMap } from '../pages/ItemsPage';
 
 type Props = {
@@ -7,7 +20,6 @@ type Props = {
   itemStatuses: ItemStatusMap;
 };
 
-// Available slots
 const SLOTS = [
   { id: '', label: 'All Slots' },
   { id: '1h', label: '1 Hand' },
@@ -34,89 +46,147 @@ function FilterSidebar({ filters, setFilters, itemStatuses }: Props) {
     });
   };
 
+  const textFieldSx = {
+    '& .MuiOutlinedInput-root': {
+      bgcolor: 'rgba(0, 0, 0, 0.2)',
+      '& fieldset': { borderColor: 'rgba(255, 255, 255, 0.1)' },
+      '&:hover fieldset': { borderColor: 'rgba(255, 255, 255, 0.2)' },
+      '&.Mui-focused fieldset': { borderColor: '#38bdf8' },
+    },
+    '& .MuiInputLabel-root': { color: '#94a3b8' },
+    '& .MuiInputBase-input': { color: '#f8fafc' },
+  };
+
   return (
-    <aside className="filter-sidebar">
-      <h2 style={{ marginBottom: '1.5rem', fontSize: '1.2rem', paddingBottom: '0.5rem', borderBottom: '1px solid var(--glass-border)' }}>Filters</h2>
+    <Paper 
+      component="aside"
+      elevation={0}
+      sx={{ 
+        width: { xs: '100%', md: 280 }, 
+        p: 3, 
+        bgcolor: 'rgba(30, 41, 59, 0.4)', 
+        border: '1px solid rgba(255, 255, 255, 0.1)',
+        borderRadius: 4,
+        position: 'sticky',
+        top: 88,
+        height: 'fit-content'
+      }}
+    >
+      <Typography 
+        variant="h6" 
+        sx={{ 
+          fontSize: '1.2rem', 
+          fontWeight: 800, 
+          color: '#f8fafc',
+          mb: 3,
+          pb: 1,
+          borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
+        }}
+      >
+        Filters
+      </Typography>
       
-      <div className="filter-group">
-        <label>Search string</label>
-        <input
-          type="text"
-          className="search-input"
-          placeholder="Search items..."
+      <Stack spacing={3}>
+        <TextField
+          fullWidth
+          label="Search Items"
+          variant="outlined"
+          size="small"
           value={filters.searchTerm}
           onChange={(e) => updateFilter('searchTerm', e.target.value)}
+          sx={textFieldSx}
         />
-      </div>
 
-      <div className="filter-group">
-        <label>Equipment Slot</label>
-        <select 
-          className="search-input" 
-          value={filters.slot}
-          onChange={(e) => updateFilter('slot', e.target.value)}
-        >
-          {SLOTS.map(slot => (
-            <option key={slot.id} value={slot.id}>{slot.label}</option>
-          ))}
-        </select>
-      </div>
+        <FormControl fullWidth size="small" sx={textFieldSx}>
+          <InputLabel>Equipment Slot</InputLabel>
+          <Select
+            value={filters.slot}
+            label="Equipment Slot"
+            onChange={(e) => updateFilter('slot', e.target.value)}
+          >
+            {SLOTS.map(slot => (
+              <MenuItem key={slot.id} value={slot.id}>{slot.label}</MenuItem>
+            ))}
+          </Select>
+        </FormControl>
 
-      <div className="filter-group">
-        <label>Max Cost (Gold)</label>
-        <input
+        <TextField
+          fullWidth
+          label="Max Cost (Gold)"
           type="number"
-          className="search-input"
+          variant="outlined"
+          size="small"
           placeholder="Any"
-          min="0"
           value={filters.maxCost}
           onChange={(e) => updateFilter('maxCost', e.target.value)}
+          sx={textFieldSx}
         />
-      </div>
 
-      <div className="filter-group toggle-group" style={{ marginTop: '1.5rem' }}>
-        <label className="toggle-label">
-          <input 
-            type="checkbox" 
-            checked={filters.hideSpent}
-            onChange={(e) => updateFilter('hideSpent', e.target.checked)}
-          />
-          Hide Spent Items
-        </label>
-        
-        <label className="toggle-label">
-          <input 
-            type="checkbox" 
-            checked={filters.hideConsumed}
-            onChange={(e) => updateFilter('hideConsumed', e.target.checked)}
-          />
-          Hide Consumed Items
-        </label>
-      </div>
+        <Divider sx={{ borderColor: 'rgba(255, 255, 255, 0.05)' }} />
 
-      {import.meta.env.DEV && (
-        <div className="filter-group toggle-group">
-          <label style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Review Status</label>
-          <label className="toggle-label">
-            <input 
-              type="checkbox" 
-              checked={filters.showFlaggedOnly}
-              onChange={(e) => updateReviewFilters('showFlaggedOnly', e.target.checked)}
-            />
-            🚩 Flagged Only ({Object.values(itemStatuses).filter(s => s === 'flagged').length})
-          </label>
-          
-          <label className="toggle-label">
-            <input 
-              type="checkbox" 
-              checked={filters.showUnreviewedOnly}
-              onChange={(e) => updateReviewFilters('showUnreviewedOnly', e.target.checked)}
-            />
-            ❓ Unreviewed Only
-          </label>
-        </div>
-      )}
-    </aside>
+        <Stack spacing={1}>
+          <FormControlLabel
+            control={
+              <Checkbox 
+                size="small" 
+                checked={filters.hideSpent} 
+                onChange={(e) => updateFilter('hideSpent', e.target.checked)}
+                sx={{ color: '#475569', '&.Mui-checked': { color: '#38bdf8' } }}
+              />
+            }
+            label={<Typography sx={{ fontSize: '0.9rem', color: '#cbd5e1' }}>Hide Spent Items</Typography>}
+          />
+          <FormControlLabel
+            control={
+              <Checkbox 
+                size="small" 
+                checked={filters.hideConsumed} 
+                onChange={(e) => updateFilter('hideConsumed', e.target.checked)}
+                sx={{ color: '#475569', '&.Mui-checked': { color: '#38bdf8' } }}
+              />
+            }
+            label={<Typography sx={{ fontSize: '0.9rem', color: '#cbd5e1' }}>Hide Consumed Items</Typography>}
+          />
+        </Stack>
+
+        {import.meta.env.DEV && (
+          <>
+            <Divider sx={{ borderColor: 'rgba(255, 255, 255, 0.05)' }} />
+            <Typography variant="caption" sx={{ color: '#64748b', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+              Review Status
+            </Typography>
+            <Stack spacing={0.5}>
+              <FormControlLabel
+                control={
+                  <Checkbox 
+                    size="small" 
+                    checked={filters.showFlaggedOnly} 
+                    onChange={(e) => updateReviewFilters('showFlaggedOnly', e.target.checked)}
+                    sx={{ color: '#475569', '&.Mui-checked': { color: '#dc2626' } }}
+                  />
+                }
+                label={
+                  <Typography sx={{ fontSize: '0.9rem', color: '#cbd5e1' }}>
+                    🚩 Flagged ({Object.values(itemStatuses).filter(s => s === 'flagged').length})
+                  </Typography>
+                }
+              />
+              <FormControlLabel
+                control={
+                  <Checkbox 
+                    size="small" 
+                    checked={filters.showUnreviewedOnly} 
+                    onChange={(e) => updateReviewFilters('showUnreviewedOnly', e.target.checked)}
+                    sx={{ color: '#475569', '&.Mui-checked': { color: '#fbbf24' } }}
+                  />
+                }
+                label={<Typography sx={{ fontSize: '0.9rem', color: '#cbd5e1' }}>❓ Unreviewed</Typography>}
+              />
+            </Stack>
+          </>
+        )}
+      </Stack>
+    </Paper>
   );
 }
 
