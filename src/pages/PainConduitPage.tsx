@@ -163,10 +163,10 @@ function PainConduitPage() {
           <div className="char-hero-content">
             <div className="char-hero-info">
               <div className="char-hero-title-row">
-                <h1 className="char-hero-name">{characterData.name}</h1>
                 <div className="char-class-icon">
                   <img src={`${basePath}/${characterData.icon}`} alt="Class Icon" />
                 </div>
+                <h1 className="char-hero-name">{characterData.name}</h1>
               </div>
               <div className="char-hero-badges">
                 <div className="char-badge">
@@ -182,13 +182,13 @@ function PainConduitPage() {
                 </div>
               </div>
               <p className="char-hero-aka">Class: {characterData.spoilerName} • {characterData.race}</p>
-              
+
               <div className="char-hero-traits">
                 {characterData.traits?.map(trait => (
                   <span key={trait} className="char-trait-tag">{trait}</span>
                 ))}
               </div>
-              
+
               <div className="char-hero-stats">
                 <div className="char-stat-box">
                   <span className="char-stat-value">{characterData.handSize}</span>
@@ -238,11 +238,11 @@ function PainConduitPage() {
               <span className="level-number">{charLevel}</span>
             </div>
           </div>
-          <input 
-            type="range" 
-            min="1" 
-            max="9" 
-            value={charLevel} 
+          <input
+            type="range"
+            min="1"
+            max="9"
+            value={charLevel}
             onChange={(e) => setCharLevel(parseInt(e.target.value))}
             className="level-range-input"
           />
