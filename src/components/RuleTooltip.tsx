@@ -7,6 +7,7 @@ import {
 import { ElementIcon } from './ElementIcon';
 import { ConditionIcon } from './ConditionIcon';
 import { GeneralIcon } from './GeneralIcon';
+import { ModifierIcon } from './ModifierIcon';
 
 // Pre-process text to highlight modifiers
 function highlightModifiers(text: string) {
@@ -17,15 +18,20 @@ function highlightModifiers(text: string) {
   const elements: any[] = [];
   
   parts.forEach((part, i) => {
-    if (part.match(/\d+x/)) {
-      elements.push(<Box component="span" key={`mod-${i}`} sx={{ color: '#fbbf24', fontWeight: 800 }}>{part}</Box>);
-    } else if (part.match(/\+0\b/)) {
-      elements.push(<Box component="span" key={`mod-${i}`} sx={{ color: '#94a3b8', fontWeight: 800 }}>{part}</Box>);
-    } else if (part.match(/\+\d+/)) {
-      elements.push(<Box component="span" key={`mod-${i}`} sx={{ color: '#4ade80', fontWeight: 800 }}>{part}</Box>);
-    } else if (part.match(/\-\d+/)) {
-      elements.push(<Box component="span" key={`mod-${i}`} sx={{ color: '#f87171', fontWeight: 800 }}>{part}</Box>);
-    } else if (part) {
+    if (!part) return;
+
+    if (part.match(/\d+x/i)) {
+      elements.push(<ModifierIcon key={`mod-${i}`} modifier={part.toLowerCase()} size={20} />);
+    } else if (part.match(/[\+\-]\d+/)) {
+      // Split into modifier and the rest (e.g., "+1 Move" -> ["+1", " Move"])
+      const match = part.match(/([\+\-]\d+)(.*)/);
+      if (match) {
+        elements.push(<ModifierIcon key={`mod-${i}`} modifier={match[1]} size={20} />);
+        if (match[2]) elements.push(match[2]);
+      } else {
+        elements.push(part);
+      }
+    } else {
       elements.push(part);
     }
   });
