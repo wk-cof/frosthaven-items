@@ -227,12 +227,19 @@ const TraitTag = styled.span`
   color: #38bdf8;
 `;
 
+const LoreContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
+
 const LoreText = styled.p`
   font-size: 1rem;
   color: #e2e8f0;
   line-height: 1.6;
   font-style: italic;
   opacity: 0.9;
+  margin: 0;
 `;
 
 interface HeroSectionProps {
@@ -308,7 +315,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ character, level, avai
             ))}
           </RoleChart>
 
-          <LoreText>{renderTextWithTooltips(character.lore, glossaryData)}</LoreText>
+          <LoreContainer>
+            {character.lore.split('\n\n').map((para, i) => (
+              <LoreText key={i}>
+                {renderTextWithTooltips(para, glossaryData)}
+              </LoreText>
+            ))}
+          </LoreContainer>
         </HeroContent>
       </HeroInner>
     </HeroContainer>

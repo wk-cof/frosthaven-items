@@ -9,14 +9,14 @@ interface ElementIconProps {
 }
 
 const ELEMENT_MAP: Record<string, string> = {
-  'fire': 'fh-fire-color-icon.png',
-  'ice': 'fh-ice-color-icon.png',
-  'air': 'fh-air-color-icon.png',
-  'earth': 'fh-earth-color-icon.png',
-  'light': 'fh-light-color-icon.png',
-  'dark': 'fh-dark-color-icon.png',
-  'wild': 'fh-wild-color-icon.png',
-  'any': 'fh-wild-color-icon.png'
+  'fire': 'fh-fire-bw-icon.png',
+  'ice': 'fh-ice-bw-icon.png',
+  'air': 'fh-air-bw-icon.png',
+  'earth': 'fh-earth-bw-icon.png',
+  'light': 'fh-light-bw-icon.png',
+  'dark': 'fh-dark-bw-icon.png',
+  'wild': 'fh-wild-bw-icon.png',
+  'any': 'fh-wild-bw-icon.png'
 };
 
 export const ElementIcon: React.FC<ElementIconProps> = ({ element, size = 20, className = "" }) => {
@@ -36,7 +36,8 @@ export const ElementIcon: React.FC<ElementIconProps> = ({ element, size = 20, cl
         width: `${size}px`,
         height: `${size}px`,
         verticalAlign: 'middle',
-        display: 'inline-block'
+        display: 'inline-block',
+        filter: 'invert(1)'
       }}
       className={`element-icon ${className}`}
     />
