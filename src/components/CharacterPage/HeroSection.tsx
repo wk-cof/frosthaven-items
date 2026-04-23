@@ -1,304 +1,51 @@
-import styled from '@emotion/styled';
+import React from 'react';
+import { 
+  Box, 
+  Typography, 
+  Container, 
+  Stack, 
+  Chip, 
+  Avatar, 
+  Paper, 
+  Grid
+} from '@mui/material';
 import { ElementIcon } from '../ElementIcon';
 import { renderTextWithTooltips } from '../RuleTooltip';
 import glossaryData from '../../data/glossary.json';
 import { Character } from '../../types/character';
 
-const HeroContainer = styled.section`
-  background: linear-gradient(135deg, rgba(220, 38, 38, 0.15), rgba(15, 23, 42, 0.9)),
-    radial-gradient(circle at 20% 80%, rgba(220, 38, 38, 0.1), transparent 50%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 3rem 2rem;
-`;
-
-const HeroInner = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 3rem;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
-  }
-`;
-
-const Portrait = styled.div`
-  width: 280px;
-  height: 280px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 4px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 30px rgba(220, 38, 38, 0.4), inset 0 0 20px rgba(0, 0, 0, 0.5);
-  background: rgba(30, 41, 59, 0.7);
-  position: relative;
-
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 50%;
-    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.4);
-    pointer-events: none;
-  }
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 20%;
-    transition: transform 0.5s ease;
-  }
-
-  &:hover img {
-    transform: scale(1.1);
-  }
-`;
-
-const HeroContent = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-`;
-
-const TitleRow = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  
-  @media (max-width: 768px) {
-    justify-content: center;
-  }
-`;
-
-const ClassIcon = styled.div`
-  width: 50px;
-  height: 50px;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    padding: 0.5rem;
-    filter: drop-shadow(0 0 5px #38bdf8);
-  }
-`;
-
-const HeroName = styled.h1`
-  font-size: 3rem;
-  font-weight: 800;
-  background: linear-gradient(to right, #f87171, #fb923c);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height: 1.1;
-`;
-
-const BadgeRow = styled.div`
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  @media (max-width: 768px) {
-    justify-content: center;
-  }
-`;
-
-const Badge = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.3rem 0.75rem;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #94a3b8;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  white-space: nowrap;
-`;
-
-const ComplexityDots = styled.div`
-  display: flex;
-  gap: 3px;
-`;
-
-const Dot = styled.div<{ filled: boolean }>`
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: ${props => props.filled ? '#38bdf8' : 'rgba(255,255,255,0.1)'};
-  box-shadow: ${props => props.filled ? '0 0 8px rgba(56, 189, 248, 0.6)' : 'none'};
-`;
-
-
-
-const StatGrid = styled.div`
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-`;
-
-const StatBox = styled.div`
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 0.75rem 1.25rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.25rem;
-  min-width: 80px;
-`;
-
-const StatValue = styled.span`
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: #38bdf8;
-`;
-
-const StatLabel = styled.span`
-  font-size: 0.75rem;
-  color: #94a3b8;
-  text-transform: uppercase;
-`;
-
-const GlassPanel = styled.div`
-  background-color: rgba(30, 41, 59, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: 12px;
-  padding: 1.5rem;
-`;
-
-const RoleSection = styled(GlassPanel)`
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-`;
-
-const RoleHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.25rem;
-`;
-
-const RoleLabel = styled.span`
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #94a3b8;
-`;
-
-const RoleValue = styled.span`
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #38bdf8;
-`;
-
-const BarSegments = styled.div`
-  display: flex;
-  gap: 4px;
-  height: 12px;
-`;
-
-const Segment = styled.div<{ filled: boolean; partial?: boolean }>`
-  flex: 1;
-  background: ${props => 
-    props.filled ? '#38bdf8' : 
-    props.partial ? 'rgba(56, 189, 248, 0.2)' : 'rgba(15, 23, 42, 0.5)'};
-  border-radius: 2px;
-  box-shadow: ${props => props.filled ? '0 0 8px rgba(56, 189, 248, 0.4)' : 'none'};
-  transition: all 0.3s ease;
-`;
-
-const LoreCard = styled(GlassPanel)`
-  position: relative;
-  overflow: hidden;
-  margin-top: 1rem;
-
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url(${props => props.about});
-    background-size: cover;
-    background-position: center;
-    opacity: 0.15;
-    mix-blend-mode: overlay;
-    pointer-events: none;
-  }
-`;
-
-const LoreTitle = styled.h3`
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #f8fafc;
-  margin-bottom: 0.5rem;
-  position: relative;
-  z-index: 1;
-`;
-
-const LoreSubTitle = styled.div`
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: #94a3b8;
-  margin-bottom: 1rem;
-  position: relative;
-  z-index: 1;
-`;
-
-const LoreText = styled.p`
-  font-size: 1rem;
-  color: #94a3b8;
-  line-height: 1.7;
-  position: relative;
-  z-index: 1;
-  margin: 0;
-`;
-
-const TraitRow = styled.div`
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-`;
-
-const TraitTag = styled.span`
-  padding: 0.35rem 0.75rem;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  background: rgba(56, 189, 248, 0.1);
-  border: 1px solid rgba(56, 189, 248, 0.2);
-  color: #38bdf8;
-`;
+const SegmentBar = ({ value }: { value: number }) => (
+  <Stack direction="row" spacing={0.5} sx={{ height: 12, width: '100%' }}>
+    {[1, 2, 3, 4, 5].map((i) => (
+      <Box
+        key={i}
+        sx={{
+          flex: 1,
+          borderRadius: '2px',
+          bgcolor: i <= value ? '#38bdf8' : 'rgba(15, 23, 42, 0.5)',
+          boxShadow: i <= value ? '0 0 8px rgba(56, 189, 248, 0.4)' : 'none',
+          transition: 'all 0.3s ease',
+        }}
+      />
+    ))}
+  </Stack>
+);
 
 interface HeroSectionProps {
   character: Character;
   level: number;
   availableCards: number;
 }
+
+const glassStyle = {
+  backgroundColor: 'rgba(30, 41, 59, 0.7)',
+  border: '1px solid rgba(255, 255, 255, 0.1)',
+  borderTop: '1px solid rgba(255, 255, 255, 0.2)',
+  backdropFilter: 'blur(12px)',
+  WebkitBackdropFilter: 'blur(12px)',
+  borderRadius: '12px',
+  p: 3,
+};
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ character, level, availableCards }) => {
   const currentHP = character.hp[level.toString()] || character.hp["1"];
@@ -313,101 +60,262 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ character, level, avai
   };
 
   return (
-    <HeroContainer>
-      <HeroInner>
-        <Portrait>
-          <img src={`${basePath}/${character.portrait}`} alt={character.name} />
-        </Portrait>
-        <HeroContent>
-          <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '-0.5rem' }}>
-            <Badge style={{ background: 'rgba(0,0,0,0.3)', borderColor: 'rgba(255,255,255,0.05)', color: '#94a3b8' }}>THEORYCRAFTING</Badge>
-            <Badge style={{ background: 'rgba(56, 189, 248, 0.1)', borderColor: 'rgba(56, 189, 248, 0.2)', color: '#38bdf8' }}>{character.race} CLASS</Badge>
-          </div>
-          <TitleRow>
-            <ClassIcon>
-              <img src={`${basePath}/${character.icon}`} alt="Class" />
-            </ClassIcon>
-            <HeroName>{character.name}</HeroName>
-          </TitleRow>
+    <Box 
+      sx={{
+        background: 'linear-gradient(135deg, rgba(220, 38, 38, 0.15), rgba(15, 23, 42, 0.9)), radial-gradient(circle at 20% 80%, rgba(220, 38, 38, 0.1), transparent 50%)',
+        borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+        py: 6,
+      }}
+    >
+      <Container maxWidth="lg">
+        <Stack 
+          direction={{ xs: 'column', md: 'row' }} 
+          spacing={6} 
+          sx={{ 
+            alignItems: { xs: 'center', md: 'flex-start' },
+            textAlign: { xs: 'center', md: 'left' }
+          }}
+        >
+          {/* Portrait */}
+          <Box sx={{ position: 'relative', flexShrink: 0 }}>
+            <Avatar
+              src={`${basePath}/${character.portrait}`}
+              alt={character.name}
+              sx={{
+                width: 280,
+                height: 280,
+                border: '4px solid rgba(255, 255, 255, 0.1)',
+                boxShadow: '0 0 30px rgba(220, 38, 38, 0.4), inset 0 0 20px rgba(0, 0, 0, 0.5)',
+                bgcolor: 'rgba(30, 41, 59, 0.7)',
+                '& img': {
+                  objectPosition: 'center 20%',
+                  transition: 'transform 0.5s ease',
+                },
+                '&:hover img': { transform: 'scale(1.1)' }
+              }}
+            />
+          </Box>
 
-          <BadgeRow>
-            <Badge>
-              Complexity:
-              <ComplexityDots>
-                {[1, 2, 3, 4, 5].map(i => <Dot key={i} filled={i <= character.complexity} />)}
-              </ComplexityDots>
-            </Badge>
-            <Badge>
-              Affinities:
-              <div style={{ display: 'flex', gap: '4px' }}>
-                {character.elements.map(el => (
-                  <ElementIcon key={el} element={el} size={24} className="element-badge" />
-                ))}
-              </div>
-            </Badge>
-          </BadgeRow>
+          {/* Content */}
+          <Stack spacing={3} sx={{ flex: 1, width: '100%' }}>
+            {/* Header Tags */}
+            <Stack direction="row" spacing={1} sx={{ justifyContent: { xs: 'center', md: 'flex-start' } }}>
+              <Chip 
+                label="THEORYCRAFTING" 
+                size="small"
+                sx={{ 
+                  bgcolor: 'rgba(0,0,0,0.3)', 
+                  border: '1px solid rgba(255,255,255,0.05)', 
+                  color: '#94a3b8',
+                  fontWeight: 700,
+                  fontSize: '0.7rem',
+                  letterSpacing: '0.05em'
+                }} 
+              />
+              <Chip 
+                label={`${character.race.toUpperCase()} CLASS`} 
+                size="small"
+                sx={{ 
+                  bgcolor: 'rgba(56, 189, 248, 0.1)', 
+                  border: '1px solid rgba(56, 189, 248, 0.2)', 
+                  color: '#38bdf8',
+                  fontWeight: 700,
+                  fontSize: '0.7rem',
+                  letterSpacing: '0.05em'
+                }} 
+              />
+            </Stack>
 
-          <p style={{ color: '#94a3b8', fontSize: '0.9rem', opacity: 0.8 }}>
-            Class: {character.spoilerName} • {character.race}
-          </p>
+            {/* Title */}
+            <Stack direction="row" spacing={2} sx={{ alignItems: 'center', justifyContent: { xs: 'center', md: 'flex-start' } }}>
+              <Box
+                sx={{
+                  width: 50,
+                  height: 50,
+                  bgcolor: 'rgba(0, 0, 0, 0.4)',
+                  borderRadius: 1,
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  p: 1
+                }}
+              >
+                <img src={`${basePath}/${character.icon}`} alt="Class" style={{ width: '100%', filter: 'drop-shadow(0 0 5px #38bdf8)' }} />
+              </Box>
+              <Typography 
+                variant="h1" 
+                sx={{ 
+                  fontSize: '3rem', 
+                  fontWeight: 800,
+                  background: 'linear-gradient(to right, #f87171, #fb923c)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  lineHeight: 1.1
+                }}
+              >
+                {character.name}
+              </Typography>
+            </Stack>
 
-          <TraitRow>
-            {character.traits.map(t => <TraitTag key={t}>{t}</TraitTag>)}
-          </TraitRow>
+            {/* Sub-Header info */}
+            <Stack direction="row" spacing={1} sx={{ flexWrap: 'wrap', justifyContent: { xs: 'center', md: 'flex-start' } }}>
+               <Chip 
+                label={
+                  <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
+                    <Typography variant="caption" sx={{ fontWeight: 600, color: '#94a3b8' }}>COMPLEXITY:</Typography>
+                    <Stack direction="row" spacing={0.5}>
+                      {[1, 2, 3, 4, 5].map(i => (
+                        <Box key={i} sx={{ width: 8, height: 8, borderRadius: '50%', bgcolor: i <= character.complexity ? '#38bdf8' : 'rgba(255,255,255,0.1)' }} />
+                      ))}
+                    </Stack>
+                  </Stack>
+                }
+                sx={{ bgcolor: 'rgba(255, 255, 255, 0.08)', border: '1px solid rgba(255, 255, 255, 0.15)', px: 1, height: 'auto', py: 0.5 }}
+              />
+              <Chip 
+                label={
+                  <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
+                    <Typography variant="caption" sx={{ fontWeight: 600, color: '#94a3b8' }}>AFFINITIES:</Typography>
+                    <Stack direction="row" spacing={0.5}>
+                      {character.elements.map(el => <ElementIcon key={el} element={el} size={20} />)}
+                    </Stack>
+                  </Stack>
+                }
+                sx={{ bgcolor: 'rgba(255, 255, 255, 0.08)', border: '1px solid rgba(255, 255, 255, 0.15)', px: 1, height: 'auto', py: 0.5 }}
+              />
+            </Stack>
 
-          <StatGrid>
-            <StatBox>
-              <StatValue>{character.handSize}</StatValue>
-              <StatLabel>Hand Size</StatLabel>
-            </StatBox>
-            <StatBox>
-              <StatValue>{currentHP}</StatValue>
-              <StatLabel>HP (Lvl {level})</StatLabel>
-            </StatBox>
-            <StatBox>
-              <StatValue>{availableCards}</StatValue>
-              <StatLabel>Cards</StatLabel>
-            </StatBox>
-          </StatGrid>
+            <Typography variant="body2" sx={{ color: '#94a3b8', opacity: 0.8 }}>
+              Class: {character.spoilerName} • {character.race}
+            </Typography>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', marginTop: '1rem' }}>
-            <RoleSection>
-              <h2 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#f8fafc', marginBottom: '0.5rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '0.5rem' }}>
-                Combat Profile
-              </h2>
-              {Object.entries(character.roleStats).map(([label, val]) => (
-                <div key={label}>
-                  <RoleHeader>
-                    <RoleLabel>{label}</RoleLabel>
-                    <RoleValue>{getStatDesc(val)}</RoleValue>
-                  </RoleHeader>
-                  <BarSegments>
-                    {[1, 2, 3, 4, 5].map(i => (
-                      <Segment 
-                        key={i} 
-                        filled={i <= val} 
-                        partial={i === val + 1 && i <= 3} // Subtle hint for near-next levels if we had half stats
-                      />
-                    ))}
-                  </BarSegments>
-                </div>
+            {/* Traits */}
+            <Stack direction="row" spacing={1} sx={{ flexWrap: 'wrap', justifyContent: { xs: 'center', md: 'flex-start' } }}>
+              {character.traits.map(t => (
+                <Chip 
+                  key={t} 
+                  label={t} 
+                  sx={{ 
+                    bgcolor: 'rgba(56, 189, 248, 0.1)', 
+                    border: '1px solid rgba(56, 189, 248, 0.2)', 
+                    color: '#38bdf8',
+                    borderRadius: 2
+                  }} 
+                />
               ))}
-            </RoleSection>
+            </Stack>
 
-            <LoreCard about={`${basePath}/${character.matBack}`}>
-              <LoreTitle>Lore</LoreTitle>
-              <LoreSubTitle>The {character.race}</LoreSubTitle>
-              <LoreText>
-                {character.lore.split('\n\n').map((para, i) => (
-                  <span key={i} style={{ display: 'block', marginBottom: '1rem' }}>
-                    {renderTextWithTooltips(para, glossaryData)}
-                  </span>
-                ))}
-              </LoreText>
-            </LoreCard>
-          </div>
-        </HeroContent>
-      </HeroInner>
-    </HeroContainer>
+            {/* Base Stats */}
+            <Stack direction="row" spacing={2} sx={{ flexWrap: 'wrap', justifyContent: { xs: 'center', md: 'flex-start' } }}>
+              {[
+                { label: 'Hand Size', value: character.handSize },
+                { label: `HP (Lvl ${level})`, value: currentHP },
+                { label: 'Cards', value: availableCards }
+              ].map(stat => (
+                <Box 
+                  key={stat.label} 
+                  sx={{ 
+                    bgcolor: 'rgba(0, 0, 0, 0.3)', 
+                    border: '1px solid rgba(255, 255, 255, 0.1)', 
+                    borderRadius: 3, 
+                    p: '12px 20px', 
+                    minWidth: 100,
+                    textAlign: 'center'
+                  }}
+                >
+                  <Typography sx={{ fontSize: '1.8rem', fontWeight: 800, color: '#38bdf8', lineHeight: 1.2 }}>{stat.value}</Typography>
+                  <Typography variant="caption" sx={{ color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{stat.label}</Typography>
+                </Box>
+              ))}
+            </Stack>
+
+            {/* Sub-Grids */}
+            <Grid container spacing={3} sx={{ mt: 2 }}>
+              {/* Combat Profile */}
+              <Grid size={{ xs: 12, md: 6 }}>
+                <Paper elevation={0} sx={{ ...glassStyle, height: '100%', display: 'flex', flexDirection: 'column', gap: 2.5 }}>
+                  <Typography 
+                    variant="h6" 
+                    sx={{ 
+                      fontSize: '1.2rem', 
+                      fontWeight: 700, 
+                      color: '#f8fafc', 
+                      borderBottom: '1px solid rgba(255,255,255,0.1)', 
+                      pb: 1 
+                    }}
+                  >
+                    Combat Profile
+                  </Typography>
+                  <Stack spacing={2.5}>
+                    {Object.entries(character.roleStats).map(([label, val]) => (
+                      <Box key={label}>
+                        <Stack direction="row" sx={{ justifyContent: 'space-between', mb: 0.5 }}>
+                          <Typography sx={{ fontFamily: 'Space Grotesk', fontSize: '0.75rem', fontWeight: 700, color: '#94a3b8', textTransform: 'uppercase' }}>
+                            {label}
+                          </Typography>
+                          <Typography sx={{ fontFamily: 'Space Grotesk', fontSize: '0.85rem', fontWeight: 600, color: '#38bdf8' }}>
+                            {getStatDesc(val)}
+                          </Typography>
+                        </Stack>
+                        <SegmentBar value={val} />
+                      </Box>
+                    ))}
+                  </Stack>
+                </Paper>
+              </Grid>
+
+              {/* Lore */}
+              <Grid size={{ xs: 12, md: 6 }}>
+                <Paper 
+                  elevation={0} 
+                  sx={{ 
+                    ...glassStyle,
+                    height: '100%',
+                    position: 'relative',
+                    overflow: 'hidden',
+                    '&::before': {
+                      content: "''",
+                      position: 'absolute',
+                      inset: 0,
+                      backgroundImage: `url(${basePath}/${character.matBack})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      opacity: 0.15,
+                      mixBlendMode: 'overlay',
+                      pointerEvents: 'none',
+                    }
+                  }}
+                >
+                  <Typography variant="h5" sx={{ fontWeight: 700, color: '#f8fafc', mb: 0.5, position: 'relative', zIndex: 1 }}>Lore</Typography>
+                  <Typography 
+                    sx={{ 
+                      fontFamily: 'Space Grotesk', 
+                      fontSize: '0.75rem', 
+                      fontWeight: 700, 
+                      color: '#94a3b8', 
+                      textTransform: 'uppercase', 
+                      letterSpacing: '0.15em',
+                      mb: 2,
+                      position: 'relative',
+                      zIndex: 1
+                    }}
+                  >
+                    The {character.race}
+                  </Typography>
+                  <Stack spacing={2} sx={{ position: 'relative', zIndex: 1 }}>
+                    {character.lore.split('\n\n').map((para, i) => (
+                      <Typography key={i} sx={{ color: '#94a3b8', fontSize: '1rem', lineHeight: 1.7 }}>
+                        {renderTextWithTooltips(para, glossaryData)}
+                      </Typography>
+                    ))}
+                  </Stack>
+                </Paper>
+              </Grid>
+            </Grid>
+          </Stack>
+        </Stack>
+      </Container>
+    </Box>
   );
 };
