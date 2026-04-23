@@ -6,7 +6,8 @@ import {
   Chip,
   Avatar,
   Paper,
-  Grid
+  Grid,
+  Slider
 } from '@mui/material';
 import { ElementIcon } from '../ElementIcon';
 import { Character } from '../../types/character';
@@ -32,6 +33,7 @@ interface HeroSectionProps {
   character: Character;
   level: number;
   availableCards: number;
+  onLevelChange: (level: number) => void;
 }
 
 const glassStyle = {
@@ -44,7 +46,12 @@ const glassStyle = {
   p: 3,
 };
 
-export const HeroSection: React.FC<HeroSectionProps> = ({ character, level, availableCards }) => {
+export const HeroSection: React.FC<HeroSectionProps> = ({ 
+  character, 
+  level, 
+  availableCards,
+  onLevelChange 
+}) => {
   const currentHP = character.hp[level.toString()] || character.hp["1"];
   const basePath = `${import.meta.env.BASE_URL}assets/characters/${character.id}`;
 
@@ -204,27 +211,80 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ character, level, avai
                 </Stack>
 
                 {/* Base Stats */}
-                <Stack direction="row" spacing={2} sx={{ flexWrap: 'wrap', justifyContent: { xs: 'center', md: 'flex-start' } }}>
-                  {[
-                    { label: 'Hand Size', value: character.handSize },
-                    { label: `HP (Lvl ${level})`, value: currentHP },
-                    { label: 'Cards', value: availableCards }
-                  ].map(stat => (
-                    <Box
-                      key={stat.label}
+                <Stack spacing={3} sx={{ width: '100%', pt: 1 }}>
+                  <Stack direction="row" spacing={2} sx={{ flexWrap: 'wrap', justifyContent: { xs: 'center', md: 'flex-start' } }}>
+                    {[
+                      { label: 'Hand Size', value: character.handSize },
+                      { label: `HP (Lvl ${level})`, value: currentHP },
+                      { label: 'Cards', value: availableCards }
+                    ].map(stat => (
+                      <Box
+                        key={stat.label}
+                        sx={{
+                          bgcolor: 'rgba(0, 0, 0, 0.3)',
+                          border: '1px solid rgba(255, 255, 255, 0.1)',
+                          borderRadius: 3,
+                          p: '10px 16px',
+                          minWidth: 90,
+                          textAlign: 'center'
+                        }}
+                      >
+                        <Typography sx={{ fontSize: '1.5rem', fontWeight: 800, color: '#38bdf8', lineHeight: 1.2 }}>{stat.value}</Typography>
+                        <Typography variant="caption" sx={{ color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.05em', fontSize: '0.65rem' }}>{stat.label}</Typography>
+                      </Box>
+                    ))}
+                  </Stack>
+
+                  {/* Character Progression Slider */}
+                  <Box sx={{ maxWidth: 400, width: '100%', px: 1 }}>
+                    <Stack direction="row" sx={{ justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
+                      <Typography variant="caption" sx={{ fontWeight: 700, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+                        Progression
+                      </Typography>
+                      <Typography variant="caption" sx={{ fontWeight: 800, color: '#38bdf8' }}>
+                        LEVEL {level}
+                      </Typography>
+                    </Stack>
+                    <Slider
+                      min={1}
+                      max={9}
+                      step={1}
+                      value={level}
+                      onChange={(_, val) => onLevelChange(val as number)}
                       sx={{
-                        bgcolor: 'rgba(0, 0, 0, 0.3)',
-                        border: '1px solid rgba(255, 255, 255, 0.1)',
-                        borderRadius: 3,
-                        p: '10px 16px',
-                        minWidth: 90,
-                        textAlign: 'center'
+                        height: 4,
+                        color: '#38bdf8',
+                        py: 1,
+                        '& .MuiSlider-track': { border: 'none' },
+                        '& .MuiSlider-rail': { opacity: 0.1, bgcolor: '#ffffff' },
+                        '& .MuiSlider-thumb': {
+                          width: 16,
+                          height: 16,
+                          bgcolor: '#38bdf8',
+                          border: '3px solid #0f172a',
+                          boxShadow: '0 0 10px rgba(56, 189, 248, 0.4)',
+                          '&:hover, &.Mui-focusVisible, &.Mui-active': {
+                            boxShadow: '0 0 15px rgba(56, 189, 248, 0.6)',
+                          },
+                          '&::before': { display: 'none' },
+                        },
                       }}
-                    >
-                      <Typography sx={{ fontSize: '1.5rem', fontWeight: 800, color: '#38bdf8', lineHeight: 1.2 }}>{stat.value}</Typography>
-                      <Typography variant="caption" sx={{ color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.05em', fontSize: '0.65rem' }}>{stat.label}</Typography>
-                    </Box>
-                  ))}
+                    />
+                    <Stack direction="row" sx={{ justifyContent: 'space-between', px: 0.5 }}>
+                      {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(lvl => (
+                        <Typography 
+                          key={lvl} 
+                          sx={{ 
+                            color: lvl === level ? '#38bdf8' : 'rgba(255,255,255,0.2)', 
+                            fontSize: '0.65rem', 
+                            fontWeight: 700 
+                          }}
+                        >
+                          {lvl}
+                        </Typography>
+                      ))}
+                    </Stack>
+                  </Box>
                 </Stack>
               </Stack>
             </Stack>

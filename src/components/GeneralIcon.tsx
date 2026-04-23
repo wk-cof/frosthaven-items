@@ -60,6 +60,7 @@ export const GeneralIcon: React.FC<GeneralIconProps> = ({ icon, size = 18, class
       style={{
         width: `${size}px`,
         height: `${size}px`,
+        objectFit: 'contain',
         verticalAlign: 'middle',
         display: 'inline-block',
         filter: 'invert(1)' // White on transparent (removes white background when inverted against dark theme)

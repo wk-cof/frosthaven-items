@@ -45,6 +45,7 @@ export const SlotIcon: React.FC<SlotIconProps> = ({ slot, size = 20, showTooltip
       sx={{
         width: size,
         height: size,
+        objectFit: 'contain',
         verticalAlign: 'middle',
         display: 'inline-block',
         filter: 'invert(0.8) brightness(1.2)', // Light gray on transparent

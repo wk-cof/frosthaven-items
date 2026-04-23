@@ -43,6 +43,7 @@ export const ConditionIcon: React.FC<ConditionIconProps> = ({
       style={{
         width: `${size}px`,
         height: `${size}px`,
+        objectFit: 'contain',
         verticalAlign: 'middle',
         display: 'inline-block'
       }}

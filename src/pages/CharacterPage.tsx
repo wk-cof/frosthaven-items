@@ -6,7 +6,6 @@ import { Character } from '../types/character';
 import { HeroSection } from '../components/CharacterPage/HeroSection';
 import { LoreSection } from '../components/CharacterPage/LoreSection';
 import { MechanicsSection } from '../components/CharacterPage/MechanicsSection';
-import { LevelSlider } from '../components/CharacterPage/LevelSlider';
 import { AbilityCardGrid } from '../components/CharacterPage/AbilityCardGrid';
 import { MatPerksSection } from '../components/CharacterPage/MatPerksSection';
 import { BuildsSection } from '../components/CharacterPage/BuildsSection';
@@ -50,6 +49,7 @@ export const CharacterPage: React.FC<CharacterPageProps> = ({ character }) => {
         character={character} 
         level={charLevel} 
         availableCards={filteredCards.length} 
+        onLevelChange={setCharLevel}
       />
 
       <Container maxWidth="lg" sx={{ py: 4 }}>
@@ -66,10 +66,6 @@ export const CharacterPage: React.FC<CharacterPageProps> = ({ character }) => {
             <MechanicsSection notes={character.classNotes} />
           </Grid>
         </Grid>
-      </Container>
-
-      <Container maxWidth="lg">
-        <LevelSlider level={charLevel} onChange={setCharLevel} />
       </Container>
 
       <AbilityCardGrid 

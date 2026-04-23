@@ -41,6 +41,7 @@ export const ResourceIcon: React.FC<ResourceIconProps> = ({ resource, size = 18,
       sx={{
         width: size,
         height: size,
+        objectFit: 'contain',
         verticalAlign: 'middle',
         display: 'inline-block',
         filter: 'invert(1)', // White on transparent

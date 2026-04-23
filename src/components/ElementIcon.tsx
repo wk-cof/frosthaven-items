@@ -35,6 +35,7 @@ export const ElementIcon: React.FC<ElementIconProps> = ({ element, size = 20, cl
       style={{
         width: `${size}px`,
         height: `${size}px`,
+        objectFit: 'contain',
         verticalAlign: 'middle',
         display: 'inline-block',
         filter: 'invert(1)'
