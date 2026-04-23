@@ -24,10 +24,8 @@ html {
 
 body {
   font-family: 'Inter', -apple-system, sans-serif;
-  background-color: var(--bg-dark);
-  background-image:
-    radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.05), transparent 25%),
-    radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.05), transparent 25%);
+  background-color: #0b1326;
+  background-image: radial-gradient(circle at 50% 0%, #171f33 0%, #0b1326 70%);
   color: var(--text-main);
   min-height: 100vh;
 }
@@ -461,6 +459,4 @@ body {
   line-height: 1;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   margin: 0 2px;
-}
-
 }

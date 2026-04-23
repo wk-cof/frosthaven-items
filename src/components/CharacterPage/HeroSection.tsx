@@ -143,15 +143,7 @@ const Dot = styled.div<{ filled: boolean }>`
   box-shadow: ${props => props.filled ? '0 0 8px rgba(56, 189, 248, 0.6)' : 'none'};
 `;
 
-const ElementsContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  background: rgba(0, 0, 0, 0.2);
-  padding: 0.3rem 1rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-`;
+
 
 const StatGrid = styled.div`
   display: flex;
@@ -183,32 +175,107 @@ const StatLabel = styled.span`
   text-transform: uppercase;
 `;
 
-const RoleChart = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: 1rem;
-  background: rgba(0,0,0,0.2);
-  padding: 1.5rem;
+const GlassPanel = styled.div`
+  background-color: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.05);
+  padding: 1.5rem;
 `;
 
-const RoleBar = styled.div`
+const RoleSection = styled(GlassPanel)`
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 1.25rem;
+`;
+
+const RoleHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+`;
+
+const RoleLabel = styled.span`
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #94a3b8;
+`;
+
+const RoleValue = styled.span`
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #38bdf8;
 `;
 
 const BarSegments = styled.div`
   display: flex;
-  gap: 2px;
-  height: 6px;
+  gap: 4px;
+  height: 12px;
 `;
 
-const Segment = styled.div<{ filled: boolean }>`
+const Segment = styled.div<{ filled: boolean; partial?: boolean }>`
   flex: 1;
-  background: ${props => props.filled ? '#38bdf8' : 'rgba(255,255,255,0.05)'};
-  border-radius: 1px;
+  background: ${props => 
+    props.filled ? '#38bdf8' : 
+    props.partial ? 'rgba(56, 189, 248, 0.2)' : 'rgba(15, 23, 42, 0.5)'};
+  border-radius: 2px;
+  box-shadow: ${props => props.filled ? '0 0 8px rgba(56, 189, 248, 0.4)' : 'none'};
+  transition: all 0.3s ease;
+`;
+
+const LoreCard = styled(GlassPanel)`
+  position: relative;
+  overflow: hidden;
+  margin-top: 1rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url(${props => props.about});
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+`;
+
+const LoreTitle = styled.h3`
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+`;
+
+const LoreSubTitle = styled.div`
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+`;
+
+const LoreText = styled.p`
+  font-size: 1rem;
+  color: #94a3b8;
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+  margin: 0;
 `;
 
 const TraitRow = styled.div`
@@ -227,21 +294,6 @@ const TraitTag = styled.span`
   color: #38bdf8;
 `;
 
-const LoreContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-`;
-
-const LoreText = styled.p`
-  font-size: 1rem;
-  color: #e2e8f0;
-  line-height: 1.6;
-  font-style: italic;
-  opacity: 0.9;
-  margin: 0;
-`;
-
 interface HeroSectionProps {
   character: Character;
   level: number;
@@ -252,6 +304,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ character, level, avai
   const currentHP = character.hp[level.toString()] || character.hp["1"];
   const basePath = `${import.meta.env.BASE_URL}assets/characters/${character.id}`;
 
+  const getStatDesc = (val: number) => {
+    if (val >= 5) return 'Extreme';
+    if (val >= 4) return 'High';
+    if (val >= 3) return 'Average';
+    if (val >= 2) return 'Low';
+    return 'Minimal';
+  };
+
   return (
     <HeroContainer>
       <HeroInner>
@@ -259,6 +319,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ character, level, avai
           <img src={`${basePath}/${character.portrait}`} alt={character.name} />
         </Portrait>
         <HeroContent>
+          <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '-0.5rem' }}>
+            <Badge style={{ background: 'rgba(0,0,0,0.3)', borderColor: 'rgba(255,255,255,0.05)', color: '#94a3b8' }}>THEORYCRAFTING</Badge>
+            <Badge style={{ background: 'rgba(56, 189, 248, 0.1)', borderColor: 'rgba(56, 189, 248, 0.2)', color: '#38bdf8' }}>{character.race} CLASS</Badge>
+          </div>
           <TitleRow>
             <ClassIcon>
               <img src={`${basePath}/${character.icon}`} alt="Class" />
@@ -283,7 +347,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ character, level, avai
             </Badge>
           </BadgeRow>
 
-          <p style={{ color: '#94a3b8' }}>Class: {character.spoilerName} • {character.race}</p>
+          <p style={{ color: '#94a3b8', fontSize: '0.9rem', opacity: 0.8 }}>
+            Class: {character.spoilerName} • {character.race}
+          </p>
 
           <TraitRow>
             {character.traits.map(t => <TraitTag key={t}>{t}</TraitTag>)}
@@ -304,24 +370,42 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ character, level, avai
             </StatBox>
           </StatGrid>
 
-          <RoleChart>
-            {Object.entries(character.roleStats).map(([label, val]) => (
-              <RoleBar key={label}>
-                <span style={{ fontSize: '0.7rem', textTransform: 'uppercase', color: '#94a3b8' }}>{label}</span>
-                <BarSegments>
-                  {[1, 2, 3, 4, 5].map(i => <Segment key={i} filled={i <= val} />)}
-                </BarSegments>
-              </RoleBar>
-            ))}
-          </RoleChart>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', marginTop: '1rem' }}>
+            <RoleSection>
+              <h2 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#f8fafc', marginBottom: '0.5rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '0.5rem' }}>
+                Combat Profile
+              </h2>
+              {Object.entries(character.roleStats).map(([label, val]) => (
+                <div key={label}>
+                  <RoleHeader>
+                    <RoleLabel>{label}</RoleLabel>
+                    <RoleValue>{getStatDesc(val)}</RoleValue>
+                  </RoleHeader>
+                  <BarSegments>
+                    {[1, 2, 3, 4, 5].map(i => (
+                      <Segment 
+                        key={i} 
+                        filled={i <= val} 
+                        partial={i === val + 1 && i <= 3} // Subtle hint for near-next levels if we had half stats
+                      />
+                    ))}
+                  </BarSegments>
+                </div>
+              ))}
+            </RoleSection>
 
-          <LoreContainer>
-            {character.lore.split('\n\n').map((para, i) => (
-              <LoreText key={i}>
-                {renderTextWithTooltips(para, glossaryData)}
+            <LoreCard about={`${basePath}/${character.matBack}`}>
+              <LoreTitle>Lore</LoreTitle>
+              <LoreSubTitle>The {character.race}</LoreSubTitle>
+              <LoreText>
+                {character.lore.split('\n\n').map((para, i) => (
+                  <span key={i} style={{ display: 'block', marginBottom: '1rem' }}>
+                    {renderTextWithTooltips(para, glossaryData)}
+                  </span>
+                ))}
               </LoreText>
-            ))}
-          </LoreContainer>
+            </LoreCard>
+          </div>
         </HeroContent>
       </HeroInner>
     </HeroContainer>
