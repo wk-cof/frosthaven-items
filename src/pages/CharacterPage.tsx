@@ -11,7 +11,7 @@ import { MatPerksSection } from '../components/CharacterPage/MatPerksSection';
 import { BuildsSection } from '../components/CharacterPage/BuildsSection';
 import { TipsSection } from '../components/CharacterPage/TipsSection';
 import { PerkPriorityList } from '../components/CharacterPage/PerkPriorityList';
-import { Lightbox } from '../components/CharacterPage/Lightbox';
+import { Lightbox } from '../components/Lightbox';
 import { Container, Grid } from '@mui/material';
 
 interface CharacterPageProps {
@@ -73,7 +73,7 @@ export const CharacterPage: React.FC<CharacterPageProps> = ({ character }) => {
         cards={filteredCards}
         characterId={character.id}
         level={charLevel}
-        onCardClick={setLightboxImage}
+        onCardClick={(img) => setLightboxImage(`${basePath}/ability-cards/${img}`)}
       />
 
       <MatPerksSection
@@ -83,7 +83,7 @@ export const CharacterPage: React.FC<CharacterPageProps> = ({ character }) => {
         characterId={character.id}
         matSide={matSide}
         onSideChange={setMatSide}
-        onImageClick={setLightboxImage}
+        onImageClick={(img) => setLightboxImage(`${basePath}/${img}`)}
       />
 
       {character.perkPriority && (
@@ -100,9 +100,8 @@ export const CharacterPage: React.FC<CharacterPageProps> = ({ character }) => {
 
       {lightboxImage && (
         <Lightbox
-          image={lightboxImage}
+          imageSrc={lightboxImage}
           onClose={() => setLightboxImage(null)}
-          basePath={basePath}
         />
       )}
     </Box>

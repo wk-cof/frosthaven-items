@@ -4,6 +4,7 @@ import itemsData from '../data/items_db.json';
 import glossaryData from '../data/glossary.json';
 import ItemGrid from '../components/ItemGrid';
 import FilterSidebar from '../components/FilterSidebar';
+import { Lightbox } from '../components/Lightbox';
 
 export type Filters = {
   searchTerm: string;
@@ -29,6 +30,7 @@ function ItemsPage() {
   });
 
   const [itemStatuses, setItemStatuses] = useState<ItemStatusMap>({});
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
   useEffect(() => {
     if (!import.meta.env.DEV) return;
@@ -102,9 +104,17 @@ function ItemsPage() {
             glossary={glossaryData} 
             itemStatuses={itemStatuses} 
             updateItemStatus={updateItemStatus} 
+            onImageClick={setLightboxImage}
           />
         </Stack>
       </Container>
+      
+      {lightboxImage && (
+        <Lightbox 
+          imageSrc={lightboxImage} 
+          onClose={() => setLightboxImage(null)} 
+        />
+      )}
     </Box>
   );
 }

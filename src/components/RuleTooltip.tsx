@@ -9,59 +9,29 @@ import { ConditionIcon } from './ConditionIcon';
 import { GeneralIcon } from './GeneralIcon';
 import { ModifierIcon } from './ModifierIcon';
 
-// Pre-process text to highlight modifiers
-function highlightModifiers(text: string) {
-  if (!text) return [text];
-  
-  const regex = /([\+\-]\d+\s+(?:Move|Attack|Range|Shield|Retaliate|Heal|Target|Pierce)|[\+\-]\d+|\b\d+x\b)/gi;
-  const parts = text.split(regex);
-  const elements: any[] = [];
-  
-  parts.forEach((part, i) => {
-    if (!part) return;
 
-    if (part.match(/\d+x/i)) {
-      elements.push(<ModifierIcon key={`mod-${i}`} modifier={part.toLowerCase()} size={20} />);
-    } else if (part.match(/[\+\-]\d+/)) {
-      // Split into modifier and the rest (e.g., "+1 Move" -> ["+1", " Move"])
-      const match = part.match(/([\+\-]\d+)(.*)/);
-      if (match) {
-        elements.push(<ModifierIcon key={`mod-${i}`} modifier={match[1]} size={20} />);
-        if (match[2]) elements.push(match[2]);
-      } else {
-        elements.push(part);
-      }
-    } else {
-      elements.push(part);
-    }
-  });
-  
-  return elements;
-}
 
 export function renderTextWithTooltips(text: string, glossary: any, depth = 0) {
   if (!text) return null;
   
-  let elements: any = highlightModifiers(text);
-
-  // 1. Replace <TAG> placeholders
-  const tagRegex = /(<[A-Z0-9_\-]+>)/g;
-  const tagElements: any = [];
-  elements.forEach((el: any) => {
-    if (typeof el === 'string') {
-      const parts = el.split(tagRegex);
-      parts.forEach((part, i) => {
-        if (part.match(tagRegex)) {
-          tagElements.push(<GeneralIcon key={`gen-${i}`} icon={part} glossary={glossary} />);
-        } else if (part) {
-          tagElements.push(part);
-        }
-      });
-    } else {
-      tagElements.push(el);
+  // 1. Process <TAG> placeholders first on the raw string
+  const tagRegex = /(<[A-Z0-9_\-\+]+>)/g;
+  const initialParts = text.split(tagRegex);
+  let elements: any[] = [];
+  
+  initialParts.forEach((part, i) => {
+    if (part.match(tagRegex)) {
+      const inner = part.replace(/[<>]/g, '');
+      // Check if it's a modifier (e.g., +1, +2, 2X)
+      if (inner.match(/^[\+\-]?\d+X?$/i)) {
+        elements.push(<ModifierIcon key={`tag-${i}`} modifier={inner.toLowerCase()} size={18} />);
+      } else {
+        elements.push(<GeneralIcon key={`tag-${i}`} icon={inner} glossary={glossary} />);
+      }
+    } else if (part) {
+      elements.push(part);
     }
   });
-  elements = tagElements;
 
   // 2. Replace element names
   const elementNames = ['Fire', 'Ice', 'Air', 'Earth', 'Light', 'Dark', 'Wild'];

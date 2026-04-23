@@ -8,7 +8,7 @@
     "cost": 0,
     "slot": "head",
     "spent": true,
-    "text": "During your attack ability, gain advantage on one attack.",
+    "text": "During your attack ability, gain <ADVANTAGE> on one attack.",
     "resources": {
       "Metal": 1
     }
@@ -21,7 +21,7 @@
     "image": "items/frosthaven/fh-002-crude-helmet.jpeg",
     "cost": 0,
     "slot": "head",
-    "text": "When you are attacked, treat any 2x attack modifier card the enemy draws as a +1 instead.",
+    "text": "When you are attacked, treat any <2X> attack modifier card the enemy draws as a <+1> instead.",
     "resources": {
       "Metal": 1
     }
@@ -48,7 +48,7 @@
     "cost": 0,
     "slot": "body",
     "spent": true,
-    "text": "[Uses: 2] On the next two attacks targeting you, the attacker gains disadvantage. [Modifier: -1 x1]",
+    "text": "<ACTIVE> [Uses: 2] On the next two attacks targeting you, the attacker gains <DISADVANTAGE>. [Modifier: <-1> x1]",
     "resources": {
       "Hide": 2
     }
@@ -62,7 +62,7 @@
     "cost": 0,
     "slot": "legs",
     "spent": true,
-    "text": "During your move ability, add +1 Move.",
+    "text": "During your move ability, add +1 <MOVE>.",
     "resources": {
       "Hide": 2
     }
@@ -90,7 +90,7 @@
     "cost": 0,
     "slot": "2h",
     "spent": true,
-    "text": "During your turn, add +1 Range to one of your ranged attacks.",
+    "text": "During your turn, add +1 <RANGE> to one of your ranged attacks.",
     "resources": {
       "Wood": 1
     }
@@ -104,7 +104,7 @@
     "cost": 0,
     "slot": "2h",
     "spent": true,
-    "text": "During your turn, one of your single-target melee attack abilities may target an enemy two hexes away.",
+    "text": "During your turn, one of your single-target melee attack abilities may target an enemy two hexes away. [Range 2]",
     "resources": {
       "Wood": 1,
       "Metal": 1
@@ -119,7 +119,7 @@
     "cost": 0,
     "slot": "1h",
     "spent": true,
-    "text": "During your turn, grant one ally within Range 2: Shield 1",
+    "text": "During your turn, grant one ally within <RANGE> 2: <SHIELD> 1",
     "resources": {
       "Wood": 1,
       "Hide": 1
@@ -134,7 +134,7 @@
     "cost": 0,
     "slot": "1h",
     "consumed": true,
-    "text": "When an enemy would apply a negative condition to you, prevent the condition. [Modifier: -1 x1]",
+    "text": "When an enemy would apply a negative condition to you, prevent the condition. [Modifier: <-1> x1]",
     "resources": {
       "Metal": 1
     }
@@ -147,7 +147,7 @@
     "image": "items/frosthaven/fh-011-simple-charm.jpeg",
     "cost": 0,
     "slot": "head",
-    "text": "At the start of the scenario, remove one -1 attack modifier card from your attack modifier deck.",
+    "text": "At the start of the scenario, remove one <-1> attack modifier card from your attack modifier deck.",
     "resources": {
       "Metal": 2
     }
@@ -161,7 +161,7 @@
     "cost": 0,
     "slot": "body",
     "spent": true,
-    "text": "When you suffer [Damage] from an attack, gain Shield 2 for the attack. [Modifier: -1 x1]",
+    "text": "When you suffer <DAMAGE> from an attack, gain <SHIELD> 2 for the attack. [Modifier: <-1> x1]",
     "resources": {
       "Metal": 1
     }
@@ -174,7 +174,7 @@
     "image": "items/frosthaven/fh-013-dancing-slippers.jpeg",
     "cost": 0,
     "slot": "legs",
-    "text": "After you suffer [Damage] from an attack, perform: Move 2",
+    "text": "After you suffer <DAMAGE> from an attack, perform: <MOVE> 2",
     "resources": {
       "Hide": 1,
       "Arrowvine": 1
@@ -190,7 +190,7 @@
     "cost": 0,
     "slot": "1h",
     "spent": true,
-    "text": "During your melee attack ability, add +1 Attack to one attack.",
+    "text": "During your melee attack ability, add +1 <ATTACK> to one attack.",
     "resources": {
       "Metal": 1,
       "Hide": 1
@@ -205,7 +205,7 @@
     "cost": 0,
     "slot": "1h",
     "spent": true,
-    "text": "When an enemy would apply a negative condition to you, prevent the condition. [Modifier: -1 x2]",
+    "text": "When an enemy would apply a negative condition to you, prevent the condition. [Modifier: <-1> x2]",
     "resources": {
       "Wood": 1,
       "Item 010": 1
@@ -220,7 +220,7 @@
     "cost": 0,
     "slot": "head",
     "consumed": true,
-    "text": "During your turn, grant all adjacent allies: Move 2",
+    "text": "During your turn, grant all adjacent allies: <MOVE> 2",
     "resources": {
       "Metal": 1,
       "Hide": 1
@@ -235,7 +235,7 @@
     "cost": 0,
     "slot": "body",
     "spent": true,
-    "text": "[Uses: 2] On the next two attacks targeting you, the attacker gains disadvantage.",
+    "text": "<ACTIVE> [Uses: 2] On the next two attacks targeting you, the attacker gains <DISADVANTAGE>.",
     "resources": {
       "Item 004": 1,
       "Item 098": 1
@@ -250,7 +250,7 @@
     "cost": 0,
     "slot": "legs",
     "spent": true,
-    "text": "During your turn, add +1 Move to all your move abilities.",
+    "text": "During your turn, add +1 <MOVE> to all your move abilities.",
     "resources": {
       "Item 005": 1,
       "Hide": 1
@@ -265,7 +265,7 @@
     "cost": 0,
     "slot": "1h",
     "spent": true,
-    "text": "During your attack ability, add [Condition: Muddle] to all attacks. [Modifier: -1 x1]",
+    "text": "During your attack ability, add <MUDDLE> to all attacks. [Modifier: <-1> x1]",
     "resources": {
       "Wood": 1,
       "Metal": 1,
@@ -281,7 +281,7 @@
     "cost": 0,
     "slot": "2h",
     "spent": true,
-    "text": "During your turn, add +1 Range to all your ranged attacks.",
+    "text": "During your turn, add +1 <RANGE> to all your ranged attacks.",
     "resources": {
       "Item 007": 1,
       "Arrowvine": 1
@@ -295,7 +295,7 @@
     "image": "items/frosthaven/fh-021-chain-hood.jpeg",
     "cost": 0,
     "slot": "head",
-    "text": "While you are adjacent to three or more enemies, gain Shield 1. [Modifier: -1 x1]",
+    "text": "While you are adjacent to three or more enemies, gain <SHIELD> 1. [Modifier: <-1> x1]",
     "resources": {
       "Metal": 3,
       "Hide": 1
@@ -310,7 +310,7 @@
     "cost": 0,
     "slot": "body",
     "spent": true,
-    "text": "When you suffer [Damage] from an attack, gain Shield 3 for the attack. [Modifier: -1 x2]",
+    "text": "When you suffer <DAMAGE> from an attack, gain <SHIELD> 3 for the attack. [Modifier: <-1> x2]",
     "resources": {
       "Item 012": 1,
       "Metal": 1
@@ -325,7 +325,7 @@
     "cost": 0,
     "slot": "legs",
     "spent": true,
-    "text": "At the start of your turn, add -2 Move to all your move abilities to gain Shield 1 this round.",
+    "text": "At the start of your turn, add -2 <MOVE> to all your move abilities to gain <SHIELD> 1 this round. [Modifier: <-1> x2]",
     "resources": {
       "Metal": 2,
       "Hide": 2
@@ -340,7 +340,7 @@
     "cost": 0,
     "slot": "1h",
     "consumed": true,
-    "text": "During your melee attack ability, add [Condition: Wound], [Condition: Poison], and [Condition: Muddle] to one attack.",
+    "text": "During your melee attack ability, add <WOUND>, <POISON>, and <MUDDLE> to one attack.",
     "resources": {
       "Item 014": 1,
       "Item 098": 1
@@ -355,7 +355,7 @@
     "cost": 0,
     "slot": "1h",
     "spent": true,
-    "text": "During your turn, perform: [Condition: Regenerate], Target 1 ally, Range 2",
+    "text": "During your turn, perform: <REGENERATE>, <TARGET> 1 ally, <RANGE> 2",
     "resources": {
       "Wood": 1,
       "Hide": 1,

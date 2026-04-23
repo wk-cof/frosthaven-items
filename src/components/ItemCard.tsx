@@ -15,7 +15,7 @@ import { toTitleCase } from '../utils/stringUtils';
 import { SlotIcon } from './SlotIcon';
 import { ResourceIcon } from './ResourceIcon';
 
-function ItemCard({ item, glossary, status, onStatusChange }: any) {
+function ItemCard({ item, glossary, status, onStatusChange, onImageClick }: any) {
   const isVerified = status === 'verified';
   const isFlagged = status === 'flagged';
 
@@ -71,6 +71,7 @@ function ItemCard({ item, glossary, status, onStatusChange }: any) {
               </Tooltip>
             </Stack>
           )}
+          <SlotIcon slot={item.slot || 'None'} size={18} showTooltip={false} />
           <Typography variant="subtitle2" sx={{ fontWeight: 800, color: '#f8fafc', lineHeight: 1.2 }}>
             {toTitleCase(item.name)}
           </Typography>
@@ -80,71 +81,82 @@ function ItemCard({ item, glossary, status, onStatusChange }: any) {
         </Typography>
       </Box>
 
-      <Box sx={{ display: 'flex', p: 2, gap: 2 }}>
-        <Box sx={{ width: 100, flexShrink: 0 }}>
-          {item.image && (
-            <Box
-              component="img"
-              src={`${import.meta.env.BASE_URL}assets/items/${item.image.split('/').pop()}`}
-              alt={toTitleCase(item.name)}
-              sx={{ width: '100%', borderRadius: 2, boxShadow: '0 4px 6px -1px rgba(0,0,0,0.3)' }}
-              loading="lazy"
-            />
-          )}
-        </Box>
-        <Stack spacing={1} sx={{ flex: 1 }}>
-          <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
-            <SlotIcon slot={item.slot || 'None'} size={16} showTooltip={false} />
-            <Typography sx={{ fontSize: '0.85rem', color: '#94a3b8' }}>
-              {toTitleCase(item.slot || 'None')}
-            </Typography>
-          </Stack>
-          <Stack direction="row" spacing={1.5} sx={{ my: 0.5, flexWrap: 'wrap', gap: 1 }}>
-            {item.spent && (
-              <Stack direction="row" spacing={0.5} sx={{ alignItems: 'center', bgcolor: 'rgba(245, 158, 11, 0.1)', px: 1, py: 0.25, borderRadius: 1, border: '1px solid rgba(245, 158, 11, 0.2)' }}>
-                <Box component="img" src={`${import.meta.env.BASE_URL}assets/general/fh-spent-bw-icon.png`} sx={{ width: 14, height: 14, objectFit: 'contain', filter: 'invert(1) sepia(1) saturate(5) hue-rotate(0deg) brightness(1)' }} />
-                <Typography sx={{ fontSize: '0.65rem', fontWeight: 800, color: '#fbbf24', textTransform: 'uppercase' }}>Spent</Typography>
-              </Stack>
+      <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'stretch' }}>
+        <Box sx={{ display: 'flex', p: 2, gap: 2 }}>
+          <Box 
+            sx={{ 
+              width: 100, 
+              flexShrink: 0, 
+              cursor: 'zoom-in',
+              transition: 'transform 0.2s ease',
+              '&:hover': { transform: 'scale(1.05)' }
+            }}
+            onClick={() => onImageClick(`${import.meta.env.BASE_URL}assets/items/${item.image.split('/').pop()}`)}
+          >
+            {item.image && (
+              <Box
+                component="img"
+                src={`${import.meta.env.BASE_URL}assets/items/${item.image.split('/').pop()}`}
+                alt={toTitleCase(item.name)}
+                sx={{ width: '100%', borderRadius: 2, boxShadow: '0 4px 6px -1px rgba(0,0,0,0.3)' }}
+                loading="lazy"
+              />
             )}
-            {item.consumed && (
-              <Stack direction="row" spacing={0.5} sx={{ alignItems: 'center', bgcolor: 'rgba(239, 68, 68, 0.1)', px: 1, py: 0.25, borderRadius: 1, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
-                <Box component="img" src={`${import.meta.env.BASE_URL}assets/general/fh-lost-color-icon.png`} sx={{ width: 14, height: 14, objectFit: 'contain' }} />
-                <Typography sx={{ fontSize: '0.65rem', fontWeight: 800, color: '#f87171', textTransform: 'uppercase' }}>Consumed</Typography>
-              </Stack>
-            )}
-          </Stack>
-          {/* Unified Resource Cost List (Gold + Materials) */}
-          <Stack spacing={0.5}>
-            {Number(item.cost) > 0 && (
-              <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
-                <Typography sx={{ fontSize: '0.75rem', color: '#fbbf24', minWidth: 12, fontWeight: 700 }}>{item.cost}</Typography>
-                <Stack direction="row" spacing={0.5} sx={{ alignItems: 'center' }}>
-                  <ResourceIcon resource="Gold" size={16} />
-                  <Typography sx={{ fontSize: '0.75rem', color: '#fbbf24', fontWeight: 700 }}>Gold</Typography>
+          </Box>
+          <Stack spacing={1} sx={{ flex: 1 }}>
+            <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
+              <SlotIcon slot={item.slot || 'None'} size={16} showTooltip={false} />
+              <Typography sx={{ fontSize: '0.85rem', color: '#94a3b8' }}>
+                {toTitleCase(item.slot || 'None')}
+              </Typography>
+            </Stack>
+            <Stack direction="row" spacing={1.5} sx={{ my: 0.5, flexWrap: 'wrap', gap: 1 }}>
+              {item.spent && (
+                <Stack direction="row" spacing={0.5} sx={{ alignItems: 'center', bgcolor: 'rgba(245, 158, 11, 0.1)', px: 1, py: 0.25, borderRadius: 1, border: '1px solid rgba(245, 158, 11, 0.2)' }}>
+                  <Box component="img" src={`${import.meta.env.BASE_URL}assets/general/fh-spent-bw-icon.png`} sx={{ width: 14, height: 14, objectFit: 'contain', filter: 'invert(1) sepia(1) saturate(5) hue-rotate(0deg) brightness(1)' }} />
+                  <Typography sx={{ fontSize: '0.65rem', fontWeight: 800, color: '#fbbf24', textTransform: 'uppercase' }}>Spent</Typography>
                 </Stack>
-              </Stack>
-            )}
-            
-            {item.resources && Object.entries(item.resources).map(([res, count]) => (
-              <Stack key={res} direction="row" spacing={1} sx={{ alignItems: 'center' }}>
-                <Typography sx={{ fontSize: '0.75rem', color: '#64748b', minWidth: 12 }}>{String(count)}</Typography>
-                {res.startsWith('Item ') ? (
-                  <Link href={`#item-${res.replace('Item ', '')}`} sx={{ color: '#38bdf8', textDecoration: 'none', fontSize: '0.75rem' }}>{toTitleCase(res)}</Link>
-                ) : (
+              )}
+              {item.consumed && (
+                <Stack direction="row" spacing={0.5} sx={{ alignItems: 'center', bgcolor: 'rgba(239, 68, 68, 0.1)', px: 1, py: 0.25, borderRadius: 1, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
+                  <Box component="img" src={`${import.meta.env.BASE_URL}assets/general/fh-lost-color-icon.png`} sx={{ width: 14, height: 14, objectFit: 'contain' }} />
+                  <Typography sx={{ fontSize: '0.65rem', fontWeight: 800, color: '#f87171', textTransform: 'uppercase' }}>Consumed</Typography>
+                </Stack>
+              )}
+            </Stack>
+            {/* Unified Resource Cost List (Gold + Materials) */}
+            <Stack spacing={0.5}>
+              {Number(item.cost) > 0 && (
+                <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
+                  <Typography sx={{ fontSize: '0.75rem', color: '#fbbf24', minWidth: 12, fontWeight: 700 }}>{item.cost}</Typography>
                   <Stack direction="row" spacing={0.5} sx={{ alignItems: 'center' }}>
-                    <ResourceIcon resource={res} size={16} />
-                    <Typography sx={{ fontSize: '0.75rem', color: '#94a3b8' }}>{toTitleCase(res)}</Typography>
+                    <ResourceIcon resource="Gold" size={16} />
+                    <Typography sx={{ fontSize: '0.75rem', color: '#fbbf24', fontWeight: 700 }}>Gold</Typography>
                   </Stack>
-                )}
-              </Stack>
-            ))}
+                </Stack>
+              )}
+              
+              {item.resources && Object.entries(item.resources).map(([res, count]) => (
+                <Stack key={res} direction="row" spacing={1} sx={{ alignItems: 'center' }}>
+                  <Typography sx={{ fontSize: '0.75rem', color: '#64748b', minWidth: 12 }}>{String(count)}</Typography>
+                  {res.startsWith('Item ') ? (
+                    <Link href={`#item-${res.replace('Item ', '')}`} sx={{ color: '#38bdf8', textDecoration: 'none', fontSize: '0.75rem' }} onClick={(e) => e.stopPropagation()}>{toTitleCase(res)}</Link>
+                  ) : (
+                    <Stack direction="row" spacing={0.5} sx={{ alignItems: 'center' }}>
+                      <ResourceIcon resource={res} size={16} />
+                      <Typography sx={{ fontSize: '0.75rem', color: '#94a3b8' }}>{toTitleCase(res)}</Typography>
+                    </Stack>
+                  )}
+                </Stack>
+              ))}
+            </Stack>
           </Stack>
-        </Stack>
-      </Box>
+        </Box>
 
-      <CardContent sx={{ pt: 0, '& .MuiTypography-root': { fontSize: '0.9rem', color: '#cbd5e1', lineHeight: 1.6 } }}>
-        {renderTextWithTooltips(item.text, glossary)}
-      </CardContent>
+        <CardContent sx={{ pt: 0, '& .MuiTypography-root': { fontSize: '0.9rem', color: '#cbd5e1', lineHeight: 1.6 } }}>
+          {renderTextWithTooltips(item.text, glossary)}
+        </CardContent>
+      </Box>
     </Card>
   );
 }

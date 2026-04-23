@@ -8,9 +8,10 @@ type Props = {
   glossary: any;
   itemStatuses: ItemStatusMap;
   updateItemStatus: (id: string, status: 'verified' | 'flagged' | null) => void;
+  onImageClick: (img: string) => void;
 };
 
-function ItemGrid({ items, filters, glossary, itemStatuses, updateItemStatus }: Props) {
+function ItemGrid({ items, filters, glossary, itemStatuses, updateItemStatus, onImageClick }: Props) {
   const filtered = items.filter((item: any) => {
     const searchMatch = !filters.searchTerm || 
       item.name.toLowerCase().includes(filters.searchTerm.toLowerCase()) ||
@@ -56,6 +57,7 @@ function ItemGrid({ items, filters, glossary, itemStatuses, updateItemStatus }: 
                 glossary={glossary} 
                 status={itemStatuses[String(item.id)]}
                 onStatusChange={(status: any) => updateItemStatus(String(item.id), status)}
+                onImageClick={onImageClick}
               />
             </Grid>
           ))}

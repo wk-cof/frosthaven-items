@@ -8,19 +8,14 @@ import {
 import CloseIcon from '@mui/icons-material/Close';
 
 interface LightboxProps {
-  image: string;
+  imageSrc: string | null;
   onClose: () => void;
-  basePath: string;
 }
 
-export const Lightbox: React.FC<LightboxProps> = ({ image, onClose, basePath }) => {
-  const imageUrl = image.includes('ability-cards') || image.startsWith('fh-')
-    ? `${basePath}/ability-cards/${image}`
-    : `${basePath}/${image}`;
-
+export const Lightbox: React.FC<LightboxProps> = ({ imageSrc, onClose }) => {
   return (
     <Dialog
-      open={!!image}
+      open={!!imageSrc}
       onClose={onClose}
       maxWidth="xl"
       slotProps={{
@@ -46,29 +41,31 @@ export const Lightbox: React.FC<LightboxProps> = ({ image, onClose, basePath }) 
             right: -24,
             bgcolor: '#38bdf8',
             color: '#0f172a',
+            zIndex: 2,
             '&:hover': {
               bgcolor: '#7dd3fc',
               transform: 'scale(1.1) rotate(90deg)',
             },
             transition: 'all 0.2s ease',
-            zIndex: 1
           }}
         >
           <CloseIcon />
         </IconButton>
-        <DialogContent sx={{ p: 0 }}>
-          <Box
-            component="img"
-            src={imageUrl}
-            alt="Enlarged"
-            sx={{
-              display: 'block',
-              maxWidth: '100%',
-              maxHeight: '90vh',
-              borderRadius: 3,
-              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
-            }}
-          />
+        <DialogContent sx={{ p: 0, overflow: 'hidden', borderRadius: 3 }}>
+          {imageSrc && (
+            <Box
+              component="img"
+              src={imageSrc}
+              alt="Enlarged"
+              sx={{
+                display: 'block',
+                maxWidth: '100%',
+                maxHeight: '90vh',
+                borderRadius: 2,
+                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
+              }}
+            />
+          )}
         </DialogContent>
       </Box>
     </Dialog>

@@ -6,7 +6,6 @@ import {
   Stack, 
   Grid,
   Card,
-  CardActionArea,
   CardMedia,
   Chip
 } from '@mui/material';
@@ -80,12 +79,13 @@ export const AbilityCardGrid: React.FC<AbilityCardGridProps> = ({ cards, charact
                     }
                   }}
                 >
-                  <CardActionArea onClick={() => onCardClick(card.image)}>
+                  <Box>
                     <CardMedia
                       component="img"
                       image={`${basePath}/ability-cards/${card.image}`}
                       alt={card.name}
-                      sx={{ aspectRatios: '2/3', objectFit: 'cover' }}
+                      onClick={() => onCardClick(card.image)}
+                      sx={{ aspectRatios: '2/3', objectFit: 'cover', cursor: 'zoom-in' }}
                       loading="lazy"
                     />
                     <Box sx={{ p: 2, bgcolor: 'rgba(0, 0, 0, 0.3)' }}>
@@ -121,7 +121,7 @@ export const AbilityCardGrid: React.FC<AbilityCardGridProps> = ({ cards, charact
                         </Typography>
                       </Stack>
                     </Box>
-                  </CardActionArea>
+                  </Box>
                 </Card>
               </Grid>
             );

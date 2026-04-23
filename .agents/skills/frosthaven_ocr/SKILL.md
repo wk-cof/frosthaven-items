@@ -18,7 +18,8 @@ Frosthaven uses specific icons inline with text. Translate them exactly as follo
    - Air -> `<AIR>`
    - Light -> `<LIGHT>`
    - Dark -> `<DARK>`
-   - **Consumption**: If an element is to be consumed (has a red border/strike), write it as `<CONSUME_X>` (e.g., `<CONSUME_FIRE>`).
+   - Wild -> `<WILD>`
+   - **Consumption**: If an element is to be consumed (has a red border/strike), write it as `<CONSUME>`. If combined with an element, e.g., `<FIRE> <CONSUME>`.
 
 2. **Conditions**:
    - Poison -> `<POISON>`
@@ -33,31 +34,38 @@ Frosthaven uses specific icons inline with text. Translate them exactly as follo
    - Curse -> `<CURSE>`
    - Regenerate -> `<REGENERATE>`
    - Ward -> `<WARD>`
-   - Enfeeble -> `<ENFEEBLE>`
+   - Brittle -> `<BRITTLE>`
+   - Bane -> `<BANE>`
+   - Impair -> `<IMPAIR>`
 
-3. **Attack Modifiers**:
-   - If a specific modifier icon appears (often in circles or specific fonts):
-   - +1, +2, etc. -> `<+1>`, `<+2>`
-   - 2x (Critical) -> `<2X>`
-   - Null (Miss) -> `<NULL>`
-   - +0 -> `<+0>`
+3. **Attack Modifiers vs Stat Bonuses**:
+   - **IMPORTANT**: Only use diamond/circular bracketed tags for specifically circular icons (Attack Modifier cards/deck effects).
+   - Attack Modifier icons (+1, +2, 2x) -> `<+1>`, `<+2>`, `<2X>`
+   - Plain text numbers (e.g., "+1 Move", "Shield 2") -> Use plain text for the number and tags for the icons: `+1 <MOVE>`, `<SHIELD> 2`
 
-4. **Actions & Effects**:
-   - Attack (sword symbol) + # -> `Attack #`
-   - Move (boot symbol) + # -> `Move #`
-   - Range (bow symbol) + # -> `Range #`
-   - Target (bullseye) + # -> `Target #`
-   - Heal (heart symbol) + # -> `Heal #`
-   - Shield (shield symbol) + # -> `Shield #`
-   - Retaliate (spiked shield) + # -> `Retaliate #`
-   - Pierce (broken armor) + # -> `Pierce #`
+4. **Actions & Core Mechanics**:
+   - Attack (sword symbol) -> `<ATTACK>`
+   - Move (boot symbol) -> `<MOVE>`
+   - Range (bow symbol) -> `<RANGE>`
+   - Target (bullseye) -> `<TARGET>`
+   - Heal (heart symbol) -> `<HEAL>`
+   - Shield (shield symbol) -> `<SHIELD>`
+   - Retaliate (spiked shield) -> `<RETALIATE>`
+   - Pierce (broken armor) -> `<PIERCE>`
+   - Loot (bag symbol) -> `<LOOT>`
+   - XP (star symbol) -> `<XP>`
 
-5. **Item Triggers (Spent vs Consumed)**:
-   - If there is an icon of a flipped card (arrows turning it over), this is **Spent**.
-   - If there is an icon of a card with a red 'X' over it, this is **Consumed**.
+5. **Item Triggers & State**:
+   - Flipped card icon -> **Spent** (set `spent: true` in JSON)
+   - Red X card icon -> **Consumed** (set `consumed: true` in JSON)
+   - Infinity symbol or Persistent icon -> `<ACTIVE>`
+   - Use / Charge boxes -> `[Uses: X]` where X is number of boxes.
 
-6. **Uses / Charges**:
-   - If there are a sequence of small circles or checkboxes representing usage charges, represent it as `[Uses: X]`, where X is the number of boxes.
+6. **Resources**:
+   - Lumber -> `<LUMBER>`
+   - Metal -> `<METAL>`
+   - Hide -> `<HIDE>`
+   - Herbs (Arrowvine, etc) -> `<ARROWVINE>`, `<AXENUT>`, `<CORPSECAP>`, `<FLAMEFRUIT>`, `<ROCKROOT>`, `<SNOWTHISTLE>`
 
 ## Output Format
 
