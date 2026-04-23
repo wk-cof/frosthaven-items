@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import characterData from '../data/pain_conduit.json';
 import { ElementIcon } from '../components/ElementIcon';
+import { renderTextWithTooltips } from '../components/RuleTooltip';
+import glossaryData from '../data/glossary.json';
 
 const LEVEL_LABELS: Record<string, string> = {
   'x': 'X', '1': '1', '2': '2', '3': '3', '4': '4',
@@ -208,7 +210,7 @@ function PainConduitPage() {
                 ))}
               </div>
 
-              <p className="char-lore-text">{characterData.lore}</p>
+              <p className="char-lore-text">{renderTextWithTooltips(characterData.lore, glossaryData)}</p>
             </div>
           </div>
         </div>
@@ -220,7 +222,7 @@ function PainConduitPage() {
         <div className="mechanics-grid">
           {(characterData as any).classNotes?.map((note: string, i: number) => (
             <div key={i} className="mechanics-card">
-              <p>{note}</p>
+              <p>{renderTextWithTooltips(note, glossaryData)}</p>
             </div>
           ))}
         </div>

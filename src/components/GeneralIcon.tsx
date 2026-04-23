@@ -3,12 +3,13 @@ import React from 'react';
 type GeneralIconType = 
   | 'ATTACK' | 'DAMAGE' | 'HEAL' | 'SHIELD' | 'MOVE' | 'JUMP' 
   | 'TARGET' | 'RANGE' | 'RETALIATE' | 'XP' | 'LOOT' | 'MONEY'
-  | string;
+  | 'WARD' | 'DISARM' | string;
 
 interface GeneralIconProps {
   icon: GeneralIconType;
   size?: number;
   className?: string;
+  glossary?: any;
 }
 
 const ICON_MAP: Record<string, string> = {
@@ -30,19 +31,18 @@ const ICON_MAP: Record<string, string> = {
   'ICE': 'fh-ice-bw-icon.png',
   'LIGHT': 'fh-light-bw-icon.png',
   'DARK': 'fh-dark-bw-icon.png',
-  'DISARM': 'fh-disarm-bw-icon.png',
-  'WARD': 'fh-ward-bw-icon.png'
+  'WARD': 'fh-ward-bw-icon.png',
+  'DISARM': 'fh-disarm-bw-icon.png'
 };
 
-export const GeneralIcon: React.FC<GeneralIconProps> = ({ icon, size = 18, className = "" }) => {
-  const upperIcon = icon.toUpperCase().replace(/[<>]/g, '');
+export const GeneralIcon: React.FC<GeneralIconProps> = ({ icon, size = 18, className = "", glossary }) => {
+  const upperIcon = String(icon).toUpperCase().replace(/[<>]/g, '');
   const filename = ICON_MAP[upperIcon];
+  
+  // Try to find matching term for tooltip
+  const termName = upperIcon.charAt(0) + upperIcon.slice(1).toLowerCase();
 
-  if (!filename) {
-    return <span className={className}>{icon}</span>;
-  }
-
-  return (
+  const iconElement = filename ? (
     <img
       src={`${import.meta.env.BASE_URL}assets/general/${filename}`}
       alt={icon}
@@ -52,9 +52,25 @@ export const GeneralIcon: React.FC<GeneralIconProps> = ({ icon, size = 18, class
         height: `${size}px`,
         verticalAlign: 'middle',
         display: 'inline-block',
-        filter: 'invert(1) drop-shadow(0 0 2px rgba(255,255,255,0.2))' // BW icons usually black, need to invert for dark theme
+        filter: 'invert(1)' // White on transparent (removes white background when inverted against dark theme)
       }}
       className={`general-icon ${className}`}
     />
+  ) : (
+    <span className={className}>{icon}</span>
   );
+
+  if (glossary && glossary[termName]) {
+    return (
+      <span className="tooltip-container">
+        {iconElement}
+        <span className="tooltip-content">
+          <span className="tooltip-title">{termName}</span>
+          {glossary[termName]}
+        </span>
+      </span>
+    );
+  }
+
+  return iconElement;
 };

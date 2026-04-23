@@ -35,7 +35,27 @@ export function renderTextWithTooltips(text: string, glossary: any, depth = 0) {
   
   let elements: any = highlightModifiers(text);
 
-  // Replace element names with icons
+  // 1. Replace <TAG> placeholders with general icons FIRST
+  // This prevents word-boundary regex for terms from matching inside the tags
+  const tagRegex = /(<[A-Z0-9_\-]+>)/g;
+  const tagElements: any = [];
+  elements.forEach((el: any) => {
+    if (typeof el === 'string') {
+      const parts = el.split(tagRegex);
+      parts.forEach((part, i) => {
+        if (part.match(tagRegex)) {
+          tagElements.push(<GeneralIcon key={`gen-${i}`} icon={part} glossary={glossary} />);
+        } else if (part) {
+          tagElements.push(part);
+        }
+      });
+    } else {
+      tagElements.push(el);
+    }
+  });
+  elements = tagElements;
+
+  // 2. Replace element names with icons
   const elementNames = ['Fire', 'Ice', 'Air', 'Earth', 'Light', 'Dark', 'Wild'];
   elementNames.forEach(name => {
     const nextElements: any = [];
@@ -57,7 +77,7 @@ export function renderTextWithTooltips(text: string, glossary: any, depth = 0) {
     elements = nextElements;
   });
 
-  // Replace condition names with icons
+  // 3. Replace condition names with icons
   const conditionNames = [
     'Poison', 'Wound', 'Muddle', 'Immobilize', 'Disarm', 
     'Stun', 'Invisible', 'Strengthen', 'Bless', 'Curse',
@@ -82,26 +102,8 @@ export function renderTextWithTooltips(text: string, glossary: any, depth = 0) {
     });
     elements = nextElements;
   });
-
-  // Replace <TAG> placeholders with general icons
-  const tagRegex = /(<[A-Z0-9_\-]+>)/g;
-  const tagElements: any = [];
-  elements.forEach((el: any) => {
-    if (typeof el === 'string') {
-      const parts = el.split(tagRegex);
-      parts.forEach((part, i) => {
-        if (part.match(tagRegex)) {
-          tagElements.push(<GeneralIcon key={`gen-${i}`} icon={part} />);
-        } else if (part) {
-          tagElements.push(part);
-        }
-      });
-    } else {
-      tagElements.push(el);
-    }
-  });
-  elements = tagElements;
   
+  // 4. Glossary highlights
   Object.keys(glossary).forEach(term => {
     const termElements: any = [];
     elements.forEach((el: any) => {
