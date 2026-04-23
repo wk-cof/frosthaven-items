@@ -23,6 +23,8 @@ const RESOURCE_ICON_MAP: Record<string, string> = {
   'rockroot': 'fh-rockroot-bw-icon.png',
   'snowthistle': 'fh-snowthistle-bw-icon.png',
   'any herb': 'fh-loot-bw-icon.png',
+  'gold': 'fh-money-bw-icon.png',
+  'money': 'fh-money-bw-icon.png',
 };
 
 export const ResourceIcon: React.FC<ResourceIconProps> = ({ resource, size = 18, showTooltip = true }) => {

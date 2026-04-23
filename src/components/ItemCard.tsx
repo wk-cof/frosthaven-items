@@ -94,11 +94,6 @@ function ItemCard({ item, glossary, status, onStatusChange }: any) {
           )}
         </Box>
         <Stack spacing={1} sx={{ flex: 1 }}>
-          {(item.cost && Number(item.cost) > 0) && (
-            <Typography sx={{ fontSize: '0.85rem', color: '#fbbf24', fontWeight: 700 }}>
-              💰 {item.cost}
-            </Typography>
-          )}
           <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
             <SlotIcon slot={item.slot || 'None'} size={16} showTooltip={false} />
             <Typography sx={{ fontSize: '0.85rem', color: '#94a3b8' }}>
@@ -107,19 +102,32 @@ function ItemCard({ item, glossary, status, onStatusChange }: any) {
           </Stack>
           {item.spent && <Chip label="Spent" size="small" sx={{ height: 20, bgcolor: 'rgba(245, 158, 11, 0.1)', color: '#fbbf24', border: '1px solid rgba(245, 158, 11, 0.2)', fontSize: '0.65rem', fontWeight: 800 }} />}
           {item.consumed && <Chip label="Consumed" size="small" sx={{ height: 20, bgcolor: 'rgba(239, 68, 68, 0.1)', color: '#f87171', border: '1px solid rgba(239, 68, 68, 0.2)', fontSize: '0.65rem', fontWeight: 800 }} />}
-          {item.resources && Object.entries(item.resources).map(([res, count]) => (
-            <Stack key={res} direction="row" spacing={1} sx={{ alignItems: 'center' }}>
-              <Typography sx={{ fontSize: '0.75rem', color: '#64748b', minWidth: 12 }}>{String(count)}</Typography>
-              {res.startsWith('Item ') ? (
-                <Link href={`#item-${res.replace('Item ', '')}`} sx={{ color: '#38bdf8', textDecoration: 'none', fontSize: '0.75rem' }}>{toTitleCase(res)}</Link>
-              ) : (
+          {/* Unified Resource Cost List (Gold + Materials) */}
+          <Stack spacing={0.5}>
+            {Number(item.cost) > 0 && (
+              <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
+                <Typography sx={{ fontSize: '0.75rem', color: '#fbbf24', minWidth: 12, fontWeight: 700 }}>{item.cost}</Typography>
                 <Stack direction="row" spacing={0.5} sx={{ alignItems: 'center' }}>
-                  <ResourceIcon resource={res} size={16} />
-                  <Typography sx={{ fontSize: '0.75rem', color: '#94a3b8' }}>{toTitleCase(res)}</Typography>
+                  <ResourceIcon resource="Gold" size={16} />
+                  <Typography sx={{ fontSize: '0.75rem', color: '#fbbf24', fontWeight: 700 }}>Gold</Typography>
                 </Stack>
-              )}
-            </Stack>
-          ))}
+              </Stack>
+            )}
+            
+            {item.resources && Object.entries(item.resources).map(([res, count]) => (
+              <Stack key={res} direction="row" spacing={1} sx={{ alignItems: 'center' }}>
+                <Typography sx={{ fontSize: '0.75rem', color: '#64748b', minWidth: 12 }}>{String(count)}</Typography>
+                {res.startsWith('Item ') ? (
+                  <Link href={`#item-${res.replace('Item ', '')}`} sx={{ color: '#38bdf8', textDecoration: 'none', fontSize: '0.75rem' }}>{toTitleCase(res)}</Link>
+                ) : (
+                  <Stack direction="row" spacing={0.5} sx={{ alignItems: 'center' }}>
+                    <ResourceIcon resource={res} size={16} />
+                    <Typography sx={{ fontSize: '0.75rem', color: '#94a3b8' }}>{toTitleCase(res)}</Typography>
+                  </Stack>
+                )}
+              </Stack>
+            ))}
+          </Stack>
         </Stack>
       </Box>
 
