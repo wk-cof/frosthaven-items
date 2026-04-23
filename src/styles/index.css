@@ -640,6 +640,7 @@ body {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
+  margin-top: 0.5rem;
 }
 
 .char-trait-tag {
@@ -650,6 +651,52 @@ body {
   background: rgba(56, 189, 248, 0.1);
   border: 1px solid rgba(56, 189, 248, 0.2);
   color: var(--accent);
+  transition: all 0.2s ease;
+}
+
+.char-trait-tag:hover {
+  background: rgba(56, 189, 248, 0.2);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.mechanics-section {
+  background: rgba(15, 23, 42, 0.3);
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.mechanics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+}
+
+.mechanics-card {
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+
+.mechanics-card::before {
+  content: '!!';
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  font-size: 4rem;
+  font-weight: 900;
+  color: rgba(56, 189, 248, 0.05);
+  pointer-events: none;
+}
+
+.mechanics-card p {
+  line-height: 1.6;
+  color: #e2e8f0;
+  font-size: 1rem;
 }
 
 /* Sections */
@@ -1200,6 +1247,20 @@ body {
 
 .complexity-dot.filled {
   background: var(--text-main);
+}
+
+.char-elements-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.elements-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .char-elements {

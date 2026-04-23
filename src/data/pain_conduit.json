@@ -16,6 +16,10 @@
     "control": 5
   },
   "summary": "A masochistic melee hybrid who turns self-inflicted pain and conditions into devastating crowd control and damage.",
+  "classNotes": [
+    "Unlike other classes, you can benefit from suffering damage and negative conditions, using them in conjunction with your own abilities. Some allow you to ignore your negative conditions, including attackers adding +1 Attack when you are poisoned, or pass them to your enemies. You also have powerful healing abilities to keep you from exhausting.",
+    "Many of your abilities cause enemies to directly suffer Damage, bypassing Shield and Ward. Abilities without an Attack icon are not attacks and can be performed even when you have Disarm."
+  ],
   "hp": {
     "1": 8,
     "2": 9,
@@ -28,6 +32,9 @@
     "9": 20
   },
   "traits": [
+    "Chaotic",
+    "Intimidating",
+    "Outcast",
     "Condition Transfer",
     "Self-Harm",
     "Crowd Control",

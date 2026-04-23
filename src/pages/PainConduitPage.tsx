@@ -160,23 +160,32 @@ function PainConduitPage() {
           </div>
           <div className="char-hero-content">
             <div className="char-hero-info">
-              <div className="char-hero-badges">
-                <div className="char-badge">
-                  Difficulty: {renderComplexityDots(characterData.complexity as number)}
-                </div>
-                <div className="char-elements">
-                  {characterData.elements?.map(el => (
-                    <ElementIcon key={el} element={el} size={32} className="element-badge" />
-                  ))}
-                </div>
-              </div>
               <div className="char-hero-title-row">
                 <h1 className="char-hero-name">{characterData.name}</h1>
                 <div className="char-class-icon">
                   <img src={`${basePath}/${characterData.icon}`} alt="Class Icon" />
                 </div>
               </div>
+              <div className="char-hero-badges">
+                <div className="char-badge">
+                  Difficulty: {renderComplexityDots(characterData.complexity as number)}
+                </div>
+                <div className="char-elements-container">
+                  <span className="elements-label">Elemental Affinities:</span>
+                  <div className="char-elements">
+                    {characterData.elements?.map(el => (
+                      <ElementIcon key={el} element={el} size={32} className="element-badge" />
+                    ))}
+                  </div>
+                </div>
+              </div>
               <p className="char-hero-aka">Class: {characterData.spoilerName} • {characterData.race}</p>
+              
+              <div className="char-hero-traits">
+                {characterData.traits?.map(trait => (
+                  <span key={trait} className="char-trait-tag">{trait}</span>
+                ))}
+              </div>
               
               <div className="char-hero-stats">
                 <div className="char-stat-box">
@@ -202,6 +211,18 @@ function PainConduitPage() {
               <p className="char-lore-text">{characterData.lore}</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Class Mechanics Section */}
+      <section className="char-section mechanics-section">
+        <h2 className="char-section-title">Class Mechanics</h2>
+        <div className="mechanics-grid">
+          {(characterData as any).classNotes?.map((note: string, i: number) => (
+            <div key={i} className="mechanics-card">
+              <p>{note}</p>
+            </div>
+          ))}
         </div>
       </section>
 
