@@ -1107,7 +1107,7 @@
     "cost": 0,
     "slot": "1h",
     "spent": true,
-    "text": "During your turn, perform: [Condition: Stun] Range 2 [Area]",
+    "text": "During your turn, perform: <STUN> <RANGE> 2 <AREA_3_HEX_TRIANGLE>",
     "resources": {
       "Item 019": 1,
       "Item 097": 1
@@ -1122,11 +1122,11 @@
     "cost": 0,
     "slot": "1h",
     "consumed": true,
-    "text": "After any ally within Range 2 suffers [Damage] from an attack, remove all negative conditions from the ally and then perform: Heal 3 [Target] the ally, [Pull] 1",
+    "text": "After any ally within <RANGE> 2 suffers <DAMAGE> from an attack, remove all negative conditions from the ally and then perform: <HEAL> 3 <TARGET> the ally, <PULL> 1",
     "resources": {
       "Item 030": 1,
       "Flamefruit": 1,
-      "Arrowvine": 1
+      "Snowthistle": 1
     }
   },
   {
@@ -1142,7 +1142,7 @@
     "resources": {
       "Metal": 1,
       "Hide": 1,
-      "Snowthistle": 1
+      "Rockroot": 1
     }
   },
   {
@@ -1154,7 +1154,7 @@
     "cost": 0,
     "slot": "1h",
     "consumed": true,
-    "text": "During your turn, replace one 1-hex obstacle, hazardous terrain, difficult terrain, or icy terrain tile in an unoccupied hex within Range 2 with a different type of tile listed above.",
+    "text": "During your turn, replace one 1-hex obstacle, hazardous terrain, difficult terrain, or icy terrain tile in an unoccupied hex within <RANGE> 2 with a different type of tile listed above.",
     "resources": {
       "Item 086": 1,
       "Metal": 2
@@ -1185,11 +1185,11 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, add +1 Attack to all your attacks and perform: Heal 2 self",
+    "text": "During your turn, add +1 <ATTACK> to all your attacks and perform: <HEAL> 2 self",
     "resources": {
       "Hide": 2,
       "Flamefruit": 1,
-      "Arrowvine": 1
+      "Snowthistle": 1
     }
   },
   {
@@ -1201,11 +1201,11 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "When you would suffer 4 or fewer [Damage] from an attack, negate the [Damage] and perform: Heal X self where X is the amount of damage you would have suffered.",
+    "text": "When you would suffer 4 or fewer <DAMAGE> from an attack, negate the <DAMAGE> and perform: <HEAL> X self where X is the amount of damage you would have suffered.",
     "resources": {
       "Item 099": 1,
       "Item 156": 1,
-      "Snowthistle": 1
+      "Rockroot": 1
     }
   },
   {
@@ -1217,7 +1217,7 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "When you suffer 5 or fewer [Damage] from an attack, one enemy within Range 2 also suffers the same amount of [Damage].",
+    "text": "When you suffer 5 or fewer <DAMAGE> from an attack, one enemy within <RANGE> 2 also suffers the same amount of <DAMAGE>.",
     "resources": {
       "Item 097": 1,
       "Hide": 2
@@ -1232,7 +1232,7 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your move ability, after you enter any one hex, give [Condition: Immobilize] to all adjacent enemies.",
+    "text": "During your move ability, after you enter any one hex, give <IMMOBILIZE> to all adjacent enemies.",
     "resources": {
       "Item 112": 1,
       "Metal": 2
@@ -1247,10 +1247,10 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, perform: Heal 3 self",
+    "text": "During your turn, perform: <HEAL> 3 self",
     "resources": {
       "Arrowvine": 1,
-      "Corpsecap": 1
+      "Rockroot": 1
     }
   },
   {
@@ -1262,9 +1262,9 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, [Recover] one level 1 card from your discard pile.",
+    "text": "During your turn, <RECOVER> one level 1 card from your discard pile.",
     "resources": {
-      "Arrowvine": 1,
+      "Rockroot": 1,
       "Flamefruit": 1
     }
   },
@@ -1277,7 +1277,7 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, add +1 Attack to all your attacks.",
+    "text": "During your turn, add +1 <ATTACK> to all your attacks.",
     "resources": {
       "Arrowvine": 1,
       "Axenut": 1
@@ -1292,7 +1292,7 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, [Element: Any].",
+    "text": "During your turn, <WILD>.",
     "resources": {
       "Arrowvine": 1,
       "Flamefruit": 1
@@ -1307,7 +1307,7 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, remove one negative condition you have. This item can be used while you have [Condition: Disarm] or [Condition: Stun].",
+    "text": "During your turn, remove one negative condition you have. This item can be used while you have <DISARM> or <STUN>.",
     "resources": {
       "Arrowvine": 1,
       "Corpsecap": 1
@@ -1322,9 +1322,10 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, perform: [Retaliate] 1, Range 3",
+    "text": "During your turn, perform: <RETALIATE> 1, <RANGE> 3 <ACTIVE>",
     "resources": {
-      "Flamefruit": 2
+      "Rockroot": 1,
+      "Flamefruit": 1
     }
   },
   {
@@ -1336,9 +1337,10 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, perform: [Condition: Ward] self",
+    "text": "During your turn, perform: <WARD> self",
     "resources": {
-      "Rockroot": 2
+      "Rockroot": 1,
+      "Corpsecap": 1
     }
   },
   {
@@ -1350,7 +1352,7 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, perform: [Condition: Strengthen] self",
+    "text": "During your turn, perform: <STRENGTHEN> self",
     "resources": {
       "Axenut": 1,
       "Flamefruit": 1
@@ -1365,9 +1367,9 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, perform: [Condition: Bless] self",
+    "text": "During your turn, perform: <BLESS> self",
     "resources": {
-      "Rockroot": 1,
+      "Corpsecap": 1,
       "Flamefruit": 1
     }
   },
@@ -1380,10 +1382,10 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, [Recover] up to two of your spent items.",
+    "text": "During your turn, <RECOVER> up to two of your spent items.",
     "resources": {
-      "Flamefruit": 1,
-      "Arrowvine": 1
+      "Rockroot": 1,
+      "Snowthistle": 1
     }
   },
   {
@@ -1395,9 +1397,9 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "When you reveal a [Null] attack modifier card from your attack modifier deck, treat it as a +0 instead.",
+    "text": "When you reveal a <MISS> attack modifier card from your attack modifier deck, treat it as a <+0> instead.",
     "resources": {
-      "Flamefruit": 1,
+      "Snowthistle": 1,
       "Axenut": 1
     }
   },
@@ -1410,9 +1412,9 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, perform: Attack 2",
+    "text": "During your turn, perform: <ATTACK> 2",
     "resources": {
-      "Rockroot": 1,
+      "Corpsecap": 1,
       "Axenut": 1
     }
   },
@@ -1425,10 +1427,10 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, perform: [Condition: Poison] Range 1",
+    "text": "During your turn, perform: <POISON> <RANGE> 1",
     "resources": {
       "Arrowvine": 1,
-      "Rockroot": 1
+      "Corpsecap": 1
     }
   },
   {
@@ -1440,7 +1442,7 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, perform: [Condition: Wound] Range 1",
+    "text": "During your turn, perform: <WOUND> <RANGE> 1",
     "resources": {
       "Arrowvine": 1,
       "Flamefruit": 1
@@ -1455,7 +1457,7 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, one enemy within Range 2 suffers [Damage] 2.",
+    "text": "During your turn, one enemy within <RANGE> 2 suffers <DAMAGE> 2.",
     "resources": {
       "Arrowvine": 1,
       "Axenut": 1
@@ -1470,10 +1472,10 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, perform: [Condition: Wound], [Condition: Poison] self",
+    "text": "During your turn, perform: <WOUND>, <POISON> self",
     "resources": {
       "Flamefruit": 1,
-      "Rockroot": 1
+      "Snowthistle": 1
     }
   },
   {
@@ -1485,10 +1487,10 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, perform: Heal 6 self",
+    "text": "During your turn, perform: <HEAL> 6 self",
     "resources": {
       "Arrowvine": 1,
-      "Corpsecap": 1,
+      "Snowthistle": 1,
       "Flamefruit": 1
     }
   },
@@ -1501,7 +1503,7 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, [Recover] one card from your discard pile.",
+    "text": "During your turn, <RECOVER> one card from your discard pile.",
     "resources": {
       "Arrowvine": 1,
       "Flamefruit": 1,
