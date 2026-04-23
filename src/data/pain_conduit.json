@@ -16,7 +16,7 @@
     "mobility": 2,
     "support": 3,
     "defense": 3,
-    "control": 5
+    "control": 4
   },
   "summary": "A masochistic melee hybrid who turns self-inflicted pain and conditions into devastating crowd control and damage.",
   "classNotes": [
@@ -225,5 +225,143 @@
   "matBack": "character-mat-back.png",
   "portrait": "portrait.png",
   "icon": "icon.png",
-  "perks": "perks.png"
+  "perks": "perks.png",
+  "builds": [
+    {
+      "id": "melee-retaliate",
+      "icon": "⚔️",
+      "name": "Melee Retaliate",
+      "summary": "Focuses on reflecting and retaliating damage. Plays at the front line, turning enemy aggression into true damage.",
+      "keyCards": [
+        "reprisal",
+        "reversal of fate",
+        "penance",
+        "redemption"
+      ],
+      "strategy": "The primary \"thorns\" build. Your goal is to be targeted by enemies and reflect that damage back. Use Reprisal and Redemption to stack retaliate effects. Remember that damage reflected through the bottom of Redemption or Reversal of Fate is true damage, bypassing shields.",
+      "levelPicks": {
+        "2": "Reversal of Fate",
+        "3": "Reprisal",
+        "4": "Down to the Dirt",
+        "5": "Chained by Spite",
+        "6": "Hopelessness",
+        "7": "Penance",
+        "8": "Wracked with Pain",
+        "9": "Redemption"
+      }
+    },
+    {
+      "id": "ranged-condition",
+      "icon": "🎯",
+      "name": "Ranged Condition",
+      "summary": "Stacks negative conditions to supercharge attacks or transfer them to enemies from a safe distance.",
+      "keyCards": [
+        "delayed malady",
+        "shared affliction",
+        "wave of anguish",
+        "the end of everything"
+      ],
+      "strategy": "Standard ranged dealer. Focus on generating Fire and Air to power up your attacks. Use Chained by Despair to load up on conditions, then dump them on high-priority targets. Wave of Anguish is your late-game AoE transfer powerhouse.",
+      "levelPicks": {
+        "2": "Infection Purge",
+        "3": "Burned at Both Ends",
+        "4": "Down to the Dirt",
+        "5": "Chained by Despair",
+        "6": "Hopelessness",
+        "7": "Reject the Gift",
+        "8": "Wave of Anguish",
+        "9": "The End of Everything"
+      }
+    },
+    {
+      "id": "tank-control",
+      "icon": "🛡️",
+      "name": "Tank / Control",
+      "summary": "Utilizes high self-healing and crowd control (Disarm/Stun) to manipulate the battlefield and protect allies.",
+      "keyCards": [
+        "infection purge",
+        "chained by despair",
+        "wracked with pain",
+        "redemption"
+      ],
+      "strategy": "A defensive variant that prioritizes Disarm and Stun. Use Chained by Despair to give yourself Disarm, then move it to an enemy to neutralize them. Your high self-healing from Wracked with Pain and Redemption keeps you in the fight.",
+      "levelPicks": {
+        "2": "Infection Purge",
+        "3": "Burned at Both Ends",
+        "4": "Mirrored Misery",
+        "5": "Chained by Despair",
+        "6": "Hopelessness",
+        "7": "Reject the Gift",
+        "8": "Wracked with Pain",
+        "9": "Redemption"
+      }
+    },
+    {
+      "id": "support",
+      "icon": "🤝",
+      "name": "Support",
+      "summary": "Specializes in siphoning negative conditions and damage from allies to weaken and debuff foes.",
+      "keyCards": [
+        "blood ritual",
+        "mirrored misery",
+        "phantom limb",
+        "the end of everything"
+      ],
+      "strategy": "The ultimate utility build. Stay close to allies to pull their Poisons and Wounds with Blood Ritual. Classes with self-inflicted debuffs (like Geminate) love having you around. You can essentially make your team immune to conditions.",
+      "levelPicks": {
+        "2": "Infection Purge",
+        "3": "Burned at Both Ends",
+        "4": "Mirrored Misery",
+        "5": "Chained by Despair",
+        "6": "Phantom Limb",
+        "7": "Reject the Gift",
+        "8": "Wracked with Pain",
+        "9": "The End of Everything"
+      }
+    }
+  ],
+  "perkPriority": [
+    {
+      "perk": "Increase your maximum health by 1",
+      "note": "Essential for Self-Damage and Retaliate builds to survive reflections."
+    },
+    {
+      "perk": "When long resting, you may keep any negative conditions",
+      "note": "Critical for stacking Bane, Brittle, or Poison for future turns."
+    },
+    {
+      "perk": "Add \"Heal 2, Self\" modifiers",
+      "note": "Standard survivability for all front-line variants."
+    },
+    {
+      "perk": "Add \"+1 if you have a negative condition\" modifiers",
+      "note": "The core damage boost for Ranged/Condition builds."
+    },
+    {
+      "perk": "Add \"Curse\" modifiers",
+      "note": "High value for Support and Summoning (Flesh Fiend) builds."
+    }
+  ],
+  "tips": [
+    {
+      "icon": "🛡️",
+      "title": "Negating Damage",
+      "text": "If you lose a card to negate damage, you \"suffer no damage.\" This means reflection effects will NOT trigger. Plan your health pool carefully."
+    },
+    {
+      "icon": "🧪",
+      "title": "Condition Timing",
+      "text": "Healing removes Wound, Poison, Brittle, and Bane. Always transfer these to an enemy before you use a healing ability or a long rest."
+    },
+    {
+      "icon": "🔄",
+      "title": "Refreshing Conditions",
+      "text": "Reapplying a condition to yourself refreshes its duration. Use this to stack Disarm or Immobilize across multiple turns."
+    },
+    {
+      "icon": "💀",
+      "title": "Curse is a Condition",
+      "text": "Curse is technically a negative condition when applied. Once it becomes a modifier card, it is no longer a condition."
+    }
+  ]
 }
