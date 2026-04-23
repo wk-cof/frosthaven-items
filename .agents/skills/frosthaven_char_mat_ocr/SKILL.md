@@ -10,9 +10,21 @@ When analyzing Frosthaven Character Mats, extract data from both sides:
 ## Front Side Data
 
 ### 1. Class Notes
-Capture the gameplay-defining text in the top right section. It usually consists of two paragraphs:
-- **Condition/Ability Logic**: How the class interacts with damage and conditions.
-- **Attack/Defense Caveats**: Guidelines on direct damage, disarm logic, etc.
+Capture the gameplay-defining text in the top right section. It usually consists of two paragraphs.
+- **Symbol Replacement**: DO NOT leave gameplay symbols as text. Replace them with specific uppercase tags:
+    - Attack icon -> `<ATTACK>`
+    - Damage icon -> `<DAMAGE>`
+    - Shield icon -> `<SHIELD>`
+    - Ward icon -> `<WARD>`
+    - Disarm icon -> `<DISARM>`
+    - Heal icon -> `<HEAL>`
+    - Move icon -> `<MOVE>`
+    - Jump icon -> `<JUMP>`
+    - Target icon -> `<TARGET>`
+    - Range icon -> `<RANGE>`
+    - XP icon -> `<XP>`
+    - Loot icon -> `<LOOT>`
+    - Poison/Condition icon -> `<POISON>`, `<WOUND>`, etc. (only if the icon is present, otherwise keep as text if it's just the word).
 
 ### 2. Traits
 Identify the keywords located just above the health table, often separated by bars.

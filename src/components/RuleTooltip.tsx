@@ -1,6 +1,7 @@
 import React from 'react';
 import { ElementIcon } from './ElementIcon';
 import { ConditionIcon } from './ConditionIcon';
+import { GeneralIcon } from './GeneralIcon';
 
 // Pre-process text to highlight modifiers before splitting for glossary terms
 function highlightModifiers(text: string) {
@@ -28,31 +29,32 @@ function highlightModifiers(text: string) {
   
   return elements;
 }
+
 export function renderTextWithTooltips(text: string, glossary: any, depth = 0) {
   if (!text) return null;
   
   let elements: any = highlightModifiers(text);
 
   // Replace element names with icons
-  const elementNames = ['Fire', 'Ice', 'Air', 'Earth', 'Light', 'Dark', 'Wild', 'Any'];
+  const elementNames = ['Fire', 'Ice', 'Air', 'Earth', 'Light', 'Dark', 'Wild'];
   elementNames.forEach(name => {
-    const newElements: any = [];
+    const nextElements: any = [];
     elements.forEach((el: any) => {
       if (typeof el === 'string') {
         const regex = new RegExp(`\\b(${name})\\b`, 'gi');
         const parts = el.split(regex);
         parts.forEach((part, i) => {
           if (part.toLowerCase() === name.toLowerCase()) {
-            newElements.push(<ElementIcon key={`${name}-${i}`} element={part} size={18} />);
+            nextElements.push(<ElementIcon key={`${name}-${i}`} element={part} size={18} />);
           } else if (part) {
-            newElements.push(part);
+            nextElements.push(part);
           }
         });
       } else {
-        newElements.push(el);
+        nextElements.push(el);
       }
     });
-    elements = newElements;
+    elements = nextElements;
   });
 
   // Replace condition names with icons
@@ -62,34 +64,53 @@ export function renderTextWithTooltips(text: string, glossary: any, depth = 0) {
     'Ward', 'Brittle', 'Bane', 'Impair', 'Regenerate'
   ];
   conditionNames.forEach(name => {
-    const newElements: any = [];
+    const nextElements: any = [];
     elements.forEach((el: any) => {
       if (typeof el === 'string') {
         const regex = new RegExp(`\\b(${name})\\b`, 'gi');
         const parts = el.split(regex);
         parts.forEach((part, i) => {
           if (part.toLowerCase() === name.toLowerCase()) {
-            newElements.push(<ConditionIcon key={`${name}-${i}`} condition={part} size={18} />);
+            nextElements.push(<ConditionIcon key={`${name}-${i}`} condition={part} size={18} />);
           } else if (part) {
-            newElements.push(part);
+            nextElements.push(part);
           }
         });
       } else {
-        newElements.push(el);
+        nextElements.push(el);
       }
     });
-    elements = newElements;
+    elements = nextElements;
   });
+
+  // Replace <TAG> placeholders with general icons
+  const tagRegex = /(<[A-Z0-9_\-]+>)/g;
+  const tagElements: any = [];
+  elements.forEach((el: any) => {
+    if (typeof el === 'string') {
+      const parts = el.split(tagRegex);
+      parts.forEach((part, i) => {
+        if (part.match(tagRegex)) {
+          tagElements.push(<GeneralIcon key={`gen-${i}`} icon={part} />);
+        } else if (part) {
+          tagElements.push(part);
+        }
+      });
+    } else {
+      tagElements.push(el);
+    }
+  });
+  elements = tagElements;
   
   Object.keys(glossary).forEach(term => {
-    const newElements: any = [];
+    const termElements: any = [];
     elements.forEach((el: any) => {
       if (typeof el === 'string') {
         const regex = new RegExp(`\\b(${term})\\b`, 'gi');
         const parts = el.split(regex);
         parts.forEach(part => {
           if (part.toLowerCase() === term.toLowerCase()) {
-            newElements.push(
+            termElements.push(
               <span key={Math.random()} className="rule-term tooltip-container">
                 {part}
                 {depth < 2 && (
@@ -107,14 +128,14 @@ export function renderTextWithTooltips(text: string, glossary: any, depth = 0) {
               </span>
             );
           } else if (part) {
-            newElements.push(part);
+            termElements.push(part);
           }
         });
       } else {
-        newElements.push(el);
+        termElements.push(el);
       }
     });
-    elements = newElements;
+    elements = termElements;
   });
   
   return <>{elements.map((el: any, i: number) => <React.Fragment key={i}>{el}</React.Fragment>)}</>;
