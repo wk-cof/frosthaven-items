@@ -4,8 +4,6 @@ import {
   Typography, 
   Box 
 } from '@mui/material';
-import { ElementIcon } from './ElementIcon';
-import { ConditionIcon } from './ConditionIcon';
 import { GeneralIcon } from './GeneralIcon';
 import { ModifierIcon } from './ModifierIcon';
 
@@ -15,7 +13,7 @@ export function renderTextWithTooltips(text: string, glossary: any, depth = 0) {
   if (!text) return null;
   
   // 1. Process <TAG> placeholders first on the raw string
-  const tagRegex = /(<[A-Z0-9_\-\+]+>)/g;
+  const tagRegex = /(<[^>]+>)/g;
   const initialParts = text.split(tagRegex);
   let elements: any[] = [];
   
@@ -23,63 +21,31 @@ export function renderTextWithTooltips(text: string, glossary: any, depth = 0) {
     if (part.match(tagRegex)) {
       const inner = part.replace(/[<>]/g, '');
       // Check if it's a modifier (e.g., +1, +2, 2X)
-      if (inner.match(/^[\+\-]?\d+X?$/i)) {
-        elements.push(<ModifierIcon key={`tag-${i}`} modifier={inner.toLowerCase()} size={18} />);
+      // Standardize to uppercase for matching
+      const cleanInner = inner.trim().toUpperCase();
+      
+      if (cleanInner.match(/^[\+\-]?\d+X?$/)) {
+        elements.push(<ModifierIcon key={`tag-${i}`} modifier={cleanInner.toLowerCase()} size={18} />);
+      } else if (cleanInner.startsWith('MODIFIER:')) {
+        // Handle tags like <Modifier: -1 x2>
+        // Extract the actual modifier part
+        const modPart = cleanInner.replace('MODIFIER:', '').trim().split(' ')[0];
+        elements.push(
+          <Box component="span" key={`tag-mod-${i}`} sx={{ display: 'inline-flex', alignItems: 'center', gap: 0.5 }}>
+            <ModifierIcon modifier={modPart.toLowerCase()} size={18} />
+            <Typography component="span" sx={{ fontSize: '0.85rem', fontWeight: 600 }}>
+              {inner.replace(/Modifier:/i, '').trim()}
+            </Typography>
+          </Box>
+        );
       } else {
-        elements.push(<GeneralIcon key={`tag-${i}`} icon={inner} glossary={glossary} />);
+        elements.push(<GeneralIcon key={`tag-${i}`} icon={cleanInner} glossary={glossary} />);
       }
     } else if (part) {
       elements.push(part);
     }
   });
 
-  // 2. Replace element names
-  const elementNames = ['Fire', 'Ice', 'Air', 'Earth', 'Light', 'Dark', 'Wild'];
-  elementNames.forEach(name => {
-    const nextElements: any = [];
-    elements.forEach((el: any) => {
-      if (typeof el === 'string') {
-        const regex = new RegExp(`\\b(${name})\\b`, 'gi');
-        const parts = el.split(regex);
-        parts.forEach((part, i) => {
-          if (part.toLowerCase() === name.toLowerCase()) {
-            nextElements.push(<ElementIcon key={`${name}-${i}`} element={part} size={18} />);
-          } else if (part) {
-            nextElements.push(part);
-          }
-        });
-      } else {
-        nextElements.push(el);
-      }
-    });
-    elements = nextElements;
-  });
-
-  // 3. Replace condition names
-  const conditionNames = [
-    'Poison', 'Wound', 'Muddle', 'Immobilize', 'Disarm', 
-    'Stun', 'Invisible', 'Strengthen', 'Bless', 'Curse',
-    'Ward', 'Brittle', 'Bane', 'Impair', 'Regenerate'
-  ];
-  conditionNames.forEach(name => {
-    const nextElements: any = [];
-    elements.forEach((el: any) => {
-      if (typeof el === 'string') {
-        const regex = new RegExp(`\\b(${name})\\b`, 'gi');
-        const parts = el.split(regex);
-        parts.forEach((part, i) => {
-          if (part.toLowerCase() === name.toLowerCase()) {
-            nextElements.push(<ConditionIcon key={`${name}-${i}`} condition={part} size={18} />);
-          } else if (part) {
-            nextElements.push(part);
-          }
-        });
-      } else {
-        nextElements.push(el);
-      }
-    });
-    elements = nextElements;
-  });
   
   // 4. Glossary tooltips
   Object.keys(glossary).forEach(term => {

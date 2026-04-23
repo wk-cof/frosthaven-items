@@ -104,7 +104,7 @@
     "cost": 0,
     "slot": "2h",
     "spent": true,
-    "text": "During your turn, one of your single-target melee attack abilities may target an enemy two hexes away. [Range 2]",
+    "text": "During your turn, one of your single-target melee attack abilities may target an enemy two hexes away.",
     "resources": {
       "Wood": 1,
       "Metal": 1
@@ -269,7 +269,7 @@
     "resources": {
       "Wood": 1,
       "Metal": 1,
-      "Corpsecap": 1
+      "Axenut": 1
     }
   },
   {
@@ -760,7 +760,7 @@
     "cost": 0,
     "slot": "head",
     "spent": true,
-    "text": "During your turn, perform: [Condition: Wound] self",
+    "text": "During your turn, perform: <WOUND> self",
     "resources": {
       "Item 011": 1,
       "Flamefruit": 1
@@ -775,7 +775,7 @@
     "cost": 0,
     "slot": "head",
     "spent": true,
-    "text": "During your turn, [Consume Element: Fire] to cause up to two enemies within Range 4 to suffer [Damage] 1.",
+    "text": "During your turn, <FIRE> <CONSUME> to cause up to two enemies within <RANGE> 4 to suffer <DAMAGE> 1.",
     "resources": {
       "Item 097": 1,
       "Item 129": 1
@@ -789,7 +789,7 @@
     "image": "items/frosthaven/fh-053-hobnail-boots.jpeg",
     "cost": 0,
     "slot": "legs",
-    "text": "After you move 4 or more hexes during your turn, gain [Retaliate] 1 for the round.",
+    "text": "After you move 4 or more hexes during your turn, gain <RETALIATE> 1 for the round.",
     "resources": {
       "Item 018": 1,
       "Item 088": 1,
@@ -821,7 +821,7 @@
     "cost": 0,
     "slot": "1h",
     "spent": true,
-    "text": "When you are attacked by an adjacent enemy, gain [Retaliate] 2 for the attack.",
+    "text": "When you are attacked by an adjacent enemy, gain <RETALIATE> 2 for the attack.",
     "resources": {
       "Item 094": 1,
       "Metal": 1,
@@ -837,7 +837,7 @@
     "cost": 0,
     "slot": "1h",
     "spent": true,
-    "text": "During your turn, [Consume Element: Earth] to loot one adjacent loot token.",
+    "text": "During your turn, <EARTH> <CONSUME> to loot one adjacent loot token.",
     "resources": {
       "Wood": 1,
       "Metal": 1
@@ -867,7 +867,7 @@
     "cost": 0,
     "slot": "1h",
     "spent": true,
-    "text": "During your melee attack ability, add +2 Attack to one attack. After the ability, gain [Condition: Disarmed].",
+    "text": "During your melee attack ability, add +2 <ATTACK> to one attack. After the ability, gain <DISARM>.",
     "resources": {
       "Item 014": 1,
       "Item 085": 1,
@@ -896,7 +896,7 @@
     "image": "items/frosthaven/fh-060-cloak-of-many-pockets.jpeg",
     "cost": 0,
     "slot": "body",
-    "text": "At the start of the scenario, bring up to two additional [Small Item] items.",
+    "text": "At the start of the scenario, bring up to two additional <SMALL_ITEM> items.",
     "resources": {
       "Item 132": 1,
       "Hide": 3
@@ -911,7 +911,7 @@
     "cost": 0,
     "slot": "body",
     "spent": true,
-    "text": "Immediately after you are attacked by an adjacent enemy, that enemy suffers [Damage] X, where X is your Shield value for the attack.",
+    "text": "Immediately after you are attacked by an adjacent enemy, that enemy suffers <DAMAGE> X, where X is your <SHIELD> value for the attack.",
     "resources": {
       "Item 032": 1,
       "Item 105": 1,
@@ -927,7 +927,7 @@
     "cost": 0,
     "slot": "legs",
     "spent": true,
-    "text": "During your move ability, add +1 Move and gain [Condition: Regenerate].",
+    "text": "During your move ability, add +1 <MOVE> and gain <REGENERATE>.",
     "resources": {
       "Item 028": 1,
       "Item 099": 1
@@ -942,7 +942,7 @@
     "cost": 0,
     "slot": "legs",
     "spent": true,
-    "text": "During your move ability, [Consume Element: Dark] to add +2 Move.",
+    "text": "During your move ability, <DARK> <CONSUME> to add +2 <MOVE>.",
     "resources": {
       "Item 013": 1,
       "Item 158": 1
@@ -957,7 +957,7 @@
     "cost": 0,
     "slot": "1h",
     "consumed": true,
-    "text": "When one of your summons is killed, all enemies adjacent to it suffer [Damage] 2 and gain [Condition: Wound].",
+    "text": "When one of your summons is killed, all enemies adjacent to it suffer <DAMAGE> 2 and gain <WOUND>.",
     "resources": {
       "Item 096": 1,
       "Item 112": 1,
@@ -973,7 +973,8 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, place a character token on one normal or elite enemy within Range 3. That enemy gains -1 Shield for the scenario.",
+    "active": true,
+    "text": "During your turn, place a character token on one normal or elite enemy within <RANGE> 3. That enemy gains -1 <SHIELD> for the scenario.",
     "resources": {
       "Item 157": 1,
       "Corpsecap": 1
@@ -987,7 +988,7 @@
     "image": "items/frosthaven/fh-066-amulet-of-eternal-life.jpeg",
     "cost": 0,
     "slot": "head",
-    "text": "At the start of your rests, perform: Heal 1 self",
+    "text": "At the start of your rests, perform: <HEAL> 1 self",
     "resources": {
       "Item 109": 1,
       "Item 120": 1
@@ -1002,11 +1003,10 @@
     "imageBack": "items/frosthaven/fh-067-converging-lenses-back.jpeg",
     "cost": 0,
     "slot": "head",
-    "text": "When you are attacked, add +1 Attack to the attack instead of drawing an attack modifier card and flip this card over.",
+    "text": "When you are attacked, add +1 <ATTACK> to the attack instead of drawing an attack modifier card and flip this card over.",
     "resources": {
       "Item 001": 1,
-      "Item 093": 1,
-      "Metal": 1
+      "Item 093": 1
     }
   },
   {
@@ -1018,7 +1018,7 @@
     "cost": 0,
     "slot": "body",
     "consumed": true,
-    "text": "[Uses: 3] On the next three sources of 2 or fewer [Damage] you would suffer, negate the [Damage].",
+    "text": "On the next three sources of 2 or fewer <DAMAGE> you would suffer, negate the <DAMAGE>.",
     "resources": {
       "Item 089": 1,
       "Item 123": 1
@@ -1033,7 +1033,7 @@
     "cost": 0,
     "slot": "body",
     "spent": true,
-    "text": "When you suffer [Damage] from an attack, [Consume Element: Air] to gain Shield 3 for the attack.",
+    "text": "When you suffer <DAMAGE> from an attack, <AIR> <CONSUME> to gain <SHIELD> 3 for the attack.",
     "resources": {
       "Item 003": 1,
       "Item 233": 1
@@ -1047,7 +1047,7 @@
     "image": "items/frosthaven/fh-070-aesther-robe.jpeg",
     "cost": 0,
     "slot": "body",
-    "text": "Whenever you suffer [Damage] from [Retaliate], reduce the [Damage] to 1. If the [Damage] is already 1, reduce it to 0 instead.",
+    "text": "Whenever you suffer <DAMAGE> from <RETALIATE>, reduce the <DAMAGE> to 1. If the <DAMAGE> is already 1, reduce it to 0 instead.",
     "resources": {
       "Item 027": 1,
       "Item 113": 1
@@ -1062,7 +1062,7 @@
     "cost": 0,
     "slot": "legs",
     "consumed": true,
-    "text": "After your ability where you kill an enemy, perform: Move 4",
+    "text": "After your ability where you kill an enemy, perform: <MOVE> 4",
     "resources": {
       "Item 018": 1,
       "Corpsecap": 1
@@ -1077,7 +1077,7 @@
     "cost": 0,
     "slot": "2h",
     "spent": true,
-    "text": "During your turn, [Consume Element: Light] to perform: [Condition: Bless] Range 3",
+    "text": "During your turn, <LIGHT> <CONSUME> to perform: <BLESS> <RANGE> 3",
     "resources": {
       "Item 091": 1,
       "Wood": 1
@@ -1092,7 +1092,7 @@
     "cost": 0,
     "slot": "1h",
     "spent": true,
-    "text": "When you apply a positive condition to an ally, a different ally within Range 3 gains the same condition.",
+    "text": "When you apply a positive condition to an ally, a different ally within <RANGE> 3 gains the same condition.",
     "resources": {
       "Item 101": 1,
       "Metal": 2

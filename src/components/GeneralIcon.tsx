@@ -30,6 +30,7 @@ const ICON_MAP: Record<string, string> = {
   'PULL': 'fh-pull-bw-icon.png',
   'PIERCE': 'fh-pierce-bw-icon.png',
   'ACTIVE': 'fh-persistent-bonus-color-icon.png',
+  'SMALL_ITEM': 'fh-equip-slot-item-bw-icon.png',
 
   // Elements
   'FIRE': 'fh-fire-bw-icon.png',
