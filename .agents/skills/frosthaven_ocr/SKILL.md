@@ -9,30 +9,40 @@ When a user pastes an image of a Frosthaven item card into your context and invo
 
 ## Guidelines for Visual Translation
 
-Frosthaven uses specific icons inline with text. Translate them exactly as follows:
+Frosthaven uses specific icons inline with text. Translate them exactly as follows using `<UPPERCASE_TAGS>` to ensure the frontend can easily swap them for rich icons:
 
-1. **Elements**: If interpreting an elemental infusion or consumption icon:
-   - Fire -> `[Element: Fire]`
-   - Ice -> `[Element: Ice]`
-   - Earth -> `[Element: Earth]`
-   - Air -> `[Element: Air]`
-   - Light -> `[Element: Light]`
-   - Dark -> `[Element: Dark]`
-   - Format: If an element is to be consumed (has a red border/strike towards it), write it as `[Consume Element: X]`.
+1. **Elements**:
+   - Fire -> `<FIRE>`
+   - Ice -> `<ICE>`
+   - Earth -> `<EARTH>`
+   - Air -> `<AIR>`
+   - Light -> `<LIGHT>`
+   - Dark -> `<DARK>`
+   - **Consumption**: If an element is to be consumed (has a red border/strike), write it as `<CONSUME_X>` (e.g., `<CONSUME_FIRE>`).
 
 2. **Conditions**:
-   - Poison (skull with green/vials) -> `[Condition: Poison]`
-   - Wound (bleeding drop) -> `[Condition: Wound]`
-   - Muddle (swirling purple) -> `[Condition: Muddle]`
-   - Immobilize (boot with red mark) -> `[Condition: Immobilize]`
-   - Disarm (broken sword) -> `[Condition: Disarm]`
-   - Stun (stars) -> `[Condition: Stun]`
-   - Invisible (hollow cloak) -> `[Condition: Invisible]`
-   - Strengthen (flexed bicep) -> `[Condition: Strengthen]`
-   - Bless (gold card with sun) -> `[Condition: Bless]`
-   - Curse (purple card with skull) -> `[Condition: Curse]`
+   - Poison -> `<POISON>`
+   - Wound -> `<WOUND>`
+   - Muddle -> `<MUDDLE>`
+   - Immobilize -> `<IMMOBILIZE>`
+   - Disarm -> `<DISARM>`
+   - Stun -> `<STUN>`
+   - Invisible -> `<INVISIBLE>`
+   - Strengthen -> `<STRENGTHEN>`
+   - Bless -> `<BLESS>`
+   - Curse -> `<CURSE>`
+   - Regenerate -> `<REGENERATE>`
+   - Ward -> `<WARD>`
+   - Enfeeble -> `<ENFEEBLE>`
 
-3. **Actions & Effects**:
+3. **Attack Modifiers**:
+   - If a specific modifier icon appears (often in circles or specific fonts):
+   - +1, +2, etc. -> `<+1>`, `<+2>`
+   - 2x (Critical) -> `<2X>`
+   - Null (Miss) -> `<NULL>`
+   - +0 -> `<+0>`
+
+4. **Actions & Effects**:
    - Attack (sword symbol) + # -> `Attack #`
    - Move (boot symbol) + # -> `Move #`
    - Range (bow symbol) + # -> `Range #`
@@ -42,12 +52,11 @@ Frosthaven uses specific icons inline with text. Translate them exactly as follo
    - Retaliate (spiked shield) + # -> `Retaliate #`
    - Pierce (broken armor) + # -> `Pierce #`
 
-4. **Item Triggers (Spent vs Consumed)**:
+5. **Item Triggers (Spent vs Consumed)**:
    - If there is an icon of a flipped card (arrows turning it over), this is **Spent**.
    - If there is an icon of a card with a red 'X' over it, this is **Consumed**.
-   - *Note*: We already have this data matched from our JSON scraper, but it's good to cross-verify!
 
-5. **Uses / Charges**:
+6. **Uses / Charges**:
    - If there are a sequence of small circles or checkboxes representing usage charges, represent it as `[Uses: X]`, where X is the number of boxes.
 
 ## Output Format
