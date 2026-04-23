@@ -4,6 +4,7 @@ import { Character } from '../types/character';
 
 // Sub-components
 import { HeroSection } from '../components/CharacterPage/HeroSection';
+import { LoreSection } from '../components/CharacterPage/LoreSection';
 import { MechanicsSection } from '../components/CharacterPage/MechanicsSection';
 import { LevelSlider } from '../components/CharacterPage/LevelSlider';
 import { AbilityCardGrid } from '../components/CharacterPage/AbilityCardGrid';
@@ -12,6 +13,7 @@ import { BuildsSection } from '../components/CharacterPage/BuildsSection';
 import { TipsSection } from '../components/CharacterPage/TipsSection';
 import { PerkPriorityList } from '../components/CharacterPage/PerkPriorityList';
 import { Lightbox } from '../components/CharacterPage/Lightbox';
+import { Container, Grid } from '@mui/material';
 
 interface CharacterPageProps {
   character: Character;
@@ -50,9 +52,25 @@ export const CharacterPage: React.FC<CharacterPageProps> = ({ character }) => {
         availableCards={filteredCards.length} 
       />
 
-      <MechanicsSection notes={character.classNotes} />
+      <Container maxWidth="lg" sx={{ py: 4 }}>
+        <Grid container spacing={6}>
+          <Grid {...({ size: { xs: 12, md: 6 } } as any)}>
+            <LoreSection 
+              lore={character.lore}
+              race={character.race}
+              matBack={character.matBack}
+              basePath={basePath}
+            />
+          </Grid>
+          <Grid {...({ size: { xs: 12, md: 6 } } as any)}>
+            <MechanicsSection notes={character.classNotes} />
+          </Grid>
+        </Grid>
+      </Container>
 
-      <LevelSlider level={charLevel} onChange={setCharLevel} />
+      <Container maxWidth="lg">
+        <LevelSlider level={charLevel} onChange={setCharLevel} />
+      </Container>
 
       <AbilityCardGrid 
         cards={filteredCards} 

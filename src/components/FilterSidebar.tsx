@@ -13,6 +13,7 @@ import {
   Divider
 } from '@mui/material';
 import { Filters, ItemStatusMap } from '../pages/ItemsPage';
+import { SlotIcon } from './SlotIcon';
 
 type Props = {
   filters: Filters;
@@ -105,7 +106,12 @@ function FilterSidebar({ filters, setFilters, itemStatuses }: Props) {
             onChange={(e) => updateFilter('slot', e.target.value)}
           >
             {SLOTS.map(slot => (
-              <MenuItem key={slot.id} value={slot.id}>{slot.label}</MenuItem>
+              <MenuItem key={slot.id} value={slot.id}>
+                <Stack direction="row" spacing={1.5} sx={{ alignItems: 'center' }}>
+                  {slot.id && <SlotIcon slot={slot.id} size={18} showTooltip={false} />}
+                  <Typography sx={{ fontSize: '0.9rem' }}>{slot.label}</Typography>
+                </Stack>
+              </MenuItem>
             ))}
           </Select>
         </FormControl>

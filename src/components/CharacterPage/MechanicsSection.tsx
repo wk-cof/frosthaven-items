@@ -1,9 +1,8 @@
 import React from 'react';
-import { 
-  Box, 
-  Typography, 
-  Container, 
-  Stack, 
+import {
+  Box,
+  Typography,
+  Stack,
   Grid
 } from '@mui/material';
 import { renderTextWithTooltips } from '../RuleTooltip';
@@ -33,105 +32,103 @@ export const MechanicsSection: React.FC<MechanicsSectionProps> = ({ notes }) => 
   };
 
   return (
-    <Box component="section" sx={{ width: '100%', py: 8 }}>
-      <Container maxWidth="lg">
-        <Typography 
-          variant="h2" 
-          sx={{ 
-            fontSize: '2rem', 
-            fontWeight: 800, 
-            color: '#f8fafc', 
-            mb: 4,
-            display: 'flex',
-            alignItems: 'center',
-            gap: 2,
-            '&::after': {
-              content: '""',
-              flex: 1,
-              height: '1px',
-              background: 'linear-gradient(to right, rgba(255, 255, 255, 0.1), transparent)',
-            }
-          }}
-        >
-          Core Mechanics
-        </Typography>
+    <Box component="section" sx={{ width: '100%' }}>
+      <Typography
+        variant="h2"
+        sx={{
+          fontSize: '1.5rem',
+          fontWeight: 800,
+          color: '#f8fafc',
+          mb: 3,
+          display: 'flex',
+          alignItems: 'center',
+          gap: 2,
+          '&::after': {
+            content: '""',
+            flex: 1,
+            height: '1px',
+            background: 'linear-gradient(to right, rgba(255, 255, 255, 0.1), transparent)',
+          }
+        }}
+      >
+        Core Mechanics
+      </Typography>
 
-        <Grid container spacing={4}>
-          {notes.map((note, i) => {
-            const { title, body } = parseNote(note);
-            const color = getColor(i);
-            return (
-              <Grid key={i} {...({ size: { xs: 12, md: 6 } } as any)}>
-                <Box 
-                  className="mechanics-card"
-                  sx={{
-                    background: 'rgba(22, 28, 45, 0.7)',
-                    border: '1px solid rgba(255, 255, 255, 0.05)',
-                    borderRadius: '16px',
-                    p: 3,
-                    position: 'relative',
-                    overflow: 'hidden',
-                    transition: 'all 0.3s ease',
-                    height: '100%',
-                    '&:hover': {
-                      borderColor: `${color}80`,
-                      transform: 'translateY(-2px)',
-                      background: 'rgba(30, 41, 59, 0.8)',
-                    },
-                    /* Glow effect using sx pseudo-element */
-                    '&::before': {
-                      content: '""',
-                      position: 'absolute',
-                      top: '-20px',
-                      right: '-20px',
-                      width: '100px',
-                      height: '100px',
-                      background: color,
-                      opacity: 0.05,
-                      filter: 'blur(40px)',
-                      borderRadius: '50%',
-                      transition: 'opacity 0.3s ease',
-                    },
-                    '&:hover::before': {
-                      opacity: 0.15,
-                    }
-                  }}
-                >
-                  <Stack direction="row" spacing={2.5} sx={{ position: 'relative', zIndex: 1 }}>
-                    <Box
-                      sx={{
-                        width: 48,
-                        height: 48,
-                        background: `${color}15`,
-                        border: `1px solid ${color}30`,
-                        borderRadius: '10px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        flexShrink: 0,
-                        color: color,
-                      }}
+      <Grid container spacing={3}>
+        {notes.map((note, i) => {
+          const { title, body } = parseNote(note);
+          const color = getColor(i);
+          return (
+            <Grid key={i} size={{ xs: 12, md: 6 }}>
+              <Box
+                className="mechanics-card"
+                sx={{
+                  background: 'rgba(22, 28, 45, 0.7)',
+                  border: '1px solid rgba(255, 255, 255, 0.05)',
+                  borderRadius: '16px',
+                  p: 3,
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'all 0.3s ease',
+                  height: '100%',
+                  '&:hover': {
+                    borderColor: `${color}80`,
+                    transform: 'translateY(-2px)',
+                    background: 'rgba(30, 41, 59, 0.8)',
+                  },
+                  /* Glow effect using sx pseudo-element */
+                  '&::before': {
+                    content: '""',
+                    position: 'absolute',
+                    top: '-20px',
+                    right: '-20px',
+                    width: '100px',
+                    height: '100px',
+                    background: color,
+                    opacity: 0.05,
+                    filter: 'blur(40px)',
+                    borderRadius: '50%',
+                    transition: 'opacity 0.3s ease',
+                  },
+                  '&:hover::before': {
+                    opacity: 0.15,
+                  }
+                }}
+              >
+                <Stack direction="row" spacing={2.5} sx={{ position: 'relative', zIndex: 1 }}>
+                  <Box
+                    sx={{
+                      width: 48,
+                      height: 48,
+                      background: `${color}15`,
+                      border: `1px solid ${color}30`,
+                      borderRadius: '10px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexShrink: 0,
+                      color: color,
+                    }}
+                  >
+                    <span className="material-symbols-outlined">{getIcon(i)}</span>
+                  </Box>
+                  <Box sx={{ flex: 1 }}>
+                    <Typography
+                      variant="h6"
+                      sx={{ fontSize: '1.1rem', fontWeight: 700, color: '#f8fafc', mb: 0.5 }}
                     >
-                      <span className="material-symbols-outlined">{getIcon(i)}</span>
+                      {title}
+                    </Typography>
+                    <Box sx={{ fontSize: '0.95rem', lineHeight: 1.6, color: '#94a3b8' }}>
+                      {renderTextWithTooltips(body, glossaryData)}
                     </Box>
-                    <Box sx={{ flex: 1 }}>
-                      <Typography 
-                        variant="h6" 
-                        sx={{ fontSize: '1.1rem', fontWeight: 700, color: '#f8fafc', mb: 0.5 }}
-                      >
-                        {title}
-                      </Typography>
-                      <Box sx={{ fontSize: '0.95rem', lineHeight: 1.6, color: '#94a3b8' }}>
-                        {renderTextWithTooltips(body, glossaryData)}
-                      </Box>
-                    </Box>
-                  </Stack>
-                </Box>
-              </Grid>
-            );
-          })}
-        </Grid>
-      </Container>
+                  </Box>
+                </Stack>
+              </Box>
+            </Grid>
+          );
+        })}
+      </Grid>
     </Box>
   );
 };

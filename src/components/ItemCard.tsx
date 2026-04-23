@@ -13,6 +13,7 @@ import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined';
 import FlagOutlinedIcon from '@mui/icons-material/FlagOutlined';
 import { renderTextWithTooltips } from './RuleTooltip';
 import { toTitleCase } from '../utils/stringUtils';
+import { SlotIcon } from './SlotIcon';
 
 function ItemCard({ item, glossary, status, onStatusChange }: any) {
   const isVerified = status === 'verified';
@@ -97,9 +98,12 @@ function ItemCard({ item, glossary, status, onStatusChange }: any) {
               💰 {item.cost}
             </Typography>
           )}
-          <Typography sx={{ fontSize: '0.85rem', color: '#94a3b8' }}>
-            🎒 {toTitleCase(item.slot || 'None')}
-          </Typography>
+          <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
+            <SlotIcon slot={item.slot || 'None'} size={16} showTooltip={false} />
+            <Typography sx={{ fontSize: '0.85rem', color: '#94a3b8' }}>
+              {toTitleCase(item.slot || 'None')}
+            </Typography>
+          </Stack>
           {item.spent && <Chip label="Spent" size="small" sx={{ height: 20, bgcolor: 'rgba(245, 158, 11, 0.1)', color: '#fbbf24', border: '1px solid rgba(245, 158, 11, 0.2)', fontSize: '0.65rem', fontWeight: 800 }} />}
           {item.consumed && <Chip label="Consumed" size="small" sx={{ height: 20, bgcolor: 'rgba(239, 68, 68, 0.1)', color: '#f87171', border: '1px solid rgba(239, 68, 68, 0.2)', fontSize: '0.65rem', fontWeight: 800 }} />}
           {item.resources && Object.entries(item.resources).map(([res, count]) => (
