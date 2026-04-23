@@ -5,7 +5,6 @@ import {
   CardContent, 
   IconButton, 
   Stack, 
-  Chip, 
   Link,
   Tooltip
 } from '@mui/material';
@@ -100,8 +99,20 @@ function ItemCard({ item, glossary, status, onStatusChange }: any) {
               {toTitleCase(item.slot || 'None')}
             </Typography>
           </Stack>
-          {item.spent && <Chip label="Spent" size="small" sx={{ height: 20, bgcolor: 'rgba(245, 158, 11, 0.1)', color: '#fbbf24', border: '1px solid rgba(245, 158, 11, 0.2)', fontSize: '0.65rem', fontWeight: 800 }} />}
-          {item.consumed && <Chip label="Consumed" size="small" sx={{ height: 20, bgcolor: 'rgba(239, 68, 68, 0.1)', color: '#f87171', border: '1px solid rgba(239, 68, 68, 0.2)', fontSize: '0.65rem', fontWeight: 800 }} />}
+          <Stack direction="row" spacing={1.5} sx={{ my: 0.5, flexWrap: 'wrap', gap: 1 }}>
+            {item.spent && (
+              <Stack direction="row" spacing={0.5} sx={{ alignItems: 'center', bgcolor: 'rgba(245, 158, 11, 0.1)', px: 1, py: 0.25, borderRadius: 1, border: '1px solid rgba(245, 158, 11, 0.2)' }}>
+                <Box component="img" src={`${import.meta.env.BASE_URL}assets/general/fh-spent-bw-icon.png`} sx={{ width: 14, height: 14, objectFit: 'contain', filter: 'invert(1) sepia(1) saturate(5) hue-rotate(0deg) brightness(1)' }} />
+                <Typography sx={{ fontSize: '0.65rem', fontWeight: 800, color: '#fbbf24', textTransform: 'uppercase' }}>Spent</Typography>
+              </Stack>
+            )}
+            {item.consumed && (
+              <Stack direction="row" spacing={0.5} sx={{ alignItems: 'center', bgcolor: 'rgba(239, 68, 68, 0.1)', px: 1, py: 0.25, borderRadius: 1, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
+                <Box component="img" src={`${import.meta.env.BASE_URL}assets/general/fh-lost-color-icon.png`} sx={{ width: 14, height: 14, objectFit: 'contain' }} />
+                <Typography sx={{ fontSize: '0.65rem', fontWeight: 800, color: '#f87171', textTransform: 'uppercase' }}>Consumed</Typography>
+              </Stack>
+            )}
+          </Stack>
           {/* Unified Resource Cost List (Gold + Materials) */}
           <Stack spacing={0.5}>
             {Number(item.cost) > 0 && (

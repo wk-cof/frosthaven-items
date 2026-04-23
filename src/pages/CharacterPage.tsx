@@ -22,7 +22,7 @@ export const CharacterPage: React.FC<CharacterPageProps> = ({ character }) => {
   const [charLevel, setCharLevel] = useState<number>(1);
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
   const [matSide, setMatSide] = useState<'front' | 'back'>('front');
-  
+
   const basePath = `${import.meta.env.BASE_URL}assets/characters/${character.id}`;
 
   const filteredCards = character.cards.filter(c => {
@@ -35,47 +35,48 @@ export const CharacterPage: React.FC<CharacterPageProps> = ({ character }) => {
   });
 
   return (
-    <Box 
-      sx={{ 
-        display: 'flex', 
-        flexDirection: 'column', 
-        gap: 0, 
-        minHeight: '100vh', 
-        bgcolor: '#0f172a', 
-        color: '#f8fafc' 
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 0,
+        minHeight: '100vh',
+        bgcolor: '#0f172a',
+        color: '#f8fafc'
       }}
     >
-      <HeroSection 
-        character={character} 
-        level={charLevel} 
-        availableCards={filteredCards.length} 
+      <HeroSection
+        character={character}
+        level={charLevel}
+        availableCards={filteredCards.length}
         onLevelChange={setCharLevel}
       />
 
       <Container maxWidth="lg" sx={{ py: 4 }}>
         <Grid container spacing={6}>
+
           <Grid {...({ size: { xs: 12, md: 6 } } as any)}>
-            <LoreSection 
+            <MechanicsSection notes={character.classNotes} />
+          </Grid>
+          <Grid {...({ size: { xs: 12, md: 6 } } as any)}>
+            <LoreSection
               lore={character.lore}
               race={character.race}
               matBack={character.matBack}
               basePath={basePath}
             />
           </Grid>
-          <Grid {...({ size: { xs: 12, md: 6 } } as any)}>
-            <MechanicsSection notes={character.classNotes} />
-          </Grid>
         </Grid>
       </Container>
 
-      <AbilityCardGrid 
-        cards={filteredCards} 
-        characterId={character.id} 
-        level={charLevel} 
-        onCardClick={setLightboxImage} 
+      <AbilityCardGrid
+        cards={filteredCards}
+        characterId={character.id}
+        level={charLevel}
+        onCardClick={setLightboxImage}
       />
 
-      <MatPerksSection 
+      <MatPerksSection
         matFront={character.matFront}
         matBack={character.matBack}
         perks={character.perks}
@@ -98,10 +99,10 @@ export const CharacterPage: React.FC<CharacterPageProps> = ({ character }) => {
       )}
 
       {lightboxImage && (
-        <Lightbox 
-          image={lightboxImage} 
-          onClose={() => setLightboxImage(null)} 
-          basePath={basePath} 
+        <Lightbox
+          image={lightboxImage}
+          onClose={() => setLightboxImage(null)}
+          basePath={basePath}
         />
       )}
     </Box>
