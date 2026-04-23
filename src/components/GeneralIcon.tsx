@@ -41,10 +41,20 @@ export const GeneralIcon: React.FC<GeneralIconProps> = ({ icon, size = 18, class
   
   // Try to find matching term for tooltip
   const termName = upperIcon.charAt(0) + upperIcon.slice(1).toLowerCase();
+  const elementIcons = ['FIRE', 'AIR', 'EARTH', 'ICE', 'LIGHT', 'DARK', 'WILD', 'CONSUME'];
+  const conditionIcons = [
+    'POISON', 'WOUND', 'MUDDLE', 'IMMOBILIZE', 'DISARM', 
+    'STUN', 'INVISIBLE', 'STRENGTHEN', 'BLESS', 'CURSE',
+    'WARD', 'BRITTLE', 'BANE', 'IMPAIR', 'REGENERATE'
+  ];
+
+  let folder = 'general';
+  if (elementIcons.includes(upperIcon)) folder = 'elements';
+  else if (conditionIcons.includes(upperIcon)) folder = 'conditions';
 
   const iconElement = filename ? (
     <img
-      src={`${import.meta.env.BASE_URL}assets/general/${filename}`}
+      src={`${import.meta.env.BASE_URL}assets/${folder}/${filename}`}
       alt={icon}
       title={icon}
       style={{

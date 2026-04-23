@@ -266,14 +266,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ character, level, avai
                 {[1, 2, 3, 4, 5].map(i => <Dot key={i} filled={i <= character.complexity} />)}
               </ComplexityDots>
             </Badge>
-            <ElementsContainer>
-              <span style={{ fontSize: '0.8rem', color: '#94a3b8', fontWeight: 600 }}>Affinities:</span>
+            <Badge>
+              Affinities:
               <div style={{ display: 'flex', gap: '4px' }}>
                 {character.elements.map(el => (
                   <ElementIcon key={el} element={el} size={24} className="element-badge" />
                 ))}
               </div>
-            </ElementsContainer>
+            </Badge>
           </BadgeRow>
 
           <p style={{ color: '#94a3b8' }}>Class: {character.spoilerName} • {character.race}</p>
