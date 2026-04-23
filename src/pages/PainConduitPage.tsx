@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import characterData from '../data/pain_conduit.json';
+import { ElementIcon } from '../components/ElementIcon';
 
 const LEVEL_LABELS: Record<string, string> = {
   'x': 'X', '1': '1', '2': '2', '3': '3', '4': '4',
@@ -165,7 +166,7 @@ function PainConduitPage() {
                 </div>
                 <div className="char-elements">
                   {characterData.elements?.map(el => (
-                    <span key={el} className="element-tag">{el}</span>
+                    <ElementIcon key={el} element={el} size={32} className="element-badge" />
                   ))}
                 </div>
               </div>

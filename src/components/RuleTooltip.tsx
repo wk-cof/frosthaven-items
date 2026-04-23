@@ -1,4 +1,6 @@
 import React from 'react';
+import { ElementIcon } from './ElementIcon';
+import { ConditionIcon } from './ConditionIcon';
 
 // Pre-process text to highlight modifiers before splitting for glossary terms
 function highlightModifiers(text: string) {
@@ -26,11 +28,58 @@ function highlightModifiers(text: string) {
   
   return elements;
 }
-
 export function renderTextWithTooltips(text: string, glossary: any, depth = 0) {
   if (!text) return null;
   
   let elements: any = highlightModifiers(text);
+
+  // Replace element names with icons
+  const elementNames = ['Fire', 'Ice', 'Air', 'Earth', 'Light', 'Dark', 'Wild', 'Any'];
+  elementNames.forEach(name => {
+    const newElements: any = [];
+    elements.forEach((el: any) => {
+      if (typeof el === 'string') {
+        const regex = new RegExp(`\\b(${name})\\b`, 'gi');
+        const parts = el.split(regex);
+        parts.forEach((part, i) => {
+          if (part.toLowerCase() === name.toLowerCase()) {
+            newElements.push(<ElementIcon key={`${name}-${i}`} element={part} size={18} />);
+          } else if (part) {
+            newElements.push(part);
+          }
+        });
+      } else {
+        newElements.push(el);
+      }
+    });
+    elements = newElements;
+  });
+
+  // Replace condition names with icons
+  const conditionNames = [
+    'Poison', 'Wound', 'Muddle', 'Immobilize', 'Disarm', 
+    'Stun', 'Invisible', 'Strengthen', 'Bless', 'Curse',
+    'Ward', 'Brittle', 'Bane', 'Impair', 'Regenerate'
+  ];
+  conditionNames.forEach(name => {
+    const newElements: any = [];
+    elements.forEach((el: any) => {
+      if (typeof el === 'string') {
+        const regex = new RegExp(`\\b(${name})\\b`, 'gi');
+        const parts = el.split(regex);
+        parts.forEach((part, i) => {
+          if (part.toLowerCase() === name.toLowerCase()) {
+            newElements.push(<ConditionIcon key={`${name}-${i}`} condition={part} size={18} />);
+          } else if (part) {
+            newElements.push(part);
+          }
+        });
+      } else {
+        newElements.push(el);
+      }
+    });
+    elements = newElements;
+  });
   
   Object.keys(glossary).forEach(term => {
     const newElements: any = [];
