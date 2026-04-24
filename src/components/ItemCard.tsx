@@ -156,6 +156,30 @@ function ItemCard({ item, glossary, status, onStatusChange, onImageClick }: any)
         <CardContent sx={{ pt: 0, '& .MuiTypography-root': { fontSize: '0.9rem', color: '#cbd5e1', lineHeight: 1.6 } }}>
           {renderTextWithTooltips(item.text, glossary)}
         </CardContent>
+
+        {item.footer && (
+          <Box sx={{ 
+            px: 2, 
+            pb: 2, 
+            mt: -1,
+            display: 'flex', 
+            justifyContent: 'flex-start',
+            '& .MuiTypography-root': { fontSize: '0.85rem', fontWeight: 600 }
+          }}>
+            <Box sx={{ 
+              bgcolor: 'rgba(56, 189, 248, 0.1)', 
+              px: 1.5, 
+              py: 0.5, 
+              borderRadius: 2,
+              border: '1px solid rgba(56, 189, 248, 0.2)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: 1
+            }}>
+              {renderTextWithTooltips(item.footer, glossary)}
+            </Box>
+          </Box>
+        )}
       </Box>
     </Card>
   );
