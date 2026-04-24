@@ -35,6 +35,8 @@ const ICON_MAP: Record<string, string> = {
   'TELEPORT': 'fh-teleport-bw-icon.png',
   'TIDE': 'fh-tide-bw-icon.png',
   'INFUSION': 'fh-infusion-bw-icon.png',
+  'HAZARDOUS': 'fh-hazardous-terrain-color-icon.png',
+  'OBSTACLE': 'fh-obstacle-color-icon.png',
 
   // Elements
   'FIRE': 'fh-fire-bw-icon.png',
@@ -119,7 +121,7 @@ export const GeneralIcon: React.FC<GeneralIconProps> = ({ icon, size = 18, class
         objectFit: 'contain',
         verticalAlign: 'middle',
         display: 'inline-block',
-        filter: 'invert(1)' // White on transparent (removes white background when inverted against dark theme)
+        filter: filename.includes('color-icon') ? 'none' : 'invert(1)' // Only invert BW icons to white
       }}
       className={`general-icon ${className}`}
     />

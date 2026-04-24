@@ -20,8 +20,8 @@
   },
   "summary": "A high-complexity controller who shapes the battlefield with hazardous terrain and obstacles, punishing enemies with molten lava and inescapable terrain manipulation.",
   "classNotes": [
-    "You can create many hazardous terrain and obstacle tiles to damage and impede your enemies. When creating multiple overlay tiles, you are not required to create the maximum number indicated on the ability. Like any other class, the Pyroclast cannot create obstacles in hexes that would block off parts of the map.",
-    "There can never be more than **six** hexes of hazardous terrain you created on the map at any one time. If you would create a seventh, first remove any one existing hazardous terrain that you have created.",
+    "You can create many <HAZARDOUS> and <OBSTACLE> tiles to damage and impede your enemies. When creating multiple overlay tiles, you are not required to create the maximum number indicated on the ability. Like any other class, the Pyroclast cannot create obstacles in hexes that would block off parts of the map.",
+    "There can never be more than **six** hexes of <HAZARDOUS> you created on the map at any one time. If you would create a seventh, first remove any one existing <HAZARDOUS> that you have created.",
     "You have many abilities with mandatory persistent bonuses. Unlike other classes who can move cards with persistent bonuses to their discard pile (or lost pile if the action has a lost icon) whenever they want, you can **only** do so for cards with mandatory persistent bonuses at the start of your rests."
   ],
   "hp": {
