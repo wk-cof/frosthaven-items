@@ -82,10 +82,17 @@ function ItemCard({ item, glossary, status, onStatusChange, onImageClick }: any)
       </Box>
 
       <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'stretch' }}>
-        <Box sx={{ display: 'flex', p: 2, gap: 2 }}>
+        <Box sx={{ 
+          display: 'flex', 
+          flexDirection: { xs: 'column', sm: 'row' },
+          p: 2, 
+          gap: 2 
+        }}>
           <Box 
             sx={{ 
-              width: 200, 
+              width: { xs: '100%', sm: 200 },
+              maxWidth: { xs: 300, sm: 200 },
+              margin: { xs: '0 auto', sm: 0 },
               flexShrink: 0, 
               cursor: 'zoom-in',
               transition: 'transform 0.2s ease',

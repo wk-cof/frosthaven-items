@@ -59,13 +59,13 @@ function ItemsPage() {
   };
   
   return (
-    <Box sx={{ minHeight: '100vh', bgcolor: '#0f172a', color: '#f8fafc', py: 4 }}>
-      <Container maxWidth="xl">
+    <Box sx={{ minHeight: '100vh', bgcolor: '#0f172a', color: '#f8fafc', py: { xs: 2, md: 4 } }}>
+      <Container maxWidth="xl" sx={{ px: { xs: 2, sm: 3 } }}>
         <Box 
           component="header" 
           sx={{ 
-            mb: 6, 
-            pb: 4, 
+            mb: { xs: 4, md: 6 }, 
+            pb: { xs: 2, md: 4 }, 
             borderBottom: '1px solid rgba(255, 255, 255, 0.05)',
             textAlign: 'center'
           }}
@@ -75,6 +75,7 @@ function ItemsPage() {
             sx={{ 
               fontWeight: 900, 
               mb: 1,
+              fontSize: { xs: '2rem', md: '3rem' },
               background: 'linear-gradient(to right, #38bdf8, #818cf8)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
@@ -83,14 +84,14 @@ function ItemsPage() {
           >
             Frosthaven Item Database
           </Typography>
-          <Typography variant="subtitle1" sx={{ color: '#94a3b8' }}>
+          <Typography variant="subtitle1" sx={{ color: '#94a3b8', fontSize: { xs: '0.9rem', md: '1.1rem' } }}>
             Browse and filter all items from Frosthaven.
           </Typography>
         </Box>
 
         <Stack 
           direction={{ xs: 'column', md: 'row' }} 
-          spacing={4} 
+          spacing={{ xs: 3, md: 4 }} 
           sx={{ alignItems: 'flex-start' }}
         >
           <FilterSidebar 
@@ -98,14 +99,16 @@ function ItemsPage() {
             setFilters={setFilters} 
             itemStatuses={itemStatuses} 
           />
-          <ItemGrid 
-            items={itemsData} 
-            filters={filters} 
-            glossary={glossaryData} 
-            itemStatuses={itemStatuses} 
-            updateItemStatus={updateItemStatus} 
-            onImageClick={setLightboxImage}
-          />
+          <Box sx={{ width: '100%', flex: 1, overflow: 'hidden' }}>
+            <ItemGrid 
+              items={itemsData} 
+              filters={filters} 
+              glossary={glossaryData} 
+              itemStatuses={itemStatuses} 
+              updateItemStatus={updateItemStatus} 
+              onImageClick={setLightboxImage}
+            />
+          </Box>
         </Stack>
       </Container>
       

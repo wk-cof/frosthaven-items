@@ -49,7 +49,7 @@ function ItemGrid({ items, filters, glossary, itemStatuses, updateItemStatus, on
           <Typography variant="h6">No items match your filters.</Typography>
         </Box>
       ) : (
-        <Grid container spacing={3}>
+        <Grid container spacing={{ xs: 2, md: 3 }}>
           {filtered.map((item: any) => (
             <Grid key={item.id} size={{ xs: 12, sm: 6, lg: 4, xl: 3 }}>
               <ItemCard 
