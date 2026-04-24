@@ -67,16 +67,16 @@ function NavBar() {
             <Button
               component={NavLink}
               to="/characters/pain-conduit"
-              startIcon={<span>🔗</span>}
+              startIcon={<img src="/frosthaven-items/assets/characters/pain-conduit/icon.png" alt="Shackles" style={{ width: 20, height: 20, filter: 'brightness(0) invert(1)' }} />}
               sx={{
-                color: location.pathname === '/characters/pain-conduit' ? '#38bdf8' : '#94a3b8',
+                color: location.pathname === '/characters/pain-conduit' ? '#ec4899' : '#94a3b8',
                 fontWeight: 700,
                 px: 2,
                 borderRadius: 2,
-                bgcolor: location.pathname === '/characters/pain-conduit' ? 'rgba(56, 189, 248, 0.1)' : 'transparent',
+                bgcolor: location.pathname === '/characters/pain-conduit' ? 'rgba(236, 72, 153, 0.1)' : 'transparent',
                 '&:hover': {
-                  bgcolor: 'rgba(56, 189, 248, 0.05)',
-                  color: '#38bdf8'
+                  bgcolor: 'rgba(236, 72, 153, 0.05)',
+                  color: '#ec4899'
                 }
               }}
             >
@@ -85,7 +85,7 @@ function NavBar() {
             <Button
               component={NavLink}
               to="/characters/pyroclast"
-              startIcon={<span>🔥</span>}
+              startIcon={<img src="/frosthaven-items/assets/characters/pyroclast/icon.png" alt="Meteor" style={{ width: 20, height: 20, filter: 'brightness(0) invert(1)' }} />}
               sx={{
                 color: location.pathname === '/characters/pyroclast' ? '#f97316' : '#94a3b8',
                 fontWeight: 700,
@@ -103,7 +103,7 @@ function NavBar() {
             <Button
               component={NavLink}
               to="/characters/crashing-tide"
-              startIcon={<span>🐚</span>}
+              startIcon={<img src="/frosthaven-items/assets/characters/crashing-tide/icon.png" alt="Coral" style={{ width: 20, height: 20, filter: 'brightness(0) invert(1)' }} />}
               sx={{
                 color: location.pathname === '/characters/crashing-tide' ? '#0ea5e9' : '#94a3b8',
                 fontWeight: 700,
@@ -121,7 +121,7 @@ function NavBar() {
             <Button
               component={NavLink}
               to="/characters/infuser"
-              startIcon={<span>💎</span>}
+              startIcon={<img src="/frosthaven-items/assets/characters/infuser/icon.png" alt="Infuser" style={{ width: 20, height: 20, filter: 'brightness(0) invert(1)' }} />}
               sx={{
                 color: location.pathname === '/characters/infuser' ? '#10b981' : '#94a3b8',
                 fontWeight: 700,
