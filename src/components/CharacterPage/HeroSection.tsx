@@ -171,10 +171,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         <Container maxWidth="lg">
           <Grid container spacing={4}>
             {/* Main Info Column */}
-            <Grid {...({ size: { xs: 12, lg: 8 } } as any)}>
+            <Grid size={{ xs: 12, lg: 8 }}>
               <Stack
                 direction={{ xs: 'column', md: 'row' }}
-                spacing={4}
+                spacing={{ xs: 3, md: 4 }}
                 sx={{
                   alignItems: { xs: 'center', md: 'flex-start' },
                   textAlign: { xs: 'center', md: 'left' }
@@ -186,8 +186,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                     src={`${basePath}/${character.portrait}`}
                     alt={character.name}
                     sx={{
-                      width: 240,
-                      height: 240,
+                      width: { xs: 160, sm: 200, md: 240 },
+                      height: { xs: 160, sm: 200, md: 240 },
                       border: '4px solid rgba(255, 255, 255, 0.1)',
                       boxShadow: `0 0 30px ${character.theme.glow}, inset 0 0 20px rgba(0, 0, 0, 0.5)`,
                       bgcolor: 'rgba(30, 41, 59, 0.7)',
@@ -201,15 +201,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 </Box>
 
                 {/* Content */}
-                <Stack spacing={2.5} sx={{ flex: 1, width: '100%' }}>
+                <Stack spacing={2.5} sx={{ flex: 1, width: '100%', alignItems: { xs: 'center', md: 'flex-start' } }}>
                   {/* Header Tags */}
                   <Stack direction="row" spacing={1} sx={{ justifyContent: { xs: 'center', md: 'flex-start' } }}>
                     <Chip
                       label={`${character.spoilerName}`}
                       size="small"
                       sx={{
-                        bgcolor: `${character.theme.primary}1A`, // 1A is ~10% opacity
-                        border: `1px solid ${character.theme.primary}33`, // 33 is ~20% opacity
+                        bgcolor: `${character.theme.primary}1A`,
+                        border: `1px solid ${character.theme.primary}33`,
                         color: character.theme.primary,
                         fontWeight: 700,
                         fontSize: '0.7rem',
@@ -235,8 +235,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   <Stack direction="row" spacing={2} sx={{ alignItems: 'center', justifyContent: { xs: 'center', md: 'flex-start' } }}>
                     <Box
                       sx={{
-                        width: 44,
-                        height: 44,
+                        width: { xs: 32, sm: 44 },
+                        height: { xs: 32, sm: 44 },
                         bgcolor: 'rgba(0, 0, 0, 0.4)',
                         borderRadius: 1,
                         border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -251,7 +251,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                     <Typography
                       variant="h1"
                       sx={{
-                        fontSize: '2.5rem',
+                        fontSize: { xs: '1.75rem', sm: '2.5rem' },
                         fontWeight: 800,
                         background: `linear-gradient(to right, ${character.theme.primary}, ${character.theme.secondary})`,
                         WebkitBackgroundClip: 'text',
@@ -264,7 +264,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   </Stack>
 
                   {/* Sub-Header info */}
-                  <Stack direction="row" spacing={1} sx={{ flexWrap: 'wrap', justifyContent: { xs: 'center', md: 'flex-start' } }}>
+                  <Stack direction="row" spacing={1} sx={{ flexWrap: 'wrap', justifyContent: { xs: 'center', md: 'flex-start' }, gap: 1 }}>
                     <Chip
                       label={
                         <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
@@ -308,8 +308,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   </Stack>
 
                   {/* Base Stats */}
-                  <Stack spacing={3} sx={{ width: '100%', pt: 1 }}>
-                    <Stack direction="row" spacing={2} sx={{ flexWrap: 'wrap', justifyContent: { xs: 'center', md: 'flex-start' } }}>
+                  <Stack spacing={3} sx={{ width: '100%', pt: 1, alignItems: { xs: 'center', md: 'flex-start' } }}>
+                    <Stack direction="row" spacing={1.5} sx={{ flexWrap: 'wrap', justifyContent: { xs: 'center', md: 'flex-start' } }}>
                       {[
                         { label: 'Hand Size', value: character.handSize },
                         { label: `HP (Lvl ${level})`, value: currentHP },
@@ -321,13 +321,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                             bgcolor: 'rgba(0, 0, 0, 0.3)',
                             border: '1px solid rgba(255, 255, 255, 0.1)',
                             borderRadius: 3,
-                            p: '10px 16px',
-                            minWidth: 90,
+                            p: { xs: '8px 12px', sm: '10px 16px' },
+                            minWidth: { xs: 80, sm: 90 },
                             textAlign: 'center'
                           }}
                         >
-                          <Typography sx={{ fontSize: '1.5rem', fontWeight: 800, color: character.theme.primary, lineHeight: 1.2 }}>{stat.value}</Typography>
-                          <Typography variant="caption" sx={{ color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.05em', fontSize: '0.65rem' }}>{stat.label}</Typography>
+                          <Typography sx={{ fontSize: { xs: '1.25rem', sm: '1.5rem' }, fontWeight: 800, color: character.theme.primary, lineHeight: 1.2 }}>{stat.value}</Typography>
+                          <Typography variant="caption" sx={{ color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.05em', fontSize: '0.6rem' }}>{stat.label}</Typography>
                         </Box>
                       ))}
                     </Stack>
@@ -388,7 +388,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </Grid>
 
             {/* Combat Profile Sidebar Column */}
-            <Grid {...({ size: { xs: 12, lg: 4 } } as any)}>
+            <Grid size={{ xs: 12, lg: 4 }}>
               <Paper elevation={0} sx={{ ...glassStyle, height: '100%', display: 'flex', flexDirection: 'column', gap: 2.5 }}>
                 <Typography
                   variant="h6"
