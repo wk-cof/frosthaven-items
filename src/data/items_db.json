@@ -2692,128 +2692,128 @@
   },
   {
     "id": 201,
-    "name": "wave blade",
+    "name": "Wave Blade",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-201-wave-blade.jpeg",
     "cost": 50,
-    "slot": "2h",
-    "spent": true,
-    "text": "During your melee attack ability performed while occupying or adjacent to a hex with a water tile, add [Pierce] 1 and [Condition: Wound] to one attack."
+    "slot": "1h",
+    "consumed": true,
+    "text": "During your melee attack ability performed while occupying or adjacent to a hex with a water tile, add <PIERCE> 1 and <WOUND> to one attack."
   },
   {
     "id": 202,
-    "name": "giant piranha pig spine",
+    "name": "Giant Piranha-Pig Spine",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-202-giant-piranha-pig-spine.jpeg",
     "cost": 40,
-    "slot": "2h",
-    "spent": true,
-    "text": "During your melee attack ability, add [Pierce] 2 and [Condition: Wound] to one attack."
+    "slot": "1h",
+    "consumed": true,
+    "text": "During your melee attack ability, add <PIERCE> 2 and <WOUND> to one attack."
   },
   {
     "id": 203,
-    "name": "scepter of control",
+    "name": "Scepter of Control",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-203-scepter-of-control.jpeg",
     "cost": 50,
     "slot": "1h",
     "consumed": true,
-    "text": "After your attack ability, control one target: Move 2"
+    "text": "After your attack ability, control one target: <MOVE> 2"
   },
   {
     "id": 204,
-    "name": "severed claw",
+    "name": "Severed Claw",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-204-severed-claw.jpeg",
     "cost": 35,
     "slot": "1h",
     "consumed": true,
-    "text": "During your turn, one adjacent normal or elite enemy suffers [Damage] equal to their Shield value. [Modifier: -1 x3]"
+    "text": "During your turn, one adjacent normal or elite enemy suffers <DAMAGE> equal to their <SHIELD> value. <MODIFIER_NEG_1> x3"
   },
   {
     "id": 205,
-    "name": "harpoon",
+    "name": "Harpoon",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-205-harpoon.jpeg",
     "cost": 30,
-    "slot": "2h",
+    "slot": "1h",
     "consumed": true,
-    "text": "During your turn, perform: Attack 2 Range 3, [Pull] 2"
+    "text": "During your turn, perform: <ATTACK> 2 <RANGE> 3, <PULL> 2"
   },
   {
     "id": 206,
-    "name": "giant sword",
+    "name": "Giant Sword",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-206-giant-sword.jpeg",
     "cost": 40,
     "slot": "2h",
-    "spent": true,
-    "text": "During your melee attack ability, if you have not moved this round, add +2 Attack to one attack, and you may perform no move abilities this turn. [Modifier: -1 x3]"
+    "consumed": true,
+    "text": "During your melee attack ability, if you have not moved this round, add +2 <ATTACK> to one attack, and you may perform no move abilities this turn. <MODIFIER_NEG_1> x3"
   },
   {
     "id": 207,
-    "name": "fishhook",
+    "name": "Fishhook",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-207-fishhook.jpeg",
     "cost": 25,
-    "slot": "2h",
-    "spent": true,
-    "text": "After your attack, if the target's current hit point value is 3 or less, give the target [Condition: Bane]."
+    "slot": "1h",
+    "consumed": true,
+    "text": "After your attack, if the target's current hit point value is 3 or less, give the target <BANE>."
   },
   {
     "id": 208,
-    "name": "titan nail",
+    "name": "Titan Nail",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-208-titan-nail.jpeg",
     "cost": 35,
-    "slot": "2h",
-    "spent": true,
-    "text": "During your attack ability, add [Pierce] 3 to one attack targeting an enemy whose current hit point value is 4 or less."
+    "slot": "1h",
+    "consumed": true,
+    "text": "During your attack ability, add <PIERCE> 3 to one attack targeting an enemy whose current hit point value is 4 or less."
   },
   {
     "id": 209,
-    "name": "sword of mastery",
+    "name": "Sword of Mastery",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-209-sword-of-mastery.jpeg",
     "cost": 60,
-    "slot": "2h",
-    "spent": true,
-    "text": "During your melee attack ability, gain advantage on one attack. For each mastery you have completed, also add one of the following to the attack: +1 Attack, [Condition: Wound], or [Condition: Poison]."
+    "slot": "1h",
+    "consumed": true,
+    "text": "During your melee attack ability, gain advantage on one attack. For each mastery you have completed, also add one of the following to the attack: +1 <ATTACK>, <WOUND>, or <POISON>."
   },
   {
     "id": 210,
-    "name": "tanjo",
+    "name": "Tanjo",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-210-tanjo.jpeg",
     "cost": 30,
-    "slot": "2h",
+    "slot": "1h",
     "spent": true,
-    "text": "During your turn, add -3 Attack to all attacks performed by Lurkers targeting you this round."
+    "text": "During your turn, add -3 <ATTACK> to all attacks performed by Lurkers targeting you this round."
   },
   {
     "id": 211,
-    "name": "boom barrel",
+    "name": "Boom Barrel",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-211-boom-barrel.jpeg",
     "cost": 30,
-    "slot": "2h",
+    "slot": "1h",
     "consumed": true,
-    "text": "During your turn, designate one adjacent hex. At the end of your turn, all figures within Range 2 of the designated hex suffer [Damage] 1."
+    "text": "During your turn, designate one adjacent hex. At the end of your turn, all figures within <RANGE> 2 of the designated hex suffer <DAMAGE> 1."
   },
   {
     "id": 212,
-    "name": "elemental stone",
+    "name": "Elemental Stone",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-212-elemental-stone.jpeg",
@@ -2824,51 +2824,52 @@
   },
   {
     "id": 213,
-    "name": "key of seasons",
+    "name": "Key of Seasons",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-213-key-of-seasons.jpeg",
     "imageBack": "items/frosthaven/fh-213-key-of-seasons-back.jpeg",
     "cost": 70,
     "slot": "1h",
-    "text": "During your attack ability, [Consume Element: Ice] to add [Condition: Immobilize] to one attack, then flip this card over at the end of your turn. / During your attack ability, [Consume Element: Fire] to add [Condition: Wound] to one attack, then flip this card over at the end of your turn."
+    "passive": true,
+    "text": "During your attack ability, <ICE_CONSUME> to add <IMMOBILIZE> to one attack, then flip this card over at the end of your turn. / During your attack ability, <FIRE_CONSUME> to add <WOUND> to one attack, then flip this card over at the end of your turn."
   },
   {
     "id": 214,
-    "name": "cup of ventillion",
+    "name": "Cup of Ventillion",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-214-cup-of-ventillion.jpeg",
     "cost": 30,
     "slot": "1h",
-    "spent": true,
+    "consumed": true,
     "text": "During your heal ability, add one positive condition you have to one heal."
   },
   {
     "id": 215,
-    "name": "befuddling mug",
+    "name": "Befuddling Mug",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-215-befuddling-mug.jpeg",
     "cost": 30,
     "slot": "1h",
     "consumed": true,
-    "text": "During your turn, add +1 Attack and [Condition: Muddle] to all your attacks. At the end of your turn, perform: [Condition: Muddle] self"
+    "text": "During your turn, add +1 <ATTACK> and <MUDDLE> to all your attacks. At the end of your turn, perform: <MUDDLE> self"
   },
   {
     "id": 216,
-    "name": "tome of elements",
+    "name": "Tome of Elements",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-216-tome-of-elements.jpeg",
     "cost": 50,
     "slot": "1h",
-    "consumed": true,
-    "text": "During your turn, [Element: Fire] [Element: Ice] [Element: Air] [Element: Earth] [Element: Light] [Element: Dark] Elements do not move from strong to waning at the end of this round."
+    "spent": true,
+    "text": "During your turn, <FIRE>, <ICE>, <AIR>, <EARTH>, <LIGHT>, <DARK>. Elements do not move from strong to waning at the end of this round."
   },
   {
     "id": 217,
-    "name": "tome of time",
+    "name": "Tome of Time",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-217-tome-of-time.jpeg",
@@ -2879,62 +2880,62 @@
   },
   {
     "id": 218,
-    "name": "tome of life",
+    "name": "Tome of Life",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-218-tome-of-life.jpeg",
     "cost": 50,
     "slot": "1h",
     "consumed": true,
-    "text": "During your turn, remove all conditions from all figures, then grant all figures: Heal 2 self"
+    "text": "During your turn, remove all conditions from all figures, then grant all figures: <HEAL> 2 self"
   },
   {
     "id": 219,
-    "name": "tome of conflict",
+    "name": "Tome of Conflict",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-219-tome-of-conflict.jpeg",
     "cost": 50,
     "slot": "1h",
     "consumed": true,
-    "text": "During your turn, all figures gain [Condition: Strengthen]. Until any monster is killed, the first attack modifier card drawn for every attack is treated as rolling."
+    "text": "During your turn, all figures gain <STRENGTHEN>. Until any monster is killed, the first attack modifier card drawn for every attack is treated as rolling."
   },
   {
     "id": 220,
-    "name": "belaras quill",
+    "name": "Belara's Quill",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-220-belaras-quill.jpeg",
     "cost": 50,
     "slot": "1h",
     "consumed": true,
-    "text": "During your turn, [Refresh] up to one Tome item."
+    "text": "During your turn, <RECOVER> up to one Tome item."
   },
   {
     "id": 221,
-    "name": "ice shiv",
+    "name": "Ice Shiv",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-221-ice-shiv.jpeg",
     "cost": 30,
     "slot": "1h",
-    "spent": true,
-    "text": "During your melee attack ability, [Consume Element: Ice] to add [Pierce] 3 to one attack."
+    "consumed": true,
+    "text": "During your melee attack ability, <ICE_CONSUME> to add <PIERCE> 3 to one attack."
   },
   {
     "id": 222,
-    "name": "black box",
+    "name": "Black Box",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-222-black-box.jpeg",
     "cost": 30,
     "slot": "1h",
-    "spent": true,
-    "text": "During your turn, discard two cards from your hand to perform: Heal 6 self"
+    "consumed": true,
+    "text": "During your turn, discard two cards from your hand to perform: <HEAL> 6 self"
   },
   {
     "id": 223,
-    "name": "lightning rod",
+    "name": "Lightning Rod",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-223-lightning-rod.jpeg",
@@ -2945,78 +2946,81 @@
   },
   {
     "id": 224,
-    "name": "armor of empathy",
+    "name": "Armor of Empathy",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-224-armor-of-empathy.jpeg",
     "imageBack": "items/frosthaven/fh-224-armor-of-empathy-back.jpeg",
     "cost": 40,
     "slot": "body",
-    "text": "After the next three attacks targeting you, flip this card over. / During your turn, perform: Heal 3 Target 1 ally, Range 3, [Condition: Ward] then flip this card over."
+    "passive": true,
+    "text": "After the next three attacks targeting you, flip this card over. / During your turn, perform: <HEAL> 3 <TARGET> 1 ally, <RANGE> 3, <WARD> then flip this card over."
   },
   {
     "id": 225,
-    "name": "algox carving",
+    "name": "Algox Carving",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-225-algox-carving.jpeg",
     "imageBack": "items/frosthaven/fh-225-algox-carving-back.jpeg",
     "cost": 60,
     "slot": "body",
-    "text": "During your melee attack ability, [Consume Element: Earth] to add +1 Attack to one attack and flip this card over. / During your ranged attack ability, [Consume Element: Air] to add [Pierce] 2 to one attack and flip this card over."
+    "passive": true,
+    "text": "During your melee attack ability, <EARTH_CONSUME> to add +1 <ATTACK> to one attack and flip this card over. / During your ranged attack ability, <AIR_CONSUME> to add <PIERCE> 2 to one attack and flip this card over."
   },
   {
     "id": 226,
-    "name": "unfettered arm",
+    "name": "Unfettered Arm",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-226-unfettered-arm.jpeg",
     "cost": 20,
     "slot": "1h",
-    "spent": true,
-    "text": "During your attack ability, double the numerical value of the next attack modifier card you draw. 2x and Null modifier cards are unaffected."
+    "consumed": true,
+    "text": "During your attack ability, double the numerical value of the next attack modifier card you draw. <MODIFIER_2X> and <MODIFIER_NULL> modifier cards are unaffected."
   },
   {
     "id": 227,
-    "name": "data drive",
+    "name": "Data Drive",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-227-data-drive.jpeg",
     "cost": 40,
     "slot": "1h",
-    "spent": true,
+    "consumed": true,
     "text": "When you short rest, place half (rounded down) of your discard pile on this item, lose one of the remaining cards randomly as normal, then draw the cards on this item."
   },
   {
     "id": 228,
-    "name": "extendable pole",
+    "name": "Extendable Pole",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-228-extendable-pole.jpeg",
     "cost": 20,
     "slot": "1h",
-    "spent": true,
-    "text": "During your turn, open one unlocked door within Range 2."
+    "consumed": true,
+    "text": "During your turn, open one unlocked door within <RANGE> 2."
   },
   {
     "id": 229,
-    "name": "exquisite map",
+    "name": "Exquisite Map",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-229-exquisite-map.jpeg",
     "cost": 30,
     "slot": "1h",
     "consumed": true,
-    "text": "During your turn, grant one ally within Range 3: Move 3"
+    "text": "During your turn, grant one ally within <RANGE> 3: <MOVE> 3"
   },
   {
     "id": 230,
-    "name": "examination glass",
+    "name": "Examination Glass",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-230-examination-glass.jpeg",
     "cost": 20,
     "slot": "1h",
+    "consumed": true,
     "text": "After you draw one loot card, draw one additional card, keep one, and place the other on either the top or bottom of the loot deck."
   },
   {
