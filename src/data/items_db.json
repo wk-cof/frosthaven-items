@@ -1429,7 +1429,7 @@
     "consumed": true,
     "text": "During your turn, perform: <POISON> <RANGE> 1",
     "resources": {
-      "Arrowvine": 1,
+      "Snowthistle": 1,
       "Corpsecap": 1
     }
   },
@@ -1444,7 +1444,7 @@
     "consumed": true,
     "text": "During your turn, perform: <WOUND> <RANGE> 1",
     "resources": {
-      "Arrowvine": 1,
+      "Snowthistle": 1,
       "Flamefruit": 1
     }
   },
@@ -1459,7 +1459,7 @@
     "consumed": true,
     "text": "During your turn, one enemy within <RANGE> 2 suffers <DAMAGE> 2.",
     "resources": {
-      "Arrowvine": 1,
+      "Snowthistle": 1,
       "Axenut": 1
     }
   },
@@ -1474,8 +1474,7 @@
     "consumed": true,
     "text": "During your turn, perform: <WOUND>, <POISON> self",
     "resources": {
-      "Flamefruit": 1,
-      "Snowthistle": 1
+      "Same Herb": 2
     }
   },
   {
@@ -1490,8 +1489,8 @@
     "text": "During your turn, perform: <HEAL> 6 self",
     "resources": {
       "Arrowvine": 1,
-      "Snowthistle": 1,
-      "Flamefruit": 1
+      "Rockroot": 1,
+      "Snowthistle": 1
     }
   },
   {
@@ -1519,7 +1518,7 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, add +2 Attack to all your attacks.",
+    "text": "During your turn, add +2 <ATTACK> to all your attacks.",
     "resources": {
       "Arrowvine": 1,
       "Axenut": 1,
@@ -1535,7 +1534,7 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, [Element: Any] [Element: Any].",
+    "text": "During your turn, <WILD> <WILD>.",
     "resources": {
       "Arrowvine": 1,
       "Axenut": 1,
@@ -1551,7 +1550,7 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, remove all negative conditions you have. This item can be used while you have [Condition: Disarm] or [Condition: Stun].",
+    "text": "During your turn, remove all negative conditions you have. This item can be used while you have <DISARM> or <STUN>.",
     "resources": {
       "Arrowvine": 1,
       "Corpsecap": 1,
@@ -1567,9 +1566,9 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, add +3 Move and [Jump].",
+    "text": "During your move ability, add +3 <MOVE> and <JUMP>.",
     "resources": {
-      "Arrowvine": 1,
+      "Snowthistle": 1,
       "Axenut": 1,
       "Flamefruit": 1
     }
@@ -1583,10 +1582,10 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, perform: [Retaliate] 2, Range 3",
+    "text": "During your turn, perform: <RETALIATE> 2, <RANGE> 3 <ACTIVE>",
     "resources": {
       "Arrowvine": 1,
-      "Corpsecap": 1,
+      "Snowthistle": 1,
       "Flamefruit": 1
     }
   },
@@ -1599,10 +1598,10 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, perform: [Condition: Ward] Target 2 adjacent allies and self",
+    "text": "During your turn, perform: <WARD> <ALLY> 2 adjacent allies and self",
     "resources": {
       "Arrowvine": 1,
-      "Corpsecap": 1,
+      "Snowthistle": 1,
       "Axenut": 1
     }
   },
@@ -1615,11 +1614,11 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, perform: [Condition: Strengthen] Target 2 adjacent allies and self",
+    "text": "During your turn, perform: <STRENGTHEN> <ALLY> 2 adjacent allies and self",
     "resources": {
       "Arrowvine": 1,
-      "Corpsecap": 1,
-      "Flamefruit": 1
+      "Snowthistle": 1,
+      "Corpsecap": 1
     }
   },
   {
@@ -1631,7 +1630,7 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, perform: [Condition: Bless] Target 2 adjacent allies and self",
+    "text": "During your turn, perform: <BLESS> <ALLY> 2 adjacent allies and self",
     "resources": {
       "Arrowvine": 1,
       "Snowthistle": 1,
@@ -1647,10 +1646,10 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, [Recover] up to one of your lost 2-herb potions.",
+    "text": "During your turn, <RECOVER> up to one of your lost 2-herb potions.",
     "resources": {
-      "Arrowvine": 1,
       "Snowthistle": 1,
+      "Arrowvine": 1,
       "Flamefruit": 1
     }
   },
@@ -1663,10 +1662,10 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "When you reveal a [Null] attack modifier card from your attack modifier deck, treat it as a +2 instead.",
+    "text": "When you reveal a <MISS> attack modifier card from your attack modifier deck, treat it as a <+2> instead.",
     "resources": {
-      "Arrowvine": 1,
       "Snowthistle": 1,
+      "Arrowvine": 1,
       "Corpsecap": 1
     }
   },
@@ -1679,9 +1678,9 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, perform: Attack 4",
+    "text": "During your turn, perform: <ATTACK> 4",
     "resources": {
-      "Arrowvine": 1,
+      "Snowthistle": 1,
       "Axenut": 1,
       "Corpsecap": 1
     }
@@ -1695,7 +1694,7 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, suffer [Damage] 10.",
+    "text": "During your turn, suffer <DAMAGE> 10.",
     "resources": {
       "Arrowvine": 1,
       "Snowthistle": 1,
@@ -1711,9 +1710,9 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "At the start of your turn, discard one of your played cards to perform both the top and bottom actions of your other played card. At most one action can trigger a [Lost] icon.",
+    "text": "At the start of your turn, discard one of your played cards to perform both the top and bottom actions of your other played card. At most one action can trigger a <LOST> icon.",
     "resources": {
-      "Arrowvine": 1,
+      "Snowthistle": 1,
       "Corpsecap": 1,
       "Flamefruit": 1
     }
@@ -1759,11 +1758,11 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, perform: [Condition: Poison] Range 1, [Area]",
+    "text": "During your turn, perform: <POISON> <RANGE> 1 <AREA_3_COLOUR>",
     "resources": {
       "Snowthistle": 1,
-      "Corpsecap": 1,
-      "Flamefruit": 1
+      "Axenut": 1,
+      "Corpsecap": 1
     }
   },
   {
@@ -1775,10 +1774,10 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, perform: [Condition: Wound] Range 1, [Area]",
+    "text": "During your turn, perform: <WOUND> <RANGE> 1 <AREA_3_COLOUR>",
     "resources": {
       "Snowthistle": 1,
-      "Corpsecap": 1,
+      "Axenut": 1,
       "Flamefruit": 1
     }
   },
@@ -1791,7 +1790,7 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, one enemy within Range 2 suffers [Damage] 4.",
+    "text": "During your turn, one enemy within <RANGE> 2 suffers <DAMAGE> 4.",
     "resources": {
       "Arrowvine": 1,
       "Snowthistle": 1,
@@ -1807,7 +1806,7 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, perform: [Condition: Wound], [Condition: Poison], [Condition: Immobilize], [Condition: Disarm], self",
+    "text": "During your turn, perform: <WOUND>, <POISON>, <IMMOBILIZE>, <DISARM>, self",
     "resources": {
       "Any herb": 3
     }
@@ -1821,7 +1820,7 @@
     "cost": 15,
     "slot": "head",
     "spent": true,
-    "text": "During your turn, perform: Heal 1, self"
+    "text": "During your turn, perform: <HEAL> 1, self"
   },
   {
     "id": 121,
@@ -1832,7 +1831,7 @@
     "cost": 25,
     "slot": "head",
     "spent": true,
-    "text": "During your turn, perform: [Consume Element: Any] : [Element: Any]"
+    "text": "During your turn, perform: <CONSUME_WILD> : <WILD>"
   },
   {
     "id": 122,
@@ -1843,7 +1842,7 @@
     "cost": 30,
     "slot": "body",
     "spent": true,
-    "text": "When one of your summons suffers [Damage] from an attack, that summon gains Shield 2 for the attack."
+    "text": "When one of your summons suffers <DAMAGE> from an attack, that summon gains <SHIELD> 2 for the attack."
   },
   {
     "id": 123,
@@ -1865,7 +1864,7 @@
     "cost": 15,
     "slot": "legs",
     "spent": true,
-    "text": "During your turn, add [Jump] to all your move abilities."
+    "text": "During your turn, add <JUMP> to all your move abilities."
   },
   {
     "id": 125,
@@ -1887,7 +1886,7 @@
     "cost": 20,
     "slot": "2h",
     "spent": true,
-    "text": "During your ranged attack ability, add [Condition: Immobilize] to one attack."
+    "text": "During your ranged attack ability, add <IMMOBILIZE> to one attack."
   },
   {
     "id": 127,
@@ -1898,7 +1897,7 @@
     "cost": 15,
     "slot": "1h",
     "spent": true,
-    "text": "During your melee attack ability, add [Condition: Poison] to one attack."
+    "text": "During your melee attack ability, add <POISON> to one attack."
   },
   {
     "id": 128,
@@ -1909,7 +1908,7 @@
     "cost": 15,
     "slot": "1h",
     "spent": true,
-    "text": "When you suffer [Damage] from an attack, gain Shield 1 for the attack."
+    "text": "When you suffer <DAMAGE> from an attack, gain <SHIELD> 1 for the attack."
   },
   {
     "id": 129,
@@ -1930,7 +1929,7 @@
     "image": "items/frosthaven/fh-130-iron-helmet.jpeg",
     "cost": 20,
     "slot": "head",
-    "text": "When you are attacked, treat any 2x attack modifier card the enemy draws as a +0 instead. [Modifier: -1 x1]"
+    "text": "When you are attacked, treat any <2X> attack modifier card the enemy draws as a <+0> instead. <Modifier: -1 x1>"
   },
   {
     "id": 131,
@@ -1941,7 +1940,7 @@
     "cost": 25,
     "slot": "body",
     "spent": true,
-    "text": "[Uses: 3] On the next three sources of [Damage] from attacks targeting you, gain Shield 1 for the attacks. [Modifier: -1 x3]"
+    "text": "<USES: 3> On the next three sources of <DAMAGE> from attacks targeting you, gain <SHIELD> 1 for the attacks. <Modifier: -1 x3>"
   },
   {
     "id": 132,
@@ -1951,7 +1950,7 @@
     "image": "items/frosthaven/fh-132-cloak-of-pockets.jpeg",
     "cost": 30,
     "slot": "body",
-    "text": "At the start of the scenario, bring one additional [Small Item] item."
+    "text": "At the start of the scenario, bring one additional <SMALL_ITEM> item."
   },
   {
     "id": 133,
@@ -1972,7 +1971,7 @@
     "image": "items/frosthaven/fh-134-comfortable-shoes.jpeg",
     "cost": 30,
     "slot": "legs",
-    "text": "When you use the basic bottom action of an ability card, perform Move 3 instead of Move 2."
+    "text": "When you use the basic bottom action of an ability card, perform <MOVE> 3 instead of <MOVE> 2."
   },
   {
     "id": 135,
@@ -1983,7 +1982,7 @@
     "cost": 30,
     "slot": "2h",
     "consumed": true,
-    "text": "During your turn, add [Pierce] 3 to all your ranged attacks."
+    "text": "During your turn, add <PIERCE> 3 to all your ranged attacks."
   },
   {
     "id": 136,
@@ -1994,7 +1993,7 @@
     "cost": 20,
     "slot": "2h",
     "consumed": true,
-    "text": "During your single-target melee attack ability, change the targeting of the ability to: [Area]"
+    "text": "During your single-target melee attack ability, change the targeting of the ability to: <AREA>"
   },
   {
     "id": 137,
@@ -2005,7 +2004,7 @@
     "cost": 35,
     "slot": "1h",
     "spent": true,
-    "text": "When you suffer [Damage] from an attack, gain Shield 2 for the attack. [Modifier: -1 x1]"
+    "text": "When you suffer <DAMAGE> from an attack, gain <SHIELD> 2 for the attack. <Modifier: -1 x1>"
   },
   {
     "id": 138,
@@ -2015,7 +2014,7 @@
     "image": "items/frosthaven/fh-138-heavy-basinet.jpeg",
     "cost": 30,
     "slot": "head",
-    "text": "Whenever an enemy would give you [Condition: Disarm], [Condition: Stun], or [Condition: Muddle], prevent the condition. [Modifier: -1 x2]"
+    "text": "Whenever an enemy would give you <DISARM>, <STUN>, or <MUDDLE>, prevent the condition. <Modifier: -1 x2>"
   },
   {
     "id": 139,
@@ -2025,7 +2024,7 @@
     "image": "items/frosthaven/fh-139-horned-helm.jpeg",
     "cost": 35,
     "slot": "head",
-    "text": "After you move 4 or more hexes on your turn, add +1 Attack to your next melee attack this turn."
+    "text": "After you move 4 or more hexes on your turn, add +1 <ATTACK> to your next melee attack this turn."
   },
   {
     "id": 140,
@@ -2035,7 +2034,8 @@
     "image": "items/frosthaven/fh-140-mantle-of-summoning.jpeg",
     "cost": 40,
     "slot": "body",
-    "text": "During your turn, grant one of your summons: Shield 2."
+    "spent": true,
+    "text": "During your turn, grant one of your summons: <SHIELD> 2."
   },
   {
     "id": 141,
@@ -2046,7 +2046,7 @@
     "cost": 20,
     "slot": "body",
     "spent": true,
-    "text": "When you are attacked, before drawing an attack modifier card, the attacker gains disadvantage on the attack and you gain Shield 1 for the attack."
+    "text": "When you are attacked, before drawing an attack modifier card, the attacker gains <DISADVANTAGE> on the attack and you gain <SHIELD> 1 for the attack."
   },
   {
     "id": 142,
@@ -2067,7 +2067,7 @@
     "image": "items/frosthaven/fh-143-endurance-footwraps.jpeg",
     "cost": 40,
     "slot": "legs",
-    "text": "After you move 4 or more hexes on your turn, after the move ability, perform: Heal 1, self"
+    "text": "After you move 4 or more hexes on your turn, after the move ability, perform: <HEAL> 1 self"
   },
   {
     "id": 144,
@@ -2078,7 +2078,7 @@
     "cost": 50,
     "slot": "2h",
     "spent": true,
-    "text": "During your turn, [Consume Element: Any] to add +1 Attack to all your attacks."
+    "text": "During your turn, <CONSUME> <WILD> to add +1 <ATTACK> to all your attacks."
   },
   {
     "id": 145,
@@ -2088,7 +2088,7 @@
     "image": "items/frosthaven/fh-145-versatile-dagger.jpeg",
     "cost": 25,
     "slot": "1h",
-    "text": "When you use the basic top action of an ability card, perform Attack 3 instead of Attack 2."
+    "text": "When you use the basic top action of an ability card, perform <ATTACK> 3 instead of <ATTACK> 2."
   },
   {
     "id": 146,
@@ -2099,7 +2099,7 @@
     "cost": 35,
     "slot": "2h",
     "spent": true,
-    "text": "During your turn, add [Pull] 2 to all your ranged attacks."
+    "text": "During your turn, add <PULL> 2 to all your ranged attacks."
   },
   {
     "id": 147,
@@ -2109,7 +2109,7 @@
     "image": "items/frosthaven/fh-147-mask-of-terror.jpeg",
     "cost": 60,
     "slot": "head",
-    "text": "During your melee attack, add [Push] 1."
+    "text": "During your melee attack, add <PUSH> 1."
   },
   {
     "id": 148,
@@ -2120,7 +2120,7 @@
     "imageBack": "items/frosthaven/fh-148-circlet-of-sanctity-back.jpeg",
     "cost": 45,
     "slot": "head",
-    "text": "After the next three attacks targeting an ally within Range 2, flip this card over.\n\n[Back] During your turn, perform: [Condition: Ward] Range 3, then flip this card over."
+    "text": "After the next three attacks targeting an ally within <RANGE> 2, flip this card over.\n\n[Back] During your turn, perform: <WARD> <RANGE> 3, then flip this card over."
   },
   {
     "id": 149,
@@ -2131,7 +2131,7 @@
     "cost": 50,
     "slot": "body",
     "spent": true,
-    "text": "[Uses: 5] On the next five sources of [Damage] from attacks targeting you, gain Shield 1 for the attacks. [Modifier: -1 x5]"
+    "text": "[Uses: 5] On the next five sources of <DAMAGE> from attacks targeting you, gain <SHIELD> 1 for the attacks. <MODIFIER_NEG_1> x5"
   },
   {
     "id": 150,
@@ -2142,7 +2142,7 @@
     "cost": 30,
     "slot": "body",
     "spent": true,
-    "text": "During your turn, perform: Heal 3, Target 1 ally, Range 1"
+    "text": "During your turn, perform: <HEAL> 3, <TARGET> 1 ally, <RANGE> 1"
   },
   {
     "id": 151,

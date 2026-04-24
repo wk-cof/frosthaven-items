@@ -69,7 +69,18 @@ const ICON_MAP: Record<string, string> = {
   'CORPSECAP': 'fh-corpsecap-bw-icon.png',
   'FLAMEFRUIT': 'fh-flamefruit-bw-icon.png',
   'ROCKROOT': 'fh-rockroot-bw-icon.png',
-  'SNOWTHISTLE': 'fh-snowthistle-bw-icon.png'
+  'SNOWTHISTLE': 'fh-snowthistle-bw-icon.png',
+
+  // Modifiers
+  '2X': 'fh-2x-bw-icon.png',
+  'MISS': 'fh-null-bw-icon.png', // I don't see null in the list, but I saw MISS in previous session summary.
+  'PLUS_0': 'fh-plus-0-bw-icon.png',
+  'PLUS_1': 'fh-plus-1-bw-icon.png',
+  'PLUS_2': 'fh-plus-2-bw-icon.png',
+  'PLUS_3': 'fh-plus-3-bw-icon.png',
+  'PLUS_4': 'fh-plus-4-bw-icon.png',
+  'MINUS_1': 'fh-minus-1-bw-icon.png',
+  'MINUS_2': 'fh-minus-2-bw-icon.png'
 };
 
 export const GeneralIcon: React.FC<GeneralIconProps> = ({ icon, size = 18, className = "", glossary }) => {
@@ -85,10 +96,14 @@ export const GeneralIcon: React.FC<GeneralIconProps> = ({ icon, size = 18, class
     'WARD', 'BRITTLE', 'BANE', 'IMPAIR', 'REGENERATE',
     'PUSH', 'PULL', 'PIERCE'
   ];
+  const modifierIcons = [
+    '2X', 'MISS', 'PLUS_0', 'PLUS_1', 'PLUS_2', 'PLUS_3', 'PLUS_4', 'MINUS_1', 'MINUS_2'
+  ];
 
   let folder = 'general';
   if (elementIcons.includes(upperIcon)) folder = 'elements';
   else if (conditionIcons.includes(upperIcon)) folder = 'conditions';
+  else if (modifierIcons.includes(upperIcon)) folder = 'modifiers';
 
   const iconElement = filename ? (
     <img
