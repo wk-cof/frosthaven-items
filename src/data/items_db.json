@@ -1511,7 +1511,7 @@
   },
   {
     "id": 101,
-    "name": "major power potion",
+    "name": "Major Power Potion",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-101-major-power-potion.jpeg",
@@ -1527,7 +1527,7 @@
   },
   {
     "id": 102,
-    "name": "major element potion",
+    "name": "Major Element Potion",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-102-major-element-potion.jpeg",
@@ -1543,7 +1543,7 @@
   },
   {
     "id": 103,
-    "name": "major cure potion",
+    "name": "Major Cure Potion",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-103-major-cure-potion.jpeg",
@@ -1559,7 +1559,7 @@
   },
   {
     "id": 104,
-    "name": "swiftness potion",
+    "name": "Swiftness Potion",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-104-swiftness-potion.jpeg",
@@ -1575,7 +1575,7 @@
   },
   {
     "id": 105,
-    "name": "major fireshield potion",
+    "name": "Major Fireshield Potion",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-105-major-fireshield-potion.jpeg",
@@ -1591,7 +1591,7 @@
   },
   {
     "id": 106,
-    "name": "stonewall potion",
+    "name": "Stonewall Potion",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-106-stonewall-potion.jpeg",
@@ -1607,7 +1607,7 @@
   },
   {
     "id": 107,
-    "name": "vigor potion",
+    "name": "Vigor Potion",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-107-vigor-potion.jpeg",
@@ -1623,7 +1623,7 @@
   },
   {
     "id": 108,
-    "name": "holy rain",
+    "name": "Holy Rain",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-108-holy-rain.jpeg",
@@ -1639,7 +1639,7 @@
   },
   {
     "id": 109,
-    "name": "major renewing potion",
+    "name": "Major Renewing Potion",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-109-major-renewing-potion.jpeg",
@@ -1655,7 +1655,7 @@
   },
   {
     "id": 110,
-    "name": "precision potion",
+    "name": "Precision Potion",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-110-precision-potion.jpeg",
@@ -1671,7 +1671,7 @@
   },
   {
     "id": 111,
-    "name": "major frenzy potion",
+    "name": "Major Frenzy Potion",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-111-major-frenzy-potion.jpeg",
@@ -1687,7 +1687,7 @@
   },
   {
     "id": 112,
-    "name": "hammer potion",
+    "name": "Hammer Potion",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-112-hammer-potion.jpeg",
@@ -1703,7 +1703,7 @@
   },
   {
     "id": 113,
-    "name": "expertise potion",
+    "name": "Expertise Potion",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-113-expertise-potion.jpeg",
@@ -1719,7 +1719,7 @@
   },
   {
     "id": 114,
-    "name": "foresight potion",
+    "name": "Foresight Potion",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-114-foresight-potion.jpeg",
@@ -1735,7 +1735,7 @@
   },
   {
     "id": 115,
-    "name": "infusion potion",
+    "name": "Infusion Potion",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-115-infusion-potion.jpeg",
@@ -1751,7 +1751,7 @@
   },
   {
     "id": 116,
-    "name": "plague flask",
+    "name": "Plague Flask",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-116-plague-flask.jpeg",
@@ -1767,7 +1767,7 @@
   },
   {
     "id": 117,
-    "name": "inferno flask",
+    "name": "Inferno Flask",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-117-inferno-flask.jpeg",
@@ -1783,7 +1783,7 @@
   },
   {
     "id": 118,
-    "name": "fulminant flask",
+    "name": "Fulminant Flask",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-118-fulminant-flask.jpeg",
@@ -1799,7 +1799,7 @@
   },
   {
     "id": 119,
-    "name": "deadly mixture",
+    "name": "Deadly Mixture",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-119-deadly-mixture.jpeg",
@@ -1813,7 +1813,7 @@
   },
   {
     "id": 120,
-    "name": "amulet of life",
+    "name": "Amulet of Life",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-120-amulet-of-life.jpeg",
@@ -1824,7 +1824,7 @@
   },
   {
     "id": 121,
-    "name": "circlet of elements",
+    "name": "Circlet of Elements",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-121-circlet-of-elements.jpeg",
@@ -1835,7 +1835,7 @@
   },
   {
     "id": 122,
-    "name": "wardens robes",
+    "name": "Warden's Robes",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-122-wardens-robes.jpeg",
@@ -1846,7 +1846,7 @@
   },
   {
     "id": 123,
-    "name": "leather armor",
+    "name": "Leather Armor",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-123-leather-armor.jpeg",
@@ -1857,7 +1857,7 @@
   },
   {
     "id": 124,
-    "name": "winged shoes",
+    "name": "Winged Shoes",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-124-winged-shoes.jpeg",
@@ -1868,7 +1868,7 @@
   },
   {
     "id": 125,
-    "name": "boots of speed",
+    "name": "Boots of Speed",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-125-boots-of-speed.jpeg",
@@ -1879,7 +1879,7 @@
   },
   {
     "id": 126,
-    "name": "weighted net",
+    "name": "Weighted Net",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-126-weighted-net.jpeg",
@@ -1890,7 +1890,7 @@
   },
   {
     "id": 127,
-    "name": "poison dagger",
+    "name": "Poison Dagger",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-127-poison-dagger.jpeg",
@@ -1901,7 +1901,7 @@
   },
   {
     "id": 128,
-    "name": "heater shield",
+    "name": "Heater Shield",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-128-heater-shield.jpeg",
@@ -1912,7 +1912,7 @@
   },
   {
     "id": 129,
-    "name": "eagle-eye goggles",
+    "name": "Eagle-Eye Goggles",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-129-eagle-eye-goggles.jpeg",
@@ -1923,7 +1923,7 @@
   },
   {
     "id": 130,
-    "name": "iron helmet",
+    "name": "Iron Helmet",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-130-iron-helmet.jpeg",
@@ -1933,7 +1933,7 @@
   },
   {
     "id": 131,
-    "name": "chainmail",
+    "name": "Chainmail",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-131-chainmail.jpeg",
@@ -1944,7 +1944,7 @@
   },
   {
     "id": 132,
-    "name": "cloak of pockets",
+    "name": "Cloak of Pockets",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-132-cloak-of-pockets.jpeg",
@@ -1954,7 +1954,7 @@
   },
   {
     "id": 133,
-    "name": "nimble legguards",
+    "name": "Nimble Legguards",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-133-nimble-legguards.jpeg",
@@ -1965,7 +1965,7 @@
   },
   {
     "id": 134,
-    "name": "comfortable shoes",
+    "name": "Comfortable Shoes",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-134-comfortable-shoes.jpeg",
@@ -1975,7 +1975,7 @@
   },
   {
     "id": 135,
-    "name": "armorbane bow",
+    "name": "Armorbane Bow",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-135-armorbane-bow.jpeg",
@@ -1986,7 +1986,7 @@
   },
   {
     "id": 136,
-    "name": "battle axe",
+    "name": "Battle Axe",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-136-battle-axe.jpeg",
@@ -1997,7 +1997,7 @@
   },
   {
     "id": 137,
-    "name": "tower shield",
+    "name": "Tower Shield",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-137-tower-shield.jpeg",
@@ -2008,7 +2008,7 @@
   },
   {
     "id": 138,
-    "name": "heavy basinet",
+    "name": "Heavy Basinet",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-138-heavy-basinet.jpeg",
@@ -2018,7 +2018,7 @@
   },
   {
     "id": 139,
-    "name": "horned helm",
+    "name": "Horned Helm",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-139-horned-helm.jpeg",
@@ -2028,7 +2028,7 @@
   },
   {
     "id": 140,
-    "name": "mantle of summoning",
+    "name": "Mantle of Summoning",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-140-mantle-of-summoning.jpeg",
@@ -2039,7 +2039,7 @@
   },
   {
     "id": 141,
-    "name": "studded leather",
+    "name": "Studded Leather",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-141-studded-leather.jpeg",
@@ -2050,7 +2050,7 @@
   },
   {
     "id": 142,
-    "name": "boots of quickness",
+    "name": "Boots of Quickness",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-142-boots-of-quickness.jpeg",
@@ -2061,7 +2061,7 @@
   },
   {
     "id": 143,
-    "name": "endurance footwraps",
+    "name": "Endurance Footwraps",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-143-endurance-footwraps.jpeg",
@@ -2071,7 +2071,7 @@
   },
   {
     "id": 144,
-    "name": "staff of eminence",
+    "name": "Staff of Eminence",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-144-staff-of-eminence.jpeg",
@@ -2082,7 +2082,7 @@
   },
   {
     "id": 145,
-    "name": "versatile dagger",
+    "name": "Versatile Dagger",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-145-versatile-dagger.jpeg",
@@ -2092,7 +2092,7 @@
   },
   {
     "id": 146,
-    "name": "hooked chain",
+    "name": "Hooked Chain",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-146-hooked-chain.jpeg",
@@ -2103,7 +2103,7 @@
   },
   {
     "id": 147,
-    "name": "mask of terror",
+    "name": "Mask of Terror",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-147-mask-of-terror.jpeg",
@@ -2113,7 +2113,7 @@
   },
   {
     "id": 148,
-    "name": "circlet of sanctity",
+    "name": "Circlet of Sanctity",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-148-circlet-of-sanctity.jpeg",
@@ -2124,7 +2124,7 @@
   },
   {
     "id": 149,
-    "name": "platemail",
+    "name": "Platemail",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-149-platemail.jpeg",
@@ -2135,7 +2135,7 @@
   },
   {
     "id": 150,
-    "name": "robes of the oak",
+    "name": "Robes of the Oak",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-150-robes-of-the-oak.jpeg",
@@ -2146,115 +2146,117 @@
   },
   {
     "id": 151,
-    "name": "serene sandals",
+    "name": "Serene Sandals",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-151-serene-sandals.jpeg",
-    "cost": 75,
+    "cost": 30,
     "slot": "legs",
-    "text": "When you use the basic bottom action of an ability card, perform Move 4 instead of Move 2."
+    "consumed": true,
+    "text": "When you perform a move action, add +2 <MOVE> and <REGENERATE> self."
   },
   {
     "id": 152,
-    "name": "steel sabatons",
+    "name": "Steel Sabatons",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-152-steel-sabatons.jpeg",
-    "cost": 55,
+    "cost": 40,
     "slot": "legs",
-    "text": "At the end of your turn, if you have moved 1 or fewer hexes during your turn, gain Shield 1 for the round. [Modifier: -1 x2]"
+    "spent": true,
+    "text": "When you suffer <DAMAGE> from an attack, gain <SHIELD> 2 for the attack. <MODIFIER_NEG_1> x2"
   },
   {
     "id": 153,
-    "name": "long spear",
+    "name": "Long Spear",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-153-long-spear.jpeg",
     "cost": 40,
     "slot": "2h",
     "spent": true,
-    "text": "During your single-target melee attack ability, change the targeting of the ability to: [Area]"
+    "text": "During your single-target melee attack ability, change the targeting of the ability to: <AREA>"
   },
   {
     "id": 154,
-    "name": "volatile bomb",
+    "name": "Volatile Bomb",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-154-volatile-bomb.jpeg",
     "cost": 50,
-    "slot": "2h",
+    "slot": "1h",
     "consumed": true,
-    "text": "During your single-target ranged attack ability, change the targeting of the ability to: [Area]"
+    "text": "During your single-target ranged attack ability, change the targeting of the ability to: <AREA>"
   },
   {
     "id": 155,
-    "name": "wall shield",
+    "name": "Wall Shield",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-155-wall-shield.jpeg",
     "cost": 50,
-    "slot": "2h",
+    "slot": "1h",
     "spent": true,
-    "text": "When you suffer [Damage] from an attack, gain Shield 4 for the attack. [Modifier: -1 x2]"
+    "text": "When you suffer <DAMAGE> from an attack, gain <SHIELD> 4 for the attack. <MODIFIER_NEG_1> x2"
   },
   {
     "id": 156,
-    "name": "moon earring",
+    "name": "Moon Earring",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-156-moon-earring.jpeg",
     "cost": 20,
     "slot": "small",
     "consumed": true,
-    "text": "When you short rest, [Refresh] up to three of your spent items."
+    "text": "When you short rest, <RECOVER> up to three of your spent items."
   },
   {
     "id": 157,
-    "name": "steel ring",
+    "name": "Steel Ring",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-157-steel-ring.jpeg",
     "cost": 20,
     "slot": "small",
     "consumed": true,
-    "text": "When you suffer [Damage] from an attack, gain Shield 4 for the attack."
+    "text": "When you suffer <DAMAGE> from an attack, gain <SHIELD> 4 for the attack."
   },
   {
     "id": 158,
-    "name": "deep earth brooch",
+    "name": "Deep Earth Brooch",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-158-deep-earth-brooch.jpeg",
     "cost": 30,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, perform: [Consume Element: Earth/Dark] : Heal 3 self, [Condition: Ward]"
+    "text": "During your turn, perform: <EARTH_CONSUME><DARK_CONSUME> : <HEAL> 3 self, <SHIELD> 1."
   },
   {
     "id": 159,
-    "name": "glorious bracelet",
+    "name": "Glorious Bracelet",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-159-glorious-bracelet.jpeg",
     "cost": 30,
     "slot": "small",
     "consumed": true,
-    "text": "After your attack ability during which one enemy suffered at least [Damage] 6, perform: [Condition: Bless], [Condition: Bless] self"
+    "text": "After your attack ability during which one enemy suffered at least <DAMAGE> 6, perform: <BLESS>, <BLESS> self."
   },
   {
     "id": 160,
-    "name": "sun earring",
+    "name": "Sun Earring",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-160-sun-earring.jpeg",
     "cost": 35,
     "slot": "small",
     "consumed": true,
-    "text": "When you short rest, [Refresh] up to three of your spent items and perform: Heal 2 self"
+    "text": "When you short rest, <RECOVER> up to three of your spent items and perform: <HEAL> 2 self."
   },
   {
     "id": 161,
-    "name": "strategists ring",
+    "name": "Strategist's Ring",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-161-strategists-ring.jpeg",
@@ -2265,40 +2267,40 @@
   },
   {
     "id": 162,
-    "name": "howling ice brooch",
+    "name": "Howling Ice Brooch",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-162-howling-ice-brooch.jpeg",
     "cost": 40,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, perform: [Consume Element: Ice/Air] : Attack 3 Range 3, [Condition: Immobilize]"
+    "text": "During your turn, perform: <ICE_CONSUME><AIR_CONSUME> : <ATTACK> 3 <RANGE> 3, <IMMOBILIZE>."
   },
   {
     "id": 163,
-    "name": "stunning bracelet",
+    "name": "Stunning Bracelet",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-163-stunning-bracelet.jpeg",
     "cost": 35,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, give [Condition: Stun] to half (rounded up) the enemies adjacent to you."
+    "text": "During your turn, give <STUN> to half (rounded up) the enemies adjacent to you."
   },
   {
     "id": 164,
-    "name": "star earring",
+    "name": "Star Earring",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-164-star-earring.jpeg",
     "cost": 50,
     "slot": "small",
     "consumed": true,
-    "text": "When you short rest, [Refresh] up to three of your spent items, choose which card to lose during the rest, and perform: Heal 2 self"
+    "text": "When you short rest, <RECOVER> up to three of your spent items, choose which card to lose during the rest, and perform: <HEAL> 2 self."
   },
   {
     "id": 165,
-    "name": "ring of haste",
+    "name": "Ring of Haste",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-165-ring-of-haste.jpeg",
@@ -2309,51 +2311,51 @@
   },
   {
     "id": 166,
-    "name": "blazing sun brooch",
+    "name": "Blazing Sun Brooch",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-166-blazing-sun-brooch.jpeg",
     "cost": 50,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, perform: [Consume Element: Fire/Light] : Attack 3 [Condition: Disarm]"
+    "text": "During your turn, perform: <FIRE_CONSUME><LIGHT_CONSUME> : <ATTACK> 3, <PUSH> 2."
   },
   {
     "id": 167,
-    "name": "attractive bracelet",
+    "name": "Attractive Bracelet",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-167-attractive-bracelet.jpeg",
     "cost": 40,
     "slot": "small",
     "consumed": true,
-    "text": "At the start of an enemy's turn, before it determines its focus, perform: [Pull] 4 Target the enemy, Range 5, [Condition: Muddle]"
+    "text": "At the start of an enemy's turn, before it determines its focus, perform: <PULL> 4 <TARGET> the enemy, <RANGE> 5."
   },
   {
     "id": 168,
-    "name": "circlet of eyes",
+    "name": "Circlet of Eyes",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-168-circlet-of-eyes.jpeg",
     "cost": 50,
     "slot": "head",
     "consumed": true,
-    "text": "During your ranged attack ability, add +1 Target."
+    "text": "During your ranged attack ability, add +1 <TARGET>."
   },
   {
     "id": 169,
-    "name": "fateful charm",
+    "name": "Fateful Charm",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-169-fateful-charm.jpeg",
     "cost": 30,
     "slot": "head",
-    "consumed": true,
+    "spent": true,
     "text": "During your turn, reveal the top card of your attack modifier deck. You may place the card on the bottom of the deck."
   },
   {
     "id": 170,
-    "name": "eye of truth",
+    "name": "Eye of Truth",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-170-eye-of-truth.jpeg",
@@ -2364,17 +2366,17 @@
   },
   {
     "id": 171,
-    "name": "rejuvenating charm",
+    "name": "Rejuvenating Charm",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-171-rejuvenating-charm.jpeg",
     "cost": 20,
     "slot": "head",
-    "text": "Whenever you lose a card to negate [Damage], [Recover] up to one card from your discard pile and gain [Condition: Regenerate]."
+    "text": "Whenever you lose a card to negate <DAMAGE>, <RECOVER> up to one card from your discard pile and gain <REGENERATE>."
   },
   {
     "id": 172,
-    "name": "cap of premonition",
+    "name": "Cap of Premonition",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-172-cap-of-premonition.jpeg",
@@ -2385,145 +2387,148 @@
   },
   {
     "id": 173,
-    "name": "multi-colored cloak",
+    "name": "Multi-Colored Cloak",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-173-multi-colored-cloak.jpeg",
     "cost": 20,
     "slot": "body",
-    "text": "When attacked, [Element: Any]."
+    "spent": true,
+    "text": "When attacked, <WILD>."
   },
   {
     "id": 174,
-    "name": "magnetic cape",
+    "name": "Magnetic Cape",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-174-magnetic-cape.jpeg",
     "cost": 40,
     "slot": "body",
     "consumed": true,
-    "text": "During your turn, perform: [Teleport] 20. This teleport must end in a hex adjacent to one of your allies."
+    "text": "During your turn, perform:\n<TELEPORT> 20\nThis teleport must end in a hex adjacent to one of your allies."
   },
   {
     "id": 175,
-    "name": "mirrored armor",
+    "name": "Mirrored Armor",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-175-mirrored-armor.jpeg",
     "cost": 35,
     "slot": "body",
     "consumed": true,
-    "text": "When you suffer [Damage] from an attack, the attacker suffers an equal amount of [Damage]. [Modifier: -1 x2]"
+    "text": "When you suffer <DAMAGE> from an attack, the attacker suffers an equal amount of <DAMAGE>."
   },
   {
     "id": 176,
-    "name": "blinking cape",
+    "name": "Blinking Cape",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-176-blinking-cape.jpeg",
     "cost": 50,
     "slot": "body",
     "consumed": true,
-    "text": "During your turn, perform: [Teleport] 4. This teleport must end in a hex adjacent to an enemy."
+    "text": "During your turn, perform:\n<TELEPORT> 4\nThis teleport must end in a hex adjacent to an enemy."
   },
   {
     "id": 177,
-    "name": "boots of transference",
+    "name": "Boots of Transference",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-177-boots-of-transference.jpeg",
     "cost": 40,
     "slot": "legs",
     "consumed": true,
-    "text": "When you spring a trap by entering its hex, you may apply its effects to a figure within Range 3 instead of yourself."
+    "text": "When you spring a trap by entering its hex, you may apply its effects to a figure within <RANGE> 3 instead of yourself."
   },
   {
     "id": 178,
-    "name": "tranquil shoes",
+    "name": "Tranquil Shoes",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-178-tranquil-shoes.jpeg",
     "cost": 40,
     "slot": "legs",
-    "text": "At the start of your turn in which your initiative is 60 or higher and you are not performing a long rest, perform: Heal 1 self"
+    "text": "At the start of your turn in which your initiative is 60 or higher and you are not performing a long rest, perform:\n<HEAL> 1 self"
   },
   {
     "id": 179,
-    "name": "burst boots",
+    "name": "Burst Boots",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-179-burst-boots.jpeg",
     "cost": 25,
     "slot": "legs",
     "consumed": true,
-    "text": "During your move ability, add +4 Move. After the move ability, gain [Condition: Immobilize]."
+    "text": "During your move ability, add +4 <MOVE>.\nAfter the move ability, gain <WOUND>."
   },
   {
     "id": 180,
-    "name": "boots of greed",
+    "name": "Boots of Greed",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-180-boots-of-greed.jpeg",
     "cost": 35,
     "slot": "legs",
-    "text": "Whenever you loot two or more loot tokens at once, perform: [Condition: Bless] self"
+    "text": "Whenever you loot two or more loot tokens at once, perform:\n<BLESS> self"
   },
   {
     "id": 181,
-    "name": "translocation rod",
+    "name": "Translocation Rod",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-181-translocation-rod.jpeg",
     "cost": 30,
     "slot": "2h",
     "consumed": true,
-    "text": "During your turn, designate any two allies or any two normal or elite monsters. Each designated figure simultaneously [Teleport] to the hex occupied by the other designated figure."
+    "text": "During your turn, designate any two allies or any two normal or elite monsters. Each designated figure simultaneously <TELEPORT> to the hex occupied by the other designated figure."
   },
   {
     "id": 182,
-    "name": "wing clippers",
+    "name": "Wing Clippers",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-182-wing-clippers.jpeg",
     "cost": 40,
     "slot": "2h",
-    "text": "After your melee attack, place a character token on the target. The target loses [Flying]."
+    "spent": true,
+    "text": "After your melee attack, place a character token on the target. The target loses <FLYING>."
   },
   {
     "id": 183,
-    "name": "decanter of mists",
+    "name": "Decanter of Mists",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-183-decanter-of-mists.jpeg",
     "cost": 35,
     "slot": "1h",
     "consumed": true,
-    "text": "During your turn, all figures gain disadvantage on and add -1 Range to all ranged attacks this round."
+    "text": "During your turn, all figures gain disadvantage on and add -1 <RANGE> to all ranged attacks this round."
   },
   {
     "id": 184,
-    "name": "flashing axe",
+    "name": "Flashing Axe",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-184-flashing-axe.jpeg",
     "cost": 20,
     "slot": "1h",
     "consumed": true,
-    "text": "During your multi-target melee attack ability, add +1 Target."
+    "text": "During your multi-target melee attack ability, add +1 <TARGET>."
   },
   {
     "id": 185,
-    "name": "mirrored knife",
+    "name": "Mirrored Knife",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-185-mirrored-knife.jpeg",
     "cost": 20,
     "slot": "1h",
-    "text": "During your melee attack ability, add all negative conditions you have except [Condition: Brittle], [Condition: Bane], and [Condition: Stun] to one attack."
+    "spent": true,
+    "text": "During your melee attack ability, add all negative conditions you have except <REGENERATE>, <WARD>, and <STRENGTHEN> to one attack."
   },
   {
     "id": 186,
-    "name": "wild growth seeds",
+    "name": "Wild Growth Seeds",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-186-wild-growth-seeds.jpeg",
@@ -2534,18 +2539,18 @@
   },
   {
     "id": 187,
-    "name": "dangerous gear",
+    "name": "Dangerous Gear",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-187-dangerous-gear.jpeg",
     "cost": 25,
     "slot": "small",
     "consumed": true,
-    "text": "During you turn, create one [Damage] 3 trap in an adjacent empty hex."
+    "text": "During your turn, create one <DAMAGE> 3 trap in an adjacent empty hex."
   },
   {
     "id": 188,
-    "name": "freezing crystal",
+    "name": "Freezing Crystal",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-188-freezing-crystal.jpeg",
@@ -2556,62 +2561,62 @@
   },
   {
     "id": 189,
-    "name": "ring of the night",
+    "name": "Ring of the Night",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-189-ring-of-the-night.jpeg",
     "cost": 50,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, perform: [Consume Element: Dark] or [Consume Element: Any] : [Condition: Invisible] self"
+    "text": "During your turn, perform: <DARK_CONSUME> or <WILD_CONSUME> : <INVISIBLE> self"
   },
   {
     "id": 190,
-    "name": "white card",
+    "name": "White Card",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-190-white-card.jpeg",
     "cost": 20,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, place a character token on one normal or elite enemy within Range 3. This enemy adds -1 Attack to all its attacks."
+    "text": "During your turn, place a character token on one normal or elite enemy within <RANGE> 3. This enemy adds -1 <ATTACK> to all its attacks."
   },
   {
     "id": 191,
-    "name": "corrupted scroll",
+    "name": "Corrupted Scroll",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-191-corrupted-scroll.jpeg",
     "cost": 25,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, perform: Heal 5 Range 5, [Condition: Poison] target of the heal ability"
+    "text": "During your turn, perform: <HEAL> 5 <RANGE> 5, <POISON> the target of the heal ability"
   },
   {
     "id": 192,
-    "name": "enticing bell",
+    "name": "Enticing Bell",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-192-enticing-bell.jpeg",
     "cost": 25,
     "slot": "small",
     "consumed": true,
-    "text": "At the end of your turn, designate one enemy within Range 3. You are its primary focus and it does not avoid negative hexes when determining movement this round."
+    "text": "At the end of your turn, designate one enemy within <RANGE> 3. You are its primary focus and it does not avoid negative hexes when determining movement this round."
   },
   {
     "id": 193,
-    "name": "mind-thieving helmet",
+    "name": "Mind-Thieving Helmet",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-193-mind-thieving-helmet.jpeg",
     "cost": 30,
     "slot": "head",
     "consumed": true,
-    "text": "During your turn, control one enemy within Range 3: Attack 3."
+    "text": "During your turn, control one enemy within <RANGE> 3: <ATTACK> 3."
   },
   {
     "id": 194,
-    "name": "temporal amulet",
+    "name": "Temporal Amulet",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-194-temporal-amulet.jpeg",
@@ -2622,29 +2627,29 @@
   },
   {
     "id": 195,
-    "name": "tri-corner hat",
+    "name": "Tri-Corner Hat",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-195-tri-corner-hat.jpeg",
     "cost": 30,
     "slot": "head",
     "spent": true,
-    "text": "During your turn, add +1 Range and [Pierce] 1 to one of your ranged attacks."
+    "text": "During your turn, add +1 <RANGE> and <PIERCE> 1 to one of your ranged attacks."
   },
   {
     "id": 196,
-    "name": "choker of sacrifice",
+    "name": "Choker of Sacrifice",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-196-choker-of-sacrifice.jpeg",
     "cost": 30,
     "slot": "head",
     "consumed": true,
-    "text": "During your turn, discard one loot card except Random Item to perform: Heal 5 Range 2, [Condition: Ward]"
+    "text": "During your turn, discard one loot card except Random Item to perform: <HEAL> 5 <RANGE> 2, <WARD>"
   },
   {
     "id": 197,
-    "name": "aesther diadem",
+    "name": "Aesther Diadem",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-197-aesther-diadem.jpeg",
@@ -2655,18 +2660,18 @@
   },
   {
     "id": 198,
-    "name": "hunters necklace",
+    "name": "Hunter's Necklace",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-198-hunters-necklace.jpeg",
     "cost": 35,
     "slot": "head",
     "consumed": true,
-    "text": "During your turn, perform: [Pull] 3 Range 4"
+    "text": "During your turn, perform: <LOOT> 3 <RANGE> 4"
   },
   {
     "id": 199,
-    "name": "opulent shoes",
+    "name": "Opulent Shoes",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-199-opulent-shoes.jpeg",
@@ -2676,14 +2681,14 @@
   },
   {
     "id": 200,
-    "name": "eventide scepter",
+    "name": "Eventide Scepter",
     "game": "fh",
     "source": "fh",
     "image": "items/frosthaven/fh-200-eventide-scepter.jpeg",
     "imageBack": "items/frosthaven/fh-200-eventide-scepter-back.jpeg",
     "cost": 50,
-    "slot": "1h",
-    "text": "During your heal ability targeting an ally, [Consume Element: Light] to add [Condition: Ward] to one heal and flip this card over. / During your attack ability, [Consume Element: Dark] to add [Condition: Curse] to one attack and flip this card over."
+    "passive": true,
+    "text": "During your heal ability targeting an ally, <LIGHT_CONSUME> to add <STRENGTHEN> to one heal and flip this card over. / During your attack ability, <DARK_CONSUME> to add <CURSE> to one attack and flip this card over."
   },
   {
     "id": 201,
