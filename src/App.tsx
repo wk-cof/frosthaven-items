@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import ItemsPage from './pages/ItemsPage';
 import PainConduitPage from './pages/PainConduitPage';
 import PyroclastPage from './pages/PyroclastPage';
+import CrashingTidePage from './pages/CrashingTidePage';
 
 const darkTheme = createTheme({
   palette: {
@@ -38,6 +39,7 @@ function App() {
             <Route path="/" element={<ItemsPage />} />
             <Route path="/characters/pain-conduit" element={<PainConduitPage />} />
             <Route path="/characters/pyroclast" element={<PyroclastPage />} />
+            <Route path="/characters/crashing-tide" element={<CrashingTidePage />} />
           </Routes>
         </Box>
       </HashRouter>

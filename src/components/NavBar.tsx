@@ -100,6 +100,24 @@ function NavBar() {
             >
               Meteor
             </Button>
+            <Button
+              component={NavLink}
+              to="/characters/crashing-tide"
+              startIcon={<span>🐚</span>}
+              sx={{
+                color: location.pathname === '/characters/crashing-tide' ? '#0ea5e9' : '#94a3b8',
+                fontWeight: 700,
+                px: 2,
+                borderRadius: 2,
+                bgcolor: location.pathname === '/characters/crashing-tide' ? 'rgba(14, 165, 233, 0.1)' : 'transparent',
+                '&:hover': {
+                  bgcolor: 'rgba(14, 165, 233, 0.05)',
+                  color: '#0ea5e9'
+                }
+              }}
+            >
+              Coral
+            </Button>
           </Stack>
         </Toolbar>
       </Container>

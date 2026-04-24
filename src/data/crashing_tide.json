@@ -1,0 +1,243 @@
+{
+  "id": "crashing-tide",
+  "name": "Crashing Tide",
+  "spoilerName": "Coral",
+  "race": "Lurker",
+  "handSize": 12,
+  "complexity": 3,
+  "elements": [
+    "Light",
+    "Dark"
+  ],
+  "lore": "Lurkers, as they are called by those who dwell on the land, once reigned over a vast, underwater empire, but it fell to ruin when the source of their power—a coral crown—was destroyed and the shards scattered by the currents of the Misty Sea. The Lurkers search endlessly for the pieces of this crown, haunted by an overwhelming sense of loss. They are driven to reassemble the crown, even if they no longer understand why. The currents have brought these shards to the north, and, close to their source of power, the Lurkers have begun to grow in strength once again.\n\nLike the ebb and flow of the Lurkers' power throughout history, so too do the tides shift. There is a cycle to all things, and this is particularly exemplified in the Crashing Tides, guardians and protectors of their society and the natural order of things. They build their power over time, and then use it to crash against their foes in a wave of destruction. The waves must recede, of course, but then power will grow once again.",
+  "roleStats": {
+    "melee": 5,
+    "ranged": 0,
+    "mobility": 3,
+    "support": 1,
+    "defense": 5,
+    "control": 3
+  },
+  "summary": "A specialized melee/defense hybrid that utilizes 'Tide' persistent bonuses to chain powerful actions and adapt to the flow of battle.",
+  "classNotes": [
+    "Your power will ebb and flow. Many of your actions are Tides, which are persistent bonuses that can make your other abilities more effective. As you perform more Tide actions, your power will grow, but when you run out of cards and must rest, you are **forced to move all Tide cards to your discard pile**, requiring you to perform those actions again to regain their effects. Managing this cycle is the key to success.",
+    "One powerful Tide available to you is the bottom action of Overwhelming Wave, which allows you to play three cards each round instead of two. This bonus can be used to activate more Tides at once, move great distances, or assault your enemies with a flurry of attacks. Keep in mind that this effect is **optional**. There may be times when it is better for the flow of battle to only play two cards.",
+    "All water tiles you create are difficult terrain."
+  ],
+  "hp": {
+    "1": 10,
+    "2": 12,
+    "3": 14,
+    "4": 16,
+    "5": 18,
+    "6": 20,
+    "7": 22,
+    "8": 24,
+    "9": 26
+  },
+  "traits": [
+    "Armored",
+    "Chaotic",
+    "Strong"
+  ],
+  "cards": [
+    {
+      "name": "chaotic refraction",
+      "level": "1",
+      "initiative": 26,
+      "image": "fh-chaotic-refraction.png"
+    },
+    {
+      "name": "clean sweep",
+      "level": "1",
+      "initiative": 56,
+      "image": "fh-clean-sweep.png"
+    },
+    {
+      "name": "cleansing swell",
+      "level": "1",
+      "initiative": 45,
+      "image": "fh-cleansing-swell.png"
+    },
+    {
+      "name": "crashing surge",
+      "level": "1",
+      "initiative": 34,
+      "image": "fh-crashing-surge.png"
+    },
+    {
+      "name": "cresting force",
+      "level": "1",
+      "initiative": 87,
+      "image": "fh-cresting-force.png"
+    },
+    {
+      "name": "mighty claws",
+      "level": "1",
+      "initiative": 75,
+      "image": "fh-mighty-claws.png"
+    },
+    {
+      "name": "overwhelming wave",
+      "level": "1",
+      "initiative": 88,
+      "image": "fh-overwhelming-wave.png"
+    },
+    {
+      "name": "pool of power",
+      "level": "1",
+      "initiative": 41,
+      "image": "fh-pool-of-power.png"
+    },
+    {
+      "name": "powerful pincer",
+      "level": "1",
+      "initiative": 74,
+      "image": "fh-powerful-pincer.png"
+    },
+    {
+      "name": "sharp chitin",
+      "level": "1",
+      "initiative": 25,
+      "image": "fh-sharp-chitin.png"
+    },
+    {
+      "name": "shuck",
+      "level": "1",
+      "initiative": 55,
+      "image": "fh-shuck.png"
+    },
+    {
+      "name": "soft flesh",
+      "level": "1",
+      "initiative": 15,
+      "image": "fh-soft-flesh.png"
+    },
+    {
+      "name": "blood in the water",
+      "level": "2",
+      "initiative": 53,
+      "image": "fh-blood-in-the-water.png"
+    },
+    {
+      "name": "smashing torrent",
+      "level": "2",
+      "initiative": 67,
+      "image": "fh-smashing-torrent.png"
+    },
+    {
+      "name": "rancid brine",
+      "level": "3",
+      "initiative": 62,
+      "image": "fh-rancid-brine.png"
+    },
+    {
+      "name": "tidal blast",
+      "level": "3",
+      "initiative": 71,
+      "image": "fh-tidal-blast.png"
+    },
+    {
+      "name": "skitter",
+      "level": "4",
+      "initiative": 22,
+      "image": "fh-skitter.png"
+    },
+    {
+      "name": "sodden soil",
+      "level": "4",
+      "initiative": 38,
+      "image": "fh-sodden-soil.png"
+    },
+    {
+      "name": "clean sweep",
+      "level": "5",
+      "initiative": 56,
+      "image": "fh-clean-sweep.png"
+    },
+    {
+      "name": "endless cycle",
+      "level": "5",
+      "initiative": 15,
+      "image": "fh-endless-cycle.png"
+    },
+    {
+      "name": "twilight grasp",
+      "level": "6",
+      "initiative": 27,
+      "image": "fh-twilight-grasp.png"
+    },
+    {
+      "name": "submerge",
+      "level": "6",
+      "initiative": 43,
+      "image": "fh-submerge.png"
+    },
+    {
+      "name": "drown beneath the waves",
+      "level": "7",
+      "initiative": 9,
+      "image": "fh-drown-beneath-the-waves.png"
+    },
+    {
+      "name": "dug in",
+      "level": "7",
+      "initiative": 76,
+      "image": "fh-dug-in.png"
+    },
+    {
+      "name": "death on all sides",
+      "level": "8",
+      "initiative": 73,
+      "image": "fh-death-on-all-sides.png"
+    },
+    {
+      "name": "ebb and flow",
+      "level": "8",
+      "initiative": 24,
+      "image": "fh-ebb-and-flow.png"
+    },
+    {
+      "name": "high tide",
+      "level": "9",
+      "initiative": 90,
+      "image": "fh-high-tide.png"
+    },
+    {
+      "name": "low tide",
+      "level": "9",
+      "initiative": 10,
+      "image": "fh-low-tide.png"
+    },
+    {
+      "name": "crush armor",
+      "level": "x",
+      "initiative": 42,
+      "image": "fh-crush-armor.png"
+    },
+    {
+      "name": "rising flood",
+      "level": "x",
+      "initiative": 49,
+      "image": "fh-rising-flood.png"
+    },
+    {
+      "name": "undertow",
+      "level": "x",
+      "initiative": 15,
+      "image": "fh-undertow.png"
+    }
+  ],
+  "matFront": "character-mat-front.png",
+  "matBack": "character-mat-back.png",
+  "portrait": "portrait.png",
+  "icon": "icon.png",
+  "perks": "perks.png",
+  "theme": {
+    "primary": "#0ea5e9",
+    "secondary": "#38bdf8",
+    "accent": "#7dd3fc",
+    "glow": "rgba(14, 165, 233, 0.4)",
+    "headerGradient": "linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(15, 23, 42, 0.9))"
+  }
+}
