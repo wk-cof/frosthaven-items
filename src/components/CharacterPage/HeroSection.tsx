@@ -87,7 +87,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         <Box
           sx={{
             position: 'fixed',
-            top: 0,
+            top: { xs: 56, sm: 64 }, // Offset by NavBar height
             left: 0,
             right: 0,
             zIndex: 1100,
@@ -96,7 +96,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
             py: 1,
             boxShadow: '0 4px 20px rgba(0, 0, 0, 0.4)',
-            display: { xs: 'none', md: 'block' }
+            display: 'block' // Show on mobile too, but we might need to adjust the content
           }}
         >
           <Container maxWidth="lg">
@@ -121,7 +121,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 </Stack>
               </Stack>
 
-              <Box sx={{ flex: 1, maxWidth: 300, px: 2 }}>
+              <Box sx={{ flex: 1, maxWidth: 300, px: 2, display: { xs: 'none', lg: 'block' } }}>
                 <Slider
                   min={1}
                   max={9}
@@ -147,13 +147,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 />
               </Box>
 
-              <Stack direction="row" spacing={1.5} sx={{ alignItems: 'center', flex: 1, justifyContent: 'center' }}>
+              <Stack direction="row" spacing={1.5} sx={{ alignItems: 'center', flex: 1, justifyContent: { xs: 'flex-end', md: 'center' } }}>
                 <CompactStat label="Hand" value={character.handSize} color={character.theme.primary} />
                 <CompactStat label="HP" value={currentHP} color={character.theme.primary} />
-                <CompactStat label="Cards" value={availableCards} color={character.theme.primary} />
+                <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+                  <CompactStat label="Cards" value={availableCards} color={character.theme.primary} />
+                </Box>
               </Stack>
 
-              <Stack direction="row" spacing={1}>
+              <Stack direction="row" spacing={1} sx={{ display: { xs: 'none', sm: 'flex' } }}>
                 {character.elements.map(el => <ElementIcon key={el} element={el} size={24} />)}
               </Stack>
             </Stack>
