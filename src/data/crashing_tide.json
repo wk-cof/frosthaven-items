@@ -20,8 +20,8 @@
   },
   "summary": "A specialized melee/defense hybrid that utilizes 'Tide' persistent bonuses to chain powerful actions and adapt to the flow of battle.",
   "classNotes": [
-    "Your power will ebb and flow. Many of your actions are Tides, which are persistent bonuses that can make your other abilities more effective. As you perform more Tide actions, your power will grow, but when you run out of cards and must rest, you are **forced to move all Tide cards to your discard pile**, requiring you to perform those actions again to regain their effects. Managing this cycle is the key to success.",
-    "One powerful Tide available to you is the bottom action of Overwhelming Wave, which allows you to play three cards each round instead of two. This bonus can be used to activate more Tides at once, move great distances, or assault your enemies with a flurry of attacks. Keep in mind that this effect is **optional**. There may be times when it is better for the flow of battle to only play two cards.",
+    "Your power will ebb and flow. Many of your actions are <TIDE>, which are persistent bonuses that can make your other abilities more effective. As you perform more <TIDE> actions, your power will grow, but when you run out of cards and must rest, you are **forced to move all <TIDE> cards to your discard pile**, requiring you to perform those actions again to regain their effects. Managing this cycle is the key to success.",
+    "One powerful <TIDE> available to you is the bottom action of Overwhelming Wave, which allows you to play three cards each round instead of two. This bonus can be used to activate more <TIDE> at once, move great distances, or assault your enemies with a flurry of attacks. Keep in mind that this effect is **optional**. There may be times when it is better for the flow of battle to only play two cards.",
     "All water tiles you create are difficult terrain."
   ],
   "hp": {
