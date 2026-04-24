@@ -48,7 +48,8 @@
     "cost": 0,
     "slot": "body",
     "spent": true,
-    "text": "<ACTIVE> [Uses: 2] On the next two attacks targeting you, the attacker gains <DISADVANTAGE>. [Modifier: <-1> x1]",
+    "text": "<ACTIVE> [Uses: 2] On the next two attacks targeting you, the attacker gains <DISADVANTAGE>.",
+    "footer": "<MINUS_1> x1",
     "resources": {
       "Hide": 2
     }
@@ -134,7 +135,8 @@
     "cost": 0,
     "slot": "1h",
     "consumed": true,
-    "text": "When an enemy would apply a negative condition to you, prevent the condition. [Modifier: <-1> x1]",
+    "text": "When an enemy would apply a negative condition to you, prevent the condition.",
+    "footer": "<MINUS_1> x1",
     "resources": {
       "Metal": 1
     }
@@ -161,7 +163,8 @@
     "cost": 0,
     "slot": "body",
     "spent": true,
-    "text": "When you suffer <DAMAGE> from an attack, gain <SHIELD> 2 for the attack. [Modifier: <-1> x1]",
+    "text": "When you suffer <DAMAGE> from an attack, gain <SHIELD> 2 for the attack.",
+    "footer": "<MINUS_1> x1",
     "resources": {
       "Metal": 1
     }
@@ -205,7 +208,8 @@
     "cost": 0,
     "slot": "1h",
     "spent": true,
-    "text": "When an enemy would apply a negative condition to you, prevent the condition. [Modifier: <-1> x2]",
+    "text": "When an enemy would apply a negative condition to you, prevent the condition.",
+    "footer": "<MINUS_1> x2",
     "resources": {
       "Wood": 1,
       "Item 010": 1
@@ -265,7 +269,8 @@
     "cost": 0,
     "slot": "1h",
     "spent": true,
-    "text": "During your attack ability, add <MUDDLE> to all attacks. [Modifier: <-1> x1]",
+    "text": "During your attack ability, add <MUDDLE> to all attacks.",
+    "footer": "<MINUS_1> x1",
     "resources": {
       "Wood": 1,
       "Metal": 1,
@@ -295,7 +300,8 @@
     "image": "items/frosthaven/fh-021-chain-hood.jpeg",
     "cost": 0,
     "slot": "head",
-    "text": "While you are adjacent to three or more enemies, gain <SHIELD> 1. [Modifier: <-1> x1]",
+    "text": "While you are adjacent to three or more enemies, gain <SHIELD> 1.",
+    "footer": "<MINUS_1> x1",
     "resources": {
       "Metal": 3,
       "Hide": 1
@@ -310,7 +316,8 @@
     "cost": 0,
     "slot": "body",
     "spent": true,
-    "text": "When you suffer <DAMAGE> from an attack, gain <SHIELD> 3 for the attack. [Modifier: <-1> x2]",
+    "text": "When you suffer <DAMAGE> from an attack, gain <SHIELD> 3 for the attack.",
+    "footer": "<MINUS_1> x2",
     "resources": {
       "Item 012": 1,
       "Metal": 1
@@ -325,7 +332,8 @@
     "cost": 0,
     "slot": "legs",
     "spent": true,
-    "text": "At the start of your turn, add -2 <MOVE> to all your move abilities to gain <SHIELD> 1 this round. [Modifier: <-1> x2]",
+    "text": "At the start of your turn, add -2 <MOVE> to all your move abilities to gain <SHIELD> 1 this round.",
+    "footer": "<MINUS_1> x2",
     "resources": {
       "Metal": 2,
       "Hide": 2
@@ -510,7 +518,8 @@
     "cost": 0,
     "slot": "1h",
     "spent": true,
-    "text": "When you suffer <DAMAGE> from an attack, gain <SHIELD> 1 for the attack and prevent any negative conditions from the attack. <Modifier: -1 x2>",
+    "text": "When you suffer <DAMAGE> from an attack, gain <SHIELD> 1 for the attack and prevent any negative conditions from the attack.",
+    "footer": "<MINUS_1> x2",
     "resources": {
       "Wood": 2,
       "Metal": 1
@@ -618,7 +627,8 @@
     "cost": 0,
     "slot": "body",
     "spent": true,
-    "text": "<USES: 2> On the next two sources of <DAMAGE> from attacks targeting you, gain <SHIELD> 2 for the attacks. <Modifier: -1 x4>",
+    "text": "<USES: 2> On the next two sources of <DAMAGE> from attacks targeting you, gain <SHIELD> 2 for the attacks.",
+    "footer": "<MINUS_1> x4",
     "resources": {
       "Item 112": 1,
       "Metal": 3
@@ -743,7 +753,8 @@
     "cost": 0,
     "slot": "1h",
     "consumed": true,
-    "text": "When you suffer <DAMAGE> from an attack, gain <SHIELD> 1 for the attack and flip this card over. <Modifier: -1 x3>",
+    "text": "When you suffer <DAMAGE> from an attack, gain <SHIELD> 1 for the attack and flip this card over.",
+    "footer": "<MINUS_1> x3",
     "resources": {
       "Item 035": 1,
       "Item 105": 1,
@@ -1929,7 +1940,8 @@
     "image": "items/frosthaven/fh-130-iron-helmet.jpeg",
     "cost": 20,
     "slot": "head",
-    "text": "When you are attacked, treat any <2X> attack modifier card the enemy draws as a <+0> instead. <Modifier: -1 x1>"
+    "text": "When you are attacked, treat any <2X> attack modifier card the enemy draws as a <+0> instead.",
+    "footer": "<MINUS_1> x1"
   },
   {
     "id": 131,
@@ -1940,7 +1952,8 @@
     "cost": 25,
     "slot": "body",
     "spent": true,
-    "text": "<USES: 3> On the next three sources of <DAMAGE> from attacks targeting you, gain <SHIELD> 1 for the attacks. <Modifier: -1 x3>"
+    "text": "<USES: 3> On the next three sources of <DAMAGE> from attacks targeting you, gain <SHIELD> 1 for the attacks.",
+    "footer": "<MINUS_1> x3"
   },
   {
     "id": 132,
@@ -2004,7 +2017,8 @@
     "cost": 35,
     "slot": "1h",
     "spent": true,
-    "text": "When you suffer <DAMAGE> from an attack, gain <SHIELD> 2 for the attack. <Modifier: -1 x1>"
+    "text": "When you suffer <DAMAGE> from an attack, gain <SHIELD> 2 for the attack.",
+    "footer": "<MINUS_1> x1"
   },
   {
     "id": 138,
@@ -2014,7 +2028,8 @@
     "image": "items/frosthaven/fh-138-heavy-basinet.jpeg",
     "cost": 30,
     "slot": "head",
-    "text": "Whenever an enemy would give you <DISARM>, <STUN>, or <MUDDLE>, prevent the condition. <Modifier: -1 x2>"
+    "text": "Whenever an enemy would give you <DISARM>, <STUN>, or <MUDDLE>, prevent the condition.",
+    "footer": "<MINUS_1> x2"
   },
   {
     "id": 139,
@@ -2131,7 +2146,8 @@
     "cost": 50,
     "slot": "body",
     "spent": true,
-    "text": "[Uses: 5] On the next five sources of <DAMAGE> from attacks targeting you, gain <SHIELD> 1 for the attacks. <MODIFIER_NEG_1> x5"
+    "text": "[Uses: 5] On the next five sources of <DAMAGE> from attacks targeting you, gain <SHIELD> 1 for the attacks.",
+    "footer": "<MINUS_1> x5"
   },
   {
     "id": 150,
@@ -2164,7 +2180,8 @@
     "cost": 40,
     "slot": "legs",
     "spent": true,
-    "text": "When you suffer <DAMAGE> from an attack, gain <SHIELD> 2 for the attack. <MODIFIER_NEG_1> x2"
+    "text": "When you suffer <DAMAGE> from an attack, gain <SHIELD> 2 for the attack.",
+    "footer": "<MINUS_1> x2"
   },
   {
     "id": 153,
@@ -2197,7 +2214,8 @@
     "cost": 50,
     "slot": "1h",
     "spent": true,
-    "text": "When you suffer <DAMAGE> from an attack, gain <SHIELD> 4 for the attack. <MODIFIER_NEG_1> x2"
+    "text": "When you suffer <DAMAGE> from an attack, gain <SHIELD> 4 for the attack.",
+    "footer": "<MINUS_1> x2"
   },
   {
     "id": 156,
@@ -2732,7 +2750,8 @@
     "cost": 35,
     "slot": "1h",
     "consumed": true,
-    "text": "During your turn, one adjacent normal or elite enemy suffers <DAMAGE> equal to their <SHIELD> value. <MODIFIER_NEG_1> x3"
+    "text": "During your turn, one adjacent normal or elite enemy suffers <DAMAGE> equal to their <SHIELD> value.",
+    "footer": "<MINUS_1> x3"
   },
   {
     "id": 205,
@@ -2754,7 +2773,8 @@
     "cost": 40,
     "slot": "2h",
     "consumed": true,
-    "text": "During your melee attack ability, if you have not moved this round, add +2 <ATTACK> to one attack, and you may perform no move abilities this turn. <MODIFIER_NEG_1> x3"
+    "text": "During your melee attack ability, if you have not moved this round, add +2 <ATTACK> to one attack, and you may perform no move abilities this turn.",
+    "footer": "<MINUS_1> x3"
   },
   {
     "id": 207,
@@ -3043,7 +3063,7 @@
     "cost": 20,
     "slot": "1h",
     "consumed": true,
-    "text": "During your turn, lose 1 morale to perform: [Condition: Ward] Target all allies and self"
+    "text": "During your turn, lose 1 morale to perform: <WARD> Target all allies and self"
   },
   {
     "id": 233,
@@ -3054,7 +3074,7 @@
     "cost": 30,
     "slot": "small",
     "consumed": true,
-    "text": "During an ally's ranged attack ability, add [Condition: Muddle] and [Condition: Curse] to one attack."
+    "text": "During an ally's ranged attack ability, add <MUDDLE> and <CURSE> to one attack."
   },
   {
     "id": 234,
@@ -3065,7 +3085,7 @@
     "cost": 30,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, create one [Condition: Poison], [Condition: Immobilize] trap in an empty hex within Range 2."
+    "text": "During your turn, create one <POISON>, <IMMOBILIZE> trap in an empty hex within Range 2."
   },
   {
     "id": 235,
@@ -3163,7 +3183,7 @@
     "cost": 10,
     "slot": "small",
     "consumed": true,
-    "text": "This item cannot be sold and must be brought into and used every scenario.\n\nAt the start of the scenario, perform: [Condition: Curse], [Condition: Ward] self"
+    "text": "This item cannot be sold and must be brought into and used every scenario.\n\nAt the start of the scenario, perform: <CURSE>, <WARD> self"
   },
   {
     "id": 244,
@@ -3249,7 +3269,7 @@
     "cost": 0,
     "slot": "1h",
     "consumed": true,
-    "text": "Place one [Water] in an adjacent hex.\n[Element: Dark]"
+    "text": "Place one [Water] in an adjacent hex.\n<DARK>"
   },
   {
     "id": 252,
@@ -3260,7 +3280,7 @@
     "cost": 0,
     "slot": "1h",
     "consumed": true,
-    "text": "On the next three deaths of any of your summons, [Consume Element: Earth] or [Consume Element: Dark] and perform: Heal 2 self"
+    "text": "On the next three deaths of any of your summons, <CONSUME><EARTH> or <CONSUME><DARK> and perform: Heal 2 self"
   },
   {
     "id": 253,
@@ -3293,7 +3313,7 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "During your turn, you may create either one 1-hex obstacle or hazardous terrain tile in an empty hex within Range 2.\n[Consume Element: Fire] or [Consume Element: Earth]"
+    "text": "During your turn, you may create either one 1-hex obstacle or hazardous terrain tile in an empty hex within Range 2.\n<CONSUME><FIRE> or <CONSUME><EARTH>"
   },
   {
     "id": 256,
@@ -3304,7 +3324,7 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "Gain 3 [Wave].\n[Consume Element: Air] or [Consume Element: Earth]"
+    "text": "Gain 3 [Wave].\n<CONSUME><AIR> or <CONSUME><EARTH>"
   },
   {
     "id": 257,
@@ -3326,7 +3346,7 @@
     "cost": 0,
     "slot": "small",
     "consumed": true,
-    "text": "When you suffer damage, if your hit point value is reduced to below half of your maximum, perform: Heal 7 self, [Condition: Curse]\nThis heal is not affected by and cannot remove negative conditions."
+    "text": "When you suffer damage, if your hit point value is reduced to below half of your maximum, perform: Heal 7 self, <CURSE>\nThis heal is not affected by and cannot remove negative conditions."
   },
   {
     "id": 259,
@@ -3348,7 +3368,7 @@
     "cost": 0,
     "slot": "1h",
     "consumed": true,
-    "text": "During your attack ability, add [Condition: Brittle] to one attack and create one 1-hex icy terrain tile in the featureless hex occupied by the target."
+    "text": "During your attack ability, add <BRITTLE> to one attack and create one 1-hex icy terrain tile in the featureless hex occupied by the target."
   },
   {
     "id": 261,
@@ -3380,7 +3400,7 @@
     "image": "items/frosthaven/fh-263-warlords-skull.jpeg",
     "cost": 0,
     "slot": "1h",
-    "text": "Whenever you gain [Condition: Invisible] or perform a teleport ability while you have [Condition: Invisible], after the ability perform: Move 1"
+    "text": "Whenever you gain <INVISIBLE> or perform a teleport ability while you have <INVISIBLE>, after the ability perform: Move 1"
   },
   {
     "id": 264,
@@ -3391,6 +3411,6 @@
     "cost": 0,
     "slot": "head",
     "consumed": true,
-    "text": "When you rest, you may keep up to three [Tides] cards in your active area.\n[Consume Element: Light] or [Consume Element: Dark]"
+    "text": "When you rest, you may keep up to three [Tides] cards in your active area.\n<CONSUME><LIGHT> or <CONSUME><DARK>"
   }
 ]
