@@ -65,12 +65,16 @@ function FilterSidebar({ filters, setFilters, itemStatuses }: Props) {
       sx={{ 
         width: { xs: '100%', md: 280 }, 
         p: 3, 
-        bgcolor: 'rgba(30, 41, 59, 0.4)', 
+        bgcolor: { 
+          xs: 'rgba(30, 41, 59, 1)', // Fully opaque on mobile
+          md: 'rgba(30, 41, 59, 0.4)' // Semi-transparent on desktop sticky
+        }, 
         border: '1px solid rgba(255, 255, 255, 0.1)',
         borderRadius: 4,
-        position: 'sticky',
-        top: 88,
-        height: 'fit-content'
+        position: { xs: 'relative', md: 'sticky' },
+        top: { md: 88 },
+        height: 'fit-content',
+        zIndex: { xs: 1, md: 100 }
       }}
     >
       <Typography 
