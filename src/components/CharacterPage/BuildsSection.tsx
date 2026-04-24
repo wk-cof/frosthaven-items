@@ -11,13 +11,14 @@ import {
   Chip
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { BuildArchetype } from '../../types/character';
+import { BuildArchetype, CharacterTheme } from '../../types/character';
 
 interface BuildsSectionProps {
   builds: BuildArchetype[];
+  theme: CharacterTheme;
 }
 
-export const BuildsSection: React.FC<BuildsSectionProps> = ({ builds }) => {
+export const BuildsSection: React.FC<BuildsSectionProps> = ({ builds, theme }) => {
   const [expandedId, setExpandedId] = useState<string | null>(builds[0]?.id || null);
 
   return (
@@ -55,13 +56,13 @@ export const BuildsSection: React.FC<BuildsSectionProps> = ({ builds }) => {
                 backgroundImage: 'none',
                 borderRadius: '16px !important',
                 border: '1px solid',
-                borderColor: expandedId === build.id ? 'rgba(56, 189, 248, 0.4)' : 'rgba(255, 255, 255, 0.1)',
+                borderColor: expandedId === build.id ? `${theme.primary}66` : 'rgba(255, 255, 255, 0.1)',
                 color: '#f8fafc',
                 transition: 'all 0.3s ease',
-                boxShadow: expandedId === build.id ? '0 10px 30px -10px rgba(0, 0, 0, 0.5)' : 'none',
+                boxShadow: expandedId === build.id ? `0 10px 30px -10px ${theme.glow}` : 'none',
                 '&::before': { display: 'none' },
                 '&:hover': {
-                  borderColor: 'rgba(56, 189, 248, 0.3)'
+                  borderColor: `${theme.primary}4D` // 4D = ~30%
                 }
               }}
             >
@@ -95,7 +96,7 @@ export const BuildsSection: React.FC<BuildsSectionProps> = ({ builds }) => {
                     <Grid {...({ size: { xs: 12, md: 6 } } as any)}>
                       <Stack spacing={4}>
                         <Box>
-                          <Typography variant="caption" sx={{ textTransform: 'uppercase', color: '#38bdf8', fontWeight: 700, letterSpacing: '0.1em', mb: 1, display: 'block' }}>
+                          <Typography variant="caption" sx={{ textTransform: 'uppercase', color: theme.primary, fontWeight: 700, letterSpacing: '0.1em', mb: 1, display: 'block' }}>
                             Philosophy
                           </Typography>
                           <Typography variant="body2" sx={{ color: '#cbd5e1', lineHeight: 1.6 }}>
@@ -103,7 +104,7 @@ export const BuildsSection: React.FC<BuildsSectionProps> = ({ builds }) => {
                           </Typography>
                         </Box>
                         <Box>
-                          <Typography variant="caption" sx={{ textTransform: 'uppercase', color: '#38bdf8', fontWeight: 700, letterSpacing: '0.1em', mb: 1.5, display: 'block' }}>
+                          <Typography variant="caption" sx={{ textTransform: 'uppercase', color: theme.primary, fontWeight: 700, letterSpacing: '0.1em', mb: 1.5, display: 'block' }}>
                             Core Cards
                           </Typography>
                           <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: 'wrap' }}>
@@ -113,10 +114,10 @@ export const BuildsSection: React.FC<BuildsSectionProps> = ({ builds }) => {
                                 label={c} 
                                 size="small"
                                 sx={{ 
-                                  bgcolor: 'rgba(56, 189, 248, 0.1)', 
-                                  color: '#7dd3fc',
+                                  bgcolor: `${theme.primary}1A`, 
+                                  color: theme.secondary,
                                   fontWeight: 600,
-                                  border: '1px solid rgba(56, 189, 248, 0.2)',
+                                  border: `1px solid ${theme.primary}33`,
                                   borderRadius: 1.5
                                 }} 
                               />
@@ -126,7 +127,7 @@ export const BuildsSection: React.FC<BuildsSectionProps> = ({ builds }) => {
                       </Stack>
                     </Grid>
                     <Grid {...({ size: { xs: 12, md: 6 } } as any)}>
-                      <Typography variant="caption" sx={{ textTransform: 'uppercase', color: '#38bdf8', fontWeight: 700, letterSpacing: '0.1em', mb: 1.5, display: 'block' }}>
+                      <Typography variant="caption" sx={{ textTransform: 'uppercase', color: theme.primary, fontWeight: 700, letterSpacing: '0.1em', mb: 1.5, display: 'block' }}>
                         Progression Path
                       </Typography>
                       <Stack spacing={1}>
@@ -141,8 +142,8 @@ export const BuildsSection: React.FC<BuildsSectionProps> = ({ builds }) => {
                               label={`LVL ${lvl}`} 
                               size="small"
                               sx={{ 
-                                bgcolor: 'rgba(56, 189, 248, 0.1)', 
-                                color: '#38bdf8',
+                                bgcolor: `${theme.primary}1A`, 
+                                color: theme.primary,
                                 fontWeight: 800,
                                 fontSize: '0.7rem',
                                 borderRadius: 1

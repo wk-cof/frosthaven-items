@@ -5,11 +5,14 @@ import {
   Paper,
 } from '@mui/material';
 
+import { CharacterTheme } from '../../types/character';
+
 interface InfoSectionProps {
   title: string;
   children: React.ReactNode;
   backgroundImage?: string;
   minHeight?: number | string;
+  theme?: CharacterTheme;
 }
 
 const glassStyle = {
@@ -26,7 +29,8 @@ export const InfoSection: React.FC<InfoSectionProps> = ({
   title, 
   children, 
   backgroundImage, 
-  minHeight = 400 
+  minHeight = 400,
+  theme
 }) => {
   return (
     <Box component="section" sx={{ width: '100%', height: '100%' }}>
@@ -44,7 +48,7 @@ export const InfoSection: React.FC<InfoSectionProps> = ({
             content: '""',
             flex: 1,
             height: '1px',
-            background: 'linear-gradient(to right, rgba(255, 255, 255, 0.1), transparent)',
+            background: theme ? `linear-gradient(to right, ${theme.primary}66, transparent)` : 'linear-gradient(to right, rgba(255, 255, 255, 0.1), transparent)',
           }
         }}
       >
@@ -59,6 +63,7 @@ export const InfoSection: React.FC<InfoSectionProps> = ({
           minHeight,
           position: 'relative',
           overflow: 'hidden',
+          borderColor: theme ? `${theme.primary}4D` : 'rgba(255, 255, 255, 0.1)',
           '&::before': backgroundImage ? {
             content: "''",
             position: 'absolute',

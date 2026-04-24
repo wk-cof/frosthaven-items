@@ -6,13 +6,14 @@ import {
   List,
   ListItem
 } from '@mui/material';
-import { PerkPriority } from '../../types/character';
+import { PerkPriority, CharacterTheme } from '../../types/character';
 
 interface PerkPriorityListProps {
   perks: PerkPriority[];
+  theme: CharacterTheme;
 }
 
-export const PerkPriorityList: React.FC<PerkPriorityListProps> = ({ perks }) => {
+export const PerkPriorityList: React.FC<PerkPriorityListProps> = ({ perks, theme }) => {
   return (
     <Box component="section" sx={{ width: '100%', py: 6 }}>
       <Container maxWidth="lg">
@@ -52,7 +53,7 @@ export const PerkPriorityList: React.FC<PerkPriorityListProps> = ({ perks }) => 
                 transition: 'all 0.2s ease',
                 '&:hover': {
                   background: 'rgba(30, 41, 59, 0.6)',
-                  borderColor: 'rgba(56, 189, 248, 0.2)',
+                  borderColor: `${theme.primary}33`,
                   transform: 'translateX(4px)',
                 }
               }}
@@ -61,7 +62,7 @@ export const PerkPriorityList: React.FC<PerkPriorityListProps> = ({ perks }) => 
                 sx={{ 
                   fontSize: '1.25rem', 
                   fontWeight: 900, 
-                  color: '#38bdf8', 
+                  color: theme.primary, 
                   opacity: 0.5, 
                   minWidth: 40 
                 }}

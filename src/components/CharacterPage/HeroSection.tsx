@@ -14,7 +14,7 @@ import {
 import { ElementIcon } from '../ElementIcon';
 import { Character } from '../../types/character';
 
-const SegmentBar = ({ value }: { value: number }) => (
+const SegmentBar = ({ value, color }: { value: number, color: string }) => (
   <Stack direction="row" spacing={0.5} sx={{ height: 12, width: '100%' }}>
     {[1, 2, 3, 4, 5].map((i) => (
       <Box
@@ -22,8 +22,8 @@ const SegmentBar = ({ value }: { value: number }) => (
         sx={{
           flex: 1,
           borderRadius: '2px',
-          bgcolor: i <= value ? '#38bdf8' : 'rgba(15, 23, 42, 0.5)',
-          boxShadow: i <= value ? '0 0 8px rgba(56, 189, 248, 0.4)' : 'none',
+          bgcolor: i <= value ? color : 'rgba(15, 23, 42, 0.5)',
+          boxShadow: i <= value ? `0 0 8px ${color}66` : 'none', // 66 is ~40% opacity in hex
           transition: 'all 0.3s ease',
         }}
       />
@@ -48,9 +48,9 @@ const glassStyle = {
   p: 3,
 };
 
-const CompactStat = ({ label, value }: { label: string, value: number | string }) => (
+const CompactStat = ({ label, value, color }: { label: string, value: number | string, color: string }) => (
   <Stack direction="row" spacing={1} sx={{ alignItems: 'baseline', bgcolor: 'rgba(0,0,0,0.3)', px: 1.5, py: 0.5, borderRadius: 2, border: '1px solid rgba(255,255,255,0.05)' }}>
-    <Typography sx={{ color: '#38bdf8', fontWeight: 800, fontSize: '0.9rem' }}>{value}</Typography>
+    <Typography sx={{ color: color, fontWeight: 800, fontSize: '0.9rem' }}>{value}</Typography>
     <Typography sx={{ color: '#94a3b8', fontWeight: 700, fontSize: '0.6rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{label}</Typography>
   </Stack>
 );
@@ -108,11 +108,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                     width: 44,
                     height: 44,
                     border: '2px solid rgba(255, 255, 255, 0.1)',
-                    boxShadow: '0 0 10px rgba(220, 38, 38, 0.3)'
+                    boxShadow: `0 0 10px ${character.theme.glow}`
                   }}
                 />
                 <Stack>
-                  <Typography variant="h6" sx={{ fontWeight: 800, fontSize: '1.1rem', background: 'linear-gradient(to right, #f87171, #fb923c)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', lineHeight: 1.2 }}>
+                  <Typography variant="h6" sx={{ fontWeight: 800, fontSize: '1.1rem', background: `linear-gradient(to right, ${character.theme.primary}, ${character.theme.secondary})`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', lineHeight: 1.2 }}>
                     {character.spoilerName}
                   </Typography>
                   <Typography variant="caption" sx={{ color: '#94a3b8', fontWeight: 600, textTransform: 'uppercase', fontSize: '0.6rem' }}>
@@ -130,16 +130,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   onChange={(_, val) => onLevelChange(val as number)}
                   sx={{
                     height: 4,
-                    color: '#38bdf8',
+                    color: character.theme.primary,
                     py: 1,
                     '& .MuiSlider-track': { border: 'none' },
                     '& .MuiSlider-rail': { opacity: 0.1, bgcolor: '#ffffff' },
                     '& .MuiSlider-thumb': {
                       width: 14,
                       height: 14,
-                      bgcolor: '#38bdf8',
+                      bgcolor: character.theme.primary,
                       '&:hover, &.Mui-focusVisible, &.Mui-active': {
-                        boxShadow: '0 0 10px rgba(56, 189, 248, 0.4)',
+                        boxShadow: `0 0 10px ${character.theme.glow}`,
                       },
                       '&::before': { display: 'none' },
                     },
@@ -148,9 +148,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               </Box>
 
               <Stack direction="row" spacing={1.5} sx={{ alignItems: 'center', flex: 1, justifyContent: 'center' }}>
-                <CompactStat label="Hand" value={character.handSize} />
-                <CompactStat label="HP" value={currentHP} />
-                <CompactStat label="Cards" value={availableCards} />
+                <CompactStat label="Hand" value={character.handSize} color={character.theme.primary} />
+                <CompactStat label="HP" value={currentHP} color={character.theme.primary} />
+                <CompactStat label="Cards" value={availableCards} color={character.theme.primary} />
               </Stack>
 
               <Stack direction="row" spacing={1}>
@@ -163,7 +163,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
       <Box
         sx={{
-          background: 'linear-gradient(135deg, rgba(220, 38, 38, 0.15), rgba(15, 23, 42, 0.9)), radial-gradient(circle at 20% 80%, rgba(220, 38, 38, 0.1), transparent 50%)',
+          background: `${character.theme.headerGradient}, radial-gradient(circle at 20% 80%, ${character.theme.glow}, transparent 50%)`,
           borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
           py: 6,
         }}
@@ -189,7 +189,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                       width: 240,
                       height: 240,
                       border: '4px solid rgba(255, 255, 255, 0.1)',
-                      boxShadow: '0 0 30px rgba(220, 38, 38, 0.4), inset 0 0 20px rgba(0, 0, 0, 0.5)',
+                      boxShadow: `0 0 30px ${character.theme.glow}, inset 0 0 20px rgba(0, 0, 0, 0.5)`,
                       bgcolor: 'rgba(30, 41, 59, 0.7)',
                       '& img': {
                         objectPosition: 'center 20%',
@@ -208,9 +208,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                       label={`${character.spoilerName}`}
                       size="small"
                       sx={{
-                        bgcolor: 'rgba(56, 189, 248, 0.1)',
-                        border: '1px solid rgba(56, 189, 248, 0.2)',
-                        color: '#38bdf8',
+                        bgcolor: `${character.theme.primary}1A`, // 1A is ~10% opacity
+                        border: `1px solid ${character.theme.primary}33`, // 33 is ~20% opacity
+                        color: character.theme.primary,
                         fontWeight: 700,
                         fontSize: '0.7rem',
                         letterSpacing: '0.05em'
@@ -221,9 +221,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                       label={`${character.race}`}
                       size="small"
                       sx={{
-                        bgcolor: 'rgba(56, 189, 248, 0.1)',
-                        border: '1px solid rgba(56, 189, 248, 0.2)',
-                        color: '#38bdf8',
+                        bgcolor: `${character.theme.primary}1A`,
+                        border: `1px solid ${character.theme.primary}33`,
+                        color: character.theme.primary,
                         fontWeight: 700,
                         fontSize: '0.7rem',
                         letterSpacing: '0.05em'
@@ -246,14 +246,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                         p: 0.8
                       }}
                     >
-                      <img src={`${basePath}/${character.icon}`} alt="Class" style={{ width: '100%', filter: 'drop-shadow(0 0 5px #38bdf8)' }} />
+                      <img src={`${basePath}/${character.icon}`} alt="Class" style={{ width: '100%', filter: `drop-shadow(0 0 5px ${character.theme.primary})` }} />
                     </Box>
                     <Typography
                       variant="h1"
                       sx={{
                         fontSize: '2.5rem',
                         fontWeight: 800,
-                        background: 'linear-gradient(to right, #f87171, #fb923c)',
+                        background: `linear-gradient(to right, ${character.theme.primary}, ${character.theme.secondary})`,
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
                         lineHeight: 1.1
@@ -271,7 +271,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                           <Typography variant="caption" sx={{ fontWeight: 600, color: '#94a3b8' }}>COMPLEXITY:</Typography>
                           <Stack direction="row" spacing={0.5}>
                             {[1, 2, 3, 4, 5].map(i => (
-                              <Box key={i} sx={{ width: 8, height: 8, borderRadius: '50%', bgcolor: i <= character.complexity ? '#38bdf8' : 'rgba(255,255,255,0.1)' }} />
+                              <Box key={i} sx={{ width: 8, height: 8, borderRadius: '50%', bgcolor: i <= character.complexity ? character.theme.primary : 'rgba(255,255,255,0.1)' }} />
                             ))}
                           </Stack>
                         </Stack>
@@ -298,9 +298,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                         key={t}
                         label={t}
                         sx={{
-                          bgcolor: 'rgba(56, 189, 248, 0.1)',
-                          border: '1px solid rgba(56, 189, 248, 0.2)',
-                          color: '#38bdf8',
+                          bgcolor: `${character.theme.primary}1A`,
+                          border: `1px solid ${character.theme.primary}33`,
+                          color: character.theme.primary,
                           borderRadius: 2
                         }}
                       />
@@ -326,7 +326,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                             textAlign: 'center'
                           }}
                         >
-                          <Typography sx={{ fontSize: '1.5rem', fontWeight: 800, color: '#38bdf8', lineHeight: 1.2 }}>{stat.value}</Typography>
+                          <Typography sx={{ fontSize: '1.5rem', fontWeight: 800, color: character.theme.primary, lineHeight: 1.2 }}>{stat.value}</Typography>
                           <Typography variant="caption" sx={{ color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.05em', fontSize: '0.65rem' }}>{stat.label}</Typography>
                         </Box>
                       ))}
@@ -338,7 +338,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                         <Typography variant="caption" sx={{ fontWeight: 700, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
                           Progression
                         </Typography>
-                        <Typography variant="caption" sx={{ fontWeight: 800, color: '#38bdf8' }}>
+                        <Typography variant="caption" sx={{ fontWeight: 800, color: character.theme.primary }}>
                           LEVEL {level}
                         </Typography>
                       </Stack>
@@ -350,18 +350,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                         onChange={(_, val) => onLevelChange(val as number)}
                         sx={{
                           height: 4,
-                          color: '#38bdf8',
+                          color: character.theme.primary,
                           py: 1,
                           '& .MuiSlider-track': { border: 'none' },
                           '& .MuiSlider-rail': { opacity: 0.1, bgcolor: '#ffffff' },
                           '& .MuiSlider-thumb': {
                             width: 16,
                             height: 16,
-                            bgcolor: '#38bdf8',
+                            bgcolor: character.theme.primary,
                             border: '3px solid #0f172a',
-                            boxShadow: '0 0 10px rgba(56, 189, 248, 0.4)',
+                            boxShadow: `0 0 10px ${character.theme.glow}`,
                             '&:hover, &.Mui-focusVisible, &.Mui-active': {
-                              boxShadow: '0 0 15px rgba(56, 189, 248, 0.6)',
+                              boxShadow: `0 0 15px ${character.theme.glow}`,
                             },
                             '&::before': { display: 'none' },
                           },
@@ -372,7 +372,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                           <Typography
                             key={lvl}
                             sx={{
-                              color: lvl === level ? '#38bdf8' : 'rgba(255,255,255,0.2)',
+                              color: lvl === level ? character.theme.primary : 'rgba(255,255,255,0.2)',
                               fontSize: '0.65rem',
                               fontWeight: 700
                             }}
@@ -409,11 +409,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                         <Typography sx={{ fontFamily: 'Space Grotesk', fontSize: '0.75rem', fontWeight: 700, color: '#94a3b8', textTransform: 'uppercase' }}>
                           {label}
                         </Typography>
-                        <Typography sx={{ fontFamily: 'Space Grotesk', fontSize: '0.85rem', fontWeight: 600, color: '#38bdf8' }}>
+                        <Typography sx={{ fontFamily: 'Space Grotesk', fontSize: '0.85rem', fontWeight: 600, color: character.theme.primary }}>
                           {getStatDesc(val)}
                         </Typography>
                       </Stack>
-                      <SegmentBar value={val} />
+                      <SegmentBar value={val} color={character.theme.primary} />
                     </Box>
                   ))}
                 </Stack>

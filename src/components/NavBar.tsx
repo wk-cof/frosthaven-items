@@ -12,7 +12,6 @@ function NavBar() {
   const location = useLocation();
 
   const isItemsActive = location.pathname === '/';
-  const isCharactersActive = location.pathname.startsWith('/characters');
 
   return (
     <AppBar 
@@ -68,20 +67,38 @@ function NavBar() {
             <Button
               component={NavLink}
               to="/characters/pain-conduit"
-              startIcon={<span>⚔️</span>}
+              startIcon={<span>🔗</span>}
               sx={{
-                color: isCharactersActive ? '#38bdf8' : '#94a3b8',
+                color: location.pathname === '/characters/pain-conduit' ? '#38bdf8' : '#94a3b8',
                 fontWeight: 700,
                 px: 2,
                 borderRadius: 2,
-                bgcolor: isCharactersActive ? 'rgba(56, 189, 248, 0.1)' : 'transparent',
+                bgcolor: location.pathname === '/characters/pain-conduit' ? 'rgba(56, 189, 248, 0.1)' : 'transparent',
                 '&:hover': {
                   bgcolor: 'rgba(56, 189, 248, 0.05)',
                   color: '#38bdf8'
                 }
               }}
             >
-              Characters
+              Shackles
+            </Button>
+            <Button
+              component={NavLink}
+              to="/characters/pyroclast"
+              startIcon={<span>🔥</span>}
+              sx={{
+                color: location.pathname === '/characters/pyroclast' ? '#f97316' : '#94a3b8',
+                fontWeight: 700,
+                px: 2,
+                borderRadius: 2,
+                bgcolor: location.pathname === '/characters/pyroclast' ? 'rgba(249, 115, 22, 0.1)' : 'transparent',
+                '&:hover': {
+                  bgcolor: 'rgba(249, 115, 22, 0.05)',
+                  color: '#f97316'
+                }
+              }}
+            >
+              Meteor
             </Button>
           </Stack>
         </Toolbar>

@@ -8,11 +8,14 @@ import { renderTextWithTooltips } from '../RuleTooltip';
 import glossaryData from '../../data/glossary.json';
 import { InfoSection } from './InfoSection';
 
+import { CharacterTheme } from '../../types/character';
+
 interface MechanicsSectionProps {
   notes: string[];
+  theme: CharacterTheme;
 }
 
-export const MechanicsSection: React.FC<MechanicsSectionProps> = ({ notes }) => {
+export const MechanicsSection: React.FC<MechanicsSectionProps> = ({ notes, theme }) => {
   const parseNote = (note: string) => {
     const sentences = note.split('. ');
     if (sentences.length > 1 && sentences[0].length < 60) {
@@ -22,7 +25,7 @@ export const MechanicsSection: React.FC<MechanicsSectionProps> = ({ notes }) => 
   };
 
   return (
-    <InfoSection title="Core Mechanics">
+    <InfoSection title="Core Mechanics" theme={theme}>
       <Stack spacing={3}>
         {notes.map((note, i) => {
           const { title, body } = parseNote(note);
@@ -33,11 +36,18 @@ export const MechanicsSection: React.FC<MechanicsSectionProps> = ({ notes }) => 
                 sx={{ 
                   fontSize: '1.1rem', 
                   fontWeight: 700, 
-                  color: '#f8fafc', 
+                  color: theme.secondary, 
                   mb: 0.5,
                   display: 'flex',
                   alignItems: 'center',
-                  gap: 1.5
+                  gap: 1.5,
+                  '&::before': {
+                    content: '""',
+                    width: '4px',
+                    height: '20px',
+                    bgcolor: theme.primary,
+                    borderRadius: '2px'
+                  }
                 }}
               >
                 {title}

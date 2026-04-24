@@ -9,16 +9,17 @@ import {
   CardMedia,
   Chip
 } from '@mui/material';
-import { CharacterCard } from '../../types/character';
+import { CharacterCard, CharacterTheme } from '../../types/character';
 
 interface AbilityCardGridProps {
   cards: CharacterCard[];
   characterId: string;
   level: number;
   onCardClick: (img: string) => void;
+  theme: CharacterTheme;
 }
 
-export const AbilityCardGrid: React.FC<AbilityCardGridProps> = ({ cards, characterId, level, onCardClick }) => {
+export const AbilityCardGrid: React.FC<AbilityCardGridProps> = ({ cards, characterId, level, onCardClick, theme }) => {
   const basePath = `${import.meta.env.BASE_URL}assets/characters/${characterId}`;
   
   const getLevelColor = (lvl: string) => {
@@ -74,8 +75,8 @@ export const AbilityCardGrid: React.FC<AbilityCardGridProps> = ({ cards, charact
                     overflow: 'hidden',
                     '&:hover': {
                       transform: 'translateY(-8px) scale(1.02)',
-                      borderColor: '#38bdf8',
-                      boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(56, 189, 248, 0.2)',
+                      borderColor: theme.primary,
+                      boxShadow: `0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 0 15px ${theme.glow}`,
                     }
                   }}
                 >

@@ -9,6 +9,8 @@ import {
   ToggleButtonGroup
 } from '@mui/material';
 
+import { CharacterTheme } from '../../types/character';
+
 interface MatPerksSectionProps {
   matFront: string;
   matBack: string;
@@ -17,9 +19,10 @@ interface MatPerksSectionProps {
   onImageClick: (img: string) => void;
   matSide: 'front' | 'back';
   onSideChange: (side: 'front' | 'back') => void;
+  theme: CharacterTheme;
 }
 
-const ImageWrapperStyle = {
+const getImageWrapperStyle = (theme: CharacterTheme) => ({
   background: 'rgba(30, 41, 59, 0.4)',
   border: '1px solid rgba(255, 255, 255, 0.1)',
   borderRadius: '16px',
@@ -27,8 +30,8 @@ const ImageWrapperStyle = {
   cursor: 'zoom-in',
   transition: 'all 0.3s ease',
   '&:hover': {
-    borderColor: 'rgba(56, 189, 248, 0.4)',
-    boxShadow: '0 0 20px rgba(56, 189, 248, 0.1)',
+    borderColor: `${theme.primary}66`,
+    boxShadow: `0 0 20px ${theme.glow}`,
   },
   '& img': {
     width: '100%',
@@ -36,10 +39,10 @@ const ImageWrapperStyle = {
     borderRadius: '8px',
     boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.4)',
   }
-};
+});
 
 export const MatPerksSection: React.FC<MatPerksSectionProps> = ({ 
-  matFront, matBack, perks, characterId, onImageClick, matSide, onSideChange 
+  matFront, matBack, perks, characterId, onImageClick, matSide, onSideChange, theme 
 }) => {
   const basePath = `${import.meta.env.BASE_URL}assets/characters/${characterId}`;
   const currentMat = matSide === 'front' ? matFront : matBack;
@@ -89,9 +92,9 @@ export const MatPerksSection: React.FC<MatPerksSectionProps> = ({
                     fontWeight: 700,
                     fontSize: '0.85rem',
                     '&.Mui-selected': {
-                      bgcolor: '#38bdf8',
+                      bgcolor: theme.primary,
                       color: '#0f172a',
-                      '&:hover': { bgcolor: '#38bdf8' }
+                      '&:hover': { bgcolor: theme.primary }
                     }
                   }
                 }}
@@ -100,7 +103,7 @@ export const MatPerksSection: React.FC<MatPerksSectionProps> = ({
                 <ToggleButton value="back">Back</ToggleButton>
               </ToggleButtonGroup>
 
-              <Box sx={ImageWrapperStyle} onClick={() => onImageClick(currentMat)}>
+              <Box sx={getImageWrapperStyle(theme)} onClick={() => onImageClick(currentMat)}>
                 <img src={`${basePath}/${currentMat}`} alt={`Mat ${matSide}`} />
               </Box>
             </Stack>
@@ -108,7 +111,7 @@ export const MatPerksSection: React.FC<MatPerksSectionProps> = ({
 
           <Grid size={{ xs: 12, md: 5 }}>
             <Box sx={{ mt: { md: 9 } }}>
-              <Box sx={ImageWrapperStyle} onClick={() => onImageClick(perks)}>
+              <Box sx={getImageWrapperStyle(theme)} onClick={() => onImageClick(perks)}>
                 <img src={`${basePath}/${perks}`} alt="Perk Sheet" />
               </Box>
             </Box>

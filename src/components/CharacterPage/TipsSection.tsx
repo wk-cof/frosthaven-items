@@ -5,13 +5,14 @@ import {
   Container, 
   Grid
 } from '@mui/material';
-import { CharacterTip } from '../../types/character';
+import { CharacterTip, CharacterTheme } from '../../types/character';
 
 interface TipsSectionProps {
   tips: CharacterTip[];
+  theme: CharacterTheme;
 }
 
-export const TipsSection: React.FC<TipsSectionProps> = ({ tips }) => {
+export const TipsSection: React.FC<TipsSectionProps> = ({ tips, theme }) => {
   return (
     <Box component="section" sx={{ width: '100%', py: 6 }}>
       <Container maxWidth="lg">
@@ -53,7 +54,7 @@ export const TipsSection: React.FC<TipsSectionProps> = ({ tips }) => {
                   '&:hover': {
                     background: 'rgba(30, 41, 59, 0.6)',
                     transform: 'scale(1.02)',
-                    borderColor: 'rgba(56, 189, 248, 0.3)',
+                    borderColor: `${theme.primary}4D`,
                   }
                 }}
               >

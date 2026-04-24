@@ -363,5 +363,12 @@
       "title": "Curse is a Condition",
       "text": "Curse is technically a negative condition when applied. Once it becomes a modifier card, it is no longer a condition."
     }
-  ]
+  ],
+  "theme": {
+    "primary": "#dc2626",
+    "secondary": "#f87171",
+    "accent": "#fb923c",
+    "glow": "rgba(220, 38, 38, 0.4)",
+    "headerGradient": "linear-gradient(135deg, rgba(220, 38, 38, 0.15), rgba(15, 23, 42, 0.9))"
+  }
 }

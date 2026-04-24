@@ -3,6 +3,7 @@ import { Box, ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import NavBar from './components/NavBar';
 import ItemsPage from './pages/ItemsPage';
 import PainConduitPage from './pages/PainConduitPage';
+import PyroclastPage from './pages/PyroclastPage';
 
 const darkTheme = createTheme({
   palette: {
@@ -36,6 +37,7 @@ function App() {
           <Routes>
             <Route path="/" element={<ItemsPage />} />
             <Route path="/characters/pain-conduit" element={<PainConduitPage />} />
+            <Route path="/characters/pyroclast" element={<PyroclastPage />} />
           </Routes>
         </Box>
       </HashRouter>

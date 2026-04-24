@@ -35,6 +35,14 @@ export interface CharacterTip {
   text: string;
 }
 
+export interface CharacterTheme {
+  primary: string;
+  secondary: string;
+  accent: string;
+  glow: string;
+  headerGradient: string;
+}
+
 export interface Character {
   id: string;
   name: string;
@@ -58,4 +66,5 @@ export interface Character {
   builds?: BuildArchetype[];
   perkPriority?: PerkPriority[];
   tips?: CharacterTip[];
+  theme: CharacterTheme;
 }

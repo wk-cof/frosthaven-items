@@ -7,25 +7,29 @@ import { renderTextWithTooltips } from '../RuleTooltip';
 import glossaryData from '../../data/glossary.json';
 import { InfoSection } from './InfoSection';
 
+import { CharacterTheme } from '../../types/character';
+
 interface LoreSectionProps {
   lore: string;
   race: string;
   matBack: string;
   basePath: string;
+  theme: CharacterTheme;
 }
 
-export const LoreSection: React.FC<LoreSectionProps> = ({ lore, race, matBack, basePath }) => {
+export const LoreSection: React.FC<LoreSectionProps> = ({ lore, race, matBack, basePath, theme }) => {
   return (
     <InfoSection 
       title="Class Lore" 
       backgroundImage={`${basePath}/${matBack}`}
+      theme={theme}
     >
       <Typography
         sx={{
           fontFamily: 'Space Grotesk',
           fontSize: '0.75rem',
           fontWeight: 700,
-          color: '#94a3b8',
+          color: theme.primary,
           textTransform: 'uppercase',
           letterSpacing: '0.15em',
           mb: 2,

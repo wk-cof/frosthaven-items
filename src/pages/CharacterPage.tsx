@@ -56,7 +56,7 @@ export const CharacterPage: React.FC<CharacterPageProps> = ({ character }) => {
         <Grid container spacing={6}>
 
           <Grid {...({ size: { xs: 12, md: 6 } } as any)}>
-            <MechanicsSection notes={character.classNotes} />
+            <MechanicsSection notes={character.classNotes} theme={character.theme} />
           </Grid>
           <Grid {...({ size: { xs: 12, md: 6 } } as any)}>
             <LoreSection
@@ -64,6 +64,7 @@ export const CharacterPage: React.FC<CharacterPageProps> = ({ character }) => {
               race={character.race}
               matBack={character.matBack}
               basePath={basePath}
+              theme={character.theme}
             />
           </Grid>
         </Grid>
@@ -74,6 +75,7 @@ export const CharacterPage: React.FC<CharacterPageProps> = ({ character }) => {
         characterId={character.id}
         level={charLevel}
         onCardClick={(img) => setLightboxImage(`${basePath}/ability-cards/${img}`)}
+        theme={character.theme}
       />
 
       <MatPerksSection
@@ -84,18 +86,19 @@ export const CharacterPage: React.FC<CharacterPageProps> = ({ character }) => {
         matSide={matSide}
         onSideChange={setMatSide}
         onImageClick={(img) => setLightboxImage(`${basePath}/${img}`)}
+        theme={character.theme}
       />
 
       {character.perkPriority && (
-        <PerkPriorityList perks={character.perkPriority} />
+        <PerkPriorityList perks={character.perkPriority} theme={character.theme} />
       )}
 
       {character.builds && (
-        <BuildsSection builds={character.builds} />
+        <BuildsSection builds={character.builds} theme={character.theme} />
       )}
 
       {character.tips && (
-        <TipsSection tips={character.tips} />
+        <TipsSection tips={character.tips} theme={character.theme} />
       )}
 
       {lightboxImage && (
