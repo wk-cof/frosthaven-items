@@ -5,6 +5,7 @@ import ItemsPage from './pages/ItemsPage';
 import PainConduitPage from './pages/PainConduitPage';
 import PyroclastPage from './pages/PyroclastPage';
 import CrashingTidePage from './pages/CrashingTidePage';
+import InfuserPage from './pages/InfuserPage';
 
 const darkTheme = createTheme({
   palette: {
@@ -40,6 +41,7 @@ function App() {
             <Route path="/characters/pain-conduit" element={<PainConduitPage />} />
             <Route path="/characters/pyroclast" element={<PyroclastPage />} />
             <Route path="/characters/crashing-tide" element={<CrashingTidePage />} />
+            <Route path="/characters/infuser" element={<InfuserPage />} />
           </Routes>
         </Box>
       </HashRouter>

@@ -118,6 +118,24 @@ function NavBar() {
             >
               Coral
             </Button>
+            <Button
+              component={NavLink}
+              to="/characters/infuser"
+              startIcon={<span>💎</span>}
+              sx={{
+                color: location.pathname === '/characters/infuser' ? '#10b981' : '#94a3b8',
+                fontWeight: 700,
+                px: 2,
+                borderRadius: 2,
+                bgcolor: location.pathname === '/characters/infuser' ? 'rgba(16, 185, 129, 0.1)' : 'transparent',
+                '&:hover': {
+                  bgcolor: 'rgba(16, 185, 129, 0.05)',
+                  color: '#10b981'
+                }
+              }}
+            >
+              Infuser
+            </Button>
           </Stack>
         </Toolbar>
       </Container>

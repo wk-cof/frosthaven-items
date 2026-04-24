@@ -34,6 +34,7 @@ const ICON_MAP: Record<string, string> = {
   'RECOVER': 'fh-recover-card-color-icon.png',
   'TELEPORT': 'fh-teleport-bw-icon.png',
   'TIDE': 'fh-tide-bw-icon.png',
+  'INFUSION': 'fh-infusion-bw-icon.png',
 
   // Elements
   'FIRE': 'fh-fire-bw-icon.png',
