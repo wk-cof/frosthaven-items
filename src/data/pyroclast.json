@@ -11,12 +11,12 @@
   ],
   "lore": "The Savvas live deep under the Copperneck Mountains, largely removed from the turmoil of the surface. There, they protect their source of life, which imbues unliving rock with consciousness and thought. The Savvas have few needs, and so, most are driven to seek domination over the elements, controlling and using wind, earth, ice, and fire. Those who are able to master the elements are held in the highest regard.\n\nSavvas go to extreme lengths to exert their power over the elements. Some cast themselves into active volcanoes, where they are either destroyed or become one with the raw power of the magma, emerging as a Pyroclast—a living embodiment of the chaotic and destructive force of flowing lava. No one can question their power then.",
   "roleStats": {
-    "melee": 2,
-    "ranged": 2,
-    "mobility": 2,
+    "melee": 4,
+    "ranged": 3,
+    "mobility": 3,
     "support": 1,
-    "defense": 2,
-    "control": 4
+    "defense": 3,
+    "control": 5
   },
   "summary": "A high-complexity controller who shapes the battlefield with hazardous terrain and obstacles, punishing enemies with molten lava and inescapable terrain manipulation.",
   "classNotes": [
@@ -41,35 +41,180 @@
     "Intimidating"
   ],
   "cards": [
-    { "name": "cloud of ash", "level": "1", "initiative": 23, "image": "fh-cloud-of-ash.png" },
-    { "name": "cooling", "level": "1", "initiative": 75, "image": "fh-cooling.png" },
-    { "name": "eruption", "level": "1", "initiative": 18, "image": "fh-eruption.png" },
-    { "name": "flowing fire", "level": "1", "initiative": 17, "image": "fh-flowing-fire.png" },
-    { "name": "hand of flame", "level": "1", "initiative": 32, "image": "fh-hand-of-flame.png" },
-    { "name": "hardened spike", "level": "1", "initiative": 31, "image": "fh-hardened-spike.png" },
-    { "name": "heat wave", "level": "1", "initiative": 33, "image": "fh-heat-wave.png" },
-    { "name": "igneous path", "level": "1", "initiative": 20, "image": "fh-igneous-path.png" },
-    { "name": "lava bomb", "level": "1", "initiative": 19, "image": "fh-lava-bomb.png" },
-    { "name": "liquid stone", "level": "1", "initiative": 23, "image": "fh-liquid-stone.png" },
-    { "name": "deep fury", "level": "2", "initiative": 38, "image": "fh-deep-fury.png" },
-    { "name": "living magma", "level": "2", "initiative": 30, "image": "fh-living-magma.png" },
-    { "name": "searing smoke", "level": "3", "initiative": 28, "image": "fh-searing-smoke.png" },
-    { "name": "under pressure", "level": "3", "initiative": 21, "image": "fh-under-pressure.png" },
-    { "name": "melted armor", "level": "4", "initiative": 22, "image": "fh-melted-armor.png" },
-    { "name": "obsidian shield", "level": "4", "initiative": 37, "image": "fh-obsidian-shield.png" },
-    { "name": "magma orbs", "level": "5", "initiative": 35, "image": "fh-magma-orbs.png" },
-    { "name": "rain of fire", "level": "5", "initiative": 34, "image": "fh-rain-of-fire.png" },
-    { "name": "quenched rage", "level": "6", "initiative": 16, "image": "fh-quenched-rage.png" },
-    { "name": "return to the source", "level": "6", "initiative": 36, "image": "fh-return-to-the-source.png" },
-    { "name": "erupting rage", "level": "7", "initiative": 70, "image": "fh-erupting-rage.png" },
-    { "name": "swelter", "level": "7", "initiative": 32, "image": "fh-swelter.png" },
-    { "name": "cinder lance", "level": "8", "initiative": 90, "image": "fh-cinder-lance.png" },
-    { "name": "feed the beast", "level": "8", "initiative": 27, "image": "fh-feed-the-beast.png" },
-    { "name": "calamity", "level": "9", "initiative": 35, "image": "fh-calamity.png" },
-    { "name": "stone armor", "level": "9", "initiative": 9, "image": "fh-stone-armor.png" },
-    { "name": "force of the earth", "level": "x", "initiative": 15, "image": "fh-force-of-the-earth.png" },
-    { "name": "metamorphic rock", "level": "x", "initiative": 68, "image": "fh-metamorphic-rock.png" },
-    { "name": "wildfire", "level": "x", "initiative": 72, "image": "fh-wildfire.png" }
+    {
+      "name": "cloud of ash",
+      "level": "1",
+      "initiative": 23,
+      "image": "fh-cloud-of-ash.png"
+    },
+    {
+      "name": "cooling",
+      "level": "1",
+      "initiative": 75,
+      "image": "fh-cooling.png"
+    },
+    {
+      "name": "eruption",
+      "level": "1",
+      "initiative": 18,
+      "image": "fh-eruption.png"
+    },
+    {
+      "name": "flowing fire",
+      "level": "1",
+      "initiative": 17,
+      "image": "fh-flowing-fire.png"
+    },
+    {
+      "name": "hand of flame",
+      "level": "1",
+      "initiative": 32,
+      "image": "fh-hand-of-flame.png"
+    },
+    {
+      "name": "hardened spike",
+      "level": "1",
+      "initiative": 31,
+      "image": "fh-hardened-spike.png"
+    },
+    {
+      "name": "heat wave",
+      "level": "1",
+      "initiative": 33,
+      "image": "fh-heat-wave.png"
+    },
+    {
+      "name": "igneous path",
+      "level": "1",
+      "initiative": 20,
+      "image": "fh-igneous-path.png"
+    },
+    {
+      "name": "lava bomb",
+      "level": "1",
+      "initiative": 19,
+      "image": "fh-lava-bomb.png"
+    },
+    {
+      "name": "liquid stone",
+      "level": "1",
+      "initiative": 23,
+      "image": "fh-liquid-stone.png"
+    },
+    {
+      "name": "deep fury",
+      "level": "2",
+      "initiative": 38,
+      "image": "fh-deep-fury.png"
+    },
+    {
+      "name": "living magma",
+      "level": "2",
+      "initiative": 30,
+      "image": "fh-living-magma.png"
+    },
+    {
+      "name": "searing smoke",
+      "level": "3",
+      "initiative": 28,
+      "image": "fh-searing-smoke.png"
+    },
+    {
+      "name": "under pressure",
+      "level": "3",
+      "initiative": 21,
+      "image": "fh-under-pressure.png"
+    },
+    {
+      "name": "melted armor",
+      "level": "4",
+      "initiative": 22,
+      "image": "fh-melted-armor.png"
+    },
+    {
+      "name": "obsidian shield",
+      "level": "4",
+      "initiative": 37,
+      "image": "fh-obsidian-shield.png"
+    },
+    {
+      "name": "magma orbs",
+      "level": "5",
+      "initiative": 35,
+      "image": "fh-magma-orbs.png"
+    },
+    {
+      "name": "rain of fire",
+      "level": "5",
+      "initiative": 34,
+      "image": "fh-rain-of-fire.png"
+    },
+    {
+      "name": "quenched rage",
+      "level": "6",
+      "initiative": 16,
+      "image": "fh-quenched-rage.png"
+    },
+    {
+      "name": "return to the source",
+      "level": "6",
+      "initiative": 36,
+      "image": "fh-return-to-the-source.png"
+    },
+    {
+      "name": "erupting rage",
+      "level": "7",
+      "initiative": 70,
+      "image": "fh-erupting-rage.png"
+    },
+    {
+      "name": "swelter",
+      "level": "7",
+      "initiative": 32,
+      "image": "fh-swelter.png"
+    },
+    {
+      "name": "cinder lance",
+      "level": "8",
+      "initiative": 90,
+      "image": "fh-cinder-lance.png"
+    },
+    {
+      "name": "feed the beast",
+      "level": "8",
+      "initiative": 27,
+      "image": "fh-feed-the-beast.png"
+    },
+    {
+      "name": "calamity",
+      "level": "9",
+      "initiative": 35,
+      "image": "fh-calamity.png"
+    },
+    {
+      "name": "stone armor",
+      "level": "9",
+      "initiative": 9,
+      "image": "fh-stone-armor.png"
+    },
+    {
+      "name": "force of the earth",
+      "level": "x",
+      "initiative": 15,
+      "image": "fh-force-of-the-earth.png"
+    },
+    {
+      "name": "metamorphic rock",
+      "level": "x",
+      "initiative": 68,
+      "image": "fh-metamorphic-rock.png"
+    },
+    {
+      "name": "wildfire",
+      "level": "x",
+      "initiative": 72,
+      "image": "fh-wildfire.png"
+    }
   ],
   "matFront": "character-mat-front.png",
   "matBack": "character-mat-back.png",
